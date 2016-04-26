@@ -25,6 +25,7 @@
     "immutable": "^3.8.1",
     "joi": "^8.0.5",
     "knex": "^0.10.0",
+    "mongoose": "^4.4.13",
     "mysql": "^2.10.2",
     "node-hasher": "0.0.3",
     "node-uuid": "^1.4.7",

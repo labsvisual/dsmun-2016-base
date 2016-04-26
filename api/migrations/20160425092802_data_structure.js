@@ -25,19 +25,24 @@ exports.up = function(knex, Promise) {
 
             } )
 
-            // .createTable( 'school_information', function( schoolInfoTable ) {
-            //
-            //     // Primary Key
-            //     schoolInfoTable.increments();
-            //
-            //     // Composite
-            //     schoolInfoTable.string( 'guid', 50 ).notNullable().references( 'guid' ).inTable( 'users' );
-            //
-            //     // Info
-            //     schoolInfoTable.string( 'teacher_escort', 250 ).notNullable();
-            //     schoolInfoTable.string( 'school_name', 250 ).notNullable();
-            //
-            // } )
+            .createTable( 'conference_information', function( conferenceInfoTable ) {
+
+                // Primary Key
+                conferenceInfoTable.increments();
+
+                // Composite
+                conferenceInfoTable.string( 'guid', 50 ).notNullable().references( 'guid' ).inTable( 'users' );
+
+                // Info
+                conferenceInfoTable.string( 'conference_guid', 36 ).notNullable();
+                conferenceInfoTable.boolean( 'form_one' ).notNullable().default( false );
+                conferenceInfoTable.boolean( 'form_two' ).notNullable().default( false );
+                conferenceInfoTable.boolean( 'form_three' ).notNullable().default( false );
+                conferenceInfoTable.boolean( 'form_four' ).notNullable().default( false );
+                conferenceInfoTable.boolean( 'form_five' ).notNullable().default( false );
+                conferenceInfoTable.boolean( 'is_confirmed' ).notNullable().default( false );
+
+            } )
 
             .createTable( 'conferences', function( conferencesTable ) {
 
