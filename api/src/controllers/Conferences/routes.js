@@ -15,7 +15,52 @@ const routes = [
                 payload: {
 
                     token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required(),
                     data: Joi.object().required()
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
+        path: '/',
+        method: 'GET',
+        handler: controller.getConferences,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
+        path: '/{conferenceId}',
+        method: 'GET',
+        handler: controller.getConference,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
 
                 }
 
@@ -36,6 +81,7 @@ const routes = [
 
                 payload: {
 
+                    guid: Joi.string().min( 36 ).max( 36 ).required(),
                     token: Joi.string().min( 32 ).max( 32 ).required(),
                     data: Joi.object().required()
 

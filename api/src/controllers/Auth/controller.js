@@ -7,7 +7,9 @@ const handlers = {
     authUser( request, reply ) {
 
         const users = Knex( 'users' ).where( {
+
             username: request.payload.username
+
         }).select( 'password', 'guid', 'role', 'is_confirmed' ).then( ( school ) => {
 
             if( school.length === 0 ) {
@@ -19,8 +21,10 @@ const handlers = {
                 school = school[ 0 ];
 
                 if( !school.is_confirmed ) {
+
                     ResponseBuilder( 411, "The associated account hasn't been activated.", null, reply );
                     return;
+
                 }
 
                 if( school.password === request.payload.password ) {
@@ -28,9 +32,11 @@ const handlers = {
                     const token = RandomString.generate( 32 );
 
                     Knex( 'tokens' ).insert( {
+
                         guid: school.guid,
                         token,
                         role: school.role
+
                     } ).then( ( id ) => {
 
                         ResponseBuilder( 200, "Logged in successfully!", {
@@ -41,8 +47,7 @@ const handlers = {
 
                         }, reply );
 
-                    } )
-                    .catch( ( err ) => {
+                    } ).catch( ( err ) => {
 
                         ResponseBuilder( 500, "Server error!", null, reply );
 
