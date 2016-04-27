@@ -161,7 +161,7 @@ const handlers = {
 
             }
 
-            if( Object.keys( data ).indexOf( 'isConfirmed' ) > -1 && dbData.role !== 1 ) {
+            if( ( Object.keys( data ).indexOf( 'isConfirmed' ) > -1 && dbData.role !== 1 ) || ( Helpers.containsKey( data, 'isFormFilled' ) ) ) {
 
                 ResponseBuilder( 403, "Your are not authorised to make that change.", null, reply );
                 return;

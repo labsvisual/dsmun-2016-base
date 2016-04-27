@@ -9,36 +9,36 @@ const type = thinky.type;
 
 const model = thinky.createModel( 'conference', {
 
-    conferenceGuid: String,
-    schoolGuid: String,
-    isConfirmed: Boolean,
+    conferenceGuid: type.string(),
+    schoolGuid: type.string(),
+    isConfirmed: type.boolean().default( false ),
 
     registration: {
 
-        name: String,
-        delegationSize: Number,
-        countryPreference: Array,
+        name: type.string(),
+        delegationSize: type.number(),
+        countryPreference: type.array(),
 
         address: {
 
-            street: String,
-            city: String,
-            pin: Number,
-            state: String,
-            country: String,
+            street: type.string(),
+            city: type.string(),
+            pin: type.number(),
+            state: type.string(),
+            country: type.string(),
 
         },
 
         facultyAdvisor: {
 
-            name: String,
-            mobile: Number,
-            landline: Number,
-            email: String
+            name: type.string(),
+            mobileNumber: type.number(),
+            landLineNumber: type.number(),
+            email: type.string()
 
         },
 
-        isFormFilled: false
+        isFormFilled: type.boolean().default( false ),
 
     },
 
@@ -46,16 +46,16 @@ const model = thinky.createModel( 'conference', {
 
         delegates: [ {
 
-            name: String,
-            committee: String,
-            gender: String,
-            mealPreference: String,
-            isCommitteeConfirmed: Boolean,
-            delegateGuid: String
+            name: type.string(),
+            committee: type.string(),
+            gender: type.string(),
+            mealPreference: type.string(),
+            isCommitteeConfirmed: type.boolean().default( false ),
+            delegateGuid: type.string()
 
         } ],
 
-        isFormFilled: false
+        isFormFilled: type.boolean().default( false ),
 
     },
 
@@ -63,54 +63,54 @@ const model = thinky.createModel( 'conference', {
 
         delegates: [ {
 
-            delegateGuid: String,
-            grade: String,
-            dateOfBirth: String,
-            height: Number,
-            weight: Number,
-            bloodGroup: String,
-            hbPercentage: Number,
-            medicalConditions: String,
-            
+            delegateGuid: type.string(),
+            grade: type.string(),
+            dateOfBirth: type.string(),
+            height: type.number(),
+            weight: type.number(),
+            bloodGroup: type.string(),
+            hbPercentage: type.number(),
+            medicalConditions: type.string(),
+
             family: {
 
-                fatherName: String,
-                motherName: String,
-                contactNo: Number,
-                landLineNo: Number
+                fatherName: type.string(),
+                motherName: type.string(),
+                contactNo: type.number(),
+                landLineNo: type.number()
 
             }
 
         } ],
 
-        isFormFilled: false
+        isFormFilled: type.boolean().default( false ),
 
     },
 
     travelArrangements: {
 
-        totalPassengers: Number,
-        isFormFilled: false,
+        totalPassengers: type.number(),
+        isFormFilled: type.boolean().default( false ),
 
         onward: {
 
-            arrivalDate: String,
-            timeOfArrival: String,
-            mode: String,
-            placeOfDeparture: String,
-            departureDate: String,
-            details: String,
+            arrivalDate: type.string(),
+            timeOfArrival: type.string(),
+            mode: type.string(),
+            placeOfDeparture: type.string(),
+            departureDate: type.string(),
+            details: type.string(),
 
         },
 
         returnJourney: {
 
-            arrivalDate: String,
-            timeOfArrival: String,
-            mode: String,
-            placeOfDeparture: String,
-            departureDate: String,
-            details: String,
+            arrivalDate: type.string(),
+            timeOfArrival: type.string(),
+            mode: type.string(),
+            placeOfDeparture: type.string(),
+            departureDate:type. string(),
+            details: type.string(),
 
         }
 
@@ -120,11 +120,11 @@ const model = thinky.createModel( 'conference', {
 
         delegates: [ {
 
-            delegateGuid: String
+            delegateGuid: type.string()
 
         } ],
 
-        isFormFilled: false
+        isFormFilled: type.boolean().default( false ),
 
     }
 

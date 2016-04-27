@@ -1,3 +1,5 @@
+import * as _ from 'lodash';
+
 const methods = {
 
     prefixRoute( route, controllerName ) {
@@ -19,6 +21,17 @@ const methods = {
         return route;
 
     },
+
+    containsKey( obj, key ) {
+
+        if ( _.has( obj, key ) )
+            return [ obj ];
+
+        return _.flatten( _.map( obj, ( v ) => {
+            return typeof v == "object" ? containsKey( v, key ) : [];
+        }), true );
+
+    }
 
 };
 
