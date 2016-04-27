@@ -50,6 +50,10 @@ const handlers = {
 
                 ResponseBuilder( 200, "Done!", null, reply );
 
+            } ).catch( ( err ) => {
+
+                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
             } );
 
 
@@ -85,6 +89,10 @@ const handlers = {
 
                 ResponseBuilder( 200, null, conferences, reply );
 
+            } ).catch( ( err ) => {
+
+                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
             } );
 
         } );
@@ -115,11 +123,15 @@ const handlers = {
             ConferenceModel.filter( {
 
                 schoolGuid: guid,
-                conferenceId: confId
+                conferenceGuid: confId
 
             } ).then( ( conferences ) => {
 
                 ResponseBuilder( 200, null, conferences, reply );
+
+            } ).catch( ( err ) => {
+
+                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 
@@ -149,36 +161,18 @@ const handlers = {
 
             }
 
-            ConferenceModel.findOne( {
-                conferenceId,
-            }, ( err, conference ) => {
+            ConferenceModel.filter( {
 
-                if( !err ) {
-                    if( !conference ) {
+                conferenceGuid: conferenceId,
+                schoolGuid: guid,
 
-                        conference = new ConferenceSchema();
-                        conference = _.assign( conference, data );
+            } ).update( data ).then( ( res ) => {
 
-                    }
+                ResponseBuilder( 200, "Account details updated!", null, reply );
 
-                    conference.save( ( err ) => {
+            } ).catch( ( err ) => {
 
-                        if( !err ) {
-
-                            console.log("conference " + conference.phone + " created at " + conference.createdAt + " updated at " + conference.updatedAt);
-                            ResponseBuilder( 200, "Done!", null, reply );
-
-                        }
-
-                        else {
-
-                            console.log("Error: could not save conference " + conference.conferenceId);
-
-                        }
-
-                    } );
-
-                }
+                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 
