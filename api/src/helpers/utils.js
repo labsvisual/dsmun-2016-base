@@ -25,11 +25,13 @@ const methods = {
     containsKey( obj, key ) {
 
         if ( _.has( obj, key ) )
-            return [ obj ];
+            return true;
 
-        return _.flatten( _.map( obj, ( v ) => {
-            return typeof v == "object" ? containsKey( v, key ) : [];
+        const contains = _.flatten( _.map( obj, ( v ) => {
+            return typeof v == "object" ? this.containsKey( v, key ) : false;
         }), true );
+
+        return contains.indexOf( true ) > -1;
 
     }
 
