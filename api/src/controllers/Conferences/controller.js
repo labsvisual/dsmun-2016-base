@@ -151,12 +151,19 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( dbData ) => {
 
             dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+                return;
+
+            }
+
+            if( Object.keys( data ).indexOf( 'isConfirmed' ) > -1 && dbData.role !== 1 ) {
+
+                ResponseBuilder( 403, "Your are not authorised to make that change.", null, reply );
                 return;
 
             }
