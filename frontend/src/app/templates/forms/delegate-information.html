@@ -1,0 +1,31 @@
+<div ng-controller="DelegateInformationFormController as ctrl">
+
+    <h2 class="ui header">
+        <i class="user icon"></i>
+        <div class="content">
+            Delegate Information Form
+        </div>
+    </h2>
+
+    <div class="ui section divider"></div>
+
+    <form ng-submit="ctrl.UpdateForm()" class="ui seperated form">
+
+
+
+        <div class="ui buttons">
+            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
+        </div>
+
+        <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">
+            <div class="header">
+                {{ ctrl.messageHeader }}
+            </div>
+            <p>{{ ctrl.messageText }}</p>
+        </div>
+
+    </form>
+
+</div>

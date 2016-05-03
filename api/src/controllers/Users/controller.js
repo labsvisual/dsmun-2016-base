@@ -276,7 +276,7 @@ const handlers = {
         } ).select( 'guid', 'role' ).then( ( dbData ) => {
 
             dbData = dbData[ 0 ];
-            if( dbData.role !== 1 ) {
+            if( dbData.role !== 1 && dbData.guid !== guid ) {
 
                 ResponseBuilder( 511, "The provided user does not have the privileges to execute that operation.", null, reply );
                 return;

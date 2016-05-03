@@ -1,0 +1,48 @@
+<div ng-controller="DashboardController as ctrl">
+
+    <h1 class="ui header">
+        <span style="font-weight: 300;">Management console for</span> {{ ctrl.data.school_name }}
+        <h3 class="ui sub header">
+            {{ ctrl.data.teacher_escort }}
+            <div style="margin-left: 2em; display: inline;" class="ui green">
+                <span>{{ ( ctrl.conferences.count > 0 ) ? ctrl.conferences.count : "No" }} conference{{ ( ctrl.conferences.count > 1 ) ? "s" : "" }} </span>
+            </div>
+        </h3>
+    </h1>
+
+
+    <div class="dashboard__conference--controller" ng-show="ctrl.hasConferences" class="ui">
+
+        <table class="ui single line table">
+          <thead>
+            <tr>
+              <th>S. No.</th>
+              <th>Edit</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="conf in ctrl.conferences.data">
+              <td>{{ $index + 1 }}</td>
+              <td>
+                  <a ng-href="#/conferences/{{ conf.conferenceGuid }}">Edit</a>
+              </td>
+              <td>
+                  {{ ( conf.isConfirmed ) ? "Confirmed" : "Pending" }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+
+    <div class="dashboard__conference--controller" class="ui">
+
+        <button ui-sref="newConference" class="ui labeled blue icon button">
+          <i class="plus icon"></i>
+          Add Conference
+        </button>
+
+    </div>
+
+</div>

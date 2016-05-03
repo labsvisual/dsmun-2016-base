@@ -1,0 +1,4 @@
+{
+    "directory": "./src/lib",
+    "strict-ssl": false
+}

@@ -1,0 +1,109 @@
+<div ng-controller="NewConferenceController as ctrl">
+
+    <h1 class="ui header">
+        <span style="font-weight: 300;">New Conference</span>
+    </h1>
+
+    <div class="ui section divider"></div>
+
+    <form ng-submit="ctrl.NewConference()" class="ui seperated form">
+
+        <h4 class="ui dividing header">
+            Faculty Advisor
+        </h4>
+
+        <div class="field">
+
+            <div class="two fields">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.firstName" placeholder="First Name">
+                </div>
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.lastName" placeholder="Last Name">
+                </div>
+
+            </div>
+
+            <div class="two fields">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.mobile" placeholder="Mobile Number">
+                </div>
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.landline" placeholder="Landline Number">
+                </div>
+
+            </div>
+
+            <div class="field">
+                <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.email" placeholder="Email Address">
+            </div>
+
+        </div>
+
+        <h4 class="ui dividing header">
+            Address
+        </h4>
+        <div class="one field">
+
+            <div class="field">
+                <input required type="text" ng-model="ctrl.conference.registration.address.street" placeholder="Street Address">
+            </div>
+
+        </div>
+
+        <div class="two fields">
+
+            <div class="field">
+                <input required type="text" ng-model="ctrl.conference.registration.address.city" placeholder="City">
+            </div>
+
+            <div class="field">
+                <input required type="text" ng-model="ctrl.conference.registration.address.pin" placeholder="Zip Code">
+            </div>
+
+        </div>
+
+        <div class="two fields">
+
+            <!-- <div class="field">
+                <select required ng-model="ctrl.conference.registration.address.country" ng-change="ctrl.populateStateList( ctrl.conference.registration.address.country )" class="ui dropdown">
+                    <option ng-repeat="country in ctrl.countries" value="{{ country.code }}">{{ country.name }}</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <select required ng-model="ctrl.conference.registration.address.state" class="ui dropdown">
+                    <option ng-repeat="state in ctrl.states" value="{{ state }}">{{ state }}</option>
+                </select>
+            </div> -->
+
+            <div class="field">
+                <input required ng-model="ctrl.conference.registration.address.country" placeholder="Country"/>
+            </div>
+
+            <div class="field">
+                <input required ng-model="ctrl.conference.registration.address.state" placeholder="State"/>
+            </div>
+
+        </div>
+
+        <div ng-show="ctrl.isError" class="ui red message">
+            <div class="header">
+                An error was encountered!
+            </div>
+            <p>{{ ctrl.errorMessage }}</p>
+        </div>
+
+        <div class="ui buttons">
+            <button ng-disabled="ctrl.processing" class="ui button">Cancel</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Create" }}</button>
+        </div>
+
+    </form>
+
+</div>

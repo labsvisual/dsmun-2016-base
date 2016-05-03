@@ -1,0 +1,69 @@
+<div ng-controller="EditConferenceController as ctrl">
+
+    <h1 class="ui header">
+        <span style="font-weight: 300;">Edit Conference</span>
+    </h1>
+
+    <div class="ui section divider"></div>
+
+    <div class="ui five small steps">
+
+      <div ng-class="( ctrl.conferenceData.registration.isFormFilled ) ? 'completed' : 'active'" class="step">
+
+        <i class="tasks icon"></i>
+
+        <div class="content">
+          <div class="title">
+              <a ng-show="( ctrl.conferenceData.registration.isFormFilled == false )" ui-sref="registrationForm({guid: ctrl.guid})">Registration</a>
+              <span ng-show="( ctrl.conferenceData.registration.isFormFilled == true )">Registration</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div ng-class="( ctrl.conferenceData.delegateInformation.isFormFilled ) ? 'completed' : 'active'" class="step">
+
+        <i class="user icon"></i>
+
+        <div class="content">
+          <div class="title">
+              <a ng-show="( ( ctrl.conferenceData.delegateInformation.isFormFilled ) && ( ctrl.conferenceData.delegateInformation.isFormFilled == false ) )" ui-sref="delegateInformationForm({guid: ctrl.guid})">Delegate Information</a>
+              <span ng-show="( ( ctrl.conferenceData.delegateInformation.isFormFilled ) && ( ctrl.conferenceData.delegateInformation.isFormFilled == true ) )">Delegate Information</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div ng-class="( ctrl.conferenceData.medicalHistory.isFormFilled ) ? 'completed' : 'active'" class="step">
+
+        <i class="treatment icon"></i>
+
+        <div class="content">
+          <div class="title">Medical History</div>
+        </div>
+
+      </div>
+
+      <div ng-class="( ctrl.conferenceData.travelArrangement.isFormFilled ) ? 'completed' : 'active'" class="step">
+
+        <i class="calendar outline icon"></i>
+
+        <div class="content">
+          <div class="title">Travel Arrangment</div>
+        </div>
+
+      </div>
+
+      <div ng-class="( ctrl.conferenceData.gaCrisis.isFormFilled ) ? 'completed' : 'active'" class="step">
+
+        <i class="square icon"></i>
+
+        <div class="content">
+          <div class="title">GA Crisis</div>
+        </div>
+
+      </div>
+
+    </div>
+
+</div>

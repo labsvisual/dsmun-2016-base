@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <title>DSMUN Base - Conference Management</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Shreyansh Pandey" />
+
+        <!-- Frameworks -->
+        <link rel="stylesheet" href="lib/semantic/dist/semantic.css" media="screen" charset="utf-8">
+
+        <script src="lib/jquery/dist/jquery.js" charset="utf-8"></script>
+        <script src="lib/semantic/dist/semantic.js" charset="utf-8"></script>
+
+        <script src="lib/angular/angular.js" charset="utf-8"></script>
+        <script src="lib/angular-cookies/angular-cookies.js" charset="utf-8"></script>
+        <script src="lib/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
+
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/main.js" charset="utf-8"></script>
+
+        <!-- Application -->
+        <!-- <script src="app/app.modules.js" charset="utf-8"></script>
+        <script src="app/app.routes.js" charset="utf-8"></script> -->
+
+    </head>
+    <body ng-app="app" ng-controller="BasePageController as ctrl">
+
+        <div class="ui left vertical sidebar labeled icon menu">
+
+            <a ui-sref="home" class="item">
+                <i class="home icon"></i>
+                Home
+            </a>
+
+            <a ng-show="ctrl.showLogout" ng-click="ctrl.Logout()" class="item">
+                <i class="sign out icon"></i>
+                Logout
+            </a>
+
+        </div>
+
+        <div class="pusher">
+
+            <h1 id="header" class="ui header">
+                DSMUN Base
+                <div class="sub header">
+                    conference management system
+                </div>
+            </h1>
+
+            <div ui-view class="ui container"></div>
+
+        </div>
+
+        <!-- Controllers -->
+        <script type='text/javascript' src="lib/sha512.js"></script>
+
+        <!-- <script src="app/controllers/DashboardController.js" charset="utf-8"></script>
+        <script src="app/controllers/HomePageController.js" charset="utf-8"></script>
+        <script src="app/controllers/BasePageController.js" charset="utf-8"></script>
+        <script src="app/controllers/NewConferenceController.js" charset="utf-8"></script>
+        <script src="app/services/CryptoService.js" charset="utf-8"></script>
+        <script src="app/services/RestApi.js" charset="utf-8"></script> -->
+
+        <script src="dist/app.min.js" charset="utf-8"></script>
+
+    </body>
+</html>

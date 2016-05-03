@@ -44,6 +44,7 @@ const handlers = {
                             username: request.payload.username,
                             guid: school.guid,
                             token,
+                            role: school.role
 
                         }, reply );
 

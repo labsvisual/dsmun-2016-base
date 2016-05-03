@@ -10,6 +10,27 @@ import ConferenceModel from '../../models/models.js';
 var Hasher = require( 'node-hasher' )
   , _      = require( 'lodash' );
 
+_.mixin( {
+  compactObject: ( obj, keyName ) => {
+
+     let clone = _.clone( obj );
+
+     _.each( clone, ( value, key ) => {
+
+       if( key === keyName ) {
+
+         delete clone[ key ];
+
+       }
+
+     });
+
+     return clone;
+
+  }
+
+} );
+
 const handlers = {
 
     createConference( request, reply ) {
@@ -52,10 +73,15 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
+                console.log( err );
                 ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 
+
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "An invalid token was provided.", null, reply );
 
         } );
 
@@ -94,6 +120,10 @@ const handlers = {
                 ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
+
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
 
@@ -135,7 +165,11 @@ const handlers = {
 
             } );
 
-        } );
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );;
 
     },
 
@@ -143,8 +177,10 @@ const handlers = {
 
         const token = request.payload.token
             , guid  = request.payload.guid
-            , data  = request.payload.data
             , conferenceId = request.params.conferenceId;
+
+
+        let data  = request.payload.data;
 
         const checkToken = Knex( 'tokens' ).where( {
 
@@ -161,30 +197,57 @@ const handlers = {
 
             }
 
-            if( ( Object.keys( data ).indexOf( 'isConfirmed' ) > -1 && dbData.role !== 1 ) || ( Helpers.containsKey( data, 'isFormFilled' ) ) ) {
+            if( ( ( Object.keys( data ).indexOf( 'isConfirmed' ) > -1 ) || Helpers.containsKey( data, 'isFormFilled' ) || Helpers.containsKey( data, 'isCommitteeConfirmed' ) ) && dbData.role !== 1 ) {
 
-                console.log( Helpers.containsKey( data, 'name' ) );
-                ResponseBuilder( 403, "You are not authorised to make that change.", null, reply );
-                return;
+                data = _.compactObject( data, 'isConfirmed' );
+                data = _.compactObject( data, 'isFormFilled' );
+                data = _.compactObject( data, 'isCommitteeConfirmed' );
+
+                // ResponseBuilder( 403, "You are not authorised to make that change.", null, reply );
+                // return;
 
             }
 
-            ConferenceModel.filter( {
+            if( dbData.guid === guid && dbData.role === 0 ) {
 
-                conferenceGuid: conferenceId,
-                schoolGuid: guid,
+                ConferenceModel.filter( {
 
-            } ).update( data ).then( ( res ) => {
+                    conferenceGuid: conferenceId,
+                    schoolGuid: guid,
 
-                ResponseBuilder( 200, "Account details updated!", null, reply );
+                } ).update( data ).then( ( res ) => {
 
-            } ).catch( ( err ) => {
+                    ResponseBuilder( 200, "Account details updated!", null, reply );
 
-                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+                } ).catch( ( err ) => {
 
-            } );
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
-        } );
+                } );
+
+            } else if ( dbData.guid !== guid || dbData.role === 1  ) {
+
+                ConferenceModel.filter( {
+
+                    conferenceGuid: conferenceId,
+
+                } ).update( data ).then( ( res ) => {
+
+                    ResponseBuilder( 200, "Account details updated!", null, reply );
+
+                } ).catch( ( err ) => {
+
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+                } );
+
+            }
+
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );;
 
     },
 
