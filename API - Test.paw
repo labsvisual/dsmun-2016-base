@@ -1,0 +1,336 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE database SYSTEM "file:///System/Library/DTDs/CoreData.dtd">
+
+<database>
+    <databaseInfo>
+        <version>134481920</version>
+        <UUID>4A3A7CF7-301A-41B9-9118-0189A0771DEC</UUID>
+        <nextObjectID>131</nextObjectID>
+        <metadata>
+            <plist version="1.0">
+                <dict>
+                    <key>NSPersistenceFrameworkVersion</key>
+                    <integer>526</integer>
+                    <key>NSStoreModelVersionHashes</key>
+                    <dict>
+                        <key>LMCookieJar</key>
+                        <data>
+		Fttmf2L4PrGvKUF496+nqgVVGek45TjOe7sUMtjNg8I=
+		</data>
+                        <key>LMEnvironment</key>
+                        <data>
+		uzBoVFcO4YvR9/3ej4AJ1UOOsA/u5DKY2aemusoIseU=
+		</data>
+                        <key>LMEnvironmentDomain</key>
+                        <data>
+		yM1GPGHdquS8IWLtuczlNoqKhIhD9FW6IReSfFffJgs=
+		</data>
+                        <key>LMEnvironmentVariable</key>
+                        <data>
+		P8e0lYd5JZKRabS/eXVSOJ4oitilz67xtv+pLqW1Jqg=
+		</data>
+                        <key>LMEnvironmentVariableValue</key>
+                        <data>
+		my5hNPJ51oDCSa8EgdNxWAnRcDLcERUGjtuXnzhSxQ0=
+		</data>
+                        <key>LMKeyValue</key>
+                        <data>
+		bIXXbyYF2xAv2MXg8JTVFsslmMKuvsfnR86QdUcFkdM=
+		</data>
+                        <key>LMRequest</key>
+                        <data>
+		vcehD1+Y0zJEqCmgqlTWLscXXTAat5YQbsUJSVqwTq0=
+		</data>
+                        <key>LMRequestGroup</key>
+                        <data>
+		MnZKiG/nHZ2bvbULv2vfzH+0tXd5w+NuuMPlNJjBAMw=
+		</data>
+                        <key>LMRequestTreeItem</key>
+                        <data>
+		Ae5GlAcsXxZOGKCPQgemYbXQ3+KUtHlsprrqBD+V81o=
+		</data>
+                    </dict>
+                    <key>NSStoreModelVersionHashesVersion</key>
+                    <integer>3</integer>
+                    <key>NSStoreModelVersionIdentifiers</key>
+                    <array>
+                        <string>LMDocumentVersion4</string>
+                    </array>
+                </dict>
+            </plist>
+        </metadata>
+    </databaseInfo>
+    <object type="LMENVIRONMENT" id="z102">
+        <attribute name="uuid" type="string">5F691646-BFCA-4273-84EB-4EEC36FB414E</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">Administrator</attribute>
+        <relationship name="domain" type="0/1" destination="LMENVIRONMENTDOMAIN" idrefs="z118"></relationship>
+        <relationship name="variablesvalues" type="0/0" destination="LMENVIRONMENTVARIABLEVALUE" idrefs="z119 z112"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z103">
+        <attribute name="uuid" type="string">577106C9-77C7-447D-BDED-0FF4A3FF4D66</attribute>
+        <attribute name="url" type="string">http://api.base.dsmun.com:3345/conferences</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">POST</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["data"],[{"data":{"json":"{\\"registration\\":{\\"name\\":\\"Mr. Mohit Sinha\\",\\"delegationSize\\":9}}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">2</attribute>
+        <attribute name="name" type="string">Create Conference</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z113"></relationship>
+    </object>
+    <object type="LMENVIRONMENTVARIABLEVALUE" id="z105">
+        <attribute name="value" type="string">c6QF2X50daI5hvlLupxpYKKeqjyuT6AI</attribute>
+        <relationship name="environment" type="1/1" destination="LMENVIRONMENT" idrefs="z114"></relationship>
+        <relationship name="variable" type="1/1" destination="LMENVIRONMENTVARIABLE" idrefs="z116"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z106">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z126"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z108">
+        <attribute name="uuid" type="string">AE7CB659-F34F-4C64-B4FD-94D54643DFC0</attribute>
+        <attribute name="url" type="string">["http:\\/\\/api.base.dsmun.com:3345\\/conferences\\/97dd230b-a2cb-4721-94b1-d62bc0e4f8cf?token=",{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"},"\u2600guid=",{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}]</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">GET</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["data"],[{"data":{"json":"{\\"registration\\":{\\"name\\":\\"Mr. Mohit Sinha\\",\\"delegationSize\\":9}}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],false]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string">Get a Specific Conference</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z124"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z109">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z117"></relationship>
+    </object>
+    <object type="LMENVIRONMENTVARIABLE" id="z110">
+        <attribute name="uuid" type="string">28E71342-55EB-413D-A9F3-E624A4FFBBE4</attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string">guid</attribute>
+        <relationship name="domain" type="0/1" destination="LMENVIRONMENTDOMAIN" idrefs="z118"></relationship>
+        <relationship name="values" type="0/0" destination="LMENVIRONMENTVARIABLEVALUE" idrefs="z119 z125"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z111">
+        <attribute name="uuid" type="string">DB6E261F-265B-4E15-B3C6-176CBDB598C5</attribute>
+        <attribute name="url" type="string">["http:\\/\\/api.base.dsmun.com:3345\\/conferences?token=",{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"},"\u2600guid=",{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}]</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">GET</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">Get ALL Conferences</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z120"></relationship>
+    </object>
+    <object type="LMENVIRONMENTVARIABLEVALUE" id="z112">
+        <attribute name="value" type="string">zd2nHK9pFALmtcj04NEop6P01C0JMEKt</attribute>
+        <relationship name="environment" type="1/1" destination="LMENVIRONMENT" idrefs="z102"></relationship>
+        <relationship name="variable" type="1/1" destination="LMENVIRONMENTVARIABLE" idrefs="z116"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z113">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z103"></relationship>
+    </object>
+    <object type="LMENVIRONMENT" id="z114">
+        <attribute name="uuid" type="string">78C72ACC-9119-434E-98BF-9D98B9EA7831</attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string">Delegate</attribute>
+        <relationship name="domain" type="0/1" destination="LMENVIRONMENTDOMAIN" idrefs="z118"></relationship>
+        <relationship name="variablesvalues" type="0/0" destination="LMENVIRONMENTVARIABLEVALUE" idrefs="z105 z125"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z115">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z123"></relationship>
+    </object>
+    <object type="LMENVIRONMENTVARIABLE" id="z116">
+        <attribute name="uuid" type="string">C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">token</attribute>
+        <relationship name="domain" type="0/1" destination="LMENVIRONMENTDOMAIN" idrefs="z118"></relationship>
+        <relationship name="values" type="0/0" destination="LMENVIRONMENTVARIABLEVALUE" idrefs="z112 z105"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z117">
+        <attribute name="uuid" type="string">0E670DB3-081B-4307-AEE6-4284A662EC18</attribute>
+        <attribute name="url" type="string">http://api.base.dsmun.com:3345/conferences/e5c00b04-7ea1-45c2-8e91-f0a100197b6b</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">PUT</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="clientcertificate" type="string">[{"data":{"mode":0},"identifier":"com.luckymarmot.CertificateDynamicValue"}]</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["data"],[{"data":{"json":"{\\"registration\\":{\\"countryPreference\\":[\\"India\\",\\"China\\"],\\"name\\":\\"Shreyansh Pandey\\",\\"isFormFilled\\":true},\\"isConfirmed\\":false,\\"delegateInformation\\":{\\"delegates\\":[{\\"name\\":\\"Shreyansh Pandey\\",\\"committee\\":\\"DISEC\\",\\"gender\\":\\"male\\",\\"mealPreference\\":\\"veg\\",\\"isCommitteeConfirmed\\":false,\\"delegateGuid\\":\\"Hello\\"}]}}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">3</attribute>
+        <attribute name="name" type="string">Update Conference</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z109"></relationship>
+    </object>
+    <object type="LMENVIRONMENTDOMAIN" id="z118">
+        <attribute name="uuid" type="string">FD70A1DA-BC05-4B6C-AEC5-1C152C71E21D</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">Authentication</attribute>
+        <relationship name="environments" type="0/0" destination="LMENVIRONMENT" idrefs="z114 z102"></relationship>
+        <relationship name="variables" type="0/0" destination="LMENVIRONMENTVARIABLE" idrefs="z110 z116"></relationship>
+    </object>
+    <object type="LMENVIRONMENTVARIABLEVALUE" id="z119">
+        <attribute name="value" type="string">fd09e5cc-75c7-4282-820a-52697a7b0055</attribute>
+        <relationship name="environment" type="1/1" destination="LMENVIRONMENT" idrefs="z102"></relationship>
+        <relationship name="variable" type="1/1" destination="LMENVIRONMENTVARIABLE" idrefs="z110"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z120">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z111"></relationship>
+    </object>
+    <object type="LMCOOKIEJAR" id="z121">
+        <attribute name="uuid" type="string">6CE0CF93-FE61-4A22-924D-7DFD1B52F26E</attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string">Default Jar</attribute>
+    </object>
+    <object type="LMREQUESTGROUP" id="z122">
+        <attribute name="uuid" type="string">A2BA077B-21CD-44C6-A36B-4B45BE315469</attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string">Authentication</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM" idrefs="z123 z126"></relationship>
+        <relationship name="bodyparameters" type="0/0" destination="LMKEYVALUE"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE"></relationship>
+        <relationship name="urlparameters" type="0/0" destination="LMKEYVALUE"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z123">
+        <attribute name="uuid" type="string">7AEC8A6B-1B36-4E7C-BB29-980356669D50</attribute>
+        <attribute name="url" type="string">http://api.base.dsmun.com:3345/auth</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">POST</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["username"],["doonschool"],true],[["password"],["8cef0efdea3fd3ec7ddf435521c834b4b5a4ae468247a82b36dd6dc02bc2427197da4e206017d21a45af069bdae6b60f9156e2a6bdc225ee15caab2d1a888f6f"],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">Get Authentication Token</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z122"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z115"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z124">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z108"></relationship>
+    </object>
+    <object type="LMENVIRONMENTVARIABLEVALUE" id="z125">
+        <attribute name="value" type="string">f4e07143-511a-43a2-9d94-c0fd6e1775f8</attribute>
+        <relationship name="environment" type="1/1" destination="LMENVIRONMENT" idrefs="z114"></relationship>
+        <relationship name="variable" type="1/1" destination="LMENVIRONMENTVARIABLE" idrefs="z110"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z126">
+        <attribute name="uuid" type="string">FABC0D16-CC0E-4760-B048-928A3F1DB2EC</attribute>
+        <attribute name="url" type="string">http://api.base.dsmun.com:3345/deauth</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">POST</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],["nc62agtOQ95TJRXTyCL65MRuykDFHdjf"],true],[["guid"],["fd09e5cc-75c7-4282-820a-52697a7b0055"],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">1</attribute>
+        <attribute name="name" type="string">Logout</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z122"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z106"></relationship>
+    </object>
+    <object type="LMREQUESTGROUP" id="z128">
+        <attribute name="uuid" type="string">7D40C66D-6760-4862-AC9E-739B83596EAE</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">Conferences</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM" idrefs="z111 z103 z117 z108"></relationship>
+        <relationship name="bodyparameters" type="0/0" destination="LMKEYVALUE"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE"></relationship>
+        <relationship name="urlparameters" type="0/0" destination="LMKEYVALUE"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z129">
+        <attribute name="uuid" type="string">3EDEB91D-FA7F-420C-9D34-5A1AB3D35F5B</attribute>
+        <attribute name="url" type="string">["http:\\/\\/api.base.dsmun.com:3345\\/users\\/f4e07143-511a-43a2-9d94-c0fd6e1775f8?token=",{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}]</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">GET</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string">Get User's Information</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z131"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z130"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z130">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z129"></relationship>
+    </object>
+    <object type="LMREQUESTGROUP" id="z131">
+        <attribute name="uuid" type="string">C0AEC71B-2D92-4C51-BEA8-4F72C01698A0</attribute>
+        <attribute name="order" type="int64">2</attribute>
+        <attribute name="name" type="string">Users</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM" idrefs="z129"></relationship>
+        <relationship name="bodyparameters" type="0/0" destination="LMKEYVALUE"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE"></relationship>
+        <relationship name="urlparameters" type="0/0" destination="LMKEYVALUE"></relationship>
+    </object>
+</database>
