@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../style/images/favicon.png">
+        <title>Supreme Council of Sovereign States - DSMUN '16</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../style/css/plugins.css" rel="stylesheet">
+        <link href="../style/css/prettify.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
+        <link href="../style/css/color/aqua.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="../style/type/fontello.css" rel="stylesheet">
+        <link href="../style/type/budicons.css" rel="stylesheet">
+        <link href="style/css/custom.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="style/js/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="full-layout">
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="../style/images/logo.png" alt="" data-src="../style/images/logo.png" data-ret="../style/images/logo@2x.png" class="retina" /></a> </div>
+                    <!-- /.navbar-brand --> 
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
+                        
+                    </ul>
+                    <!-- /.navbar-nav --> 
+                </div>
+                <!-- /.navbar-collapse -->
+                
+                <!-- /#elsewhere --> 
+            </nav>
+            <!-- /.navbar -->
+            <div class="container inner">
+                <div class="single blog row">
+                    <div class="col-md-8 col-sm-12 content">
+                        <div class="blog-posts">
+                            <div class="post box">
+                                <p>
+                                    Greetings Delegates!
+                                </p>
+                                <p>It gives me immense pleasure to welcome you to the tenth session of the Doon School Model United Nations Conference. Before I talk about this committee and what I expect from the delegates attending this conference, a bit about myself. I take a keen interest in debating and I have represented the School and the country at various debating championships. I have also participated in a fair share of MUNs, ranging from a 192-delegations Legal Committee at HMUN China, to the war-torn Syrian Cabinet at MCGSMUN. Needless to say debating and MUNning have given me a great learning platform, and I can attribute my interest in Politics and History to these activities. It is this combined interest that led me to chair the Supreme Council of Sovereign States, 1938.</p>
+                                <p>In Europe 1939 tensions are rising as the Great War slowly begins to fade in everyone’s mind. Hitler has already annexed Sudetenland through the Munich Pact. Meanwhile in Asia Japan has taken control over Manchuria despite China’s best attempt to prevent this aggression. In reality, the failure of the League of Nations prevented all geopolitical powers from sitting on one table and trying to use diplomacy to prevent another World War. Through the SCSS we are going to change this failure.</p>
+                                <p>I have always thought that the purpose behind any historical committee is to provide an opportunity for dialogue and debate that might not have existed at the time. Keeping this in mind I present to you a pre-WW2 Council. The Supreme Council of Sovereign States was created in 1938 to work towards preserving peace and allow for nations to voice their opinions on an international platform. To make it simpler to understand, the SCSS has the mandate and power of the Security Council (except Veto Powers), but existed before the SC. A detailed Rules of Procedure and structure of the committee is provided in the Background Guide, and delegates are always free to contact me in case there are any confusions.</p>
+                                <p>This committee is going to be challenging, and delegates are expected to read up about not only their nation’s role in the events that led to the Second World War, but also the overall history behind the outbreak of the Second World War. Furthermore, delegates are reminded that committees like these exist for the solutions that can be brought to the table, and the ability of delegates to build consensus in such an ideologically heterogeneous Council.</p>
+                                <p>While I have always felt that a nation’s foreign policy is determined by international events, delegates are reminded that these nations did have clear policies and had formed blocs on those lines. That being said, delegates will not be penalised if it is clearly shown that a change in foreign policy has been made for a greater good, or to vanquish a common enemy. This committee is taking place from the 16th of March 1939; therefore no documents or treaties after this date can be brought to this Council’s notice. Ultimately, the fate of the world, as we know it, is in your hands and for once history should not be repeated.</p>
+                                <div class="signing-off">
+                                  <p class="line-height">Regards,</p>
+                                  <img src="../style/images/signs/kedi.png" width=160 height=100>
+                                  <p class="line-height">Chaitanya Kediyal</p>
+                                  <p class="line-height">Chairperson - SCSS</p>
+                                  <p class="line-height">DSMUN '16</p>
+                                </div>
+                                <!-- /.share --> 
+                            </div>
+                            <!-- /.post --> 
+                        </div>
+                       
+                        <!-- /.comment-form-wrapper --> 
+                    </div>
+                    <!-- /.content -->
+                    <aside class="col-md-4 col-sm-12 sidebar">
+                        <div class="sidebox box widget">
+                            <h2 class="comm-title">Supreme Council of Sovereign States, 1939</h2>
+                        </div>
+                        <!-- /.widget -->
+                        <!-- /.widget -->
+                        <div class="sidebox box widget info">
+                            <div class="chair">
+                                <img src="../style/images/mugs/mug-kedi.jpg" />
+                                <h2>Chaitanya Kediyal</h2>
+                                <h4>Chairperson</h4>
+                            </div>
+                            
+                            <div class="dep-chairs">
+                                <p>Arjun Singh</p>
+                                <p>Harshit Bansal</p>
+                                <h4>Deputy Chairpersons</h4>
+                            </div>
+                        </div>
+
+                        <div class="sidebox box widget">
+                            
+                            <h2>Resources</h2>
+
+                            <div class="res">
+                               <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="1000" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
+                                <a href="../documents/country_matrix_scss.pdf" target="_blank">Country Matrix</a> <!-- New Tab -->
+                                <!--<a href="../documents/Background Guides/(DSMUN '16) Background Guide - HSC.pdf" target="_blank" download="(DSMUN '16) Background Guide - HSC">Background Guide</a> <!-- UID -->
+                                <a href="../documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a>
+                            </div>
+
+                        </div>
+                        <div id="agenda-intro">
+                          <h2>Introduction to Agenda</h2>
+                          <div class="divide20"></div>
+                          <h3>Agenda: Annexation of Czechoslovakia, 1939</h3>
+                          <p>Relations across Europe are souring, and the fear of War is on constant rise. In such a scenario, the primary objective of this Council will be to examine the legitimacy and efficacy of the Munich Pact and further deliberate over the Annexation of Czechoslovakia in 1939. However, the greater objective will be the prevention of War and continuation of peaceful co-existence. Thus, this Council would be expected to discuss the armament race across nations, the need or harms of colonisation and provisions that need to be made to ensure greater lasting peace and mutual co-operation. At this point it is necessary not to view the Agenda in a vacuum, apart from the actions by Nazi Germany in Europe tensions are rising in Asia. Japanese aggression in China has been taking place since the early 1930s; this council must also work towards an effective resolution of this crisis as well.</p>
+                          <p>This committee has been tasked with a difficult mandate, but times of moral crisis require extraordinary efforts. The task of preventing war, genocide and destruction rests in your hands. Ultimately, allow your conscience to guide you in your deliberations and discussions and remain true to your nation.</p>
+
+                        </div>
+                        <div class="sidebox box widget">
+                            <h5> Contact Me: chair.scss@doonschool.com </h5>
+                        </div>
+                        <!-- /.widget -->
+                        
+                        <!-- /.widget -->
+                        <!-- /.widget --> 
+                    </aside>
+                    <!-- /column .sidebar --> 
+                </div>
+                <!-- /.blog --> 
+            </div>
+            <!-- /.container --> 
+        </div>
+        <!-- /.body-wrapper --> 
+        <script src="../style/js/jquery.min.js"></script> 
+        <script src="../style/js/bootstrap.min.js"></script> 
+        <script src="../style/js/jquery.themepunch.tools.min.js"></script> 
+        <script src="../style/js/classie.js"></script> 
+        <script src="../style/js/plugins.js"></script> 
+        <script src="../style/js/scripts.js"></script>  
+        <script>
+            $.backstretch(["../style/images/art/bg3.jpg"]);
+        </script>
+    </body>
+</html>

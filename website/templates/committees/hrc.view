@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../style/images/favicon.png">
+        <title>Human Rights Council - DSMUN '16</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../style/css/plugins.css" rel="stylesheet">
+        <link href="../style/css/prettify.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
+        <link href="../style/css/color/aqua.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="../style/type/fontello.css" rel="stylesheet">
+        <link href="../style/type/budicons.css" rel="stylesheet">
+        <link href="../style/css/custom.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="style/js/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="full-layout">
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="../style/images/logo.png" alt="" data-src="../style/images/logo.png" data-ret="../style/images/logo@2x.png" class="retina" /></a> </div>
+                    <!-- /.navbar-brand --> 
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
+                        
+                    </ul>
+                    <!-- /.navbar-nav --> 
+                </div>
+                <!-- /.navbar-collapse -->
+                
+                <!-- /#elsewhere --> 
+            </nav>
+            <!-- /.navbar -->
+            <div class="container inner">
+                <div class="single blog row">
+                    <div class="col-md-8 col-sm-12 content">
+                        <div class="blog-posts">
+                            <div class="post box">
+                                <p>
+                                    Dear delegates,
+                                </p>
+                                <p>As the chairperson of the Human Rights Council, it gives me immense pleasure to welcome you to the 10th Doon School Model United Nations Conference 2016. My name is Kanav Agarwal and I am currently studying in The Doon School, pursuing the ISC curriculum in Grade 12.</p>
+                                <p>I am passionate about playing Basketball and Table Tennis, and my love for these sports has only grown over time. The first MUN I attended was DSMUN 2013 as a ‘chit boy’ and since then I have attended several MUNs including Harvard MUN China and Harvard MUN India.</p>
+                                <p>The United Nations Human Rights Council (UNHRC) is a United Nations System inter-governmental body which is responsible for promoting and protecting human rights around the world. Throughout history, women and children have been involved in and affected by war, conflict and social unrest. In recent years there has been a prevalence of such incidents around the globe. Also the disabled are neglected in the society and are looked down upon. The agendas this year relate to these issues and it is our duty as a committee to protect the rights of these people and help them live a peaceful and comfortable life.</p>
+                                <p>I expect several things from my delegates over the course of the conference. Most importantly, I want a high quality of debate, with the committee taking a holistic approach to the agendas. Delegates must keep in mind the policies and relations of nation they are representing at the time of discussion of the agenda. Furthermore, I will be enforcing a strict policy regarding the following of procedure in committee, including the punctual submission of policy statements before the start of the conference.</p>
+                                <p>I hope the committee will be an opportunity for you to gain an insight in the art of diplomacy, understand the value of collaboration and compromise, and build skills in public speaking and debating. I look forward to meeting all of you at the conference! Please feel free to reach out to me with any questions you may have.</p>
+                                <p>The agendas that will be discussed this year are:</p>
+                                <p><ul><li><b>The impact of terrorism on women and children rights in the Middle East and the Arabic world</b></li>
+                                <li><b>The Realisation of Rights of Persons with Disabilities</b></li></ul></p>
+                                <p>Hope to see you all this fall!</p>
+                                <div class="signing-off">
+                                  <p class="line-height">Regards,</p>
+                                  <img src="../style/images/signs/kanav.png" width=135 height=120>
+                                  <p class="line-height">Kanav Agarwal</p>
+                                  <p class="line-height">Chairperson - HRC</p>
+                                  <p class="line-height">DSMUN '16</p>
+                                </div>
+                                <!-- /.share --> 
+                            </div>
+                            <!-- /.post --> 
+                        </div>
+                       
+                        <!-- /.comment-form-wrapper --> 
+                    </div>
+                    <!-- /.content -->
+                    <aside class="col-md-4 col-sm-12 sidebar">
+                        <div class="sidebox box widget">
+                            <h2 class="comm-title">Human Rights Council</h2>
+                        </div>
+                        <!-- /.widget -->
+                        <!-- /.widget -->
+                        <div class="sidebox box widget info">
+                            <div class="chair">
+                                <img src="../style/images/mugs/mug-kanav.jpg" />
+                                <h2>Kanav Agarwal</h2>
+                                <h4>Chairperson</h4>
+                            </div>
+                            
+                            <div class="dep-chairs">
+                                <p>Ishaan Jhawar</p>
+                                <p>Hitansh Nagdev</p>
+                                <h4>Deputy Chairpersons</h4>
+                            </div>
+                        </div>
+
+                        <div class="sidebox box widget">
+                            
+                            <h2>Resources</h2>
+
+                            <div class="res">
+                                <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="1000" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
+                                <a href="../documents/country_matrix_hrc.pdf" target="_blank">Country Matrix</a><!-- New Tab -->
+                                <!--<a href="../documents/Background Guides/(DSMUN '16) Background Guide - HRC.pdf" target="_blank" download="(DSMUN '16) Background Guide - HRC">Background Guide</a> <!-- UID -->
+                                
+                                <a href="../documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a>
+                            </div>
+
+                        </div>
+                        <div id="agenda-intro">
+                          <h2>Introduction to Agenda</h2>
+                          <div class="divide20"></div>
+                          <h3>Agenda 1: The impact of terrorism on women and children rights in the Middle East and the Arabic world</h3>
+                          <p>The violation of human rights attacks the basic necessities for living/principles of the UN such as the equality and freedom of all humans. Terrorism in the Middle East has spared none. Women are being brutally assaulted, raped, killed and even being forced to turn into sexual slaves. Women’s rights are not protected in the Middle East, so much so that in some countries they are not even given the right to vote. Some are even forced to put on the ‘burqa’ or the veil which has now become a symbol of repression in the modern world.</p>
+                          <p>Children have become the most deadly weapon of the terrorist organisations, they are recruited and swayed towards terrorism and are also being sold by them. Children are not guaranteed their basic freedoms and are deprived of education as well. With the rise in terrorism in the area the major problems faced are xenophobia in general while we can also see anti-Semitism as a phenomenon; islamophobia is the new propensity on the upsurge.</p>
+                          <p>it is our prerogative to come up with a way to fight this ideological war, to break these anti-intellectual walls and to give women and children alike the respect they deserve.</p>
+                          <h3>Agenda 2: The Realisation of Rights of Persons with Disabilities</h3>
+                          <p>“For too long, they have been invisible...denied opportunity, victimised by prejudice, and excluded from everyday activities of society.” -Ted Kennedy</p>
+                          <p>Our society has created several barriers which restrict the disabled people. They are being discriminated against and are outcaste from society. The most basic freedoms like being part of an educational institution, participation in various cultural activities, to move freely, to get a job, even the right to vote is not enjoyed by the disabled people. These people generally live in poverty and their voices remain unheard. We must endeavor to achieve that the disabled people are considered equal in every strata of society and attain the dignity that every individual is entitled to.</p>
+                        </div>
+                        <div class="sidebox box widget">
+                            <h5> Contact Me: chair.hrc@doonschool.com </h5>
+                        </div>
+                        <!-- /.widget -->
+                        
+                        <!-- /.widget -->
+                        <!-- /.widget --> 
+                    </aside>
+                    <!-- /column .sidebar --> 
+                </div>
+                 <!-- /.blog --> 
+            </div>
+            <!-- /.container --> 
+        </div>
+        <!-- /.body-wrapper --> 
+        <script src="../style/js/jquery.min.js"></script> 
+        <script src="../style/js/bootstrap.min.js"></script> 
+        <script src="../style/js/jquery.themepunch.tools.min.js"></script> 
+        <script src="../style/js/classie.js"></script> 
+        <script src="../style/js/plugins.js"></script> 
+        <script src="../style/js/scripts.js"></script>  
+        <script>
+            $.backstretch(["../style/images/art/bg3.jpg"]);
+        </script>
+    </body>
+</html>

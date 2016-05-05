@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../style/images/favicon.png">
+        <title>United Nations Special Committee on Palestine - DSMUN '16</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../style/css/plugins.css" rel="stylesheet">
+        <link href="../style/css/prettify.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
+        <link href="../style/css/color/aqua.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="../style/type/fontello.css" rel="stylesheet">
+        <link href="../style/type/budicons.css" rel="stylesheet">
+        <link href="style/css/custom.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="style/js/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="full-layout">
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="../style/images/logo.png" alt="" data-src="../style/images/logo.png" data-ret="../style/images/logo@2x.png" class="retina" /></a> </div>
+                    <!-- /.navbar-brand --> 
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
+                        
+                    </ul>
+                    <!-- /.navbar-nav --> 
+                </div>
+                <!-- /.navbar-collapse -->
+                
+                <!-- /#elsewhere --> 
+            </nav>
+            <!-- /.navbar -->
+            <div class="container inner">
+                <div class="single blog row">
+                    <div class="col-md-8 col-sm-12 content">
+                        <div class="blog-posts">
+                            <div class="post box">
+                                <p>
+                                    Dear delegates,
+                                </p>
+                                <p>As the Chairperson of the United Nations Special Committee on Palestine, it is both my honour and privilege to welcome you to the 10th annual DSMUN Conference. My name is Dhruv Kharabanda and I am currently a student of the 12th Grade studying the IB Diploma. I am passionate about history, politics and football. Apart from this my interests lie in acting, quizzing, writing and of course, Model UN. I began MUNning when I was in Grade 10 and since then I have attended various conferences, both national and international. In the time that I have spent MUNning I have grown a special attachment towards crisis committees that have an agenda with significant political and diplomatic implications. It is with this idea in mind that this committee was thought of.</p>
+                                <p>The Israeli-Palestine issue can be considered to be one of the most contentious and globally engaging issues of modern times. Encompassing countries ranging from Saudi Arabia to United States of America, the conflict between the two has always led to great tensions. The conflict as we know it today (the formation of Israel) has its roots in the UNSCOP meeting of 1947.</p>
+                                <p>We at DSMUN, make an effort to make the committees more interesting and engaging and it is with this ideal in mind that this year the UNSCOP will be executed a bit differently. The original composition of the UNSCOP was 11 member states but in this updated version where we have taken the liberty to manipulate a few historical facts we shall have 30 member states including the Powerful 5 and the countries of the Arab world.</p>
+                                <p>Lobbying remains at the crux of every MUN experience. As your chairperson, I will not only expect a high level of debate but will also judge the ability to lobby, cooperate and reach a pragmatic and practical solution on the Issue of Palestine.</p>
+                                <p>In the end, I would just like to say that I am looking forward to seeing all of you at Chandbagh in August. The committees are obviously the most important part of the DSMUN Conference, but at the same time I will expect all of you to have fun and enjoy the beauty of monsoon at Chandbagh.</p>
+                                <div class="signing-off">
+                                  <p class="line-height">Regards,</p>
+                                  <img src="../style/images/signs/kharbanda.png" width=130 height=100>
+                                  <p class="line-height">Dhruv Kharbanda</p>
+                                  <p class="line-height">Chairperson - UNSCOP</p>
+                                  <p class="line-height">DSMUN '16</p>
+                                </div>
+                                <!-- /.share --> 
+                            </div>
+                            <!-- /.post --> 
+                        </div>
+                       
+                        <!-- /.comment-form-wrapper --> 
+                    </div>
+                    <!-- /.content -->
+                    <aside class="col-md-4 col-sm-12 sidebar">
+                        <div class="sidebox box widget">
+                            <h2 class="comm-title">United Nations Special Committee on Palestine</h2>
+                        </div>
+                        <!-- /.widget -->
+                        <!-- /.widget -->
+                        <div class="sidebox box widget info">
+                            <div class="chair">
+                                <img src="../style/images/mugs/mug-kharbanda.jpg" />
+                                <h2>Dhruv Kharbanda</h2>
+                                <h4>Chairperson</h4>
+                            </div>
+                            
+                            <div class="dep-chairs">
+                                <p>Vedant Mehra</p>
+                                <p>Jaideep Gill</p>
+                                <h4>Deputy Chairpersons</h4>
+                            </div>
+                        </div>
+
+                        <div class="sidebox box widget">
+                            
+                            <h2>Resources</h2>
+
+                            <div class="res">
+                                <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="600" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
+                                <a href="../documents/country_matrix_unscop.pdf" target="_blank">Portfolio Matrix</a><!-- New Tab -->
+                                <!--<a href="../documents/Background Guides/(DSMUN '16) Background Guide - JCC-HIN.pdf" target="_blank" download="(DSMUN '16) Background Guide - JCC-HIN">Background Guide</a> <!-- UID -->
+                                <a href="../documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a>
+                            </div>
+
+                        </div>
+                         
+                        <div id="agenda-intro">
+                          <h2>Introduction to Agenda</h2>
+                          <div class="divide20"></div>
+                          <h3>Agenda</h3>
+                          <p>Freeze Date: 15th May, 1947</p>
+                          <p>The history of conflict in the Palestine area has lasted longer than the United Nations itself. For Centuries, the two hostile groups (Israel and Palestine) have been embroiled in territorial disputes over holy cities, such as Jerusalem, that carry great symbolic meaning for both Jewish Israelis and Muslim Arabs.</p>
+                          <p>The Special Committee on Palestine was established to conduct investigations into the proposed solutions to resolve problems in Palestine. The United Kingdom which originally brought the issue to the notice of the General Assembly for arbitration, occupied the territory in 1918. Its administration was formalised by the League of Nations under the Palestine mandate with the prerogative to carry out the Balfour Declaration to establish “in Palestine, a national home for the Jewish People, it being clearly understood that nothing should be done which might prejudice the civil and religious rights of existing non-Jewish communities in Palestine”. Despite the best intentions of the original mandate, conflict between Jews and Arabs grows each year and it is the United Nations Special Committee on Palestine’s duty to find a solution that will effectively restore peace.</p>
+                          <p>As a commission of the United Nations, UNSCOP’s main function is to draft resolutions which recommend to the parties involved proposals which will, to the best of the committee’s knowledge, guarantee peaceful the resolution of the conflict. In addition, the committee may request and consider reports pertinent to the topic of discussion but cannot establish an independent body to do so.</p>
+                        </div>
+                        <div class="sidebox box widget">
+                            <h5> Contact Me: chair.scop@doonschool.com </h5>
+                        </div>
+                        <!-- /.widget -->
+                        
+                        <!-- /.widget -->
+                        <!-- /.widget --> 
+                    </aside>
+                    <!-- /column .sidebar --> 
+                </div>
+                <!-- /.blog --> 
+            </div>
+            <!-- /.container --> 
+        </div>
+        <!-- /.body-wrapper --> 
+        <script src="../style/js/jquery.min.js"></script> 
+        <script src="../style/js/bootstrap.min.js"></script> 
+        <script src="../style/js/jquery.themepunch.tools.min.js"></script> 
+        <script src="../style/js/classie.js"></script> 
+        <script src="../style/js/plugins.js"></script> 
+        <script src="../style/js/scripts.js"></script>  
+        <script>
+            $.backstretch(["../style/images/art/bg3.jpg"]);
+        </script>
+    </body>
+</html>

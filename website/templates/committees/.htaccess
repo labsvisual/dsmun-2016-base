@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Background Guides"
+AuthUserFile /path/to/.htpasswd
+require user delegates

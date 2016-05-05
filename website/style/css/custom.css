@@ -1,0 +1,156 @@
+/* index */
+.map {
+	padding: 25em;
+}
+
+.contact-us-form p:first-child {
+	padding-top: 0.5em;
+}
+
+.contact-line-height:not(.not) {
+	line-height: 4px;
+}
+
+.not:not(first-child) {
+	padding-top: 10px;
+}
+
+.not {
+	line-height: 5px;
+}
+
+.signing-off p:nth-child(3) {
+	font-size: 85%;
+	font-style: italic;
+}
+
+.signing-off p:nth-child(4) {
+	font-size: 80%;
+	font-weight: bold;
+}
+
+.line-height {
+	line-height: 3px;
+}
+
+.secgen-conti {
+	text-align: center;
+	font-weight: 100;
+}
+
+.secgen-conti>h4 {
+	padding-top: 1em;
+	font-size: 24px;
+}
+
+.secgen-conti>h5 {
+	padding-top: 0.25em; 
+}
+
+#elsewhere, #agenda-intro, #update-papers {
+	display: none;
+}
+
+.clr-white, #agenda-intro>h2, #update-papers>h2 {
+	color: white;
+}
+
+.hero-sub {
+	z-index: 3; 
+	max-width: auto; 
+	max-height: auto; 
+	white-space: nowrap; 
+	font-family: "Khmer UI",sans-serif;
+}
+
+#about-dsmun > .box, .tab-block, .address {
+	text-align: justify;
+}
+
+.about-tag {
+	font-size: 18px;
+	text-align: center;
+}
+
+iframe {
+	margin-left: 16%;
+	padding-bottom: 1em;
+}
+
+.facts p {
+	font-family: 'Khmer UI', sans-serif;
+}
+
+.more-info {
+	padding-top: 2em;
+	font-size: 18px;
+	text-align: center;
+}
+
+.signing-off img {
+	padding-bottom: 0.75em;
+}
+
+.grid-container {
+	height: 788px;
+}
+
+.cbp-item {
+	width: 200px;
+	transform: translate3d(0px, 0px, 0px);
+	opacity: 1;
+}
+
+ /* committees */
+ .not:not(first-child) {
+ 	padding-top: 10px;
+ }
+.not {
+	line-height: 5px;
+}
+
+.signing-off p:nth-child(3) {
+	font-size: 85%;
+	font-style: italic;
+}
+
+.signing-off p:nth-child(4) {
+	font-size: 80%;
+	font-weight: bold;
+}
+
+.line-height {
+	line-height: 3px;
+}
+.res a {
+	display: block;
+}
+
+.chair > h2{
+	padding-top: 1em;
+	line-height: 3px;
+}
+.chear > h4 {
+	line-height: 3px;
+}
+
+.dep-chairs {
+	padding-top: 2em;
+}
+
+.dep-chairs p {
+	line-height: 4px;
+}
+
+.dep-chairs > h4 {
+	font-size: 90%;
+	line-height: 5px;
+}
+
+.info {
+	text-align: center;
+}
+
+.comm-title {
+	text-transform: uppercase;
+}

@@ -15,7 +15,6 @@ const model = thinky.createModel( 'conference', {
 
     registration: {
 
-        name: type.string(),
         delegationSize: type.number(),
         countryPreference: type.array(),
 

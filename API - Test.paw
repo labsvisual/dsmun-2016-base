@@ -84,7 +84,7 @@
         <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z113"></relationship>
     </object>
     <object type="LMENVIRONMENTVARIABLEVALUE" id="z105">
-        <attribute name="value" type="string">c6QF2X50daI5hvlLupxpYKKeqjyuT6AI</attribute>
+        <attribute name="value" type="string">ANUmj5owe6acjA445pwPkY17UrLhIiWb</attribute>
         <relationship name="environment" type="1/1" destination="LMENVIRONMENT" idrefs="z114"></relationship>
         <relationship name="variable" type="1/1" destination="LMENVIRONMENTVARIABLE" idrefs="z116"></relationship>
     </object>
@@ -188,7 +188,7 @@
     </object>
     <object type="LMREQUEST" id="z117">
         <attribute name="uuid" type="string">0E670DB3-081B-4307-AEE6-4284A662EC18</attribute>
-        <attribute name="url" type="string">http://api.base.dsmun.com:3345/conferences/e5c00b04-7ea1-45c2-8e91-f0a100197b6b</attribute>
+        <attribute name="url" type="string">http://api.base.dsmun.com:3345/conferences/6aaa9e30-dc2e-485a-bf45-4578f0791861</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -196,7 +196,7 @@
         <attribute name="method" type="string">PUT</attribute>
         <attribute name="followredirects" type="bool">0</attribute>
         <attribute name="clientcertificate" type="string">[{"data":{"mode":0},"identifier":"com.luckymarmot.CertificateDynamicValue"}]</attribute>
-        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["data"],[{"data":{"json":"{\\"registration\\":{\\"countryPreference\\":[\\"India\\",\\"China\\"],\\"name\\":\\"Shreyansh Pandey\\",\\"isFormFilled\\":true},\\"isConfirmed\\":false,\\"delegateInformation\\":{\\"delegates\\":[{\\"name\\":\\"Shreyansh Pandey\\",\\"committee\\":\\"DISEC\\",\\"gender\\":\\"male\\",\\"mealPreference\\":\\"veg\\",\\"isCommitteeConfirmed\\":false,\\"delegateGuid\\":\\"Hello\\"}]}}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["data"],[{"data":{"json":"{\\"registration\\":{\\"countryPreference\\":[\\"India\\",\\"China\\"],\\"name\\":\\"Shreyansh Pandey\\",\\"isFormFilled\\":true},\\"isConfirmed\\":true,\\"delegateInformation\\":{\\"delegates\\":[{\\"name\\":\\"Shreyansh Pandey\\",\\"committee\\":\\"DISEC\\",\\"gender\\":\\"male\\",\\"mealPreference\\":\\"veg\\",\\"isCommitteeConfirmed\\":false,\\"delegateGuid\\":\\"Hello\\"}]}}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
         <attribute name="order" type="int64">3</attribute>
         <attribute name="name" type="string">Update Conference</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../style/images/favicon.png">
+        <title>16th Lok Sabha - DSMUN '16</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../style/css/plugins.css" rel="stylesheet">
+        <link href="../style/css/prettify.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
+        <link href="../style/css/color/aqua.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="../style/type/fontello.css" rel="stylesheet">
+        <link href="../style/type/budicons.css" rel="stylesheet">
+        <link href="style/css/custom.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="style/js/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="full-layout">
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="../style/images/logo.png" alt="" data-src="../style/images/logo.png" data-ret="../style/images/logo@2x.png" class="retina" /></a> </div>
+                    <!-- /.navbar-brand --> 
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
+                        
+                    </ul>
+                    <!-- /.navbar-nav --> 
+                </div>
+                <!-- /.navbar-collapse -->
+                
+                <!-- /#elsewhere --> 
+            </nav>
+            <!-- /.navbar -->
+            <div class="container inner">
+                <div class="single blog row">
+                    <div class="col-md-8 col-sm-12 content">
+                        <div class="blog-posts">
+                            <div class="post box">
+                                <p>
+                                    Dear Delegates,
+                                </p>
+                                <p>Welcome to the Indian Parliament; a place where shoes are flung, microphones are broken and history is made. I will be serving as the speaker of this glorious body of the Lok Sabha in DSMUN ’16.</p>
+                                <p>Before I go on talking of the committee, a little about myself. I first started MUN’ing back in the 9th grade as a member of the media team here at DSMUN. Since then MUN has taken me from France in 1789 to China in 2030. Aside from MUN, my interests lie in playing the Saxophone, quizzing and of course politics.</p>
+                                <p>Politics is an art which every human lives by, some voluntarily do so while some don’t, however it governs every individual’s thinking and decision making. While representing your various parties and constituencies, you must all keep in mind the essentials for politics. As representatives of not only your political parties but also of the people of our country, it must be everybody’s prerogative to ensure the welfare of our great nation. The Indian Parliament is an amalgamation of some of the most diverse individuals, not just by cultures but by ideologies as well. It is because of the presence of these differences that I must remind you all of the existence of the extremely fine line between a democracy and an anarchy, as well as the very fine line between an autocracy and a democracy. Therefore, be outspoken however for the betterment of your own constituents before your own personal prejudices as the assembly is only as strong as its members.</p>
+                                <p>I hope you share my excitement to be a part of this Assembly and that you shall do your best to ensure that this committee is brimming with intellectual debate, diplomatic negotiations and a fair share of entertainment. My email is given below so feel free to email me with any queries.</p>
+                                <div class="signing-off">
+                                  <p class="line-height">Best,</p>
+                                  <img src="../style/images/signs/johri.png" width=180 height=110>
+                                  <p class="line-height">Dhruv Johri</p>
+                                  <p class="line-height">Speaker - LS</p>
+                                  <p class="line-height">DSMUN '16</p>
+                                </div>
+                                <!-- /.share --> 
+                            </div>
+                            <!-- /.post --> 
+                        </div>
+                       
+                        <!-- /.comment-form-wrapper --> 
+                    </div>
+                    <!-- /.content -->
+                    <aside class="col-md-4 col-sm-12 sidebar">
+                        <div class="sidebox box widget">
+                            <h2 class="comm-title">Indian Parliament: 16th Lok Sabha</h2>
+                        </div>
+                        <!-- /.widget -->
+                        <!-- /.widget -->
+                        <div class="sidebox box widget info">
+                            <div class="chair">
+                                <img src="../style/images/mugs/mug-johri.jpg" />
+                                <h2>Dhruv Johri</h2>
+                                <h4>Speaker</h4>
+                            </div>
+                            
+                            <div class="dep-chairs">
+                                <p>Shikhar Trivedi</p>
+                                <p>Salman Mallick</p>
+                                <h4>Deputy Speakers</h4>
+                            </div>
+                        </div>
+
+                        <div class="sidebox box widget">
+                            
+                            <h2>Resources</h2>
+
+                            <div class="res">
+                                <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="1000" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
+                                <a href="../documents/country_matrix_ls.pdf" target="_blank">Portfolio Matrix</a> <!-- New Tab -->
+                                <!--<a href="../documents/Background Guides/(DSMUN '16) Background Guide - ICJ.pdf" target="_blank" download="(DSMUN '16) Background Guide - ICJ">Background Guide</a> <!-- UID -->
+                                <a href="../documents/rules_of_procedure_ls.pdf" target="_blank" >Rules of Procedure</a> <!-- UID -->
+                            </div>
+
+                        </div>
+                         
+                        <div id="agenda-intro">
+                          <h2>Introduction to Agenda</h2>
+                          <div class="divide20"></div>
+                          <h3>Agenda 1: Kashmir</h3>
+                          <p>India is nation which over the years has somewhat developed, if not earned a reputation for featuring various separatist movements. Now there are various links between these movements, from Khalistan to the demand for a united North East, however the oldest and probably the most convoluted of these conflicts is the Kashmir issue. The seeds for the turmoil in Kashmir were first sown in 1947 at the very partition of India with the inclusion of article 370, which granted the area of Kashmir ‘special autonomous statuses. Yes it wouldn't be for another twenty years before the separatists emerged following the 1987 Jammu and Kashmir elections, however I wouldn't limit this conflict to just one between India and Pakistan as China to plays a large role in the region. So I would advise all delegates to prepare wisely.</p>
+                          <h3>Agenda 2: Sedition</h3>
+                          <p>Section 124-A of the Indian penal code talks about how if somebody is found to be attempting to bring hatred or contempt towards the government of India, he may be imprisoned or fined. Now on a very denotative level, this law seems to against the very ethos of nation which practices the freedom of speech. Such was the nationwide debate which sparked after the recent protests at the Jawaharlal Nehru campus. One way to look at this issue is as stated above. However, the opposing perspective that was professed by the government of India was that the protests were anti-national in nature. Home minister Rajnath Singh informed the public of possible links between the Laskar-e-Taiba and the protests. So the question arises, if the protests really were anti-national, then was the Sedition law relevant? A piece advice I would give to all delegates before the  committee is not to limit ones research just to the JNU crisis, there are other instances where this law has been successful and so are worth looking at.</p>
+                        </div>
+                        <div class="sidebox box widget">
+                            <h5> Contact Me: chair.ls@doonschool.com </h5>
+                        </div>
+                        <!-- /.widget -->
+                        
+                        <!-- /.widget -->
+                        <!-- /.widget --> 
+                    </aside>
+                    <!-- /column .sidebar --> 
+                </div>
+                <!-- /.blog --> 
+            </div>
+            <!-- /.container --> 
+        </div>
+        <!-- /.body-wrapper --> 
+        <script src="../style/js/jquery.min.js"></script> 
+        <script src="../style/js/bootstrap.min.js"></script> 
+        <script src="../style/js/jquery.themepunch.tools.min.js"></script> 
+        <script src="../style/js/classie.js"></script> 
+        <script src="../style/js/plugins.js"></script> 
+        <script src="../style/js/scripts.js"></script>  
+        <script>
+            $.backstretch(["../style/images/art/bg3.jpg"]);
+        </script>
+    </body>
+</html>

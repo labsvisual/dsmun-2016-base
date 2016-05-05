@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="style/images/favicon.png">
+        <title>Report - DSMUN '14</title>
+        <!-- Bootstrap core CSS -->
+        <link href="style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style/css/plugins.css" rel="stylesheet">
+        <link href="style/css/prettify.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="style/css/color/aqua.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="style/type/fontello.css" rel="stylesheet">
+        <link href="style/type/budicons.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="style/js/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="full-layout">
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand text-center"> <a href=""><img src="style/images/logo.png" alt="" data-src="style/images/logo.png" data-ret="style/images/logo@2x.png" class="retina" /></a> </div>
+                    <!-- /.navbar-brand --> 
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./#home" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
+                    </ul>
+                    <!-- /.navbar-nav --> 
+                </div>
+                <!-- /.navbar-collapse -->
+                                <!-- /#elsewhere --> 
+            </nav>
+            <!-- /.navbar -->
+            <div class="container inner">
+                <div class="blog list-view row">
+                    <div class="col-md-8 col-sm-12 content">
+                        <div class="blog-posts">
+                            <div class="post box">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h1>DSMUN 2014</h1>
+                                        <h3>A glimpse of last year's conference.</h3>
+                                    </div>    
+                                </div>        
+                            </div>
+                            <div class="post box">
+                                
+                                <div class="row">
+                                    <h2 class="post-title" style="text-align: center;">Report</h2>
+                                    <div class="col-sm-12 post-content">
+                                        <p><b>Devansh Agarwal</b> is a student of Class 12th pursuing the International Baccalaureate Diploma Programme. Currently studying English and Economics at the higher level, Devansh is an avid commentator on international politics in his capacity as the Editor of The Doon School Weekly, the schools flagship publication.</p>
+                                        <p>He has been involved in Model United Nations since class 9th. Devansh has attended various national and international conferences bringing excellence to the field of MUN in school. Out of the various conferences that have been attended by him, his highlights have been winning an honorable mention at Harvard MUN Boston and several Best Delegate awards at national conferences such as IIMUN. Devansh has also been a part of the IIMUN and DSMUN executive boards in the capacity of a chairperson. He has specialized in general assembly committees with his primary focus and passion being lobbying. </p>
+                                        <p>Apart from his experience in the field of MUN, he has had the honor of representing the nation at the renowned World Individual Debating and Public Speaking Championship. His current portfolio also comprises prestigious positions such as House Captain, School Debating Secretary and Senior Representative in the School Council. His interests also lie in the field of dramatics as well as music and to that end he is the Director of his House's One Act Play and the Editor-in-Chief of the School's performing arts publication, VIBGYOR. He is a voracious reader and, in his capacity as the Editor of the school's economics journal, the Econocrat, he  particularly enjoys reading about economics. His other interests lie in sports, computer programming and the stock market.</p>
+                                    </div>
+                                    <!-- /column -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.post -->
+                      
+                            <div class="post box">
+                                <div class="row">
+                                    
+                                    <!-- /column -->
+                                     <div class="col-sm-7">
+                                            <h2 class="post-title" style="text-align: center;">Committees</h2>
+                                            <div class="panel-group" id="accordion">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" style="text-align: center" href="#collapseOne">United Nations Security Council (SC)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                                        <div class="panel-body"> 
+                                                          <p> <b>Chairperson:</b> Pulkit Agarwal</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>The Crisis in Crimea</li>
+                                                                  <li>Libyan Crisis</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Russian Federation (The Doon School, Dehradun)</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseTwo">United Nations Human Rights Council (HRC)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                          <p> <b>Chairperson:</b> Gaurav Kothari</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Right to Food</li>
+                                                                  <li>Child Labor</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Cote D'Ivoire (Aitchison College, Lahore)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseThree"> North Atlantic Treaty Organization - Shanghai Cooperation Organisation Peace Summit, 2o20 (NATO - SCO)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseThree" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Palash Kanwar</p>
+                                                           <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>US-Afghanistan 2017</li>
+                                                                </ul>
+                                                            </p>
+                                                          
+                                                            <p><b>Best Delegate Award:</b> Russian Federation (The Doon School, Dehradun)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseFour">United Nations Environment Programme (UNEP)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseFour" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Arush Sood</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Natural Disaster Risk Reduction</li>
+                                                                  <li>Revival of the Oceans</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> France (Sanskriti School, New Delhi)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseFive">All Indian Political Parties Meet, 1947 (AIPPM - 1947)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseFive" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Syed Muhammad Amaan Kazmi</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Analyzing the future of India after independence and the prospects of a partition.</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Mohd. Ali Jinnah (Pinegrove School, Kasauli)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseSix">All Indian Political Parties Meet, 2014 (AIPPM - 2014)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseSix" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Vrindam Nagpal</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Discussion of Section 377</li>
+                                                                  <li>The Kashmir Issue - Discussing the relevance of Article 370 </li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Lalu Prasad Yadav (Genesis Global School, Noida)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseSeven">Economic and Financial Affairs Council (ECOFIN)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseSeven" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Yash Upadhyay</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Regulation and marginalization of transactions involving crypto currencies.</li>
+                                                                  <li>Reviewing the possibility of centralized regulation of natural resources for promoting sustainable development and greater economic stability in the years to come.</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Russian Federation (The Doon School, Dehradun)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseEight">Disarmament and International Security Committee (DISEC)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseEight" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Sachin Mehra</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Militarization of the Arctic</li>
+                                                                  <li>Disputes over territorial claims</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Brazil (Aitchison College, Lahore), United States of America (The British School, New Delhi)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseNine">Organization of Islamic Cooperation (OIC)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseNine" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Devansh Agarwal</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Restructuring of the Sharia Law in order for it to adapt to then 21st Century</li>
+                                                                  <li>Source of sustainability for the Middle Eastern nations once the oil reserves are depleted </li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Kuwait (Welham Boys' School, Dehradun)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseTen">World Health Organization (WHO)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseTen" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Abhayraj Jain</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                 <li>Propagation of Diseases in Developing Nations</li>
+                                                                  <li>Question of the Legality of International Organ Trade</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Egypt (Mayo College Girls' School, Ajmer), France (Aitchison College, Lahore)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseEleven">Historical General Assembly (HGA)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseEleven" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Divyansh Goel</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>The Admission of People’s Republic of China to the UN</li>
+                                                                  <li>The Suez Crisis</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> Union of Soviet Socialist Republics (The Doon School, Dehradun)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseTwelve">Intelligence Agencies Meet (IAM)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseTwelve" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Prabnur Singh Bal</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Possibility of international co-operation for intelligence</li>
+                                                                  <li>Platform for Extradition</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> INIS Iraq (The Modern School, New Delhi)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseThirteen">Special Political and Decolonization Committee (SPECPOL)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseThirteen" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Armaan Imam</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Indo-China border disputes</li>
+                                                                  <li>Somali pirates</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> India (Aitchison College, Lahore), Ukraine (Welham Boys' School, Dehradun)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseFourteen">G-20 Summit (G-20)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseFourteen" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Abhinav Kejriwal</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>The 'spillover' effect of the global economy</li>
+                                                                  
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> United States of America (The British School, New Delhi)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" style="text-align: center" href="#collapseFifteen">International Press Corps (IPC)</a> </h4>
+                                                    </div>
+                                                    <div id="collapseFifteen" class="panel-collapse collapse">
+                                                        <div class="panel-body"> 
+                                                           <p> <b>Chairperson:</b> Aditya Bhattacharya</p>
+                                                          <p><b>Agendas:</b>
+                                                                <ul class="circled">
+                                                                  <li>Reportage of all the Committees in order to publish a comprehensive document in the style of allotted News Agencies</li>
+                                                                </ul>
+                                                            </p>
+                                                            <p><b>Best Delegate Award:</b> The Times of India (The Doon School, Dehradun)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                          </div>
+                                      </div>
+                                    <!-- /column -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <div class="post box">
+                                <div class="row">
+                                    <h2 class="post-title" style="text-align: center;">Gallery</h2>
+                                    
+                                    <!-- /column -->
+                                                                            <div class="col-sm-12 post-content">
+                                                                               <div id="cp_widget_9ee310f7-6635-40de-8553-d9c70bfc16ef">...</div><script type="text/javascript">
+                                        var cpo = []; cpo["_object"] ="cp_widget_9ee310f7-6635-40de-8553-d9c70bfc16ef"; cpo["_fid"] = "AAEAFYMoJb7s";
+                                        var _cpmp = _cpmp || []; _cpmp.push(cpo);
+                                        (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+                                        cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+                                        var c = document.getElementsByTagName("script")[0];
+                                        c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='http://www.cincopa.com/video-hosting'>Video Hosting for Business</a> solution.<span>New Gallery 2015/3/28</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>cameramake</span><span> Canon</span><span>height</span><span> 3000</span><span>orientation</span><span> 1</span><span>flash</span><span> 16</span><span>originaldate</span><span> 8/15/2014 8:20:25 PM</span><span>width</span><span> 4000</span><span>cameramodel</span><span> Canon IXUS 105</span></noscript>
+                                                                            </div>
+                                    <!-- /column -->
+                                </div>
+
+                                <!-- /.row -->
+                            </div>
+                            
+                        </div>   
+                    </div>
+                </div>
+                  <aside class="col-md-4 col-sm-12 sidebar">
+                        <div class="sidebox box widget">
+                             <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+                                     <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+                                     <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=(""+window.location).replace(/'/g,"%27") || hcb_user.PAGE, h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+                        </div>
+                        <!-- /.widget -->
+                        <!-- /.widget -->
+                       </aside>
+                <!-- /.blog --> 
+            </div>
+            <!-- /.container --> 
+        </div>
+        <!-- /.body-wrapper --> 
+        <script src="style/js/jquery.min.js"></script> 
+        <script src="style/js/bootstrap.min.js"></script> 
+        <script src="style/js/jquery.themepunch.tools.min.js"></script> 
+        <script src="style/js/classie.js"></script> 
+        <script src="style/js/plugins.js"></script> 
+        <script src="style/js/scripts.js"></script>  
+        <script>
+            $.backstretch(["style/images/art/bg3.jpg"]);
+        </script>
+    </body>
+</html>
