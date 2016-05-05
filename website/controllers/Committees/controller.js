@@ -1,9 +1,9 @@
 const handlers = {
 
-    showPage( request, response ) {
+    showPage( request, reply ) {
 
         const { committeeName } = request.params;
-        console.log( committeeName );
+        reply.view( 'index' );
 
     }
 

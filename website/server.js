@@ -20,10 +20,44 @@ const server = new Hapi.Server()
 // ---------- SERVICE REGISTERS ---------------
 
 server.register( require( 'inert' ), () => {} );
+server.register( require( 'vision' ), () => {
+
+    server.views( {
+
+        engines: {
+
+            view: require( 'handlebars' )
+
+        },
+
+        relativeTo: __dirname,
+        path: 'views'
+
+    } );
+
+} );
 
 // / ------------------------------------------
 
 server.connection( conf.hapiConfig );
+
+server.route( {
+
+    path: '/public/{path*}',
+    method: 'GET',
+    handler: {
+
+        directory: {
+
+            path: './views/static',
+            listing: false,
+            index: false
+
+        }
+
+    }
+
+} );
 
 middleware( server );
 routes( server );

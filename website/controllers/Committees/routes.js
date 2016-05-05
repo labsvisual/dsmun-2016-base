@@ -4,7 +4,7 @@ const routes = [
 
     {
 
-        path: '/{committeeName}',
+        path: '/view/{committeeName}',
         method: 'GET',
         handler: controller.showPage
 

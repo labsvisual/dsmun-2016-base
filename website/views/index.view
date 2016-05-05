@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="style/images/favicon.png">
+        <title>DSMUN '16</title>
+        <!-- Bootstrap core CSS -->
+        <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+        <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/style/css/plugins.css" rel="stylesheet">
+        <link href="/public/style/css/prettify.css" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
+        <link href="/style/css/color/aqua.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="/style/type/fontello.css" rel="stylesheet">
+        <link href="/style/type/budicons.css" rel="stylesheet">
+        <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.16.4/mediaelementplayer.css" />
+        <link href="/style/css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.16.4/mediaelement-and-player.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.16.4/mediaelement.min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-61188961-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="style/js/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="full-layout">
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand text-center"> <a href=""><img src="style/images/logo.png" alt="" data-src="style/images/logo.png" data-ret="style/images/logo@2x.png" class="retina" /></a> </div>
+                    <!-- /.navbar-brand -->
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="current"><a href="#home" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
+                        <li><a href="#about-dsmun" class="hint--right" data-hint="About DSMUN"><i class="budicon-network"></i><span>About DSMUN</span></a></li>
+                        <li><a href="#secgen" class="hint--right" data-hint="Addressals"><i class="budicon-note-4"></i><span>Addressals</span></a></li>
+                        <li><a href="#committees" class="hint--right" data-hint="Committees & Agendas"><i class="budicon-grid"></i><span>Committees & Agendas</span></a></li>
+                        <!-- <li><a href="meet" class="hint--right" data-hint="Meet the Team"><i class="budicon-authors"></i><span>Meet the Team</span></a></li> -->
+                        <!-- <li><a href="#contact" class="hint--right" data-hint="Contact Us"><i class="budicon-telephone"></i><span>Contact Us</span></a></li> -->
+                        <li><a href="#info" class="hint--right" data-hint="Other Information"><i class="budicon-book-4"></i><span>Other Information</span></a></li>
+                        <li><a href="#contact" class="hint--right" data-hint="Contact Us"><i class="budicon-telephone"></i><span>Contact Us</span></a></li>
+                    </ul>
+                    <!-- /.navbar-nav -->
+                </div>
+                <!-- /.navbar-collapse -->
+                <div id="elsewhere">
+                    <h1>Contact Us</h1>
+                    <div class="contact-us-form">
+
+                      <p class="contact-line-height">The Doon School</p>
+                      <p class="contact-line-height">Mall Road</p>
+                      <p class="contact-line-height">Dehradun - 248001</p>
+                      <p class="contact-line-height">Uttrakhand, India</p>
+                      <p class="contact-line-height not">e-Mail: dsmun@doonschool.com</p>
+                      <p class="contact-line-height not">Contact No.: +91 9760013831</p>
+
+                    </div>
+                </div>
+                <!-- /#elsewhere -->
+            </nav>
+            <!-- /.navbar -->
+            <section id="home" class="naked">
+                <div class="fullscreenbanner-container revolution">
+                    <div class="fullscreenbanner">
+                        <ul>
+                            <li data-transition="fade">
+                                <img src="style/images/dummy.png"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="repeat">
+                                <h1 class="tp-caption caption large sfb" data-x="center" data-y="center" data-voffset="-25" data-speed="900" data-start="1000" data-endspeed="100" data-easing="Sine.easeOut">The Doon School Model United Nations Conference '16</h1>
+                                <h3 class="tp-caption caption clr-white" data-x="center" data-y="center" data-voffset="20" data-speed="900" data-start="1000" data-endspeed="100" data-easing="Sine.easeOut">Tenth Session, 12th - 14th August</h3>
+                                <div class="tp-caption small tp-fade fadeout tp-resizeme hero-sub" data-x="center" data-y="center" data-voffset="90" data-speed="100"
+                                    data-start="1500"
+                                    data-easing="Power4.easeOut"
+                                    data-splitin="chars"
+                                    data-splitout="chars"
+                                    data-elementdelay="0.03"
+                                    data-endelementdelay="0"
+                                    data-endspeed="100"
+                                    data-endeasing="Power1.easeOut"
+                                    >Blessed are the peacemakers, for they shall be called the children of God.</div>
+                                <div class="arrow smooth"><a href="#about-dsmun"><i class="icon-down-open-big"></i></a></div>
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer"></div>
+                    </div>
+                    <!-- /.fullscreenbanner -->
+                </div>
+                <!-- /.revolution -->
+            </section>
+            <!-- /#home -->
+
+            <div class="container">
+                <section id="about-dsmun" >
+
+                  <div class="box">
+
+                    <h1>About DSMUN</h1>
+                    <p class="about-tag">Ties will be broken, wars will be waged, economies will collapse and history will be rewritten;<br>But above all, peace will be forged at DSMUN '15.</p>
+                    <iframe width="720" height="460" src="https://www.youtube.com/embed/BFAR7bLr1WM?vq=hd720" frameborder="0" allowfullscreen></iframe>
+                     <p >The Doon School Model United Nations Conference is one of India’s biggest and most reputed high school MUN conferences. Since its inception in 2007, the Doon School Model United Nations Society has hosted many extremely engaging, entertaining and intellectually stimulating conferences, each one of which has left a legacy behind it. Ranked amongst the top 25 high school MUN conferences around the world by BestDelegate.com, DSMUN has grown to be one of the key entries in every MUNning calendar. DSMUN has a history of attracting the best of, both, the Indian and the international delegates from the Pan-Asiatic region. DSMUN has not failed to surprise and amaze delegates with a diverse collection of committees which have included the traditional and the unconventional, the regional and the international, as well as the historic, the present and the futuristic.</p>
+                    <p>The Doon School, one of India’s most reputed and prestigious institutions, is a member of the G20 Group of Schools, The Headmasters’ and Headmistresses’ Conference, The International Boys’ Schools Coalition and the Round Square Conference. With its motto, “Knowledge our Light”, Doon aims to mold its students into leaders and gentlemen of service for the future. And it is this very aim that led to the establishment of the DSMUN Society 8 years back. Model United Nations has now become one of the largest and most popular activities in school with over 200 students being involved in it. The beautiful and serene 72-acre Chandbagh estate, on which the school is set, creates a perfect backdrop to the dire and pertinent issues being discussed annually in the Conference.</p>
+                    <p>The DSMUN Secretariat is proud to host The 10th Doon School Model United Nations Conference from the 12th to the 14th of August, 2016. Popularly referred to as DSMUN ’16, this year’s conference promises to engage delegates with 13 fascinating committees, each of which will discuss numerous relevant, thought-provoking and downright surprising agendas, as well as through social events such as the Delegate Dance, the Cultural Night and the Grand Dinner.</p>
+                    <p>Crises to keep you on your toes, unforgettable memories, interesting new people to meet and an experience worth a lifetime! DSMUN ’16 will have it all. We look forward to seeing you in Dehradun later this year as the rains bathe the Chandbagh estate in the light of knowledge.</p>
+
+
+                    <div class="row text-center services-3 facts">
+                      <div class="col-sm-3">
+                        <div class="col-wrapper"> <i class="budicon-date-1"></i>
+                          <h4>3</h4>
+                          <p>Days</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="col-wrapper"> <i class="icon-globe"></i>
+                          <h4>13</h4>
+                          <p>Committees</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="col-wrapper"> <i class="budicon-bus"></i>
+                          <h4>45</h4>
+                          <p>Schools</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="col-wrapper"> <i class="budicon-authors"></i>
+                          <h4>500</h4>
+                          <p>Delegates</p>
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <p class="more-info"><a href="#info">For more information about DSMUN '15, click here.</a></p>
+                      <!-- <p style="font-size: 18px; text-align: center;"><a href="dsmun14">Catch a glimpse of last year's conference, DSMUN '14, here.</a></p> -->
+                  </div>
+
+                </section>
+            </div>
+
+            <!-- <div class="container">
+                <section id="live-updates" >
+
+                  <div class="box" style="text-align: justify;">
+                    <h1>Live Updates</h1>
+                    <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseNine"> NEW! Conference Schedule for DSMUN '15 Released</a> </h4>
+                                    </div>
+                                    <div id="collapseNine" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                          <p>The Conference Schedule for DSMUN 2015 is out. Please download it from the link below. For any queries, feel free to contact us at <b>dsmun@doonschool.com</b></p>
+                                          <p><a href="documents/Conference Schedule - DSMUN '15.pdf" target="_blank" >Download Conference Schedule here</a> <!-- UID --><!--</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseEight"> NEW! Rules of Procedure for the 16th Lok Sabha Updated</a> </h4>
+                                    </div>
+                                    <div id="collapseEight" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>This is to inform you that the updated and new Rules of Procedure for the 16th Lok Sabha have now been uploaded. Follow this <a href="http://www.dsmun.com/committees/ls">link</a> and find the Rules of Procedure in the Resources tab. All delegates are highly recommended to read this. The rules of procedure for the Indian Parliament are very different from the MUN Rules of Procedure and therefore it is integral that you aquaint yourself to these rules. As DSMUN aims to be a progressive and realistic conference, we have drafted the rules of procedure to make them as close to the real procedure of the Lok Sabha as possible. For any queries, feel free to question your chair on <b>chair.ls@doonschool.com</b></p>
+                                          <p><a href="documents/Rules of Procedure - Indian Parliament Lok Sabha.pdf" target="_blank" >Download Rules of Procedure for Lok Sabha here</a> <!-- UID --><!--</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseSeven"> NEW! Update Paper released for International Press Corps and Special Convention on Religion and Terror </a> </h4>
+                                    </div>
+                                    <div id="collapseSeven" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>An update paper has been released for the International Press Corps. Follow this <a href="http://www.dsmun.com/committees/ipc">link</a> and find the update paper in the Update Papers link in the Resources tab. All delegates are highly recommended to read this. This update paper contains information regarding a new and more progressive <b>Committee Structure.</b></p>
+                                          <p>An update paper has been released for the Special Convention and Religion and Terror. Follow this <a href="http://www.dsmun.com/committees/scrt">link</a> and find the update paper in the Update Papers link in the Resources tab. All delegates are highly recommended to read this.
+                                          <p>Update Papers are released to inform delegates about recent developments in the concerned agendas. Chairpersons will release update papers as and when necessary and the live ticker will update you regarding the same. All update papers can be found on the specific committee pages under the Resources tab.</p>
+                                          <p><a href="documents/Background Guides/(DSMUN '15) Update Paper 1 - IPC.pdf" target="_blank" download="(DSMUN '15) Update Paper 1 - IPC">Download Update Paper for International Press Corps here</a></p>
+                                          <p><a href="documents/Background Guides/(DSMUN '15) Update Paper 1 - SCRT.pdf" target="_blank" download="(DSMUN '15) Update Paper 1 - SCRT">Download Update Paper for Special Convention on Religion and Terror here</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseSix"> Dress code for DSMUN '15 </a> </h4>
+                                    </div>
+                                    <div id="collapseSix" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>The following is the dress code for the various events at DSMUN '15</p>
+                                          <p><ul class="circled">
+                                              <p>Day 1:<ul class="circled"><li><b>Opening Ceremony:</b> Indian Formal/ Ethnic Wear</li>
+                                              <li><b>Committee Sessions:</b> Indian Formal/ Ethnic Wear</li></ul></p>
+                                              <p>Day 2:<ul class="circled"><li><b>Committee Sessions:</b> Western Formal Wear</li>
+                                              <li><b>Delegate Dance and Dinner:</b> Informal/ Casual Wear</li></ul></p>
+                                              <p>Day 3:<ul class="circled"><li><b>Committee Sessions:</b> Western Formal Wear</li>
+                                              <li><b>Closing Ceremony:</b> Western Formal Wear</li></ul></p>
+                                            </ul></p>
+                                            <p>
+                                              Delegates should note that we understand that certain circumstances would not allow to adhere to the dress code for all events. Kindly note that the accepted dress code for all events is Formal Wear (either Indian or Western). The dress code is a means to have uniformity. </p>
+                                              <p>The first day has been kept as Indian Wear day because we at DSMUN '15, despite being an international conference, are proud of being an Indian school and we want our conference to reflect the same. on the second day, delegates have the option of changing into casual clothes for the Delegate Dance as we understand it is incomfortable to dance in formal clothes. For this purpose, delegates are expected to carry their clothes with themselves at the starting of the day and they will be given place to change clothes in the school campus itself.
+                                              We highly recommend all delegates to adhere to the dress code.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseFive"> Background Guide for the Special Convention on Religion and terror uploaded </a> </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>The Background for the Special Convention on Religion and Terror has been uploaded. Follow this <a href="http://www.dsmun.com/committees/scrt">link</a> and find the Background Guide in the Resources tab. We apologize for the delay and the inconvinience caused.</p>
+                                          <p>The Background Guides are a tool to help and guide delegates with their research and to allow them to understand the chairperson's perspective of the agenda and where he wishes that committee move. But the delegates should also know that the guides are a mere stepping stone towards research and only provide a base on which the delegates are expected to build up.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseThree"> Update Paper released for The United Nations Security Council </a> </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>An update paper has been released for the United Nations Security Council. Follow this <a href="http://www.dsmun.com/committees/sc">link</a> and find the update paper in the Update Papers link in the Resources tab. All delegates are highly recommended to read this. This update paper contains information regarding <b>ISIL, Boko Haram and the South China Sea.</b></p>
+                                          <p>Update Papers are released to inform delegates about recent developments in the concerned agendas. Chairpersons will release update papers as and when necessary and the live ticker will update you regarding the same. All update papers can be found on the specific committee pages under the Resources tab.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseFour"> Facebook Committee Groups </a> </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>The Facebook Groups for Committees are being made by the Chairpersons. We request all delegates to join their respective groups. The name of the groups are in the format "Full Committee Name - DSMUN '15". As these groups are closed and only limited to delegates that are part of those committees, you would have to send a request to join the committee which the Chairperson will have to accept</p>
+                                          <p>These groups are an important forum for discussion, debate and most importantly introduction with the other delegates and the Exceutive Board before the conference actually statrs. All delegates are expected to be active on these groups. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseOne"> Background Guides Uploaded </a> </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>The Background Guides for all committees have been uploaded. Refer to the respective <a href="#committees">committee pages</a> and follow the link to the Background Guide in the Resources tab.</p>
+                                          <p>The Background Guides are a tool to help and guide delegates with their research and to allow them to understand the chairperson's perspective of the agenda and where he wishes that committee move. But the delegates should also know that the guides are a mere stepping stone towards research and only provide a base on which the delegates are expected to build up.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseTwo"> Deadline for submission of Position Papers </a> </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p>The deadline for submission of position papers is the <b>7th of August, 2015</b>. The Position papers must be sent either directly to the Chairperson of the specific committees by the delegates or put together in a zipped folder and sent to dsmun@doonschool.com by the Head Delegate. Delegates should not exceed the deadline. </p>
+                                          <p>Position Papers aid the Chairperson and other delegates get aquainted with the position of other committees, further allowing delegates to find other delegates with similar positions and solution. This helps in bloc formation. Delegates should also note that Position papers will be marked by the Executive Board and hold 20% weightage in the awards. </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                      </div>
+                      </div>
+
+
+
+
+                </section>
+            </div> -->
+
+                <!-- /#portfolio -->
+                <div class="container">
+                <section id="secgen">
+                    <div class="box">
+                        <h1>Secretary General's Address</h1>
+                        <div class="row">
+                            <div class="col-md-3 col-md-push-9 col-sm-12">
+                                <figure class="frame"><img src="style/images/mugs/mug-ishaan.jpg" alt="" /></figure>
+                                <div class="secgen-conti">
+                                  <h4>Ishaan Kapoor</h4>
+                                  <h5>Secretary General</h5>
+                                </div>
+                            </div>
+                            <!-- /column -->
+                            <div class="col-md-9 col-md-pull-3 col-sm-12 address">
+                                <p>Dear Delegate and Faculty Advisers and Friends of the DSMUN,</p>
+                                <p>It is with immense pride that I cordially welcome you to join us for the 10th Doon School Model United Nations Conference. We at DSMUN 2016 have put in countless hours of work to ensure that this year’s conference lives up to the promise that the name entails and look forward to hosting you for a memorable weekend at Chandbagh. This session looks at honing the true spirit of democracy and collaboration in a moderate mix of historical simulations, sanctioned UN bodies and other contemporary political committees.</p>
+                                <p>The world, as we see it today, is facing its fair share of problems; a majority of which have been created by us. At the risk of sounding overtly cynical I do see humans as a leading cause for the ad-vent of social ills as well as environmental damage. I’m also a firm believer in the ideology that within the cause of a problem lays its most viable solution. The MUN, as an idea, gives us a carni-valesque, an escape valve from the liminal space within which we-as teens- are trapped. It empowers us, for a transient phase of three short days, to make decisions that have consequences reaching far beyond what we tend to grasp. Under the guise of an MUN, we have within us the vested ability to solve problems that confound even the most experienced of scholars, in an unbiased though im-mature manner. The consequences become secondary in nature as opposed to the immediate solu-tion, in-turn exposing novel perspectives to questions that are deep rooted in history and hence, amid the disparity and feud, MUN allows us to find concurrence.</p>
+                                <p>What has worried me though is that I have seen a trend across MUNs, one that has resulted in them changing from serious simulations that sincerely work to reach feasible compromises, to a frolicking weekend of fun and socialising. The latter has also brought in the onset of excessively unreal and unconventional committees that bend and distort and become almost farcical. And all this simply for the sake of making that one weekend more “exciting”. But that isn't really and was never the real purpose of an MUN. Hence we at DSMUN, seek to find this very “excitement” as we abide by and embrace the truth. By not divulging in pulp fiction we seek to recreate the soul of a true MUN and cultivate a robust, plausible and concrete ‘simulated reality’ as opposed to whimsical conjecture.</p>
+                                <p>All that is left for me to say is that I eagerly await the arrival of the first delegates on the 12th of August through the gates of Chandbagh. I am indeed honoured to be working with such an accom-plished and hard-working team on the Executive Board and look forward to a memorable time this fall.</p>
+                                <div class="signing-off">
+                                  <p class="line-height">Warm regards,</p>
+                                  <img src="style/images/signs/ishaan.png" width=175 height=100>
+                                  <p class="line-height">Ishaan Kapoor</p>
+                                  <p class="line-height">Secretary General</p>
+                                  <p class="line-height">The Doon School Model United Nations Conference 2016</p>
+                                </div>
+                            </div>
+                            <!-- /column -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="clearfix"></div>
+                        <!-- /.services -->
+                    </div>
+                    <!-- /.box -->
+                </section>
+                </div>
+                <div class="container">
+                <section id="president">
+                    <div class="box">
+                        <h1>President's Address</h1>
+                        <div class="row">
+                            <div class="col-md-3 col-md-push-9 col-sm-12">
+                                <figure class="frame"><img src="style/images/mugs/mug-rahul.jpg" alt="" /></figure>
+                                <div class="secgen-conti">
+                                  <h4>Rahul Agarwal</h4>
+                                  <h5>President</h5>
+                                </div>
+                            </div>
+                            <!-- /column -->
+                            <div class="col-md-9 col-md-pull-3 col-sm-12 address">
+                                <p>Dear Delegates and Faculty Advisors,</p>
+                                <p>It is my utmost privilege to welcome you to the 10th session of the Doon School Model United Nations Conference. Over the years, DSMUN has grown to be one of the biggest and most competitive high school conferences in the Pan-Asiatic region; last year’s conférence had over 450 delegates from 40 schools from around the world. This year Ishaan and I have been given the chance to host you and it will be our constant endeavour to make this the most memorable conference you have ever attended. I, myself, have been involved in the DSMUN Secretariat for the past three years in various capacities ranging from an official to the Head of the Secretariat. DSMUN has always had a very special place in my heart, and I look forward to creating a truly memorable experience for you all as I organise my last MUN conference in School.</p>
+                                <p>DSMUN’16 is not only the Decennial Jubilee of the conference but is also different from the ones before in many ways. This year, not only do we have 13 of the most talented chair-persons I have had the privilege to work with, but we also have an   eclectic and diverse range of  committees- from the conventional Security Council and Disarmament and International Security committees to novel ones such as the Special Committee on Palestine and the Supreme Council of Sovereign States.</p>
+                                <p>DSMUN offers a great platform for delegates to not only showcase their intellectual prowess and diplomatic skills but also to make friends and memories for a lifetime.  When you step into the committees, you will be expected to act, talk and behave like diplomats working together to discover innovative solutions to existing issues ailing the international community. You will be bombarded by constant crises that will test your intellectual and emotional quotient as well as your ability to work under pressure. Ultimately remember that when you step into the shoes of these diplomats, our world is at stake and every action that you take will have serious consequences.</p>
+                                <p>However we do understand that all work and no play makes Jack a dull boy and so we also offer you the chance to let your hair down and socialise at events like the Cultural Night, Delegate Dance and the Grand Dinner. We hope to make DSMUN 2016 the biggest and the best conference you shall ever experience.</p>
+                                <p>But in the end do remember; as Hitler once rightly said:</p>
+                                <p><i>"When diplomacy ends, war begins"</i></p>
+                                <div class="signing-off">
+                                  <p class="line-height">Best regards,</p>
+                                  <img src="style/images/signs/rahul.png" width=150 height=85>
+                                  <p class="line-height">Rahul Agarwal</p>
+                                  <p class="line-height">President</p>
+                                  <p class="line-height">The Doon School Model United Nations Conference 2016</p>
+                                </div>
+                            </div>
+                            <!-- /column -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="clearfix"></div>
+                        <!-- /.services -->
+                    </div>
+                    <!-- /.box -->
+                </section>
+                </div>
+                <div class="container">
+                <section id="committees" class="portfolio">
+                  <div class="box">
+                    <h1>Committees</h1>
+                    <!-- /#filters-container -->
+                    <div class="clearfix"></div>
+                    <div id="grid-container" class="cbp-l-grid-masonry cbp cbp-chrome cbp-caption-fadeIn cbp-animation-quicksand cbp-cols-3 cbp-ready">
+                      <ul class="cbp-wrapper">
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/sc">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/sc.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">UN Security Council</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/scss">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/scss.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">UN Supreme Council of Sovereign States, 1939</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/disec">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/disec.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Disarmament and International Security Committee</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/au">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/au.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">African Union</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/ec">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/ec.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">European Council</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/iaea">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/iaea.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">International Atomic Energy Agency</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/hrc">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/hrc.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">UN Human Rights Council</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/ls">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/ls.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Indian Parliament: 16th Lok Sabha</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/ipc">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/ipc.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">International Press Corps</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/specpol">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/specpol.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Special Political and Decolonisation Committee</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/unscop">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/unscop.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Special Committee on Palestine, 1947</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/unodc">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/unodc.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">Office of Drugs and Crime</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                        <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/icao">
+                          <div class="cbp-caption-defaultWrap"> <img src="style/images/committee_bg/icao.jpg" alt=""> </div>
+                          <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                              <div class="cbp-l-caption-body">
+                                <div class="cbp-l-caption-title">International Civil Aviation Organization</div>
+                              </div>
+                            </div>
+                          </div>
+                          </a>
+                        </div></li>
+                      </ul>
+                    </div>
+                    <!-- /.cbp-l-grid-masonry -->
+                    <!-- <div class="cbp-l-loadMore-button"> <a href="ajax/port1-more.html" class="cbp-l-loadMore-button-link btn">LOAD MORE</a> </div> -->
+                  </div>
+                </section>
+                </div>
+                  <!-- /.box -->
+                <div class="container">
+                <section id="agenda">
+                    <div class="box">
+                        <h1>Agendas</h1>
+                        <p>An insight into the agendas being discussed at DSMUN '15</p>
+                        <div class="row">
+                            <div id="map-canvas" class="col-md-12 col-sm-12">
+                                <!-- <figure id="map-canvas"></figure> -->
+                            </div>
+                            <!-- /column -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="clearfix"></div>
+                        <!-- /.services -->
+                    </div>
+                    <!-- /.box -->
+                </section>
+                <!-- /#about -->
+                </div>
+                <div class="container">
+            <section id="info">
+                    <div class="box">
+                        <div class="row">
+                            <!-- /column -->
+                            <div class="col-sm-7">
+                            <h3 class="section-title">Other Information</h3>
+          <div class="tabs tabs-top left tab-container">
+            <ul class="etabs">
+              <li class="tab"><a href="#tab-4">Participation</a></li>
+              <li class="tab"><a href="#tab-2">Delegations</a></li>
+              <li class="tab"><a href="#tab-3">Payment Details</a></li>
+              <li class="tab"><a href="#tab-1">Awards</a></li>
+
+            </ul>
+            <!-- /.etabs -->
+            <div class="panel-container">
+              <div class="tab-block" id="tab-1">
+                <p>The individual committee awards are as follows:
+                <ul class="circled">
+                  <li>Lok Sabha and DISEC - 1 Best Delegate Award, 2 Most Outstanding Delegate Awards and 3 Honorable Mentions</li>
+                  <li>All other Committees - 1 Best Delegate Award, 1 Most Outstanding Delegate Award and 1 Honorable Mention.</li>
+                  </ul></p>
+                <p>The delegation awards are in two categories:
+                <ul class="circled">
+                  <li>Award for the Best Delegation - Large: Delegations with 10 or more that 10 delegates</li>
+                  <li>Award for the Best Delegation - Small: Delegations with less than 10 delegates</li>
+                </ul></p>
+                <p>The other awards are as follows:
+                <ul class="circled">
+                  <li>President's Award for the Best Delegation in the General Assembly Crisis</li>
+                  <li>Secretary General's Award for the Best Committee</li>
+                </ul></p>
+
+
+              </div>
+              <!-- /.tab-block -->
+              <div class="tab-block" id="tab-2">
+                <p>Each school is allowed to send one delegation only. The delegation can consist of a maximum of 17 delegates and a minimum of 6 delegates. Each delegation can be accompanied by one teacher escort/ faculty advisor. Additional teacher escorts need to paid for.</p>
+                <p>The United Nations Security Council, the Supreme Council of Sovereign States (1939) and the International Press Corps require a double delegation entry. The United Nations Security Council require special applications which is provided on the committee page. Delegates wishing to participate in this committees must fill these applications and send them to dsmun@doonschool.com</p>
+              </div>
+              <!-- /.tab-block -->
+              <div class="tab-block" id="tab-3">
+                <p>The menu on the right shows the fees for the conference that need to to be paid per school (School Registration Fee) as well as per delegate (Delegate Registration Fee). The fee mentioned includes the following:</p>
+                <p><ul class="circled">
+                  <li>Accommodation for 4 nights in a 4-star hotel in Dehradun </li>
+                  <li>All meals during the course of the conference</li>
+                  <li>Local transportation to and from the Conference Venue</li>
+                  <li>Registration Kit</li>
+                  <li>Above expenses for one Teacher Escort</li>
+                </ul></p>
+              <p>The fee for additional Teacher Escorts is the same as the individual delegate fee for the various scenarios.</p>
+              <p>The payment can be made by cheque/ draft or online via wire transfer. We strongly urge the schools to use the wire transfer facility. The details for the same are given on the dashboard.</p>
+              </div>
+              <!-- /.tab-block -->
+              <div class="tab-block" id="tab-4">
+                <p>All schools wishing to participate must confirm the same by writing to us at dsmun@doonschool.com. Schools can also confirm using the contact form given below with the appropriate subject. The confirmation email should include the school name, address, contact details (eMail id and phone number) and name of the Faculty Advisor. </a>. </p>
+                <p>All participating schools need to fill in the registration forms and submit them along with the payment to finalize participation. The registration forms have been attached along with the invite. Only after we receive the registration forms and payment that you will receive your committee - country allotments and accommodation allotments.</p>
+                <p>The deadlines for the above are as follows:
+                <ul class="circled">
+                  <li>Confirmation of Participation: 15th May, 2016</li>
+                  <li>Submission of Registration Forms and Payment: 30th June, 2016</li>
+                </ul>
+                </p>
+
+              </div>
+              <!-- /.tab-block -->
+            </div>
+            <!-- /.panel-container -->
+          </div>
+          <!-- /.tabs -->
+        </div>
+        <div class="col-md-5 col-sm-12">
+                            <h3 class="section-title">Payment Details</h3>
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle active" data-parent="#accordion" href="#collapseOne"> Indian Schools </a> </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                          <p> School Registration Fee: &#8377 15,000 /- per school</p>
+                                          <p> Delegate Registration Fee: &#8377 15,000 /- per delegate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" href="#collapseTwo"> Schools outside India & Embassy Schools </a> </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                          <p> School Registration Fee: $ 300 /- per school</p>
+                                          <p> Delegate Registration Fee: $ 300 /- per delegate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion" href="#collapseThree"> Schools making their own arrangements</a> </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                           <p> Note: This is applicable to schools making their own arrangements regarding accommodation and local transportation.</p>
+                                           <p> School Registration Fee: &#8377 8,000 or $ 175 per school</p>
+                                          <p> Delegate Registration Fee: &#8377 4,000 or $ 55 per delegate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                      </div>
+                  </div>
+                        <!-- /.row -->
+                        <div class="clearfix"></div>
+                        <!-- /.services -->
+                    </div>
+
+                    <!-- /.box -->
+                </section>
+                </div>
+
+
+                <div class="container">
+                <section id="contact">
+                    <div class="box">
+                        <h1>Contact Us</h1>
+                        <div class="divide20"></div>
+                        <div class="row text-center services-2">
+                            <div class="col-md-4 col-sm-6">
+                                <i class="budicon-map"></i>
+                                <p>The Doon School <br />
+                                    The Mall Road <br />
+                                    Dehradun - 248 001 <br />
+                                    Uttrakhand, India.
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <i class="budicon-telephone"></i>
+                                <p>+91 9760013831 <br />
+                                   +91 9708797933
+                                </p>
+                            </div>
+                            <!-- <div class="col-md-4 col-sm-6">
+                                <i class="budicon-mobile"></i>
+                                <p>00 (123) 456 78 90 <br />
+                                    00 (987) 654 32 10
+                                </p>
+                            </div> -->
+                            <div class="col-md-4 col-sm-6">
+                                <i class="budicon-mail"></i>
+                                <p> <a class="nocolor" href="mailto:dsmun@doonschool.com">dsmun@doonschool.com</a> <br />
+                                    <a class="nocolor" href="mailto:president_mun@doonschool.com">president_mun@doonschool.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.services-2 -->
+                        <div class="divide30"></div>
+                        <div class="form-container">
+                            <form class="forms">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-row text-input-row name-field">
+                                                <label>Name</label>
+                                                <input data-pigeon-validate="only-alphabets; required" id="name" type="text" name="name" class="text-input defaultText required"/>
+                                            </div>
+                                            <div class="form-row text-input-row email-field">
+                                                <label>Email</label>
+                                                <input data-pigeon-validate="email; required" id="email" type="text" name="email" class="text-input defaultText required email"/>
+                                            </div>
+                                            <div class="form-row text-input-row subject-field">
+                                                <label>Subject</label>
+                                                <input id="subject" type="text" name="subject" class="text-input defaultText"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 lp5">
+                                            <div class="form-row text-area-row">
+                                                <label>Message</label>
+                                                <textarea id="msg" name="message" class="text-area required"></textarea>
+                                            </div>
+                                            <div class="form-row hidden-row">
+                                                <input type="hidden" name="hidden" value="" />
+                                            </div>
+                                            <div class="nocomment">
+                                                <label for="nocomment">Leave This Field Empty</label>
+                                                <input id="nocomment" value="" name="nocomment" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="button-row pull-right">
+                                                <input id="submit_email" type="submit" value="Send Message" name="submit" class="btn btn-submit bm0" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 lp5">
+                                            <div class="button-row pull-left">
+                                                <input type="reset" value="Clear Message" name="reset" class="btn btn-submit bm0" />
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="v_error" id="v-error" value="Required" />
+                                        <input type="hidden" name="v_email" id="v-email" value="Enter a valid email" />
+                                        <div class="col-sm-12">
+                                          <?php
+
+                                          if (isset($_SESSION['email_send'])) {
+                                            echo "<p style=\"text-align: center;\">" . $_SESSION['email_msg'] ."</p>";
+                                          }
+
+                                          ?>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- /.form-container -->
+                    </div>
+                    <!-- /.box -->
+                </section>
+                </div>
+                <!-- /#contact -->
+                <div class="container">
+                <footer class="footer box">
+                    <p class="pull-left">© 2016 The Doon School. All rights reserved. Designed by <a href="http://dumbstruck.tk">Shreyansh Pandey</a> and <a href="http://pratinav.tk">Pratinav Bagla</a>.</p>
+                    <ul class="social pull-right">
+                        <li><a href="http://www.twitter.com/dsmundoon"><i class="icon-s-twitter"></i></a></li>
+                        <li><a href="http://www.facebook.com/dsmun15"><i class="icon-s-facebook"></i></a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </footer>
+              </div>
+                <!-- /footer -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.body-wrapper -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+        <script src="style/js/jquery.min.js"></script>
+        <script src="style/js/bootstrap.min.js"></script>
+        <script src="style/js/jquery.themepunch.tools.min.js"></script>
+        <script src="style/js/classie.js"></script>
+        <script src="style/js/plugins.js"></script>
+        <script src="style/js/scripts.js"></script>
+        <script src="style/js/map.js"></script>
+        <script src="https://cdn.jsdelivr.net/pigeon-js/1.0.1/pigeon.min.js"></script>
+        <script>
+            $.backstretch(["style/images/art/bg3.jpg"]);
+            var a = new Pigeon({
+                method: "POST",
+                action: "contactus/",
+                formElement: ".forms",
+                errorClass: "error",
+                prompt: function( element, message ) {
+                    element.className = "error"
+                    alert(element);
+                }
+            });
+        </script>
+    </body>
+</html>
