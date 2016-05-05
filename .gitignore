@@ -1,5 +1,5 @@
 node_modules/
 .DS_STORE
 trello-api
-visual_identity
+visual_identity/
 *.git
