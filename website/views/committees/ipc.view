@@ -17,7 +17,7 @@
         <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
         <link href="/public/style/type/fontello.css" rel="stylesheet">
         <link href="/public/style/type/budicons.css" rel="stylesheet">
-        <link href="style/css/custom.css" rel="stylesheet">
+        <link href="/public/style/css/custom.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="/public/style/js/html5shiv.js"></script>
@@ -35,19 +35,19 @@
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
                     <div class="navbar-brand text-center"> <a href="../"><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
-                    <!-- /.navbar-brand --> 
+                    <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="../" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
-                        
+
                     </ul>
-                    <!-- /.navbar-nav --> 
+                    <!-- /.navbar-nav -->
                 </div>
                 <!-- /.navbar-collapse -->
-                
-                <!-- /#elsewhere --> 
+
+                <!-- /#elsewhere -->
             </nav>
             <!-- /.navbar -->
             <div class="container inner">
@@ -76,12 +76,12 @@
                                   <p class="line-height">Chairperson - IPC</p>
                                   <p class="line-height">DSMUN '16</p>
                                 </div>
-                                <!-- /.share --> 
+                                <!-- /.share -->
                             </div>
-                            <!-- /.post --> 
+                            <!-- /.post -->
                         </div>
-                       
-                        <!-- /.comment-form-wrapper --> 
+
+                        <!-- /.comment-form-wrapper -->
                     </div>
                     <!-- /.content -->
                     <aside class="col-md-4 col-sm-12 sidebar">
@@ -96,7 +96,7 @@
                                 <h2>Madhav Singhal</h2>
                                 <h4>Chairperson</h4>
                             </div>
-                            
+
                             <div class="dep-chairs">
                                 <p>Aryan Chabbra</p>
                                 <p>Krishna Goyal</p>
@@ -105,7 +105,7 @@
                         </div>
 
                         <div class="sidebox box widget">
-                            
+
                             <h2>Resources</h2>
 
                             <div class="res">
@@ -113,7 +113,7 @@
                                 <a href="/public/documents/country_matrix_ipc.pdf" target="_blank">Agency Matrix</a>  <!-- New Tab -->
                                 <!--<a href="/public/documents/Background Guides/(DSMUN '16) Background Guide - IPC.pdf" target="_blank" download="(DSMUN '16) Background Guide - IPC">Background Guide</a> <!-- UID -->
                                 <a href="#update-papers" class="fancybox-inline" data-fancybox-width="600" data-fancybox-height="400">Update Papers</a> <!-- Popup -->
-                                
+
                             </div>
 
                         </div>
@@ -121,7 +121,7 @@
                           <h2>Update Papers</h2>
                           <div class="divide20"></div>
                           <h3><a href="/public/documents/Background Guides/(DSMUN '16) Update Paper 1 - IPC.pdf" target="_blank" download="(DSMUN '16) Update Paper 1 - IPC">Update Paper 1 - International Press Corps</a></h3>
-                          
+
                         </div>
                         <div class="sidebox box widget">
                             <h5> Contact Me: chair.ipc@doonschool.com </h5>
@@ -133,23 +133,23 @@
                           <p>The IPC this year will be functioning in a slightly different manner. The double delegations have been introduced to ensure interdependent journalism, and in the IPC, there will be no one journalist doing all the work. The working is as such: Delegations will be split on both days that committee is held, i.e. Day 1 and Day 2. There will be no work on Day 3, though delegations must come to committee. Through chit-picking, the delegation will receive their committees on the first day. They will then split up and present one write-up each in the style of their news agency, as well as one video recording each of an interview taken with a delegate from the committee they are reporting on. On the second day, delegations will pick chits again, but this time, they will be picking chits with the names of different delegations, and those two delegations will have to switch committees. Chits will be picked until all delegations have switched agencies. It is up to the members of that delegation to choose which committee from the two they wish to cover on the second day. Once again, they will have to submit a write-up and a video. Awards will be given on an agency basis and not an individual delegate basis. </p>
                         </div>
                         <!-- /.widget -->
-                        
+
                         <!-- /.widget -->
-                        <!-- /.widget --> 
+                        <!-- /.widget -->
                     </aside>
-                    <!-- /column .sidebar --> 
+                    <!-- /column .sidebar -->
                 </div>
-                <!-- /.blog --> 
+                <!-- /.blog -->
             </div>
-            <!-- /.container --> 
+            <!-- /.container -->
         </div>
-        <!-- /.body-wrapper --> 
-        <script src="/public/style/js/jquery.min.js"></script> 
-        <script src="/public/style/js/bootstrap.min.js"></script> 
-        <script src="/public/style/js/jquery.themepunch.tools.min.js"></script> 
-        <script src="/public/style/js/classie.js"></script> 
-        <script src="/public/style/js/plugins.js"></script> 
-        <script src="/public/style/js/scripts.js"></script>  
+        <!-- /.body-wrapper -->
+        <script src="/public/style/js/jquery.min.js"></script>
+        <script src="/public/style/js/bootstrap.min.js"></script>
+        <script src="/public/style/js/jquery.themepunch.tools.min.js"></script>
+        <script src="/public/style/js/classie.js"></script>
+        <script src="/public/style/js/plugins.js"></script>
+        <script src="/public/style/js/scripts.js"></script>
         <script>
             $.backstretch(["/public/style/images/art/bg3.jpg"]);
         </script>
