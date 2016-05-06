@@ -32,6 +32,12 @@ const handlers = {
 
         }
 
+    },
+
+    showIndexPage( request, reply ) {
+
+        reply.view( 'index' );
+
     }
 
 };

@@ -61,6 +61,18 @@ server.route( {
 
 } );
 
+server.route( {
+
+    path: '/',
+    method: 'GET',
+    handler: ( request, reply ) => {
+
+        reply.view( 'index' );
+
+    }
+
+} );
+
 middleware( server );
 routes( server );
 

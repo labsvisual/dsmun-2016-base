@@ -10,11 +10,45 @@ const methods = {
 
         if( path.lastIndexOf( '/' ) === path.length - 1 ) {
 
-            route.path = "/" + controllerName + path.replace( '/', '' );
+            if( Object.prototype.toString.call( route ) === '[object Array]' ) {
+
+                let arr = [];
+                route.path.forEach( ( path ) => {
+
+                    path = "/" + controllerName + path.replace( '/', '' );
+                    arr.push( path );
+
+                } );
+
+                route.path = arr;
+
+            } else {
+
+                route.path = "/" + controllerName + path.replace( '/', '' );
+
+            }
 
         } else {
 
-            route.path = `/${ controllerName }/${ path.replace( '/', '' ) }`;
+            if( Object.prototype.toString.call( route ) === '[object Array]' ) {
+
+                let arr = [];
+                route.path.forEach( ( path ) => {
+
+                    path = `/${ controllerName }/${ path.replace( '/', '' ) }`;
+                    arr.push( path );
+
+                } );
+
+                route.path = arr;
+
+            } else {
+
+                route.path = `/${ controllerName }/${ path.replace( '/', '' ) }`;
+
+            }
+
+            // route.path = `/${ controllerName }/${ path.replace( '/', '' ) }`;
 
         }
 
