@@ -5,22 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="../style/images/favicon.png">
+        <link rel="shortcut icon" href="/public/style/images/favicon.png">
         <title>16th Lok Sabha - DSMUN '16</title>
         <!-- Bootstrap core CSS -->
-        <link href="../style/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../style/css/plugins.css" rel="stylesheet">
-        <link href="../style/css/prettify.css" rel="stylesheet">
-        <link href="../style.css" rel="stylesheet">
-        <link href="../style/css/color/aqua.css" rel="stylesheet">
+        <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/public/style/css/plugins.css" rel="stylesheet">
+        <link href="/public/style/css/prettify.css" rel="stylesheet">
+        <link href="/public/style.css" rel="stylesheet">
+        <link href="/public/style/css/color/aqua.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
-        <link href="../style/type/fontello.css" rel="stylesheet">
-        <link href="../style/type/budicons.css" rel="stylesheet">
+        <link href="/public/style/type/fontello.css" rel="stylesheet">
+        <link href="/public/style/type/budicons.css" rel="stylesheet">
         <link href="style/css/custom.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-        <script src="style/js/html5shiv.js"></script>
+        <script src="/public/style/js/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
@@ -34,7 +34,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href="../"><img src="../style/images/logo.png" alt="" data-src="../style/images/logo.png" data-ret="../style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand --> 
                 </div>
                 <!-- /.navbar-header -->
@@ -64,7 +64,7 @@
                                 <p>I hope you share my excitement to be a part of this Assembly and that you shall do your best to ensure that this committee is brimming with intellectual debate, diplomatic negotiations and a fair share of entertainment. My email is given below so feel free to email me with any queries.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Best,</p>
-                                  <img src="../style/images/signs/johri.png" width=180 height=110>
+                                  <img src="/public/style/images/signs/johri.png" width=180 height=110>
                                   <p class="line-height">Dhruv Johri</p>
                                   <p class="line-height">Speaker - LS</p>
                                   <p class="line-height">DSMUN '16</p>
@@ -85,7 +85,7 @@
                         <!-- /.widget -->
                         <div class="sidebox box widget info">
                             <div class="chair">
-                                <img src="../style/images/mugs/mug-johri.jpg" />
+                                <img src="/public/style/images/mugs/mug-johri.jpg" />
                                 <h2>Dhruv Johri</h2>
                                 <h4>Speaker</h4>
                             </div>
@@ -103,9 +103,9 @@
 
                             <div class="res">
                                 <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="1000" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
-                                <a href="../documents/country_matrix_ls.pdf" target="_blank">Portfolio Matrix</a> <!-- New Tab -->
-                                <!--<a href="../documents/Background Guides/(DSMUN '16) Background Guide - ICJ.pdf" target="_blank" download="(DSMUN '16) Background Guide - ICJ">Background Guide</a> <!-- UID -->
-                                <a href="../documents/rules_of_procedure_ls.pdf" target="_blank" >Rules of Procedure</a> <!-- UID -->
+                                <a href="/public/documents/country_matrix_ls.pdf" target="_blank">Portfolio Matrix</a> <!-- New Tab -->
+                                <!--<a href="/public/documents/Background Guides/(DSMUN '16) Background Guide - ICJ.pdf" target="_blank" download="(DSMUN '16) Background Guide - ICJ">Background Guide</a> <!-- UID -->
+                                <a href="/public/documents/rules_of_procedure_ls.pdf" target="_blank" >Rules of Procedure</a> <!-- UID -->
                             </div>
 
                         </div>
@@ -133,14 +133,14 @@
             <!-- /.container --> 
         </div>
         <!-- /.body-wrapper --> 
-        <script src="../style/js/jquery.min.js"></script> 
-        <script src="../style/js/bootstrap.min.js"></script> 
-        <script src="../style/js/jquery.themepunch.tools.min.js"></script> 
-        <script src="../style/js/classie.js"></script> 
-        <script src="../style/js/plugins.js"></script> 
-        <script src="../style/js/scripts.js"></script>  
+        <script src="/public/style/js/jquery.min.js"></script> 
+        <script src="/public/style/js/bootstrap.min.js"></script> 
+        <script src="/public/style/js/jquery.themepunch.tools.min.js"></script> 
+        <script src="/public/style/js/classie.js"></script> 
+        <script src="/public/style/js/plugins.js"></script> 
+        <script src="/public/style/js/scripts.js"></script>  
         <script>
-            $.backstretch(["../style/images/art/bg3.jpg"]);
+            $.backstretch(["/public/style/images/art/bg3.jpg"]);
         </script>
     </body>
 </html>
