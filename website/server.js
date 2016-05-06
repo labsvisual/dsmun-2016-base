@@ -10,6 +10,8 @@ import middleware       from './middleware';
 import routes           from './routes';
 import serverReporter   from './reporters/server';
 
+import * as Path from 'path';
+
 // ---------- BASE LEVEL APP ENTRY DIRECTIVE ----------
 
 const server = new Hapi.Server()
@@ -31,7 +33,7 @@ server.register( require( 'vision' ), () => {
         },
 
         relativeTo: __dirname,
-        path: 'views'
+        path: 'views',
 
     } );
 
