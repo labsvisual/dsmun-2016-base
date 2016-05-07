@@ -44,7 +44,7 @@
 }
 
 .secgen-conti>h5 {
-	padding-top: 0.25em; 
+	padding-top: 0.25em;
 }
 
 #elsewhere, #agenda-intro, #update-papers {
@@ -56,10 +56,10 @@
 }
 
 .hero-sub {
-	z-index: 3; 
-	max-width: auto; 
-	max-height: auto; 
-	white-space: nowrap; 
+	z-index: 3;
+	max-width: auto;
+	max-height: auto;
+	white-space: nowrap;
 	font-family: "Khmer UI",sans-serif;
 }
 
@@ -124,6 +124,13 @@ iframe {
 }
 .res a {
 	display: block;
+}
+
+.chair > img {
+
+	width: 302px;
+	height: auto;
+
 }
 
 .chair > h2{
