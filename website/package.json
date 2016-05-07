@@ -23,6 +23,8 @@
     "hapi": "^13.3.0",
     "immutable": "^3.8.1",
     "request": "^2.72.0",
-    "vision": "^4.1.0"
+    "vision": "^4.1.0",
+    "inert": "*",
+    "vision": "*"
   }
 }
