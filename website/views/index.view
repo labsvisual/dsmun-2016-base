@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>DSMUN '16</title>
         <!-- Bootstrap core CSS -->
         <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
@@ -49,7 +49,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href=""><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href=""><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -88,7 +88,7 @@
                     <div class="fullscreenbanner">
                         <ul>
                             <li data-transition="fade">
-                                <img src="/public/style/images/dummy.png"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="repeat">
+                                <img src="http://static.dsmun.com/dummy.png"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="repeat">
                                 <h1 class="tp-caption caption large sfb" data-x="center" data-y="center" data-voffset="-25" data-speed="900" data-start="1000" data-endspeed="100" data-easing="Sine.easeOut">The Doon School Model United Nations Conference '16</h1>
                                 <h3 class="tp-caption caption clr-white" data-x="center" data-y="center" data-voffset="20" data-speed="900" data-start="1000" data-endspeed="100" data-easing="Sine.easeOut">Tenth Session, 12th - 14th August</h3>
                                 <div class="tp-caption small tp-fade fadeout tp-resizeme hero-sub" data-x="center" data-y="center" data-voffset="90" data-speed="100"
@@ -297,7 +297,7 @@
                         <h1>Secretary General's Address</h1>
                         <div class="row">
                             <div class="col-md-3 col-md-push-9 col-sm-12">
-                                <figure class="frame"><img src="/public/style/images/mugs/mug-ishaan.jpg" alt="" /></figure>
+                                <figure class="frame"><img src="http://static.dsmun.com/mugs/mug-ishaan.jpg" alt="" /></figure>
                                 <div class="secgen-conti">
                                   <h4>Ishaan Kapoor</h4>
                                   <h5>Secretary General</h5>
@@ -312,7 +312,7 @@
                                 <p>All that is left for me to say is that I eagerly await the arrival of the first delegates on the 12th of August through the gates of Chandbagh. I am indeed honoured to be working with such an accom-plished and hard-working team on the Executive Board and look forward to a memorable time this fall.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Warm regards,</p>
-                                  <img src="/public/style/images/signs/ishaan.png" width=175 height=100>
+                                  <img src="http://static.dsmun.com/signs/ishaan.png" width=175 height=100>
                                   <p class="line-height">Ishaan Kapoor</p>
                                   <p class="line-height">Secretary General</p>
                                   <p class="line-height">The Doon School Model United Nations Conference 2016</p>
@@ -333,7 +333,7 @@
                         <h1>President's Address</h1>
                         <div class="row">
                             <div class="col-md-3 col-md-push-9 col-sm-12">
-                                <figure class="frame"><img src="/public/style/images/mugs/mug-rahul.JPG" alt="" /></figure>
+                                <figure class="frame"><img src="http://static.dsmun.com/mugs/mug-rahul.JPG" alt="" /></figure>
                                 <div class="secgen-conti">
                                   <h4>Rahul Agarwal</h4>
                                   <h5>President</h5>
@@ -350,7 +350,7 @@
                                 <p><i>"When diplomacy ends, war begins"</i></p>
                                 <div class="signing-off">
                                   <p class="line-height">Best regards,</p>
-                                  <img src="/public/style/images/signs/rahul.png" width=150 height=85>
+                                  <img src="http://static.dsmun.com/signs/rahul.png" width=150 height=85>
                                   <p class="line-height">Rahul Agarwal</p>
                                   <p class="line-height">President</p>
                                   <p class="line-height">The Doon School Model United Nations Conference 2016</p>
@@ -374,7 +374,7 @@
                     <div id="grid-container" class="cbp-l-grid-masonry cbp cbp-chrome cbp-caption-fadeIn cbp-animation-quicksand cbp-cols-3 cbp-ready">
                       <ul class="cbp-wrapper">
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/sc">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/sc.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/sc.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -385,7 +385,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/scss">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/scss.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/scss.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -396,7 +396,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/disec">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/disec.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/disec.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -407,7 +407,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/au">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/au.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/au.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -418,7 +418,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/ec">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/ec.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/ec.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -429,7 +429,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/iaea">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/iaea.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/iaea.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -440,7 +440,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/hrc">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/hrc.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/hrc.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -451,7 +451,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/ls">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/ls.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/ls.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -462,7 +462,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/ipc">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/ipc.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/ipc.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -473,7 +473,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/specpol">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/specpol.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/specpol.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -484,7 +484,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/unscop">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/unscop.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/unscop.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -495,7 +495,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/unodc">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/unodc.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/unodc.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -506,7 +506,7 @@
                           </a>
                         </div></li>
                         <li class="cbp-item frame architecture"><div class="cbp-item-wrapper"> <a class="cbp-caption" href="committees/icao">
-                          <div class="cbp-caption-defaultWrap"> <img src="/public/style/images/committee_bg/icao.jpg" alt=""> </div>
+                          <div class="cbp-caption-defaultWrap"> <img src="http://static.dsmun.com/committee_bg/icao.jpg" alt=""> </div>
                           <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                               <div class="cbp-l-caption-body">
@@ -786,7 +786,7 @@
         <script src="/public/style/js/map.js"></script>
         <script src="https://cdn.jsdelivr.net/pigeon-js/1.0.1/pigeon.min.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
             var a = new Pigeon({
                 method: "POST",
                 action: "contactus/",

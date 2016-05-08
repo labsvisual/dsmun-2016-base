@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>International Atomic Energy Agency - DSMUN '16</title>
         <!-- Bootstrap core CSS -->
         <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href="index.html"><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href="index.html"><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -68,7 +68,7 @@
                                 <p>I look forward to meeting you at Chandbagh.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Regards,</p>
-                                  <img src="/public/style/images/signs/ahuja.png" width=130 height=80>
+                                  <img src="http://static.dsmun.com/signs/ahuja.png" width=130 height=80>
                                   <p class="line-height">Dhruv Ahuja</p>
                                   <p class="line-height">President - IAEA</p>
                                   <p class="line-height">DSMUN '16</p>
@@ -89,7 +89,7 @@
                         <!-- /.widget -->
                         <div class="sidebox box widget info">
                             <div class="chair">
-                                <img src="/public/style/images/mugs/mug-ahuja.jpg" />
+                                <img src="http://static.dsmun.com/mugs/mug-ahuja.jpg" />
                                 <h2>Dhruv Ahuja</h2>
                                 <h4>Chairperson</h4>
                             </div>
@@ -145,7 +145,7 @@
         <script src="/public/style/js/plugins.js"></script>
         <script src="/public/style/js/scripts.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
     </body>
 </html>

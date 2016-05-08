@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>United Nations Office on Drugs and Crime - DSMUN '16</title>
         <!-- Bootstrap core CSS -->
         <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href="../"><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -64,7 +64,7 @@
                                 <p>All that remains for me to say is that gear up, prepare and make the best of your time at Chandbagh. For those new to MUN, I’d strongly recommend using this experience as a platform for future MUNs and the rest, fully engage in debate and be an active part of committee. Remember, delegates that while research and eloquence do play an important role, the true test of your skill lies in diplomacy and that is exactly what I hope DSMUN, this year, can bring out of you.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Cheers</p>
-                                  <img src="/public/style/images/signs/rishi.png" width=200 height=90>
+                                  <img src="http://static.dsmun.com/signs/rishi.png" width=200 height=90>
                                   <p class="line-height">Rishi Raj Deva</p>
                                   <p class="line-height">Chairperson - UNODC</p>
                                   <p class="line-height">DSMUN '16</p>
@@ -85,7 +85,7 @@
                         <!-- /.widget -->
                         <div class="sidebox box widget info">
                             <div class="chair">
-                                <img src="/public/style/images/mugs/mug-rishi.jpg" />
+                                <img src="http://static.dsmun.com/mugs/mug-rishi.jpg" />
                                 <h2>Rishi Raj Deva</h2>
                                 <h4>Chairperson</h4>
                             </div>
@@ -139,7 +139,7 @@
         <script src="/public/style/js/plugins.js"></script>
         <script src="/public/style/js/scripts.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
     </body>
 </html>

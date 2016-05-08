@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>16th Lok Sabha - DSMUN '16</title>
         <!-- Bootstrap core CSS -->
         <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href="../"><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -64,7 +64,7 @@
                                 <p>I hope you share my excitement to be a part of this Assembly and that you shall do your best to ensure that this committee is brimming with intellectual debate, diplomatic negotiations and a fair share of entertainment. My email is given below so feel free to email me with any queries.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Best,</p>
-                                  <img src="/public/style/images/signs/johri.png" width=180 height=110>
+                                  <img src="http://static.dsmun.com/signs/johri.png" width=180 height=110>
                                   <p class="line-height">Dhruv Johri</p>
                                   <p class="line-height">Speaker - LS</p>
                                   <p class="line-height">DSMUN '16</p>
@@ -85,7 +85,7 @@
                         <!-- /.widget -->
                         <div class="sidebox box widget info">
                             <div class="chair">
-                                <img src="/public/style/images/mugs/mug-johri.jpg" />
+                                <img src="http://static.dsmun.com/mugs/mug-johri.jpg" />
                                 <h2>Dhruv Johri</h2>
                                 <h4>Speaker</h4>
                             </div>
@@ -140,7 +140,7 @@
         <script src="/public/style/js/plugins.js"></script>
         <script src="/public/style/js/scripts.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
     </body>
 </html>

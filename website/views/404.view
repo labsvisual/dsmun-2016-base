@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>Not Found - DSMUN '15</title>
         <!-- Bootstrap core CSS -->
         <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href=""><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href=""><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -79,7 +79,7 @@
         <script src="/public/style/js/plugins.js"></script>
         <script src="/public/style/js/scripts.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
     </body>
 </html>
@@ -90,7 +90,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>Not Found - DSMUN '15</title>
         <!-- Bootstrap core CSS -->
         <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
@@ -118,7 +118,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href=""><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href=""><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -164,7 +164,7 @@
         <script src="/public/style/js/plugins.js"></script>
         <script src="/public/style/js/scripts.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
     </body>
 </html>

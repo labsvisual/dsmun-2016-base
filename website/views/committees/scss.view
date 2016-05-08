@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="shortcut icon" href="/public/style/images/favicon.png">
+        <link rel="shortcut icon" href="http://static.dsmun.com/favicon.png">
         <title>Supreme Council of Sovereign States - DSMUN '16</title>
         <!-- Bootstrap core CSS -->
         <link href="/public/style/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand text-center"> <a href="../"><img src="/public/style/images/logo.png" alt="" data-src="/public/style/images/logo.png" data-ret="/public/style/images/logo@2x.png" class="retina" /></a> </div>
+                    <div class="navbar-brand text-center"> <a href="../"><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
                     <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
@@ -65,7 +65,7 @@
                                 <p>While I have always felt that a nation’s foreign policy is determined by international events, delegates are reminded that these nations did have clear policies and had formed blocs on those lines. That being said, delegates will not be penalised if it is clearly shown that a change in foreign policy has been made for a greater good, or to vanquish a common enemy. This committee is taking place from the 16th of March 1939; therefore no documents or treaties after this date can be brought to this Council’s notice. Ultimately, the fate of the world, as we know it, is in your hands and for once history should not be repeated.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Regards,</p>
-                                  <img src="/public/style/images/signs/kedi.png" width=160 height=100>
+                                  <img src="http://static.dsmun.com/signs/kedi.png" width=160 height=100>
                                   <p class="line-height">Chaitanya Kediyal</p>
                                   <p class="line-height">Chairperson - SCSS</p>
                                   <p class="line-height">DSMUN '16</p>
@@ -86,7 +86,7 @@
                         <!-- /.widget -->
                         <div class="sidebox box widget info">
                             <div class="chair">
-                                <img src="/public/style/images/mugs/mug-kedi.jpg" />
+                                <img src="http://static.dsmun.com/mugs/mug-kedi.jpg" />
                                 <h2>Chaitanya Kediyal</h2>
                                 <h4>Chairperson</h4>
                             </div>
@@ -140,7 +140,7 @@
         <script src="/public/style/js/plugins.js"></script>
         <script src="/public/style/js/scripts.js"></script>
         <script>
-            $.backstretch(["/public/style/images/art/bg3.jpg"]);
+            $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
     </body>
 </html>
