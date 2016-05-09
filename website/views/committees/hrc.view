@@ -35,19 +35,19 @@
                 <div class="navbar-header">
                     <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
                     <div class="navbar-brand text-center"> <a href="../"><img src="http://static.dsmun.com/logo.png" alt="" data-src="http://static.dsmun.com/logo.png" data-ret="http://static.dsmun.com/logo@2x.png" class="retina" /></a> </div>
-                    <!-- /.navbar-brand --> 
+                    <!-- /.navbar-brand -->
                 </div>
                 <!-- /.navbar-header -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="../" class="hint--right" data-hint="Home"><i class="budicon-home-1"></i><span>Home</span></a></li>
-                        
+
                     </ul>
-                    <!-- /.navbar-nav --> 
+                    <!-- /.navbar-nav -->
                 </div>
                 <!-- /.navbar-collapse -->
-                
-                <!-- /#elsewhere --> 
+
+                <!-- /#elsewhere -->
             </nav>
             <!-- /.navbar -->
             <div class="container inner">
@@ -74,12 +74,12 @@
                                   <p class="line-height">Chairperson - HRC</p>
                                   <p class="line-height">DSMUN '16</p>
                                 </div>
-                                <!-- /.share --> 
+                                <!-- /.share -->
                             </div>
-                            <!-- /.post --> 
+                            <!-- /.post -->
                         </div>
-                       
-                        <!-- /.comment-form-wrapper --> 
+
+                        <!-- /.comment-form-wrapper -->
                     </div>
                     <!-- /.content -->
                     <aside class="col-md-4 col-sm-12 sidebar">
@@ -94,7 +94,7 @@
                                 <h2>Kanav Agarwal</h2>
                                 <h4>Chairperson</h4>
                             </div>
-                            
+
                             <div class="dep-chairs">
                                 <p>Ishaan Jhawar</p>
                                 <p>Hitansh Nagdev</p>
@@ -103,14 +103,14 @@
                         </div>
 
                         <div class="sidebox box widget">
-                            
+
                             <h2>Resources</h2>
 
                             <div class="res">
                                 <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="1000" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
                                 <a href="/public/documents/country_matrix_hrc.pdf" target="_blank">Country Matrix</a><!-- New Tab -->
                                 <!--<a href="/public/documents/Background Guides/(DSMUN '16) Background Guide - HRC.pdf" target="_blank" download="(DSMUN '16) Background Guide - HRC">Background Guide</a> <!-- UID -->
-                                
+
                                 <a href="/public/documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a>
                             </div>
 
@@ -118,35 +118,47 @@
                         <div id="agenda-intro">
                           <h2>Introduction to Agenda</h2>
                           <div class="divide20"></div>
-                          <h3>Agenda 1: The humanitarian impact of terrorism on women and children rights in the middle east and the arabic world</h3>
-                          <p>The violation of human rights attacks the basic necessities for living/principles of the UN such as the equality and freedom of all humans. Terrorism in the Middle East has spared none. Women are being brutally assaulted, raped, killed and even being forced to turn into sexual slaves. Women’s rights are not protected in the Middle East, so much so that in some countries they are not even given the right to vote. Some are even forced to put on the ‘burqa’ or the veil which has now become a symbol of repression in the modern world.</p>
-                          <p>Children have become the most deadly weapon of the terrorist organisations, they are recruited and swayed towards terrorism and are also being sold by them. Children are not guaranteed their basic freedoms and are deprived of education as well. With the rise in terrorism in the area the major problems faced are xenophobia in general while we can also see anti-Semitism as a phenomenon; islamophobia is the new propensity on the upsurge.</p>
-                          <p>it is our prerogative to come up with a way to fight this ideological war, to break these anti-intellectual walls and to give women and children alike the respect they deserve.</p>
+                          <h3>Agenda 1: The humanitarian impact of terrorism on women and children rights in the middle east and the arabic world.</h3>
                           <h3>Agenda 2: Military Use of Children</h3>
-                          <p>Tens of thousands of children are recruited to serve as soldiers or otherwise in armed conflict. A child soldier is one who is below 18 years of age and can be used as fighters to take part in hostilities, to provide assistance in the form of spies, cooks, servants, messengers etc. and are also used as human shields to gain leverage over others. Girl children are also used by various non-state actors and are exploited and raped. Hence it does not pertain to only those children who take a direct part in hostilities. Children are abducted, coerced, pressurised or voluntarily decide to enroll either to get revenge for violence committed against their loved ones or as they feel that it is the only way to remain safe. An environment of neediness and displacement make kids even more vulnerable to join these armed forces. Despite the fact that infringement of children’s rights is strongly denounced by all we still have to battle with this issue in the twenty first century. This is one of the gravest ILO violations and a serious war crime. It has a great physical and psychological impact on children as they grow up without knowing anything but war, fear and hate. It is our prerogatives a committee to propose solutions to protect the rights of these children and hold any such inhuman people recruiting children accountable.</p>
-                          
+                          <p>
+                            Tens of thousands of children are recruited to serve as soldiers or otherwise in armed conflict. A
+                            child soldier is one who is below 18 years of age and can be used as fighters to take part in
+                            hostilities, to provide assistance in the form of spies, cooks, servants, messengers etc. and are
+                            also used as human shields to gain leverage over others. Girl children are also used by various
+                            non-state actors and are exploited and raped. Hence it does not pertain to only those children who
+                            take a direct part in hostilities. Children are abducted, coerced, pressurised or voluntarily decide to
+                            enroll either to get revenge for violence committed against their loved ones or as they feel that it is
+                            the only way to remain safe. An environment of neediness and displacement make kids even more
+                            vulnerable to join these armed forces. Despite the fact that infringement of children’s rights is
+                            strongly denounced by all we still have to battle with this issue in the twenty first century. This is
+                            one of the gravest ILO violations and a serious war crime. It has a great physical and psychological
+                            impact on children as they grow up without knowing anything but war, fear and hate. It is our
+                            prerogatives a committee to propose solutions to protect the rights of these children and hold any
+                            such inhuman people recruiting children accountable.
+                          </p>
+
                         </div>
                         <div class="sidebox box widget">
                             <h5> Contact Me: chair.hrc@doonschool.com </h5>
                         </div>
                         <!-- /.widget -->
-                        
+
                         <!-- /.widget -->
-                        <!-- /.widget --> 
+                        <!-- /.widget -->
                     </aside>
-                    <!-- /column .sidebar --> 
+                    <!-- /column .sidebar -->
                 </div>
-                 <!-- /.blog --> 
+                 <!-- /.blog -->
             </div>
-            <!-- /.container --> 
+            <!-- /.container -->
         </div>
-        <!-- /.body-wrapper --> 
-        <script src="/public/style/js/jquery.min.js"></script> 
-        <script src="/public/style/js/bootstrap.min.js"></script> 
-        <script src="/public/style/js/jquery.themepunch.tools.min.js"></script> 
-        <script src="/public/style/js/classie.js"></script> 
-        <script src="/public/style/js/plugins.js"></script> 
-        <script src="/public/style/js/scripts.js"></script>  
+        <!-- /.body-wrapper -->
+        <script src="/public/style/js/jquery.min.js"></script>
+        <script src="/public/style/js/bootstrap.min.js"></script>
+        <script src="/public/style/js/jquery.themepunch.tools.min.js"></script>
+        <script src="/public/style/js/classie.js"></script>
+        <script src="/public/style/js/plugins.js"></script>
+        <script src="/public/style/js/scripts.js"></script>
         <script>
             $.backstretch(["http://static.dsmun.com/art/bg3.jpg"]);
         </script>
