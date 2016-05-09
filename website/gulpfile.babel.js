@@ -4,7 +4,6 @@ import uglify     from 'gulp-uglify';
 import plumber    from 'gulp-plumber';
 import aws        from 'gulp-s3';
 import rename     from 'gulp-rename';
-import awsInfo    from './aws.json';
 
 const srcJs = './views/static/style/js/**/*.js';
 const srcCss = [ './views/static/style/css/*.css', './views/static/style/css/color/aqua.css' ];
