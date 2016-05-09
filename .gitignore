@@ -3,3 +3,5 @@ node_modules/
 trello-api
 visual_identity/
 *.git
+aws.json
+dist/
