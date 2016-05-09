@@ -29,8 +29,10 @@
     "handlebars": "^4.0.5",
     "hapi": "^13.3.0",
     "immutable": "^3.8.1",
+    "inert": "*",
+    "nodemailer": "^2.3.2",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "request": "^2.72.0",
-    "vision": "*",
-    "inert": "*"
+    "vision": "*"
   }
 }
