@@ -105,10 +105,10 @@
 
                             <div class="res">
                                 <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="1000" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
-                                <a href="/public/documents/country_matrix_ec.pdf" target="_blank">Portfolio Matrix</a>  <!-- New Tab -->
-                                <!--<a href="/public/documents/Background Guides/(DSMUN '16) Background Guide - SCRT.pdf" target="_blank" download="(DSMUN '16) Background Guide - SCRT">Background Guide</a> <!-- UID -->
+                                <a href="http://static.dsmun.com/documents/country_matrix_ec.pdf" target="_blank">Portfolio Matrix</a>  <!-- New Tab -->
+                                <!--<a href="http://static.dsmun.com/documents/Background Guides/(DSMUN '16) Background Guide - SCRT.pdf" target="_blank" download="(DSMUN '16) Background Guide - SCRT">Background Guide</a> <!-- UID -->
                                 <!--<a href="#update-papers" class="fancybox-inline" data-fancybox-width="600" data-fancybox-height="400">Update Papers</a> <!-- Popup -->
-                                <a href="/public/documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a> <!-- Downloadable -->
+                                <a href="http://static.dsmun.com/documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a> <!-- Downloadable -->
                             </div>
 
                         </div>
