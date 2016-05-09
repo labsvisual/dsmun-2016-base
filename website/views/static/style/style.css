@@ -1493,10 +1493,10 @@ figure a .text-overlay .info span {
     border-bottom: 3px solid #9cbc68
 }
 .sp-grab {
-    cursor: url(/public/style/images/openhand.cur), move
+    cursor: url(http://static.dsmun.com/images/openhand.cur), move
 }
 .sp-grabbing {
-    cursor: url(/public/style/images/closedhand.cur), move
+    cursor: url(http://static.dsmun.com/images/closedhand.cur), move
 }
 .sp-thumbnails {
     margin-top: 6px

@@ -1371,7 +1371,7 @@ figure a .text-overlay .info span {
 .tp-bannertimer {
     width: 100%;
     height: 10px;
-    background: url(/public/style/images/timer.png);
+    background: url(http://static.dsmun.com/images/timer.png);
     position: absolute;
     z-index: 200;
 }
@@ -1493,10 +1493,10 @@ figure a .text-overlay .info span {
     border-bottom: 3px solid #9cbc68
 }
 .sp-grab {
-    cursor: url(/public/style/images/openhand.cur), move
+    cursor: url(http://static.dsmun.com/images/openhand.cur), move
 }
 .sp-grabbing {
-    cursor: url(/public/style/images/closedhand.cur), move
+    cursor: url(http://static.dsmun.com/images/closedhand.cur), move
 }
 .sp-thumbnails {
     margin-top: 6px
