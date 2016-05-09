@@ -89,6 +89,8 @@ iframe {
 
 .signing-off img {
 	padding-bottom: 0.75em;
+	width: 100px;
+	height: auto;
 }
 
 .grid-container {

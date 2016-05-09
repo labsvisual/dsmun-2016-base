@@ -187,7 +187,7 @@
                                 <p>All that is left for me to say is that I eagerly await the arrival of the first delegates on the 12th of August through the gates of Chandbagh. I am indeed honoured to be working with such an accom-plished and hard-working team on the Executive Board and look forward to a memorable time this fall.</p>
                                 <div class="signing-off">
                                   <p class="line-height">Warm regards,</p>
-                                  <img src="http://static.dsmun.com/signs/ishaan.png" width=175 height=100>
+                                  <img src="http://static.dsmun.com/signs/ishaan.png">
                                   <p class="line-height">Ishaan Kapoor</p>
                                   <p class="line-height">Secretary General</p>
                                   <p class="line-height">The Doon School Model United Nations Conference 2016</p>
@@ -225,7 +225,7 @@
                                 <p><i>"When diplomacy ends, war begins"</i></p>
                                 <div class="signing-off">
                                   <p class="line-height">Best regards,</p>
-                                  <img src="http://static.dsmun.com/signs/rahul.png" width=150 height=85>
+                                  <img src="http://static.dsmun.com/signs/rahul.png">
                                   <p class="line-height">Rahul Agarwal</p>
                                   <p class="line-height">President</p>
                                   <p class="line-height">The Doon School Model United Nations Conference 2016</p>
@@ -398,26 +398,20 @@
                   </div>
                 </section>
                 </div>
-                  <!-- /.box -->
-                <div class="container">
+<!--                 <div class="container">
                 <section id="agenda">
                     <div class="box">
                         <h1>Agendas</h1>
                         <p>An insight into the agendas being discussed at DSMUN '16</p>
                         <div class="row">
                             <div id="map-canvas" class="col-md-12 col-sm-12">
-                                <!-- <figure id="map-canvas"></figure> -->
+                                <figure id="map-canvas"></figure>
                             </div>
-                            <!-- /column -->
                         </div>
-                        <!-- /.row -->
                         <div class="clearfix"></div>
-                        <!-- /.services -->
                     </div>
-                    <!-- /.box -->
                 </section>
-                <!-- /#about -->
-                </div>
+                </div> -->
                 <div class="container">
             <section id="info">
                     <div class="box">
@@ -478,7 +472,7 @@
                 <p>All participating schools need to fill in the registration forms and submit them along with the payment to finalize participation. The registration forms have been attached along with the invite. Only after we receive the registration forms and payment that you will receive your committee - country allotments and accommodation allotments.</p>
                 <p>The deadlines for the above are as follows:
                 <ul class="circled">
-                  <li>Confirmation of Participation: 15th May, 2016</li>
+                  <li>Confirmation of Participation: 20th May, 2016</li>
                   <li>Submission of Registration Forms and Payment: 30th June, 2016</li>
                 </ul>
                 </p>
@@ -499,8 +493,8 @@
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse in">
                                         <div class="panel-body">
-                                          <p>School Registration Fee: &#8377 15,000 per school</p>
-                                          <p>Delegate Registration Fee: &#8377 15,000 per delegate</p>
+                                          <p>School Registration Fee: &#8377;15,000 per school</p>
+                                          <p>Delegate Registration Fee: &#8377;15,000 per delegate</p>
                                         </div>
                                     </div>
                                 </div>
@@ -522,8 +516,8 @@
                                     <div id="collapseThree" class="panel-collapse collapse">
                                         <div class="panel-body">
                                            <p>Note: This is applicable to schools making their own arrangements regarding accommodation and local transportation.</p>
-                                           <p>School Registration Fee: &#8377 8,000 or $175 per school</p>
-                                          <p>Delegate Registration Fee: &#8377 5,000 or $80 per delegate</p>
+                                           <p>School Registration Fee: &#8377;8,000 or $175 per school</p>
+                                          <p>Delegate Registration Fee: &#8377;5,000 or $80 per delegate</p>
                                         </div>
                                     </div>
                                 </div>
