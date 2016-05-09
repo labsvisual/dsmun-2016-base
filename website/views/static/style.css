@@ -1371,7 +1371,7 @@ figure a .text-overlay .info span {
 .tp-bannertimer {
     width: 100%;
     height: 10px;
-    background: url(http://static.dsmun.com/images/timer.png);
+    background: url(http://static.dsmun.com/timer.png);
     position: absolute;
     z-index: 200;
 }

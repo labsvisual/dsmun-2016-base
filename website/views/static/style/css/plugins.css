@@ -119,7 +119,7 @@
 	margin-right: 0;
 }
 
-/* Vertical thumbnails 
+/* Vertical thumbnails
 ----------------------*/
 .sp-left-thumbnails .sp-thumbnail-container,
 .sp-right-thumbnails .sp-thumbnail-container {
@@ -904,7 +904,7 @@ a.sp-video:after {
 
 .cbp-loading {
   /* @editable properties */
-  background: url("../images/cbp-loading.gif") no-repeat scroll center center transparent; }
+  background: url("http://static.dsmun.com/cbp-loading.gif") no-repeat scroll center center transparent; }
 
 .cbp .cbp-item-hidden {
   pointer-events: none;
@@ -3525,7 +3525,7 @@ a.sp-video:after {
 
   .cbp-popup-singlePage .cbp-popup-navigation-wrap {
     height: 84px; }
-    
+
   .cbp-popup-singlePage .cbp-popup-content {
     margin-top: 120px; }
  }
@@ -3964,7 +3964,7 @@ a.sp-video:after {
   box-shadow: none; */ }
 
 .cbp-l-loadMore-button .cbp-l-loadMore-button-link:hover {
-  /* @editable properties 
+  /* @editable properties
   color: #B0B0B0;
   text-decoration: none;*/ }
 
@@ -4996,7 +4996,7 @@ a.sp-video:after {
  * Released on: January 4, 2015
 */
 /* ===============================================================
-Basic Swiper Styles 
+Basic Swiper Styles
 ================================================================*/
 .swiper-container {
 	margin:0 auto;
@@ -5017,23 +5017,23 @@ Basic Swiper Styles
 	-webkit-transition-duration:0s;
 	-webkit-transform:translate3d(0px,0,0);
 	-webkit-transition-timing-function:ease;
-	
+
 	-moz-transition-property:-moz-transform, left, top;
 	-moz-transition-duration:0s;
 	-moz-transform:translate3d(0px,0,0);
 	-moz-transition-timing-function:ease;
-	
+
 	-o-transition-property:-o-transform, left, top;
 	-o-transition-duration:0s;
 	-o-transform:translate3d(0px,0,0);
 	-o-transition-timing-function:ease;
 	-o-transform:translate(0px,0px);
-	
+
 	-ms-transition-property:-ms-transform, left, top;
 	-ms-transition-duration:0s;
 	-ms-transform:translate3d(0px,0,0);
 	-ms-transition-timing-function:ease;
-	
+
 	transition-property:transform, left, top;
 	transition-duration:0s;
 	transform:translate3d(0px,0,0);
@@ -5078,32 +5078,32 @@ sizes, pagination, etc.
 }
 .swiper-slide {
 	/* Specify Slides's Size: */
-	
+
 	/*width: 100%;
 	height: 100%;*/
 }
 .swiper-slide-active {
 	/* Specific active slide styling: */
-	
+
 }
 .swiper-slide-visible {
-	/* Specific visible slide styling: */	
+	/* Specific visible slide styling: */
 
 }
 /* ===============================================================
 Pagination Styles
 ================================================================*/
 .swiper-pagination-switch {
-	/* Stylize pagination button: */	
+	/* Stylize pagination button: */
 
 }
 .swiper-active-switch {
-	/* Specific active button style: */	
-	
+	/* Specific active button style: */
+
 }
 .swiper-visible-switch {
-	/* Specific visible button style: */	
-	
+	/* Specific visible button style: */
+
 }
 
 
@@ -6753,7 +6753,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 		color-stop(0.13, rgb(0,0,0)),
 		color-stop(1, rgb(50,50,50))
 	);
-	
+
 	display:table;max-width:100%; overflow:hidden;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;
 }
 
