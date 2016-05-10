@@ -108,7 +108,7 @@ const model = thinky.createModel( 'conference', {
             timeOfArrival: type.string(),
             mode: type.string(),
             placeOfDeparture: type.string(),
-            departureDate:type. string(),
+            departureDate: type.string(),
             details: type.string(),
 
         }

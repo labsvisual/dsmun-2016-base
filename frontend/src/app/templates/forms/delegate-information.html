@@ -20,49 +20,48 @@
             </h4>
 
             <div class="field">
+                <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
+            </div>
 
+            <div class="two fields">
                 <div class="field">
-                    <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
-                </div>
+                    <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
 
-                <div class="field">
-                    <div class="two fields">
-                        <select ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
-
-                            <option value="veg">Vegetarian</option>
-                            <option value="nonveg">Non - Vegetarian</option>
-
-                        </select>
-                        <select ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
-
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="opther">I prefer not to disclose</option>
-
-                        </select>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <select ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
-
-                        <option value="unsc">United Nations Security Council</option>
-                        <option value="unscss">Supreme Council of Sovereign States</option>
-                        <option value="disec">Disarmament and International Security Committee</option>
-                        <option value="au">African Union</option>
-                        <option value="ec">European Council</option>
-                        <option value="iaea">International Atomic Energy Agency</option>
-                        <option value="unhrc">United Nations Human Rights Council</option>
-                        <option value="ls">Lok Sabha</option>
-                        <option value="ipc">International Press Corps</option>
-                        <option value="specpol">Special Political and Decolonisation Committee</option>
-                        <option value="scp">United Nations Special Committee on Palestine</option>
-                        <option value="odc">United Nations Office of Drugs and Crime</option>
-                        <option value="icao">International Civil Aviation Organisation</option>
+                        <option value="veg">Vegetarian</option>
+                        <option value="nonveg">Non - Vegetarian</option>
 
                     </select>
                 </div>
+                <div class="field">
+                    <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
 
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="opther">I prefer not to disclose</option>
+
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="field">
+                <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
+
+                    <option value="unsc">United Nations Security Council</option>
+                    <option value="unscss">Supreme Council of Sovereign States</option>
+                    <option value="disec">Disarmament and International Security Committee</option>
+                    <option value="au">African Union</option>
+                    <option value="ec">European Council</option>
+                    <option value="iaea">International Atomic Energy Agency</option>
+                    <option value="unhrc">United Nations Human Rights Council</option>
+                    <option value="ls">Lok Sabha</option>
+                    <option value="ipc">International Press Corps</option>
+                    <option value="specpol">Special Political and Decolonisation Committee</option>
+                    <option value="scp">United Nations Special Committee on Palestine</option>
+                    <option value="odc">United Nations Office of Drugs and Crime</option>
+                    <option value="icao">International Civil Aviation Organisation</option>
+
+                </select>
             </div>
 
         </div>

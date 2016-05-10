@@ -19,6 +19,22 @@ angular.module( 'app' )
 
                this.conferenceData = data;
 
+               if( this.conferenceData.travelArrangements.onward.arrivalDate ) {
+                   this.conferenceData.travelArrangements.onward.arrivalDate = new Date( this.conferenceData.travelArrangements.onward.arrivalDate );
+               }
+
+               if( this.conferenceData.travelArrangements.onward.departureDate ) {
+                   this.conferenceData.travelArrangements.onward.departureDate = new Date( this.conferenceData.travelArrangements.onward.departureDate );
+               }
+
+               if( this.conferenceData.travelArrangements.returnJourney.arrivalDate ) {
+                   this.conferenceData.travelArrangements.returnJourney.arrivalDate = new Date( this.conferenceData.travelArrangements.returnJourney.arrivalDate );
+               }
+
+               if( this.conferenceData.travelArrangements.returnJourney.departureDate ) {
+                   this.conferenceData.travelArrangements.returnJourney.departureDate = new Date( this.conferenceData.travelArrangements.returnJourney.departureDate );
+               }
+
            } );
 
 

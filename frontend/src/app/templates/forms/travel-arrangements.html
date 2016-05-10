@@ -11,13 +11,126 @@
 
     <form ng-submit="ctrl.UpdateForm()" class="ui seperated form">
 
-        
+        <div class="field">
 
-        <div ng-show="ctrl.isError" class="ui red message">
-            <div class="header">
-                An error was encountered!
+            <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassngers">
+
+        </div>
+
+        <h4 class="ui dividing header">
+            Onward Journey
+        </h4>
+
+        <div class="two fields">
+
+            <div class="field">
+
+                <label>Arrival Date</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.onward.arrivalDate" type="date">
+
             </div>
-            <p>{{ ctrl.errorMessage }}</p>
+
+            <div class="field">
+
+                <label>Departure Date</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.onward.departureDate" type="date">
+
+            </div>
+
+        </div>
+
+        <div class="three fields">
+
+            <div class="field">
+
+                <label>Time of Arrival</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.onward.timeOfArrival" type="text" placeholder="Time of Arrival">
+
+            </div>
+
+            <div class="field">
+
+                <label>Place of Departure</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.onward.placeOfDeparture" type="text" placeholder="Place of Departure">
+
+            </div>
+
+            <div class="field">
+
+                <label>Mode of Transport</label>
+                <select ng-model="ctrl.conferenceData.travelArrangements.onward.mode" class="ui search dropdown">
+                    <option value="train">Train</option>
+                    <option value="air">Air</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <label>Other Details</label>
+            <textarea ng-model="ctrl.conferenceData.travelArrangements.onward.details" ></textarea>
+
+        </div>
+
+        <h4 class="ui dividing header">
+            Return Journey
+        </h4>
+
+        <div class="two fields">
+
+            <div class="field">
+
+                <label>Arrival Date</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.arrivalDate" type="date">
+
+            </div>
+
+            <div class="field">
+
+                <label>Departure Date</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.departureDate" type="date">
+
+            </div>
+
+        </div>
+
+        <div class="three fields">
+
+            <div class="field">
+
+                <label>Time of Arrival</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.timeOfArrival" type="text" placeholder="Time of Arrival">
+
+            </div>
+
+            <div class="field">
+
+                <label>Place of Departure</label>
+                <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.placeOfDeparture" type="text" placeholder="Place of Departure">
+
+            </div>
+
+            <div class="field">
+
+                <label>Mode of Transport</label>
+                <select ng-model="ctrl.conferenceData.travelArrangements.returnJourney.mode" class="ui search dropdown">
+                    <option value="train">Train</option>
+                    <option value="air">Air</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <label>Other Details</label>
+            <textarea ng-model="ctrl.conferenceData.travelArrangements.returnJourney.details" ></textarea>
+
         </div>
 
         <div class="ui buttons">
