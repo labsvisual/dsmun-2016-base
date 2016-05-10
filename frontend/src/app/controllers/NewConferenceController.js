@@ -36,6 +36,12 @@ angular.module( 'app' )
 
            };
 
+           this.cancel = () => {
+
+               $state.go( 'dashboard' );
+
+           };
+
            this.NewConference = () => {
 
                this.processing = true;

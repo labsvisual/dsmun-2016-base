@@ -8,27 +8,27 @@
 
     <div class="ui five small steps">
 
-      <div ng-class="( ctrl.conferenceData.registration.isFormFilled ) ? 'completed' : 'active'" class="step">
+      <div ng-class="( ctrl.conferenceData.registration && ctrl.conferenceData.registration.isFormFilled ) ? 'completed' : 'active'" class="step">
 
         <i class="tasks icon"></i>
 
         <div class="content">
           <div class="title">
-              <a ng-show="( ctrl.conferenceData.registration.isFormFilled == false )" ui-sref="registrationForm({guid: ctrl.guid})">Registration</a>
-              <span ng-show="( ctrl.conferenceData.registration.isFormFilled == true )">Registration</span>
+              <a ng-show="( !ctrl.conferenceData.registration || ( ctrl.conferenceData.registration && ctrl.conferenceData.registration.isFormFilled == false ) )" ui-sref="registrationForm({guid: ctrl.guid})">Registration</a>
+              <span ng-show="( ctrl.conferenceData.registration && ctrl.conferenceData.registration.isFormFilled == true )">Registration</span>
           </div>
         </div>
 
       </div>
 
-      <div ng-class="( ctrl.conferenceData.delegateInformation.isFormFilled ) ? 'completed' : 'active'" class="step">
+      <div ng-class="( ctrl.conferenceData.delegateInformation && ctrl.conferenceData.delegateInformation.isFormFilled ) ? 'completed' : 'active'" class="step">
 
-        <i class="user icon"></i>
+        <i class="tasks icon"></i>
 
         <div class="content">
           <div class="title">
-              <a ng-show="( ( ctrl.conferenceData.delegateInformation.isFormFilled ) && ( ctrl.conferenceData.delegateInformation.isFormFilled == false ) )" ui-sref="delegateInformationForm({guid: ctrl.guid})">Delegate Information</a>
-              <span ng-show="( ( ctrl.conferenceData.delegateInformation.isFormFilled ) && ( ctrl.conferenceData.delegateInformation.isFormFilled == true ) )">Delegate Information</span>
+              <a ng-show="( !ctrl.conferenceData.delegateInformation || ( ctrl.conferenceData.delegateInformation && ctrl.conferenceData.delegateInformation.isFormFilled == false ) )" ui-sref="delegateInformationForm({guid: ctrl.guid})">Delegate Information</a>
+              <span ng-show="( ctrl.conferenceData.delegateInformation && ctrl.conferenceData.delegateInformation.isFormFilled == true )">Delegate Information</span>
           </div>
         </div>
 

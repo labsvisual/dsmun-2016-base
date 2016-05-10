@@ -99,7 +99,7 @@
         </div>
 
         <div class="ui buttons">
-            <button ng-disabled="ctrl.processing" class="ui button">Cancel</button>
+            <button ng-click="ctrl.cancel()" ng-disabled="ctrl.processing" class="ui button">Cancel</button>
             <div class="or"></div>
             <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Create" }}</button>
         </div>
