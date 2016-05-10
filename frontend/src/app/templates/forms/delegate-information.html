@@ -66,6 +66,12 @@
 
         </div>
 
+        <div class="ui buttons">
+            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
+        </div>
+
         <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
             <div class="ui button" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
                 <i class="plus icon"></i> Delegate
@@ -73,12 +79,6 @@
             <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
                 {{ ctrl.conferenceData.delegateInformation.delegates.length || 0 }}
             </a>
-        </div>
-
-        <div class="ui buttons">
-            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
-            <div class="or"></div>
-            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
         </div>
 
         <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">

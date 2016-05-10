@@ -115,7 +115,7 @@ const model = thinky.createModel( 'conference', {
 
     },
 
-    generalAssembly: {
+    gaCrisis: {
 
         delegates: [ {
 

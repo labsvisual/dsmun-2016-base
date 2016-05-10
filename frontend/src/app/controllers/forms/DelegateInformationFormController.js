@@ -37,11 +37,27 @@ angular.module( 'app' )
 
                }
 
-               this.conferenceData.delegateInformation.delegates.push( {
+               if( this.conferenceData.delegateInformation ) {
 
-                   name: 'Delegate Name'
+                   this.conferenceData.delegateInformation.delegates.push( {
 
-               } );
+                       name: 'Delegate Name'
+
+                   } );
+
+               } else {
+
+                   this.conferenceData.delegateInformation = {
+                       delegates: []
+                   };
+
+                   this.conferenceData.delegateInformation.delegates.push( {
+
+                       name: 'Delegate Name'
+
+                   } );
+
+               }
 
            };
 
