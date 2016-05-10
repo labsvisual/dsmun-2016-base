@@ -35,6 +35,9 @@
     "randomstring": "^1.1.4",
     "request": "^2.72.0",
     "thinky": "^2.2.8",
-    "vision": "^4.1.0"
+    "vision": "^4.1.0",
+    "winston": "^2.2.0",
+    "winston-graylog2": "^0.4.3",
+    "winston-graylogger": "0.0.1"
   }
 }
