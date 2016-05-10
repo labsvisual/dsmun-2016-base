@@ -23,7 +23,7 @@
 
       <div ng-class="( ctrl.conferenceData.delegateInformation && ctrl.conferenceData.delegateInformation.isFormFilled ) ? 'completed' : 'active'" class="step">
 
-        <i class="tasks icon"></i>
+        <i class="user icon"></i>
 
         <div class="content">
           <div class="title">
@@ -34,32 +34,41 @@
 
       </div>
 
-      <div ng-class="( ctrl.conferenceData.medicalHistory.isFormFilled ) ? 'completed' : 'active'" class="step">
+      <div ng-class="( ctrl.conferenceData.medicalHistory && ctrl.conferenceData.medicalHistory.isFormFilled ) ? 'completed' : 'active'" class="step">
 
         <i class="treatment icon"></i>
 
         <div class="content">
-          <div class="title">Medical History</div>
+          <div class="title">
+              <a ng-show="( !ctrl.conferenceData.medicalHistory || ( ctrl.conferenceData.medicalHistory && ctrl.conferenceData.medicalHistory.isFormFilled == false ) )" ui-sref="medicalHistoryForm({guid: ctrl.guid})">Medical History</a>
+              <span ng-show="( ctrl.conferenceData.medicalHistory && ctrl.conferenceData.medicalHistory.isFormFilled == true )">Medical History</span>
+          </div>
         </div>
 
       </div>
 
-      <div ng-class="( ctrl.conferenceData.travelArrangement.isFormFilled ) ? 'completed' : 'active'" class="step">
+      <div ng-class="( ctrl.conferenceData.travelArrangements && ctrl.conferenceData.travelArrangements.isFormFilled ) ? 'completed' : 'active'" class="step">
 
         <i class="calendar outline icon"></i>
 
         <div class="content">
-          <div class="title">Travel Arrangment</div>
+          <div class="title">
+              <a ng-show="( !ctrl.conferenceData.travelArrangements || ( ctrl.conferenceData.travelArrangements && ctrl.conferenceData.travelArrangements.isFormFilled == false ) )" ui-sref="travelArrangementsForm({guid: ctrl.guid})">Travel Arrangement</a>
+              <span ng-show="( ctrl.conferenceData.travelArrangements && ctrl.conferenceData.travelArrangements.isFormFilled == true )">Travel Arrangement</span>
+          </div>
         </div>
 
       </div>
 
-      <div ng-class="( ctrl.conferenceData.gaCrisis.isFormFilled ) ? 'completed' : 'active'" class="step">
+      <div ng-class="( ctrl.conferenceData.gaCrisis && ctrl.conferenceData.gaCrisis.isFormFilled ) ? 'completed' : 'active'" class="step">
 
         <i class="square icon"></i>
 
         <div class="content">
-          <div class="title">GA Crisis</div>
+          <div class="title">
+              <a ng-show="( !ctrl.conferenceData.gaCrisis || ( ctrl.conferenceData.gaCrisis && ctrl.conferenceData.gaCrisis.isFormFilled == false ) )" ui-sref="gaCrisisForm({guid: ctrl.guid})">GA Crisis</a>
+              <span ng-show="( ctrl.conferenceData.gaCrisis && ctrl.conferenceData.gaCrisis.isFormFilled == true )">GA Crisis</span>
+          </div>
         </div>
 
       </div>
