@@ -50,6 +50,28 @@ const routes = [
 
     {
 
+        path: '/all',
+        method: 'GET',
+        handler: controller.getAllConferences,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
         path: '/{conferenceId}',
         method: 'GET',
         handler: controller.getConference,

@@ -9,9 +9,72 @@
 
     <div class="ui section divider"></div>
 
-    <form ng-submit="ctrl.UpdateForm()" class="ui seperated form">
+    <form ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
 
+        <div ng-repeat="delegate in ctrl.conferenceData.delegateInformation.delegates" style="padding-bottom: 2.5em;">
 
+            <h4 class="ui dividing header">
+
+                {{ delegate.name }}
+
+            </h4>
+
+            <div class="field">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
+                </div>
+
+                <div class="field">
+                    <div class="two fields">
+                        <select ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
+
+                            <option value="veg">Vegetarian</option>
+                            <option value="nonveg">Non - Vegetarian</option>
+
+                        </select>
+                        <select ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
+
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="opther">I prefer not to disclose</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <select ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
+
+                        <option value="unsc">United Nations Security Council</option>
+                        <option value="unscss">Supreme Council of Sovereign States</option>
+                        <option value="disec">Disarmament and International Security Committee</option>
+                        <option value="au">African Union</option>
+                        <option value="ec">European Council</option>
+                        <option value="iaea">International Atomic Energy Agency</option>
+                        <option value="unhrc">United Nations Human Rights Council</option>
+                        <option value="ls">Lok Sabha</option>
+                        <option value="ipc">International Press Corps</option>
+                        <option value="specpol">Special Political and Decolonisation Committee</option>
+                        <option value="scp">United Nations Special Committee on Palestine</option>
+                        <option value="odc">United Nations Office of Drugs and Crime</option>
+                        <option value="icao">International Civil Aviation Organisation</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
+            <div class="ui button" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
+                <i class="plus icon"></i> Delegate
+            </div>
+            <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
+                {{ ctrl.conferenceData.delegateInformation.delegates.length }}
+            </a>
+        </div>
 
         <div class="ui buttons">
             <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>

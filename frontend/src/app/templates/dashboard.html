@@ -19,16 +19,26 @@
               <th>S. No.</th>
               <th>Edit</th>
               <th>Status</th>
+              <th>Confirmation Sheet</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="conf in ctrl.conferences.data">
               <td>{{ $index + 1 }}</td>
-              <td>
+              <td ng-if="( !conf.isConfirmed )">
                   <a ng-href="#/conferences/{{ conf.conferenceGuid }}">Edit</a>
+              </td>
+              <td ng-if="( conf.isConfirmed )">
+                  NA
               </td>
               <td>
                   {{ ( conf.isConfirmed ) ? "Confirmed" : "Pending" }}
+              </td>
+              <td ng-if="conf.isConfirmed">
+                  <a href="http://static.dsmun.com/conference/{{ conf.conferenceGuid }}/confirmation.pdf">Download</a>
+              </td>
+              <td ng-if="( !conf.isConfirmed )">
+                  Conference not confirmed
               </td>
             </tr>
           </tbody>

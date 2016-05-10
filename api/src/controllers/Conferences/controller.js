@@ -129,6 +129,52 @@ const handlers = {
 
     },
 
+    getAllConferences( request, reply ) {
+
+        const token = request.query.token
+            , guid  = request.query.guid;
+
+        const checkToken = Knex( 'tokens' ).where( {
+
+            is_revoked: false,
+            token,
+
+        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+
+            dbData = dbData[ 0 ];
+            if( dbData.guid !== guid || dbData.guid === undefined ) {
+
+                ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+                return;
+
+            }
+
+            if( dbData.role === 1 ) {
+
+                ConferenceModel.then( ( conferences ) => {
+
+                    ResponseBuilder( 200, null, conferences, reply );
+
+                } ).catch( ( err ) => {
+
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+                } );
+
+            } else {
+
+                ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
+
+            }
+
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );
+
+    },
+
     getConference( request, reply ) {
 
         const token = request.query.token
@@ -203,9 +249,6 @@ const handlers = {
                 data = _.compactObject( data, 'isFormFilled' );
                 data = _.compactObject( data, 'isCommitteeConfirmed' );
 
-                // ResponseBuilder( 403, "You are not authorised to make that change.", null, reply );
-                // return;
-
             }
 
             if( dbData.guid === guid && dbData.role === 0 ) {
@@ -225,7 +268,7 @@ const handlers = {
 
                 } );
 
-            } else if ( dbData.guid !== guid || dbData.role === 1  ) {
+            } else if ( dbData.guid !== guid || dbData.role === 1 ) {
 
                 ConferenceModel.filter( {
 
