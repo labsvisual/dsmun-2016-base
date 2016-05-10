@@ -1,0 +1,48 @@
+<div ng-controller="GaCrisisFormController as ctrl">
+
+    <h2 class="ui header">
+        <i class="square icon"></i>
+        <div class="content">
+            GA Crisis Form
+        </div>
+    </h2>
+
+    <div class="ui section divider"></div>
+
+    <form ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
+
+        <div ng-repeat="delegate in ctrl.conferenceData.gaCrisis.delegates" style="padding-bottom: 2.5em;">
+
+            <div class="field">
+
+                <input type="text" ng-model="ctrl.conferenceData.gaCrisis.delegates[ $index ].name">
+
+            </div>
+
+        </div>
+
+        <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
+            <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
+                <i class="plus icon"></i> Delegate
+            </div>
+            <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
+                {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
+            </a>
+        </div>
+
+        <div class="ui buttons">
+            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
+        </div>
+
+        <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">
+            <div class="header">
+                {{ ctrl.messageHeader }}
+            </div>
+            <p>{{ ctrl.messageText }}</p>
+        </div>
+
+    </form>
+
+</div>

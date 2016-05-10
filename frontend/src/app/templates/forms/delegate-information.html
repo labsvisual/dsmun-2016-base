@@ -71,7 +71,7 @@
                 <i class="plus icon"></i> Delegate
             </div>
             <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
-                {{ ctrl.conferenceData.delegateInformation.delegates.length }}
+                {{ ctrl.conferenceData.delegateInformation.delegates.length || 0 }}
             </a>
         </div>
 

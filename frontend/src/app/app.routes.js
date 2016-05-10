@@ -52,6 +52,13 @@ angular.module( 'app' )
                    templateUrl: 'app/templates/forms/travel-arrangements.html',
                    controller: 'TravelArrangementsFormController'
 
+               })
+               .state( 'gaCrisisForm', {
+
+                   url: '/conferences/:guid/ga',
+                   templateUrl: 'app/templates/forms/ga-crisis.html',
+                   controller: 'GaCrisisFormController'
+
                });
 
        }]);
