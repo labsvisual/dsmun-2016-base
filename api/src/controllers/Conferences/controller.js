@@ -197,16 +197,17 @@ const handlers = {
                 schoolGuid: guid,
                 isConfirmed: false,
 
-            } ).then( ( conferences ) => {
+            } ).count().execute().then( ( count ) => {
 
                 ResponseBuilder( 200, null, {
 
-                    count: conferences.length,
+                    count,
 
                 }, reply );
 
             } ).catch( ( err ) => {
 
+                console.log( err );
                 ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
