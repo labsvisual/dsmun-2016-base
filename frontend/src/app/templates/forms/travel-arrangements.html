@@ -1,0 +1,38 @@
+<div ng-controller="TravelArrangementsFormController as ctrl">
+
+    <h2 class="ui header">
+        <i class="calendar outline icon"></i>
+        <div class="content">
+            Travel Arrangements Form
+        </div>
+    </h2>
+
+    <div class="ui section divider"></div>
+
+    <form ng-submit="ctrl.UpdateForm()" class="ui seperated form">
+
+        
+
+        <div ng-show="ctrl.isError" class="ui red message">
+            <div class="header">
+                An error was encountered!
+            </div>
+            <p>{{ ctrl.errorMessage }}</p>
+        </div>
+
+        <div class="ui buttons">
+            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
+        </div>
+
+        <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">
+            <div class="header">
+                {{ ctrl.messageHeader }}
+            </div>
+            <p>{{ ctrl.messageText }}</p>
+        </div>
+
+    </form>
+
+</div>

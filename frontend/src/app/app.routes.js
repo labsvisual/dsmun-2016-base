@@ -45,6 +45,13 @@ angular.module( 'app' )
                    templateUrl: 'app/templates/forms/delegate-information.html',
                    controller: 'DelegateInformationFormController'
 
+               })
+               .state( 'travelArrangementsForm', {
+
+                   url: '/conferences/:guid/travel',
+                   templateUrl: 'app/templates/forms/travel-arrangements.html',
+                   controller: 'TravelArrangementsFormController'
+
                });
 
        }]);
