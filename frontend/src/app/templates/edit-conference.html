@@ -75,4 +75,27 @@
 
     </div>
 
+    <div ng-show="ctrl.isAllDone" style="padding-top: 3em;">
+
+        <h2>All Forms Filled</h2>
+        <p>
+            All of your forms have been filled, and have been checked by the DSMUN Management Team.
+            All it remains for you is to finish the registration by downloading the Payment From
+            from <a href="http://static.dsmun.com/documents/payment_form.pdf">here</a>, and finishing
+            the payment.
+        </p>
+
+        <p>
+            Once the payment is received and processed, your <a ui-sref="dashboard">Dashboard</a>
+            will show an option to download the confirmation sheet. This sheet contains a summarised
+            version of your registration, a confirmation code, and other such details.
+        </p>
+
+    </div>
+
+    <button style="margin-top: 4em;" class="ui labeled icon button" ui-sref="dashboard">
+        <i class="arrow left icon"></i>
+        Back
+    </button>
+
 </div>

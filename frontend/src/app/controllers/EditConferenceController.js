@@ -19,6 +19,8 @@ angular.module( 'app' )
 
                this.conferenceData = data;
 
+               this.isAllDone = this.conferenceData.registration.isFormFilled && this.conferenceData.delegateInformation.isFormFilled && this.conferenceData.travelArrangements.isFormFilled && this.conferenceData.gaCrisis.isFormFilled;
+
            } );
 
        } ] );
