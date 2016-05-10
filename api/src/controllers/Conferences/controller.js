@@ -129,6 +129,96 @@ const handlers = {
 
     },
 
+    getUnconfirmedConferences( request, reply ) {
+
+        const token = request.query.token
+            , guid  = request.query.guid;
+
+        const checkToken = Knex( 'tokens' ).where( {
+
+            is_revoked: false,
+            token,
+
+        } ).select( 'guid' ).then( ( dbData ) => {
+
+            dbData = dbData[ 0 ];
+            if( dbData.guid !== guid || dbData.guid === undefined ) {
+
+                ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+                return;
+
+            }
+
+            ConferenceModel.filter( {
+
+                schoolGuid: guid,
+                isConfirmed: false,
+
+            } ).then( ( conferences ) => {
+
+                ResponseBuilder( 200, null, conferences, reply );
+
+            } ).catch( ( err ) => {
+
+                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+            } );
+
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );
+
+    },
+
+    getUnconfirmedConferencesCount( request, reply ) {
+
+        const token = request.query.token
+            , guid  = request.query.guid;
+
+        const checkToken = Knex( 'tokens' ).where( {
+
+            is_revoked: false,
+            token,
+
+        } ).select( 'guid' ).then( ( dbData ) => {
+
+            dbData = dbData[ 0 ];
+            if( dbData.guid !== guid || dbData.guid === undefined ) {
+
+                ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+                return;
+
+            }
+
+            ConferenceModel.filter( {
+
+                schoolGuid: guid,
+                isConfirmed: false,
+
+            } ).then( ( conferences ) => {
+
+                ResponseBuilder( 200, null, {
+
+                    count: conferences.length,
+
+                }, reply );
+
+            } ).catch( ( err ) => {
+
+                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+            } );
+
+        } ).catch( ( err ) => {
+
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );
+
+    },
+
     getAllConferences( request, reply ) {
 
         const token = request.query.token

@@ -9,6 +9,7 @@ angular.module( 'app' )
            }
 
            const self = this;
+
            self.Login = () => {
 
                const resultPromise = $restApi.Login( self.user );

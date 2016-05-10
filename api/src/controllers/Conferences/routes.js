@@ -50,6 +50,50 @@ const routes = [
 
     {
 
+        path: '/unconfirmed',
+        method: 'GET',
+        handler: controller.getUnconfirmedConferences,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
+        path: '/unconfirmed/count',
+        method: 'GET',
+        handler: controller.getUnconfirmedConferencesCount,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
         path: '/all',
         method: 'GET',
         handler: controller.getAllConferences,

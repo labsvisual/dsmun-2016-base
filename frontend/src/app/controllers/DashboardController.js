@@ -10,6 +10,12 @@ angular.module( 'app' )
 
            data = JSON.parse( data );
 
+           $rest.GetUnconfirmedCount( data ).then( ( dat ) => {
+
+               this.shouldAddNewButton = dat.data.count === 0;
+
+           } );
+
            let dataPromise = $rest.GetUser( data );
            dataPromise.then( ( dataOut ) => {
 

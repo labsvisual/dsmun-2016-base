@@ -52,6 +52,45 @@ angular
 
             },
 
+            ForgotPassword( userObject ) {
+
+                const dataObject = {}
+                    , promise    = $q.defer();
+
+                dataObject.username = userObject.username;
+
+                $http.post( apiUrl + '/forgot', dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve();
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             GetUser( data ) {
 
                 const promise    = $q.defer();
@@ -97,6 +136,44 @@ angular
                     if( data.status === 200 && data.data.data ) {
 
                         promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            GetUnconfirmedCount( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/conferences/unconfirmed/count?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( {
+                            data: data.data.data
+                        } );
 
                     } else {
 
