@@ -1,0 +1,103 @@
+<div ng-controller="MedicalHistoryFormController as ctrl">
+
+    <h2 class="ui header">
+        <i class="treatment icon"></i>
+        <div class="content">
+            Medical Information Form
+        </div>
+    </h2>
+
+    <div class="ui section divider"></div>
+
+    <form ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
+
+        <div ng-repeat="delegate in ctrl.conferenceData.delegateInformation.delegates" style="padding-bottom: 2.5em;">
+
+            <h4 class="ui dividing header">
+
+                {{ delegate.name }}
+
+            </h4>
+
+            <div class="field">
+                <input required type="hidden" placeholder="Name">
+            </div>
+
+            <div class="two fields">
+
+                <div class="field">
+
+                    <label>Grade</label>
+                    <select class="ui dropdown">
+
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Date of Birth</label>
+                    <input type="date" >
+
+                </div>
+
+            </div>
+
+            <div class="four fields">
+
+                <div class="field">
+
+                    <label>Height</label>
+                    <input type="text" >
+
+                </div>
+
+                <div class="field">
+
+                    <label>Weight</label>
+                    <input type="text">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Blood Group</label>
+                    <input type="text">
+
+                </div>
+
+                <div class="field">
+
+                    <label>hB Percentage</label>
+                    <input type="text">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ui buttons">
+            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
+        </div>
+
+        <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">
+            <div class="header">
+                {{ ctrl.messageHeader }}
+            </div>
+            <p>{{ ctrl.messageText }}</p>
+        </div>
+
+    </form>
+
+</div>
