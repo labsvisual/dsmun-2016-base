@@ -38,7 +38,7 @@ const middlewares = [
                     },
                     config: {
                         service: 'DSMUN_PRIMARY_WEBSITE',
-                        host: '52.76.9.136',
+                        host: '52.77.145.233',
                         port: '12202',
                     }
 

@@ -38,8 +38,8 @@ const middlewares = [
                     },
                     config: {
                         service: 'DSMUN_MANAGEMENT_APPLICATION',
-                        host: '52.76.9.136',
-                        port: '12201',
+                        host: '52.77.145.233',
+                        port: '5555',
                     }
 
                 }
