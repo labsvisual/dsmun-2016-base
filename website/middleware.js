@@ -48,8 +48,6 @@ const middlewares = [
 
             responsePayload: true,
 
-            ],
-
         },
 
     },
