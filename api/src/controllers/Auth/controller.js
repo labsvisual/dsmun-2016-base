@@ -1,6 +1,7 @@
 import ResponseBuilder from '../../response.js';
 import Knex from '../../knex.js';
 import * as RandomString from 'randomstring';
+import Winston from '../../helpers/logger';
 
 const handlers = {
 
@@ -14,6 +15,7 @@ const handlers = {
 
             if( school.length === 0 ) {
 
+                Winston.info( 'Incorrect username and password' );
                 ResponseBuilder( 411, "Username and/or password were entered incorrectly.", null, reply );
 
             } else {
@@ -22,6 +24,7 @@ const handlers = {
 
                 if( !school.is_confirmed ) {
 
+                    Winston.warn( `Unconfirmed account ${ school.guid } tried to login.` );
                     ResponseBuilder( 411, "The associated account hasn't been activated.", null, reply );
                     return;
 
@@ -50,6 +53,9 @@ const handlers = {
 
                     } ).catch( ( err ) => {
 
+                        Winston.log( 'error', {
+                            username: request.payload.username
+                        }, err );
                         ResponseBuilder( 500, "Server error!", null, reply );
 
                     } );
@@ -64,6 +70,9 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', {
+                username: request.payload.username
+            }, err );
             ResponseBuilder( 500, "Server error!", null, reply );
 
         } );
@@ -81,6 +90,9 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', {
+                username: request.payload.username
+            }, err );
             ResponseBuilder( 500, "Server error!", null, reply );
 
         } );

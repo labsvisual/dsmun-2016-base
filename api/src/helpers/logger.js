@@ -21,6 +21,8 @@ Winston.add( require( 'winston-graylog2' ), {
 
 } );
 
+
+
 Winston.add( Winston.transports.Console, {
 
     name: 'Console',

@@ -3,7 +3,8 @@
 */
 
 const Good             = require( 'good' )
-    , GoodConsole      = require( 'good-console' );
+    , GoodConsole      = require( 'good-console' )
+    , GoodGraylog2     = require( 'good-graylog2' );
 
 const middlewares = [
 
@@ -12,18 +13,40 @@ const middlewares = [
 
         options: {
 
-            reporters: [ {
+            reporters: [
 
-                reporter: GoodConsole,
+                {
 
-                events: {
+                    reporter: GoodConsole,
 
-                    response: '*',
-                    log: '*',
+                    events: {
+
+                        response: '*',
+                        log: '*',
+
+                    },
 
                 },
 
-            } ],
+                {
+
+                    reporter: GoodGraylog2,
+                    events: {
+                        response: '*',
+                        log: '*',
+                        error: '*'
+                    },
+                    config: {
+                        service: 'DSMUN_MANAGEMENT_APPLICATION',
+                        host: '52.76.9.136',
+                        port: '12201',
+                    }
+
+                }
+
+            ],
+
+            responsePayload: true,
 
         },
 
