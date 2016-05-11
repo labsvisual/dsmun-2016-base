@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node bootstrap.js",
-    "test": "./deploy.sh"
+    "test": "./deploy.sh",
+    "deploy": "ssh -i ~/dsmun.pem ubuntu@52.76.9.136 'bash /home/ubuntu/deploy.sh'"
   },
   "author": "",
   "license": "MIT",
