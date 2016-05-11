@@ -46,8 +46,6 @@ const middlewares = [
 
             ],
 
-            responsePayload: true,
-
         },
 
     },
