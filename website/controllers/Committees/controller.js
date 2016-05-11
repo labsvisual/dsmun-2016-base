@@ -28,7 +28,8 @@ const handlers = {
 
         } else {
 
-            reply.view( '404' );
+            const response = reply.view( '404' );
+            response.statusCode = 404;
 
         }
 
