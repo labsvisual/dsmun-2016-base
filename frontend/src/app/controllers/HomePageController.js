@@ -18,6 +18,8 @@ angular.module( 'app' )
                resultPromise.then( ( dataLogin ) => {
 
                    self.isProcessing = false;
+                   self.hasButtonMessage = true;
+                   self.buttonMessage = "Redirecting to dashboard...";
 
                    $cookies.put( 'loginData', JSON.stringify( dataLogin ) );
                    $cookies.put( 'isLoggedIn', true );

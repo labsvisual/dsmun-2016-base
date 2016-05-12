@@ -23,7 +23,7 @@
 
             <button type="submit" ng-disabled="ctrl.isProcessing" class="ui right labeled icon blue button">
                 <i class="right arrow icon"></i>
-                {{ ctrl.isProcessing ? "Processing..." : "Sign In" }}
+                {{ ctrl.isProcessing ? "Processing..." : ( ctrl.hasButtonMessage ? ctrl.buttonMessage : "Sign In" ) }}
             </button>
 
             <button ui-sref="forgot" class="ui icon button">
