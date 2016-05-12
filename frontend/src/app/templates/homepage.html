@@ -21,7 +21,7 @@
                 <input required ng-model="ctrl.user.password" type="password" name="password" placeholder="Password">
             </div>
 
-            <button type="submit" ng-disabled="ctrl.processing" class="ui right labeled icon blue button">
+            <button type="submit" ng-disabled="ctrl.isProcessing" class="ui right labeled icon blue button">
                 <i class="right arrow icon"></i>
                 {{ ctrl.processing ? "Processing..." : "Sign In" }}
             </button>
