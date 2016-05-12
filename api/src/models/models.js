@@ -1,7 +1,7 @@
 const thinky = require( 'thinky' )( {
 
-    host: '192.168.33.10',
-    db: 'dsmun'
+    host: process.env.RETHINK_HOST || '192.168.33.10',
+    db: process.env.RETHINK_DB_NAME || 'dsmun'
 
 } );
 

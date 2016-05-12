@@ -14,12 +14,12 @@ const config = {
         client: 'mysql',
         connection: {
 
-            host: '192.168.33.10',
+            host: process.env.MYSQL_HOST || '192.168.33.10',
 
-            user: 'shreyansh',
-            password: 'shreyansh',
+            user: process.env.MYSQL_USER || 'shreyansh',
+            password: process.env.MYSQL_PASS || 'shreyansh',
 
-            database: 'dsmun',
+            database: process.env.MYSQL_NAME || 'dsmun',
             charset: 'utf8',
 
         },
