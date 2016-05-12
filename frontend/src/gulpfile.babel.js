@@ -24,7 +24,7 @@ gulp.task( 'compile', () => {
                     outSourceMaps: true
                 } ) )
                .pipe( sourcemaps.write( './' ) )
-               .pipe( gulp.dest( './dist' ) );
+               .pipe( gulp.dest( './app/dist' ) );
 
 } );
 
