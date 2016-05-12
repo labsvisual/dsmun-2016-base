@@ -1,6 +1,6 @@
 FROM httpd:2.4
 
-RUN     sudo apt-get update && sudo apt-get upgrade -y
+RUN     apt-get update && apt-get upgrade -y
 
 COPY    ./src /usr/local/apache2/htdocs/
 
