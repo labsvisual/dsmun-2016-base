@@ -10,9 +10,9 @@ angular.module( 'app' )
 
            const self = this;
 
-           self.isProcessing = true;
-
            self.Login = () => {
+
+               self.isProcessing = true;
 
                const resultPromise = $restApi.Login( self.user );
                resultPromise.then( ( dataLogin ) => {
