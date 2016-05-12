@@ -47,6 +47,8 @@ angular.module( 'app' )
 
                } else {
 
+                   this.conferenceData.delegateInformation = {};
+
                    this.conferenceData.delegateInformation = {
                        delegates: []
                    };
