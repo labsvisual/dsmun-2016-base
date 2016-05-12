@@ -55,6 +55,9 @@ const handlers = {
 
                     } ).catch( ( err ) => {
 
+                        Winston.log( 'error', err, {
+                            type: 'api_error'
+                        } );
                         ResponseBuilder( 511, "An error was encountered during the process.", null, reply );
 
                     } );
@@ -139,7 +142,9 @@ const handlers = {
                 Mailer.instance.sendMail( msg, ( err, res ) => {
 
                     if( err ) {
-                        console.log( err );
+                        Winston.log( 'error', err, {
+                            type: 'api_error'
+                        } );
                         ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
                         return;
                     }
@@ -150,12 +155,18 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
+                Winston.log( 'error', err, {
+                    type: 'api_error'
+                } );
                 ResponseBuilder( 454, "The provided user already exists.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -207,14 +218,18 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
-                console.log( err );
+                Winston.log( 'error', err, {
+                    type: 'api_error'
+                } );
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
-            console.log( err );
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -235,6 +250,7 @@ const handlers = {
             dbData = dbData[ 0 ];
             if( dbData.role !== 1 ) {
 
+                Winston.warn( `An attempt to execute an escalated operation was noted ${ token }` );
                 ResponseBuilder( 511, "The provided user does not have the privileges to execute that operation.", null, reply );
                 return;
 
@@ -249,14 +265,15 @@ const handlers = {
 
                 } );
 
-                // usersArr = JSON.stringify( usersArr );
-
                 ResponseBuilder( 200, null, usersArr ,reply );
 
             } );
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -278,6 +295,7 @@ const handlers = {
             dbData = dbData[ 0 ];
             if( dbData.role !== 1 && dbData.guid !== guid ) {
 
+                Winston.warn( `An attempt to execute an escalated operation was noted ${ guid }` );
                 ResponseBuilder( 511, "The provided user does not have the privileges to execute that operation.", null, reply );
                 return;
 
@@ -298,13 +316,18 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
-                console.log( Object.keys( err ) );
+                Winston.log( 'error', err, {
+                    type: 'api_error'
+                } );
                 ResponseBuilder( 511, "The specified user was not found.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );

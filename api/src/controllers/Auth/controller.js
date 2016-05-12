@@ -53,9 +53,9 @@ const handlers = {
 
                     } ).catch( ( err ) => {
 
-                        Winston.log( 'error', {
-                            username: request.payload.username
-                        }, err );
+                        Winston.log( 'error', err, {
+                            type: 'api_error'
+                        } );
                         ResponseBuilder( 500, "Server error!", null, reply );
 
                     } );
@@ -70,9 +70,9 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', {
-                username: request.payload.username
-            }, err );
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 500, "Server error!", null, reply );
 
         } );
@@ -90,9 +90,9 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', {
-                username: request.payload.username
-            }, err );
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 500, "Server error!", null, reply );
 
         } );

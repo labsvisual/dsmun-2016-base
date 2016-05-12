@@ -52,12 +52,18 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
+                Winston.log( 'error', err, {
+                    type: 'api_error'
+                } );
                 ResponseBuilder( 511, "An error was encountered during the process.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             reply.view( 'error', {
                 message: "The provided password reset token has already been consumed. "
             } );
@@ -90,6 +96,10 @@ const handlers = {
             } );
 
         } ).catch( ( err ) => {
+
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
 
             reply.view( 'error', {
                 message: "The provided password reset token has already been consumed. "
@@ -155,7 +165,9 @@ const handlers = {
                 Mailer.instance.sendMail( message, ( err, res ) => {
 
                     if( err ) {
-                        console.log( err );
+                        Winston.log( 'error', err, {
+                            type: 'api_error'
+                        } );
                         ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
                         return;
                     }
@@ -168,6 +180,9 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 411, "The specified username was not found in the database!", null, reply );
 
         } );

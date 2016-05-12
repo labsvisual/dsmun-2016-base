@@ -14,6 +14,9 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
             ResponseBuilder( 500, "Server error!", null, reply );
 
         } );

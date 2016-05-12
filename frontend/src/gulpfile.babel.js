@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create();
 
 gulp.task( 'compile', () => {
 
-    return gulp.src( [ './app/**/*.js', '!./app/dist/*.*' ] )
+    return gulp.src( [ './app/**/*.js', '!./app/dist/*.*', '!app/services/ExceptionLoggingService.js' ] )
                .pipe( plumber() )
                .pipe( concat( 'app.min.js' ) )
                .pipe( sourcemaps.init() )
