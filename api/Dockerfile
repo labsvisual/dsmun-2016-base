@@ -12,7 +12,7 @@ RUN     mkdir -p /var/log/supervisor
 COPY    package.json /usr/src/app/package.json
 
 # THIS IS A BAD BAD HACK
-RUN     npm set registry http://registry.npmjs.org
+# RUN     npm set registry http://registry.npmjs.org
 
 RUN     cd /usr/src/app && npm install
 
@@ -33,4 +33,4 @@ WORKDIR /usr/src/app
 
 EXPOSE  3345
 
-CMD        [ "npm", "start" ]
+CMD        [ "/usr/bin/supervisord" ]
