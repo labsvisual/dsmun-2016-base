@@ -10,10 +10,14 @@ angular.module( 'app' )
 
            const self = this;
 
+           self.isProcessing = true;
+
            self.Login = () => {
 
                const resultPromise = $restApi.Login( self.user );
                resultPromise.then( ( dataLogin ) => {
+
+                   self.isProcessing = false;
 
                    $cookies.put( 'loginData', JSON.stringify( dataLogin ) );
                    $cookies.put( 'isLoggedIn', true );
@@ -22,6 +26,8 @@ angular.module( 'app' )
                    $state.go( 'dashboard' );
 
                } ).catch( ( dataError ) => {
+
+                   self.isProcessing = false;
 
                    if( dataError.loggedIn === false ) {
 
