@@ -2,7 +2,7 @@ angular
     .module( 'app' )
     .factory( 'RestApiService', [ '$http', 'CryptoService', '$q', ( $http, $cryptoService, $q ) => {
 
-        const apiUrl = 'http://api.base.dsmun.com:3345'
+        const apiUrl = 'http://api.app.beta.dsmun.com'
 
         return {
 
