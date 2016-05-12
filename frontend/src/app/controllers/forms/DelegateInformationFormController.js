@@ -23,7 +23,7 @@ angular.module( 'app' )
 
            this.AddDelegate = () => {
 
-               if( this.conferenceData.delegateInformation.delegates.length === 17 ) {
+               if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates.length === 17 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
