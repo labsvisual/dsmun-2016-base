@@ -6,6 +6,8 @@ import * as Guid from 'node-uuid';
 import * as Mailer from '../../helpers/mailer.js';
 import * as Helpers from '../../helpers/utils.js';
 
+import Winston from '../../helpers/logger';
+
 var Hasher = require( 'node-hasher' );
 
 const handlers = {

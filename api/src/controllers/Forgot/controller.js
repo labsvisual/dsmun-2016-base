@@ -1,6 +1,7 @@
 import ResponseBuilder from '../../response.js';
 import Knex from '../../knex.js';
 
+import Winston from '../../helpers/logger';
 import * as RandomString from 'randomstring';
 import * as Mailer from '../../helpers/mailer.js';
 var Hasher = require( 'node-hasher' );

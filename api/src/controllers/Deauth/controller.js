@@ -1,6 +1,8 @@
 import ResponseBuilder from '../../response.js';
 import Knex from '../../knex.js';
 
+import Winston from '../../helpers/logger';
+
 const handlers = {
 
     deauthUser( request, reply ) {
