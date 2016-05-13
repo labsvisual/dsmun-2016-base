@@ -7,6 +7,7 @@ angular.module( 'app' )
            data = JSON.parse( data );
 
            const conferenceGuid = $stateParams.guid;
+
            this.guid = conferenceGuid;
 
            this.ConfirmConference = ( guid ) => {
@@ -157,6 +158,8 @@ angular.module( 'app' )
                }
 
            };
+
+
 
            $rest.GetConference( {
 

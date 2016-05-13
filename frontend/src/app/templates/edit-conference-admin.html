@@ -81,15 +81,15 @@
 
     </div>
 
-    <div>
+    <div class="mid-container">
 
         <form ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
 
             <div class="admin__form-header ui dividing header">
                 <h1>Delegate Information Form</h1>
-                <div class="ui checkbox">
-                    <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.isFormFilled" type="checkbox" tabindex="0" class="hidden">
-                    <label>Form Confirmed and Filled</label>
+                <div class="checkbox__container">
+                    <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.isFormFilled" type="checkbox" tabindex="0">
+                    <label>Form Filled and Confirmed</label>
                 </div>
             </div>
 
@@ -157,8 +157,12 @@
                 </a>
             </div>
 
-            <div style="margin-top: 2em; margin-bottom: 2em;" class="ui dividing header">
+            <div class="admin__form-header ui dividing header">
                 <h1>GA Crisis Form</h1>
+                <div class="checkbox__container">
+                    <input ng-model="ctrl.conferenceData.gaCrisis.isFormFilled" type="checkbox" tabindex="0">
+                    <label>Form Filled and Confirmed</label>
+                </div>
             </div>
 
             <div ng-repeat="delegate in ctrl.conferenceData.gaCrisis.delegates" style="padding-bottom: 2.5em;">
@@ -173,11 +177,78 @@
 
             <div ng-disabled="this.shouldDisableAddGaDelegates" ng-click="ctrl.AddGADelegate()" class="ui labeled button" tabindex="0">
                 <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                    <i class="plus icon"></i> Delegate
+                    <i class="plus icon"></i> Delegate (GA)
                 </div>
                 <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
                     {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
                 </a>
+            </div>
+
+            <div class="admin__form-header ui dividing header">
+                <h1>Registration Form</h1>
+                <div class="checkbox__container">
+                    <input ng-model="ctrl.conferenceData.registration.isFormFilled" type="checkbox" tabindex="0">
+                    <label>Form Filled and Confirmed</label>
+                </div>
+            </div>
+
+            <div class="field">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.name" placeholder="First Name">
+                </div>
+
+                <div class="two fields">
+
+                    <div class="field">
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
+                    </div>
+
+                    <div class="field">
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.email" placeholder="Email Address">
+                </div>
+
+            </div>
+
+            <h4 class="ui dividing header">
+                Address
+            </h4>
+            <div class="one field">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.address.street" placeholder="Street Address">
+                </div>
+
+            </div>
+
+            <div class="two fields">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.address.city" placeholder="City">
+                </div>
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.address.pin" placeholder="Zip Code">
+                </div>
+
+            </div>
+
+            <div class="two fields">
+
+                <div class="field">
+                    <input required ng-model="ctrl.conferenceData.registration.address.country" />
+                </div>
+
+                <div class="field">
+                    <input required ng-model="ctrl.conferenceData.registration.address.state" />
+                </div>
+
             </div>
 
             <div class="ui buttons">
@@ -205,16 +276,12 @@
 
 </div>
 
-<script>
+<!-- <script>
 
     $( document ).ready( function() {
 
         $( '.checkbox' ).checkbox();
-        var checkboxDelegateInformation = document.getElementById( 'delegateInformationCheck' );
-        checkboxDelegateInformation.onchange = function () {
-            console.log( ctrl );
-        };
 
     } );
 
-</script>
+</script> -->

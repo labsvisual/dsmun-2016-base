@@ -28,7 +28,7 @@ angular.module( 'app' )
 
 
                     //    $window.location.reload();
-                       $state.go( 'dashboard-admin' );
+                       $state.go( 'dashboardAdmin' );
 
                    } else {
 
