@@ -55,29 +55,40 @@ const handlers = {
 
             }
 
-            const confGuid = Guid.v4();
+            const getSchoolName = Knex( 'users' ).where( {
 
-            let dataToExtendWith = {
+                guid: dbData.guid,
 
-                conferenceGuid: confGuid,
-                schoolGuid: guid,
-                isConfirmed: false
+            } ).select( 'school_name' ).then( ( dbData2 ) => {
 
-            };
+                const confGuid = Guid.v4();
 
-            dataToExtendWith = _.merge( data, dataToExtendWith );
-            const model = new ConferenceModel( dataToExtendWith );
+                dbData2 = dbData2[ 0 ];
 
-            model.save().then( ( doc ) => {
+                let dataToExtendWith = {
 
-                ResponseBuilder( 200, "Done!", doc, reply );
+                    conferenceGuid: confGuid,
+                    schoolName: dbData2['school_name'],
+                    schoolGuid: guid,
+                    isConfirmed: false
 
-            } ).catch( ( err ) => {
+                };
 
-                Winston.log( 'error', err, {
-                    type: 'api_error'
+                dataToExtendWith = _.merge( data, dataToExtendWith );
+                const model = new ConferenceModel( dataToExtendWith );
+
+                model.save().then( ( doc ) => {
+
+                    ResponseBuilder( 200, "Done!", doc, reply );
+
+                } ).catch( ( err ) => {
+
+                    Winston.log( 'error', err, {
+                        type: 'api_error'
+                    } );
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
                 } );
-                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 

@@ -2,8 +2,8 @@ angular
     .module( 'app' )
     .factory( 'RestApiService', [ '$http', 'CryptoService', '$q', ( $http, $cryptoService, $q ) => {
 
-        // const apiUrl = 'http://api.app.beta.dsmun.com';
-        const apiUrl = 'http://localhost:3345';
+        const apiUrl = 'http://api.app.beta.dsmun.com';
+        // const apiUrl = 'http://localhost:3345';
 
         return {
 
@@ -164,11 +164,85 @@ angular
 
             },
 
+            GetAllConferencesForAllUsers( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/conferences/all?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             GetUnconfirmedCount( data ) {
 
                 const promise    = $q.defer();
 
                 $http.get( `${ apiUrl }/conferences/unconfirmed/count?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( {
+                            data: data.data.data
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            GetUnconfirmedConferences( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/conferences/unconfirmed/all?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
 
                     if( data.status === 200 && data.data.data ) {
 

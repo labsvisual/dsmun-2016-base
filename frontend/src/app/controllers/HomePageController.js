@@ -21,11 +21,23 @@ angular.module( 'app' )
                    self.hasButtonMessage = true;
                    self.buttonMessage = "Redirecting to dashboard...";
 
-                   $cookies.put( 'loginData', JSON.stringify( dataLogin ) );
-                   $cookies.put( 'isLoggedIn', true );
+                  $cookies.put( 'loginData', JSON.stringify( dataLogin ) );
+                  $cookies.put( 'isLoggedIn', true );
 
-                   $window.location.reload();
-                   $state.go( 'dashboard' );
+                   if( dataLogin.role === 1 ) {
+
+
+                    //    $window.location.reload();
+                       $state.go( 'dashboard-admin' );
+
+                   } else {
+
+
+                    //    $window.location.reload();
+                       $state.go( 'dashboard' );
+
+                   }
+
 
                } ).catch( ( dataError ) => {
 
