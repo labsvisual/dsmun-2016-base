@@ -543,6 +543,56 @@ angular
 
             },
 
+            UnconfirmConference( confUserObject ) {
+
+                const promise = $q.defer();
+
+                const dataObject = {
+
+                    token: confUserObject.token,
+                    guid: confUserObject.guid,
+                    data: {
+                        isConfirmed: false,
+                    }
+
+                };
+
+                $http.put( apiUrl + '/conferences/' + confUserObject.conferenceGuid, dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve( {
+
+                            data: data.data,
+
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
         };
 
     } ] );

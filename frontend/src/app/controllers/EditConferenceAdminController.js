@@ -159,8 +159,6 @@ angular.module( 'app' )
 
            };
 
-
-
            $rest.GetConference( {
 
                conferenceGuid,
@@ -172,7 +170,11 @@ angular.module( 'app' )
                this.conferenceData = dataDb;
 
                this.isConferenceConfirmed = this.conferenceData.isConfirmed;
-               this.areFormsFilled = this.conferenceData.registration.isFormFilled && this.conferenceData.delegateInformation.isFormFilled && this.conferenceData.travelArrangements.isFormFilled && this.conferenceData.gaCrisis.isFormFilled;
+               this.areFormsFilled = ( () => {
+
+                   return ( this.conferenceData.registration && this.conferenceData.delegateInformation && this.conferenceData.travelArrangements && this.conferenceData.gaCrisis && this.conferenceData.registration.isFormFilled && this.conferenceData.delegateInformation.isFormFilled && this.conferenceData.travelArrangements.isFormFilled && this.conferenceData.gaCrisis.isFormFilled )
+
+               } )();
 
            } );
 
