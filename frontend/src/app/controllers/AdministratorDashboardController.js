@@ -35,4 +35,39 @@ angular.module( 'app' )
 
            } );
 
+           this.ConfirmConference = ( guid ) => {
+
+               this.isProcessing = true;
+
+               $rest.ConfirmConference( {
+
+                   guid: data.guid,
+                   token: data.token,
+                   conferenceGuid: guid
+
+               } ).then( ( dbData ) => {
+
+                   this.isProcessing = false;
+
+                   this.hasMessage = true;
+                   this.messageClass = {
+                       blue: true
+                   };
+                   this.messageText = "Conference confirmed!";
+
+
+               } ).catch( ( err ) => {
+
+                   this.isProcessing = false;
+
+                   this.hasMessage = true;
+                   this.messageClass = {
+                       red: true
+                   };
+                   this.messageText = "An error was encountered while executing that operation!";
+
+               } );
+
+           };
+
        } ] );

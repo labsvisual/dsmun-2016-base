@@ -58,13 +58,12 @@ angular.module( 'app' )
                    templateUrl: 'app/templates/forms/ga-crisis.html',
 
                })
-               .state( 'dashboard-admin', {
+               .state( 'dashboardAdmin', {
 
                    url: '/dashboard/admin',
                    templateUrl: 'app/templates/dashboard-admin.html',
 
                })
-
                .state( 'editConferenceAdmin', {
 
                    url: '/dashboard/edit/conferences/:guid',

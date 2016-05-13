@@ -38,9 +38,9 @@
                         {{ ( conference.isConfirmed ? "Confirmed" : ( conference.areFormsFilled ? "All Forms Filled" : "Unconfirmed" ) ) }}
                     </td>
                     <td>
-                        <button class="ui labeled icon primary button" ng-disabled="!conference.areFormsFilled">
+                        <button ng-click="ctrl.ConfirmConference( conference.conferenceGuid )" class="ui labeled icon primary button" ng-disabled="!conference.areFormsFilled || ctrl.isProcessing">
                             <i class="checkmark icon"></i>
-                            Confirm Conference
+                            {{ ctrl.isProcessing ? "Processing..." : "Confirm Conference" }}
                         </button>
                     </td>
                     <td>

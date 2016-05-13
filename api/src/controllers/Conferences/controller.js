@@ -114,7 +114,7 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( dbData ) => {
 
             dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
@@ -318,7 +318,7 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( dbData ) => {
 
             dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
@@ -328,23 +328,46 @@ const handlers = {
 
             }
 
-            ConferenceModel.filter( {
+            if( dbData.role === 1 ) {
 
-                schoolGuid: guid,
-                conferenceGuid: confId
+                ConferenceModel.filter( {
 
-            } ).then( ( conferences ) => {
+                    conferenceGuid: confId
 
-                ResponseBuilder( 200, null, conferences, reply );
+                } ).then( ( conferences ) => {
 
-            } ).catch( ( err ) => {
+                    ResponseBuilder( 200, null, conferences, reply );
 
-                Winston.log( 'error', err, {
-                    type: 'api_error'
+                } ).catch( ( err ) => {
+
+                    Winston.log( 'error', err, {
+                        type: 'api_error'
+                    } );
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
                 } );
-                ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
-            } );
+            } else {
+
+                ConferenceModel.filter( {
+
+                    schoolGuid: guid,
+                    conferenceGuid: confId
+
+                } ).then( ( conferences ) => {
+
+                    ResponseBuilder( 200, null, conferences, reply );
+
+                } ).catch( ( err ) => {
+
+                    Winston.log( 'error', err, {
+                        type: 'api_error'
+                    } );
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+                } );
+
+            }
 
         } ).catch( ( err ) => {
 

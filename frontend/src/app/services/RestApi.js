@@ -2,8 +2,8 @@ angular
     .module( 'app' )
     .factory( 'RestApiService', [ '$http', 'CryptoService', '$q', ( $http, $cryptoService, $q ) => {
 
-        // const apiUrl = 'http://api.app.beta.dsmun.com';
-        const apiUrl = 'http://localhost:3345';
+        const apiUrl = 'http://api.app.beta.dsmun.com';
+        // const apiUrl = 'http://localhost:3345';
 
         return {
 
@@ -454,6 +454,56 @@ angular
                     token: confUserObject.token,
                     guid: confUserObject.guid,
                     data: confUserObject.data
+
+                };
+
+                $http.put( apiUrl + '/conferences/' + confUserObject.conferenceGuid, dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve( {
+
+                            data: data.data,
+
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            ConfirmConference( confUserObject ) {
+
+                const promise = $q.defer();
+
+                const dataObject = {
+
+                    token: confUserObject.token,
+                    guid: confUserObject.guid,
+                    data: {
+                        isConfirmed: true,
+                    }
 
                 };
 
