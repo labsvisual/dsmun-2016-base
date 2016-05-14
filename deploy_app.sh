@@ -12,9 +12,8 @@ cd ../website
 echo "Deploying dsmun-website"
 npm run deploy
 
-cd ../
+cd ../frontend
 echo "Deploying dsmun-frontend"
 npm run deploy
 
-echo "\r\n"
 echo "ALL SYSTEMS DEPLOYED"
