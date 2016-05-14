@@ -1,0 +1,54 @@
+<div ng-controller="NewUserController as ctrl">
+
+    <h1 class="ui header">
+        <span style="font-weight: 300;">New User</span>
+    </h1>
+
+    <div class="ui section divider"></div>
+
+    <form ng-submit="ctrl.NewUser()" class="ui seperated form">
+
+        <div class="field">
+
+            <div class="two fields">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.user.school_name" placeholder="School Name">
+                </div>
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.user.teacher_escort" placeholder="Teacher Escort">
+                </div>
+
+            </div>
+
+            <div class="two fields">
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.user.email" placeholder="Email">
+                </div>
+
+                <div class="field">
+                    <input required type="text" ng-model="ctrl.user.username" placeholder="Username">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">
+            <div class="header">
+                {{ ctrl.messageHeader }}
+            </div>
+            <p>{{ ctrl.messageText }}</p>
+        </div>
+
+        <div class="ui buttons">
+            <button ui-sref="dashboardAdmin" ng-disabled="ctrl.processing" class="ui button">Cancel</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Create" }}</button>
+        </div>
+
+    </form>
+
+</div>

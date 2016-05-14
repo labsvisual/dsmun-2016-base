@@ -445,6 +445,54 @@ angular
 
             },
 
+            CreateUser( confUserObject ) {
+
+                const promise = $q.defer();
+
+                const dataObject = {
+
+                    token: confUserObject.token,
+                    data: confUserObject.data,
+                    hash: confUserObject.hash
+
+                };
+
+                $http.post( apiUrl + '/users', dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve( {
+
+                            data: data.data,
+
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             UpdateConference( confUserObject ) {
 
                 const promise = $q.defer();
