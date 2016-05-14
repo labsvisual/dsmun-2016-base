@@ -19,3 +19,47 @@
 .ui.seperated {
     padding-bottom: 8em;
 }
+
+.admin__form-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+.mid-container {
+
+    margin-top: 2em;
+
+}
+
+.ui.checkbox.form.label {
+
+    font-size: 60%;
+
+}
+
+.checkbox__container {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    & > input[type=checkbox] {
+
+        margin-right: 1em;
+
+    }
+
+    & > label {
+
+        font-weight: 400;
+        font-size: 80%;
+
+    }
+
+}

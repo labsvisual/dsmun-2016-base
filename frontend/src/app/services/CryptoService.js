@@ -10,6 +10,15 @@ angular
                 shaObj.update( data );
                 return shaObj.getHash( "HEX" );
 
+            },
+
+            getHmac: function( data, key ) {
+
+                var shaObj = new jsSHA('SHA-512', "TEXT");
+                shaObj.setHMACKey( key, "TEXT");
+                shaObj.update( data );
+                return shaObj.getHMAC("HEX");
+
             }
 
         };

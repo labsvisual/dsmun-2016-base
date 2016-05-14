@@ -57,6 +57,24 @@ angular.module( 'app' )
                    url: '/conferences/:guid/ga',
                    templateUrl: 'app/templates/forms/ga-crisis.html',
 
+               })
+               .state( 'dashboardAdmin', {
+
+                   url: '/dashboard/admin',
+                   templateUrl: 'app/templates/dashboard-admin.html',
+
+               })
+               .state( 'editConferenceAdmin', {
+
+                   url: '/dashboard/edit/conferences/:guid',
+                   templateUrl: 'app/templates/edit-conference-admin.html',
+
+               })
+               .state( 'addNewUser', {
+
+                   url: '/dashboard/users/new',
+                   templateUrl: 'app/templates/new-user.html',
+
                });
 
        }]);

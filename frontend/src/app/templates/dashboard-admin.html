@@ -1,0 +1,68 @@
+<div ng-controller="AdministratorDashboardController as ctrl">
+
+    <h1 class="ui header">
+        <span style="font-weight: 300;">Administrative Management Console</span>
+        <h3 class="ui sub header">
+            <div style="display: inline;" class="ui green">
+                <span>{{ ctrl.data.teacher_escort }} </span>
+            </div>
+        </h3>
+    </h1>
+
+    <div class="dashboard__conference--controller">
+
+        <table class="ui sortable celled table">
+
+            <thead>
+
+                <tr>
+
+                    <th ng-class="( ctrl.sortType === 'schoolName' ? ( ctrl.sortReverse ? 'sorted descending' : 'sorted ascending' ) : '' )" ng-click="ctrl.ChangeSort( 'schoolName' )">School Name</th>
+                    <th ng-class="( ctrl.sortType === 'isConfirmed' ? ( ctrl.sortReverse ? 'sorted descending' : 'sorted ascending' ) : '' )" ng-click="ctrl.ChangeSort( 'isConfirmed' )">Status</th>
+                    <th>Confirm Conference</th>
+                    <th>Edit</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="conference in ctrl.allConferences | orderBy:ctrl.sortType:ctrl.sortReverse">
+
+                    <td>
+                        {{ conference.schoolName }}
+                    </td>
+
+                    <td>
+                        {{ ( conference.isConfirmed ? "Confirmed" : ( conference.areFormsFilled ? "All Forms Filled" : "Unconfirmed" ) ) }}
+                    </td>
+                    <td>
+                        <button ng-click="ctrl.ConfirmConference( conference.conferenceGuid )" class="ui button" ng-class="( conference.isConfirmed ? 'green' : 'primary labeled icon' )" ng-disabled="!conference.areFormsFilled || ctrl.isProcessing || conference.isConfirmed">
+                            <i ng-show="!conference.isConfirmed" class="checkmark icon"></i>
+                            {{ ( conference.isConfirmed ? "Conference Confirmed" : ctrl.isProcessing ? "Processing..." : ( ctrl.hasButtonMessage ) ? ctrl.buttonMessage : "Confirm Conference" ) }}
+                        </button>
+                        <button ng-click="ctrl.UnconfirmConference( conference.conferenceGuid )" class="ui button" ng-class="( conference.isConfirmed ? 'labeled icon red' : 'green' )" ng-disabled="ctrl.isProcessing || !conference.isConfirmed">
+                            <i ng-show="conference.isConfirmed" class="remove icon"></i>
+                            {{ ( !conference.isConfirmed ? "Conference Unconfirmed" : ctrl.isProcessing ? "Processing..." : ( ctrl.hasButtonMessage ) ? ctrl.buttonMessage : "Unconfirm Conference" ) }}
+                        </button>
+                    </td>
+                    <td>
+                        <a ui-sref="editConferenceAdmin({guid: conference.conferenceGuid})">Edit</a>
+                    </td>
+
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <button ui-sref="addNewUser" class="ui green button">
+            <i class="plus icon"></i>
+            Add User
+        </button>
+
+    </div>
+
+</div>

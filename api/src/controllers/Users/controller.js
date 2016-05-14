@@ -122,6 +122,8 @@ const handlers = {
                 password: Hasher( 'sha512', generatedPassword ),
                 email: data.email,
                 guid: generatedGuid,
+                school_name: data.school_name,
+                teacher_escort: data.teacher_escort,
                 confirmation_code: activationKey,
                 is_confirmed: false
 
@@ -133,6 +135,9 @@ const handlers = {
                 <br>
                 An account related to this email was created for DSMUN Base. You can confirm the account by
                 clicking <a href="http://api.base.dsmun.com/users/confirm/${ generatedGuid }/${ activationKey }">here</a>. <br>
+                <br>
+                The username for the account is: <b>${ data.username }</b><br>
+                The password for the account is: <b>${ generatedPassword }</b><br>
                 <br>
                 If you believe that this is a mistake, you can safely ignore and/or delete this email. :) <br>
                 <br>

@@ -164,11 +164,85 @@ angular
 
             },
 
+            GetAllConferencesForAllUsers( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/conferences/all?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             GetUnconfirmedCount( data ) {
 
                 const promise    = $q.defer();
 
                 $http.get( `${ apiUrl }/conferences/unconfirmed/count?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( {
+                            data: data.data.data
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            GetUnconfirmedConferences( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/conferences/unconfirmed/all?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
 
                     if( data.status === 200 && data.data.data ) {
 
@@ -371,6 +445,54 @@ angular
 
             },
 
+            CreateUser( confUserObject ) {
+
+                const promise = $q.defer();
+
+                const dataObject = {
+
+                    token: confUserObject.token,
+                    data: confUserObject.data,
+                    hash: confUserObject.hash
+
+                };
+
+                $http.post( apiUrl + '/users', dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve( {
+
+                            data: data.data,
+
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             UpdateConference( confUserObject ) {
 
                 const promise = $q.defer();
@@ -380,6 +502,106 @@ angular
                     token: confUserObject.token,
                     guid: confUserObject.guid,
                     data: confUserObject.data
+
+                };
+
+                $http.put( apiUrl + '/conferences/' + confUserObject.conferenceGuid, dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve( {
+
+                            data: data.data,
+
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            ConfirmConference( confUserObject ) {
+
+                const promise = $q.defer();
+
+                const dataObject = {
+
+                    token: confUserObject.token,
+                    guid: confUserObject.guid,
+                    data: {
+                        isConfirmed: true,
+                    }
+
+                };
+
+                $http.put( apiUrl + '/conferences/' + confUserObject.conferenceGuid, dataObject ).then( ( data ) => {
+
+                    if( data.status === 200 ) {
+
+                        promise.resolve( {
+
+                            data: data.data,
+
+                        } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            UnconfirmConference( confUserObject ) {
+
+                const promise = $q.defer();
+
+                const dataObject = {
+
+                    token: confUserObject.token,
+                    guid: confUserObject.guid,
+                    data: {
+                        isConfirmed: false,
+                    }
 
                 };
 
