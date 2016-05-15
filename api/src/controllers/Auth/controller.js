@@ -79,21 +79,40 @@ const handlers = {
 
     },
 
-    deauthUser( request, reply ) {
+    isTokenValid( request, reply ) {
+
 
         const users = Knex( 'tokens' ).where( {
-            guid: request.payload.guid,
-            token: request.payload.token
-        }).del().then( () => {
 
-            ResponseBuilder( 200, "Successfully logged out.", null, reply );
+            token: request.params.token,
+            is_revoked: false
+
+        }).select( 'guid' ).then( ( [ data ] ) => {
+
+            if( data ) {
+
+                ResponseBuilder( 200, null, {
+                    valid: true,
+                    guid: data.guid,
+                }, reply );
+
+            } else {
+
+                ResponseBuilder( 200, null, {
+                    valid: false,
+                }, reply );
+
+            }
 
         } ).catch( ( err ) => {
 
             Winston.log( 'error', err, {
                 type: 'api_error'
             } );
-            ResponseBuilder( 500, "Server error!", null, reply );
+            ResponseBuilder( 200, null, {
+                valid: false,
+                guid: data.guid,
+            }, reply );
 
         } );
 

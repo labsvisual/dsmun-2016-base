@@ -1,11 +1,36 @@
 angular.module( 'app' )
        .controller( 'HomePageController', [ 'RestApiService', '$state', '$cookies', '$window', function( $restApi, $state, $cookies, $window ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' )
-               , data       = ( $cookies.get( 'loginData' ) );
+           const isLoggedIn = $cookies.get( 'isLoggedIn' );
+            let  data       = ( $cookies.get( 'loginData' ) );
 
            if( isLoggedIn && data ) {
-               $state.go( 'dashboard' );
+
+               data = JSON.parse( data );
+
+               $restApi.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( valid.valid ) {
+
+                       if( data.role === 1 ) {
+
+                           $state.go( 'dashboardAdmin' );
+
+                       } else {
+
+                           $state.go( 'dashboard' );
+
+                       }
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $cookies.remove( 'isLoggedIn' );
+                   $cookies.remove( 'loginData' );
+
+               } );
+
            }
 
            const self = this;
@@ -26,14 +51,10 @@ angular.module( 'app' )
 
                    if( dataLogin.role === 1 ) {
 
-
-                    //    $window.location.reload();
                        $state.go( 'dashboardAdmin' );
 
                    } else {
 
-
-                    //    $window.location.reload();
                        $state.go( 'dashboard' );
 
                    }

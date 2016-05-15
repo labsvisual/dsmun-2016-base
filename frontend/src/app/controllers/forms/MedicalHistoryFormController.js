@@ -19,12 +19,6 @@ angular.module( 'app' )
 
                this.conferenceData = data;
 
-               if( this.conferenceData.medicalHistory.delegates.length === 0 ) {
-
-                   
-
-               }
-
            } );
 
            this.UpdateForm = () => {

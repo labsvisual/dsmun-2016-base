@@ -4,8 +4,30 @@ angular.module( 'app' )
            let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data       = ( $cookies.get( 'loginData' ) );
 
-           if( !isLoggedIn && !data ) {
-               return $state.go( 'home' );
+           if( isLoggedIn && data ) {
+
+               $rest.IsValidToken( JSON.parse( data ).token ).then( ( valid ) => {
+
+                   if( valid.valid ) {
+
+                       if( JSON.parse( data ).role === 1 ) {
+
+                           $state.go( 'dashboardAdmin' );
+
+                       } else {
+
+                           $state.go( 'dashboard' );
+
+                       }
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
            }
 
            data = JSON.parse( data );
@@ -24,7 +46,8 @@ angular.module( 'app' )
 
            } ).catch( ( data ) => {
 
-               console.log( 'Error Encountered' );
+               console.error( 'The application failed to load with the provided parameters; trying to reload internal state.' );
+            //    $state.go( 'home' );
 
            } );
 
@@ -39,7 +62,8 @@ angular.module( 'app' )
 
            } ).catch( ( data ) => {
 
-               console.log( 'Error Encountered' );
+               console.error( 'The application failed to load with the provided parameters; trying to reload internal state.' );
+               $state.go( 'home' );
 
            } );
 

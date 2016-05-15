@@ -17,12 +17,12 @@ gulp.task( 'compile', () => {
                .pipe( babel({
                    presets: [ 'es2015' ]
                }) )
-               .pipe( uglify( {
-                    compress: {
-                        negate_iife: false
-                    },
-                    outSourceMaps: true
-                } ) )
+            //    .pipe( uglify( {
+            //         compress: {
+            //             negate_iife: false
+            //         },
+            //         outSourceMaps: true
+            //     } ) )
                .pipe( sourcemaps.write( './' ) )
                .pipe( gulp.dest( './app/dist' ) );
 

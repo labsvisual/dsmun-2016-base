@@ -23,6 +23,27 @@ const routes = [
 
         }
 
+    },
+
+    {
+
+        path: '/token/valid/{token}',
+        method: 'GET',
+        handler: controller.isTokenValid,
+        config: {
+
+            validate: {
+
+                params: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+
+                }
+
+            }
+
+        }
+
     }
 
 ];

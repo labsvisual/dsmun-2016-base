@@ -251,6 +251,136 @@
 
             </div>
 
+            <div class="admin__form-header ui dividing header">
+                <h1>Travel Arrangements Form</h1>
+                <div class="checkbox__container">
+                    <input ng-model="ctrl.conferenceData.travelArrangements.isFormFilled" type="checkbox" tabindex="0">
+                    <label>Form Filled and Confirmed</label>
+                </div>
+            </div>
+
+            <div class="field">
+
+                <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassngers">
+
+            </div>
+
+            <h4 class="ui dividing header">
+                Onward Journey
+            </h4>
+
+            <div class="two fields">
+
+                <div class="field">
+
+                    <label>Arrival Date</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.arrivalDate" type="date">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Departure Date</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.departureDate" type="date">
+
+                </div>
+
+            </div>
+
+            <div class="three fields">
+
+                <div class="field">
+
+                    <label>Time of Arrival</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.timeOfArrival" type="text" placeholder="Time of Arrival">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Place of Departure</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.placeOfDeparture" type="text" placeholder="Place of Departure">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Mode of Transport</label>
+                    <select ng-model="ctrl.conferenceData.travelArrangements.onward.mode" class="ui search dropdown">
+                        <option value="train">Train</option>
+                        <option value="air">Air</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="field">
+
+                <label>Other Details</label>
+                <textarea ng-model="ctrl.conferenceData.travelArrangements.onward.details" ></textarea>
+
+            </div>
+
+            <h4 class="ui dividing header">
+                Return Journey
+            </h4>
+
+            <div class="two fields">
+
+                <div class="field">
+
+                    <label>Arrival Date</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.arrivalDate" type="date">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Departure Date</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.departureDate" type="date">
+
+                </div>
+
+            </div>
+
+            <div class="three fields">
+
+                <div class="field">
+
+                    <label>Time of Arrival</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.timeOfArrival" type="text" placeholder="Time of Arrival">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Place of Departure</label>
+                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.placeOfDeparture" type="text" placeholder="Place of Departure">
+
+                </div>
+
+                <div class="field">
+
+                    <label>Mode of Transport</label>
+                    <select ng-model="ctrl.conferenceData.travelArrangements.returnJourney.mode" class="ui search dropdown">
+                        <option value="train">Train</option>
+                        <option value="air">Air</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="field">
+
+                <label>Other Details</label>
+                <textarea ng-model="ctrl.conferenceData.travelArrangements.returnJourney.details" ></textarea>
+
+            </div>
+
             <div class="ui buttons">
                 <button ui-sref="dashboardAdmin" ng-disabled="ctrl.processing" class="ui button">Back</button>
                 <div class="or"></div>

@@ -2,13 +2,35 @@ angular.module( 'app' )
        .controller( 'AdministratorDashboardController', [ 'RestApiService', '$cookies', '$state', '$window', function( $rest, $cookies, $state, $window ) {
 
            let isLoggedIn = $cookies.get( 'isLoggedIn' )
-               , data       = ( $cookies.get( 'loginData' ) );
+               , data     = $cookies.get( 'loginData' );
 
-           if( !isLoggedIn && !data ) {
-               return $state.go( 'home' );
+           if( isLoggedIn && data ) {
+
+               data = JSON.parse( data );
+
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( valid.valid ) {
+
+                       if( data.role === 1 ) {
+
+                           $state.go( 'dashboardAdmin' );
+
+                       } else {
+
+                           $state.go( 'dashboard' );
+
+                       }
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
            }
-
-           data = JSON.parse( data );
 
            $rest.GetUser( data ).then( ( { school_name, teacher_escort, username } ) => {
 

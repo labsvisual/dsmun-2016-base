@@ -24,6 +24,7 @@
     "good-graylog2": "*",
     "handlebars": "^4.0.5",
     "hapi": "^13.3.0",
+    "html-pdf": "^2.0.1",
     "immutable": "^3.8.1",
     "joi": "^8.0.5",
     "knex": "^0.10.0",
@@ -39,7 +40,6 @@
     "thinky": "^2.2.8",
     "vision": "^4.1.0",
     "winston": "^2.2.0",
-    "winston-graylog2": "^0.4.3",
-    "winston-graylogger": "0.0.1"
+    "winston-graylog2": "^0.4.3"
   }
 }

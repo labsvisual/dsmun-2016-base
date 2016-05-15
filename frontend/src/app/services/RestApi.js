@@ -2,10 +2,32 @@ angular
     .module( 'app' )
     .factory( 'RestApiService', [ '$http', 'CryptoService', '$q', ( $http, $cryptoService, $q ) => {
 
-        const apiUrl = 'http://api.app.beta.dsmun.com';
-        // const apiUrl = 'http://localhost:3345';
+        // const apiUrl = 'http://api.app.beta.dsmun.com';
+        const apiUrl = 'http://localhost:3345';
 
         return {
+
+            IsValidToken( token ) {
+
+                const promise = $q.defer();
+
+                $http.get( `${ apiUrl }/auth/token/valid/${ token }` ).then( ( data ) => {
+
+                    promise.resolve( data.data.data );
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        valid: false,
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
 
             Login( userObject ) {
 
