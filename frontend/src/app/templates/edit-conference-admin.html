@@ -95,9 +95,13 @@
 
             <div ng-repeat="delegate in ctrl.conferenceData.delegateInformation.delegates" style="padding-bottom: 2.5em;">
 
-                <h4 class="ui dividing header">
+                <h4 class="ui dividing header checkbox__container alt">
 
-                    {{ delegate.name }}
+                    <span>{{ delegate.name }}</span>
+                    <div class="checkbox__container--inner">
+                        <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" type="checkbox" tabindex="0">
+                        <label>Committee Confirmed</label>
+                    </div>
 
                 </h4>
 
@@ -124,7 +128,6 @@
                         </select>
                     </div>
                 </div>
-
 
                 <div class="field">
                     <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
@@ -261,7 +264,7 @@
 
             <div class="field">
 
-                <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassngers">
+                <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassengers">
 
             </div>
 

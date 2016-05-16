@@ -30,7 +30,6 @@ angular.module( 'app' )
                    };
                    this.messageText = "Conference confirmed!";
 
-
                } ).catch( ( err ) => {
 
                    this.isProcessing = false;

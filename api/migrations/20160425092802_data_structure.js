@@ -25,40 +25,6 @@ exports.up = function(knex, Promise) {
 
             } )
 
-            .createTable( 'conference_information', function( conferenceInfoTable ) {
-
-                // Primary Key
-                conferenceInfoTable.increments();
-
-                // Composite
-                conferenceInfoTable.string( 'guid', 50 ).notNullable().references( 'guid' ).inTable( 'users' );
-
-                // Info
-                conferenceInfoTable.string( 'conference_guid', 36 ).notNullable();
-                conferenceInfoTable.boolean( 'form_one' ).notNullable().default( false );
-                conferenceInfoTable.boolean( 'form_two' ).notNullable().default( false );
-                conferenceInfoTable.boolean( 'form_three' ).notNullable().default( false );
-                conferenceInfoTable.boolean( 'form_four' ).notNullable().default( false );
-                conferenceInfoTable.boolean( 'form_five' ).notNullable().default( false );
-                conferenceInfoTable.boolean( 'is_confirmed' ).notNullable().default( false );
-
-            } )
-
-            .createTable( 'conferences', function( conferencesTable ) {
-
-                // Primary Key
-                conferencesTable.increments()
-
-                // Composite
-                conferencesTable.string( 'guid', 50 ).notNullable().references( 'guid' ).inTable( 'users' );
-
-                // Info
-                conferencesTable.string( 'conference_guid', 50 ).unique().notNullable();
-                conferencesTable.integer( 'year' ).notNullable();
-                conferencesTable.boolean( 'is_confirmed' ).notNullable().defaultTo( false );
-
-            } )
-
             .createTable( 'tokens', function( tokensTable ) {
 
                 tokensTable.increments();
@@ -69,6 +35,17 @@ exports.up = function(knex, Promise) {
                 tokensTable.integer( 'role' ).notNullable().defaultTo( 0 );
                 tokensTable.boolean( 'is_revoked' ).notNullable().defaultTo( false );
 
+            } )
+
+            .createTable( 'confirmations', function( tokensTable ) {
+
+                tokensTable.increments();
+                tokensTable.string( 'guid', 50 ).notNullable().references( 'guid' ).inTable( 'users' );
+
+                tokensTable.string( 'confirmation_id', 32 ).notNullable().unique();
+                tokensTable.string( 'conference_guid', 36 ).notNullable();
+                tokensTable.timestamp( 'created_at' ).notNullable().defaultTo( knex.fn.now() );
+
             } );
 
 };
@@ -77,9 +54,8 @@ exports.down = function(knex, Promise) {
 
     return knex
             .schema
-            .dropTableIfExists( 'conferences' )
-            .dropTableIfExists( 'school_information' )
             .dropTableIfExists( 'tokens' )
+            .dropTableIfExists( 'confirmations' )
             .dropTableIfExists( 'users' );
 
 };

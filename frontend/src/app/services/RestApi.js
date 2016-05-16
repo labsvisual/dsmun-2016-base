@@ -571,15 +571,12 @@ angular
 
                     token: confUserObject.token,
                     guid: confUserObject.guid,
-                    data: {
-                        isConfirmed: true,
-                    }
 
                 };
 
-                $http.put( apiUrl + '/conferences/' + confUserObject.conferenceGuid, dataObject ).then( ( data ) => {
+                $http.post( apiUrl + '/conferences/confirm/' + confUserObject.conferenceGuid, dataObject ).then( ( data ) => {
 
-                    if( data.status === 200 ) {
+                    if( data.status === 200 && data.data.data.confirmationId ) {
 
                         promise.resolve( {
 
@@ -623,6 +620,7 @@ angular
                     guid: confUserObject.guid,
                     data: {
                         isConfirmed: false,
+                        confirmationId: '',
                     }
 
                 };

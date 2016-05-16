@@ -4,13 +4,15 @@ angular.module( 'app' )
            let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data       = ( $cookies.get( 'loginData' ) );
 
+           data = JSON.parse( data );
+
            if( isLoggedIn && data ) {
 
-               $rest.IsValidToken( JSON.parse( data ).token ).then( ( valid ) => {
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
 
                    if( valid.valid ) {
 
-                       if( JSON.parse( data ).role === 1 ) {
+                       if( data.role === 1 ) {
 
                            $state.go( 'dashboardAdmin' );
 
@@ -29,8 +31,6 @@ angular.module( 'app' )
                } );
 
            }
-
-           data = JSON.parse( data );
 
            $rest.GetUnconfirmedCount( data ).then( ( dat ) => {
 

@@ -28,6 +28,36 @@ const routes = [
 
     {
 
+        path: '/confirm/{conferenceGuid}',
+        method: 'POST',
+        handler: controller.confirmConference,
+        config: {
+
+            validate: {
+
+                payload: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required(),
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
+        path: '/confirm/{conferenceGuid}',
+        method: 'GET',
+        handler: controller.getConfirmation,
+
+    },
+
+    {
+
         path: '/',
         method: 'GET',
         handler: controller.getConferences,

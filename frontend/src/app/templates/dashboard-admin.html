@@ -46,13 +46,9 @@
                             <button ui-sref="editConferenceAdmin({guid: conference.conferenceGuid})" class="ui teal button">
                                 Edit Conference
                             </button>
-                            <button ng-click="ctrl.UnconfirmConference( conference.conferenceGuid )" class="ui button" ng-class="( conference.isConfirmed ? 'labeled icon red' : 'red' )" ng-disabled="ctrl.isProcessing || !conference.isConfirmed">
-                                <i ng-show="conference.isConfirmed" class="remove icon"></i>
+                            <button ng-click="ctrl.UnconfirmConference( conference.conferenceGuid )" class="ui right labeled icon button" ng-class="( conference.isConfirmed ? 'red' : 'red' )" ng-disabled="ctrl.isProcessing || !conference.isConfirmed">
+                                <i ng-show="conference.isConfirmed" class="remove right icon"></i>
                                 {{ ( !conference.isConfirmed ? "Conference Unconfirmed" : ctrl.isProcessing ? "Processing..." : ( ctrl.hasButtonMessage ) ? ctrl.buttonMessage : "Unconfirm" ) }}
-                            </button>
-                            <button ng-click="ctrl.PrepareConfirmationSheet( conference.conferenceGuid )" class="ui right labeled icon button" ng-disabled="ctrl.isProcessing || !conference.isConfirmed">
-                                <i class="file right icon"></i>
-                                {{ ( ctrl.isProcessing ? "Processing..." : ( ctrl.hasButtonMessage ) ? ctrl.buttonMessage : "Confirmation Sheet" ) }}
                             </button>
 
                         </div>

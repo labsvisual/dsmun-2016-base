@@ -63,3 +63,29 @@
     }
 
 }
+
+.checkbox__container.alt {
+
+    justify-content: space-between;
+
+}
+
+.checkbox__container--inner {
+
+    display: flex;
+    align-items: center;
+
+    & > input[type=checkbox] {
+
+        margin-right: 1em;
+
+    }
+
+    & > label {
+
+        font-weight: 400;
+        font-size: 80%;
+
+    }
+
+}

@@ -31,3 +31,15 @@
   .checkbox__container > label {
     font-weight: 400;
     font-size: 80%; }
+
+.checkbox__container.alt {
+  justify-content: space-between; }
+
+.checkbox__container--inner {
+  display: flex;
+  align-items: center; }
+  .checkbox__container--inner > input[type=checkbox] {
+    margin-right: 1em; }
+  .checkbox__container--inner > label {
+    font-weight: 400;
+    font-size: 80%; }

@@ -6,22 +6,15 @@ const routes = [
     {
 
         path: '/{conferenceGuid}',
-        method: 'POST',
+        method: 'GET',
         handler: controller.prepareConfirmationSheet,
         config: {
 
             validate: {
 
-                payload: {
-
-                    token: Joi.string().min( 32 ).max( 32 ).required(),
-                    guid: Joi.string().min( 36 ).max( 36 ).required(),
-
-                },
-
                 params: {
 
-                    conferenceGuid: Joi.string().min( 36 ).max( 36 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
 
                 }
 
@@ -30,6 +23,7 @@ const routes = [
         }
 
     },
+
 
 ];
 

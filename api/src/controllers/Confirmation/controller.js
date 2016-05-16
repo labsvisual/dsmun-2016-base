@@ -8,10 +8,6 @@ import Helpers from '../../helpers/utils.js';
 import ConferenceModel from '../../models/models.js';
 import Winston from '../../helpers/logger';
 
-const Path = require('path')
-    , fs   = require( 'fs' )
-    , pdf  = require( 'html-pdf' );
-
 var Hasher = require( 'node-hasher' )
   , _      = require( 'lodash' );
 
@@ -19,21 +15,19 @@ const handlers = {
 
     prepareConfirmationSheet( request, reply ) {
 
-        const token = request.payload.token
-            , guid  = request.payload.guid;
+        const confirmationId = request.params.confirmationId
+            , guid  = request.params.guid;
 
-        const checkToken = Knex( 'tokens' ).where( {
+        const checkToken = Knex( 'confirmations' ).where( {
 
-            is_revoked: false,
-            token,
+            confirmationId,
+            guid,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'id' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
-            if( dbData.guid !== guid || dbData.guid === undefined ) {
+            if( !dbData ) {
 
-                ResponseBuilder( 511, "The provided token is invalid.", null, reply );
-                return;
+                reply.view( 'error' );
 
             }
 
@@ -43,11 +37,9 @@ const handlers = {
 
                     conferenceGuid: request.params.conferenceGuid,
 
-                } ).then( ( conference ) => {
+                } ).then( ( [ conference ] ) => {
 
-                    conference = conference[ 0 ];
-
-
+                    renderer.render(  )
 
                     ResponseBuilder( 200, null, conference, reply );
 
