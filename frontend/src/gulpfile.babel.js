@@ -19,12 +19,6 @@ gulp.task( 'compile:development', () => {
                    presets: [ 'es2015' ]
                }) )
                .pipe( concat( 'app.min.js' ) )
-            //    .pipe( uglify( {
-            //         compress: {
-            //             negate_iife: false
-            //         },
-            //         outSourceMaps: true
-            //     } ) )
                .pipe( replace( '{{@API_URL}}', 'http://localhost:3345' ) )
                .pipe( sourcemaps.write( './' ) )
                .pipe( gulp.dest( './app/dist' ) );
@@ -48,6 +42,23 @@ gulp.task( 'compile:production', () => {
                 } ) )
                .pipe( replace( '{{@API_URL}}', 'http://api.app.beta.dsmun.com' ) )
                .pipe( sourcemaps.write( './' ) )
+               .pipe( gulp.dest( './app/dist' ) );
+
+} );
+
+gulp.task( 'prepare:production', [ 'compile:production' ], () => {
+
+    return gulp.src( [ 'lib/jquery/dist/jquery.js', 'lib/semantic/dist/semantic.js',
+                       'lib/angular/angular.js', 'lib/angular-cookies/angular-cookies.js',
+                       'lib/angular-ui-router/release/angular-ui-router.js', 'lib/ng-lodash/build/ng-lodash.js',
+                       'lib/stacktrace-js/dist/stacktrace.concat.js' ] )
+               .pipe( plumber() )
+               .pipe( concat( 'vendor.js' ) )
+               .pipe( uglify( {
+                    compress: {
+                        negate_iife: false
+                    },
+                } ) )
                .pipe( gulp.dest( './app/dist' ) );
 
 } );
