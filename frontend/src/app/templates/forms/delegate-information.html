@@ -45,7 +45,7 @@
 
 
             <div class="field">
-                <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
+                <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
 
                     <option value="unsc">United Nations Security Council</option>
                     <option value="unscss">Supreme Council of Sovereign States</option>
