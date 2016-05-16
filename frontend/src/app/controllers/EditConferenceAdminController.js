@@ -1,5 +1,5 @@
 angular.module( 'app' )
-        .controller( 'EditConferenceAdminController', [ 'LoginService', '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $login, $stateParams, $cookies, $http, $state, $window, $rest ) {
+        .controller( 'EditConferenceAdminController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $stateParams, $cookies, $http, $state, $window, $rest ) {
 
             let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data     = $cookies.get( 'loginData' );

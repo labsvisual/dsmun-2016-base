@@ -1,5 +1,5 @@
 angular.module( 'app' )
-        .controller( 'DashboardController', [ 'LoginService', 'RestApiService', '$cookies', '$state', function( $login, $rest, $cookies, $state ) {
+        .controller( 'DashboardController', [ 'RestApiService', '$cookies', '$state', function( $rest, $cookies, $state ) {
 
             let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data     = $cookies.get( 'loginData' );
