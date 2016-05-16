@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node bootstrap.js",
     "test": "./deploy.sh",
-    "deploy": "ssh -i ~/dsmun.pem ubuntu@52.76.9.136 'sudo -u ubuntu /home/ubuntu/deploy.sh'"
+    "deploy": "git add . && git commit -am \"DEPLOY_PREP\" && git push -u origin develop && ssh -i ~/dsmun.pem ubuntu@52.76.9.136 'sudo -u ubuntu /home/ubuntu/deploy.sh'"
   },
   "author": "",
   "license": "MIT",
