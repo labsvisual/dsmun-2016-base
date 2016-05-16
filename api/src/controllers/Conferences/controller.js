@@ -401,6 +401,8 @@ const handlers = {
             let delegates = [];
             conference.delegateInformation.delegates.map( ( delegate ) => {
 
+                delegate.mealPreference = delegate.mealPreference === 'veg' ? 'Vegetarian' : 'Non Vegetarian';
+
                 const { committee } = delegate
                     , shortName     = committee;
                 switch( committee ) {
