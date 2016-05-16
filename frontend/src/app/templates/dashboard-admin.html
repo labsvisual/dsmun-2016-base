@@ -11,6 +11,8 @@
 
     <div class="dashboard__conference--controller">
 
+        <h2>Conferences</h2>
+
         <table class="ui sortable celled table">
 
             <thead>
@@ -52,6 +54,51 @@
                             </button>
 
                         </div>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="dashboard__users--controller">
+
+        <h2>Users</h2>
+
+        <table class="ui celled table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Teacher Escort</th>
+                    <th>Email</th>
+                    <th>School Name</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="user in ctrl.users">
+
+                    <td>
+                        {{ user.teacher_escort }}
+                    </td>
+
+                    <td>
+                        {{ user.email }}
+                    </td>
+                    <td>
+                        {{ user.school_name }}
+                    </td>
+                    <td>
+                        {{ user.is_confirmed === 1 ? 'Account Confirmed' : 'Account Unconfirmed' }}
                     </td>
 
                 </tr>

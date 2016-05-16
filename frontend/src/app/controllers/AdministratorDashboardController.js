@@ -32,6 +32,16 @@ angular.module( 'app' )
 
            }
 
+           $rest.GetAllUsers( {
+
+               token: data.token,
+
+           } ).then( ( data ) => {
+
+               this.users = data;
+
+           } );
+
            $rest.GetUser( data ).then( ( { school_name, teacher_escort, username } ) => {
 
                this.data = {

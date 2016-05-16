@@ -188,6 +188,42 @@ angular
 
             },
 
+            GetAllUsers( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/users?token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             GetAllConferencesForAllUsers( data ) {
 
                 const promise    = $q.defer();
