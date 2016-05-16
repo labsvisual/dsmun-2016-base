@@ -14,11 +14,11 @@ gulp.task( 'compile:development', () => {
 
     return gulp.src( [ './app/**/*.js', '!./app/dist/*.*', '!app/services/ExceptionLoggingService.js' ] )
                .pipe( plumber() )
-               .pipe( concat( 'app.min.js' ) )
                .pipe( sourcemaps.init() )
                .pipe( babel({
                    presets: [ 'es2015' ]
                }) )
+               .pipe( concat( 'app.min.js' ) )
             //    .pipe( uglify( {
             //         compress: {
             //             negate_iife: false

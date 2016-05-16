@@ -1,12 +1,30 @@
 angular.module( 'app' )
        .controller( 'DelegateInformationFormController', [ '$cookies', '$http', '$stateParams', '$window', 'RestApiService', function( $cookies, $http, $stateParams, $window, $rest ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+           let isLoggedIn       = $cookies.get( 'isLoggedIn' )
+               , data           = $cookies.get( 'loginData' )
+               , conferenceGuid = $stateParams.guid;
 
-           data = JSON.parse( data );
+           if( isLoggedIn && data ) {
 
-           const conferenceGuid = $stateParams.guid;
+               data = JSON.parse( data );
+
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+           }
+
            this.guid = conferenceGuid;
 
            $rest.GetConference( {

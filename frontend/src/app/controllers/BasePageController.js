@@ -1,7 +1,8 @@
 angular.module( 'app' )
-       .controller( 'BasePageController', [ '$cookies', '$state', '$window', 'RestApiService', function( $cookies, $state, $window, $rest ) {
+        .controller( 'BasePageController', [ '$cookies', '$state', '$window', 'RestApiService', function( $cookies, $state, $window, $rest ) {
 
             const data = $cookies.get( 'loginData' );
+
             this.showLogout = $cookies.get( 'isLoggedIn' ) && data;
             this.Logout = () => {
 

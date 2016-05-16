@@ -1,10 +1,28 @@
 angular.module( 'app' )
        .controller( 'GaCrisisFormController', [ 'lodash', '$cookies', '$http', '$stateParams', '$window', 'RestApiService', function( _, $cookies, $http, $stateParams, $window, $rest ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+           let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           data = JSON.parse( data );
+           if( isLoggedIn && data ) {
+
+               data = JSON.parse( data );
+
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+           }
 
            const conferenceGuid = $stateParams.guid;
            this.guid = conferenceGuid;
@@ -33,6 +51,7 @@ angular.module( 'app' )
                        'yellow': true,
 
                    };
+                   
                    return false;
 
                }

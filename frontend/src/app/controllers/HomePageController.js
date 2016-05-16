@@ -1,81 +1,69 @@
 angular.module( 'app' )
-       .controller( 'HomePageController', [ 'RestApiService', '$state', '$cookies', '$window', function( $restApi, $state, $cookies, $window ) {
+        .controller( 'HomePageController', [ 'RestApiService', '$state', '$cookies', '$window', function( $rest, $state, $cookies, $window ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-            let  data       = ( $cookies.get( 'loginData' ) );
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           if( isLoggedIn && data ) {
+            if( isLoggedIn && data ) {
 
                data = JSON.parse( data );
 
-               $restApi.IsValidToken( data.token ).then( ( valid ) => {
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
 
-                   if( valid.valid ) {
+                   if( !valid.valid ) {
 
-                       if( data.role === 1 ) {
-
-                           $state.go( 'dashboardAdmin' );
-
-                       } else {
-
-                           $state.go( 'dashboard' );
-
-                       }
+                       $state.go( 'home' );
 
                    }
 
                } ).catch( ( err ) => {
 
-                   $cookies.remove( 'isLoggedIn' );
-                   $cookies.remove( 'loginData' );
+                   $state.go( 'home' );
 
                } );
 
-           }
+            }
 
-           const self = this;
+            this.Login = () => {
 
-           self.Login = () => {
+                this.isProcessing = true;
 
-               self.isProcessing = true;
+                const resultPromise = $rest.Login( this.user );
 
-               const resultPromise = $restApi.Login( self.user );
-               resultPromise.then( ( dataLogin ) => {
+                resultPromise.then( ( dataLogin ) => {
 
-                   self.isProcessing = false;
-                   self.hasButtonMessage = true;
-                   self.buttonMessage = "Redirecting to dashboard...";
+                    this.hasButtonMessage = true;
+                    this.buttonMessage = "Redirecting to dashboard...";
 
-                  $cookies.put( 'loginData', JSON.stringify( dataLogin ) );
-                  $cookies.put( 'isLoggedIn', true );
+                    $cookies.put( 'loginData', JSON.stringify( dataLogin ) );
+                    $cookies.put( 'isLoggedIn', true );
 
-                   if( dataLogin.role === 1 ) {
+                    if( dataLogin.role === 1 ) {
 
-                       $state.go( 'dashboardAdmin' );
+                        $state.go( 'dashboardAdmin' );
 
-                   } else {
+                    } else {
 
-                       $state.go( 'dashboard' );
+                        $state.go( 'dashboard' );
 
-                   }
+                    }
 
+                } ).catch( ( dataError ) => {
 
-               } ).catch( ( dataError ) => {
+                    this.isProcessing = false;
 
-                   self.isProcessing = false;
+                    if( dataError.loggedIn === false ) {
 
-                   if( dataError.loggedIn === false ) {
+                        this.hasMessage = true;
+                        this.messageText = dataError.message;
+                        this.messageClass = {
+                            red: true
+                        }
 
-                       self.hasMessage = true;
-                       self.messageText = dataError.message;
-                       self.messageClass = {
-                           red: true
-                       }
+                    }
 
-                   }
+                } );
 
-               } );
-
-           }
+            }
 
        } ] );

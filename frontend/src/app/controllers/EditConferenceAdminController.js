@@ -1,16 +1,34 @@
 angular.module( 'app' )
-       .controller( 'EditConferenceAdminController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $stateParams, $cookies, $http, $state, $window, $rest ) {
+        .controller( 'EditConferenceAdminController', [ 'LoginService', '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $login, $stateParams, $cookies, $http, $state, $window, $rest ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           data = JSON.parse( data );
+            if( isLoggedIn && data ) {
 
-           const conferenceGuid = $stateParams.guid;
+               data = JSON.parse( data );
 
-           this.guid = conferenceGuid;
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
 
-           this.ConfirmConference = ( guid ) => {
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+            }
+
+            const conferenceGuid = $stateParams.guid;
+
+            this.guid = conferenceGuid;
+
+            this.ConfirmConference = ( guid ) => {
 
                this.isProcessing = true;
 
@@ -42,9 +60,50 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
-           this.AddDelegate = () => {
+            this.AddGADelegate = () => {
+
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 5 ) {
+
+                   this.isMessage = true;
+                   this.messageHeader = "Warning!";
+                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
+                   this.messageClass = {
+
+                       'yellow': true,
+
+                   };
+
+                   return false;
+
+               }
+
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates ) {
+
+                   this.conferenceData.gaCrisis.delegates.push( {
+
+                       name: 'Delegate Name'
+
+                   } );
+
+               } else {
+
+                   this.conferenceData.gaCrisis = {
+                       delegates: []
+                   };
+
+                   this.conferenceData.gaCrisis.delegates.push( {
+
+                       name: 'Delegate Name'
+
+                   } );
+
+               }
+
+            };
+
+            this.AddDelegate = () => {
 
                if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates && this.conferenceData.delegateInformation.delegates.length === 17 ) {
 
@@ -56,6 +115,7 @@ angular.module( 'app' )
                        'yellow': true,
 
                    };
+
                    return false;
 
                }
@@ -86,9 +146,9 @@ angular.module( 'app' )
 
                }
 
-           };
+            };
 
-           this.UpdateForm = () => {
+            this.UpdateForm = () => {
 
                this.processing = true;
 
@@ -118,55 +178,15 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
-           this.AddGADelegate = () => {
-
-               if( this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 5 ) {
-
-                   this.isMessage = true;
-                   this.messageHeader = "Warning!";
-                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
-                   this.messageClass = {
-
-                       'yellow': true,
-
-                   };
-                   return false;
-
-               }
-
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates ) {
-
-                   this.conferenceData.gaCrisis.delegates.push( {
-
-                       name: 'Delegate Name'
-
-                   } );
-
-               } else {
-
-                   this.conferenceData.gaCrisis = {
-                       delegates: []
-                   };
-
-                   this.conferenceData.gaCrisis.delegates.push( {
-
-                       name: 'Delegate Name'
-
-                   } );
-
-               }
-
-           };
-
-           $rest.GetConference( {
+            $rest.GetConference( {
 
                conferenceGuid,
                token: data.token,
                guid: data.guid,
 
-           } ).then( ( dataDb ) => {
+            } ).then( ( dataDb ) => {
 
                this.conferenceData = dataDb;
 
@@ -205,6 +225,6 @@ angular.module( 'app' )
 
                } )();
 
-           } );
+            } );
 
        } ] );

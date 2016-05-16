@@ -1,21 +1,39 @@
 angular.module( 'app' )
-       .controller( 'TravelArrangementsFormController', [ '$cookies', '$http', '$stateParams', '$window', 'RestApiService', function( $cookies, $http, $stateParams, $window, $rest ) {
+        .controller( 'TravelArrangementsFormController', [ '$cookies', '$http', '$stateParams', '$window', 'RestApiService', function( $cookies, $http, $stateParams, $window, $rest ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           data = JSON.parse( data );
+            if( isLoggedIn && data ) {
 
-           const conferenceGuid = $stateParams.guid;
-           this.guid = conferenceGuid;
+               data = JSON.parse( data );
 
-           $rest.GetConference( {
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+            }
+
+            const conferenceGuid = $stateParams.guid;
+            this.guid = conferenceGuid;
+
+            $rest.GetConference( {
 
                conferenceGuid,
                token: data.token,
                guid: data.guid,
 
-           } ).then( ( data ) => {
+            } ).then( ( data ) => {
 
                this.conferenceData = data;
 
@@ -47,10 +65,10 @@ angular.module( 'app' )
 
                }
 
-           } );
+            } );
 
 
-           this.UpdateForm = () => {
+            this.UpdateForm = () => {
 
                this.processing = true;
 
@@ -80,6 +98,6 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
        } ] );

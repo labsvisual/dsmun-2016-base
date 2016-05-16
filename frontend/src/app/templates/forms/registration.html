@@ -64,23 +64,12 @@
 
         <div class="two fields">
 
-            <!-- <div class="field">
+            <div class="field">
                 <input required ng-model="ctrl.conference.registration.address.country" />
             </div>
 
             <div class="field">
                 <input required ng-model="ctrl.conference.registration.address.state" />
-            </div> -->
-            <div class="field">
-                <select required ng-model="ctrl.conference.registration.address.country" ng-change="ctrl.populateStateList( ctrl.conference.registration.address.country )" class="ui dropdown">
-                    <option ng-repeat="country in ctrl.countries" value="{{ country.code }}">{{ country.name }}</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <select required ng-model="ctrl.conference.registration.address.state" class="ui dropdown">
-                    <option ng-repeat="state in ctrl.states" value="{{ state }}">{{ state }}</option>
-                </select>
             </div>
 
         </div>

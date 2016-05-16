@@ -1,14 +1,32 @@
 angular.module( 'app' )
-       .controller( 'NewUserController', [ '$cookies', '$http', '$state', '$window', 'RestApiService', 'CryptoService', function( $cookies, $http, $state, $window, $rest, $crypto ) {
+        .controller( 'NewUserController', [ '$cookies', '$http', '$state', '$window', 'RestApiService', 'CryptoService', function( $cookies, $http, $state, $window, $rest, $crypto ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           const self = this;
+            if( isLoggedIn && data ) {
 
-           data = JSON.parse( data );
+               data = JSON.parse( data );
 
-           this.NewUser = () => {
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+            }
+
+            const self = this;
+
+            this.NewUser = () => {
 
                this.processing = true;
 
@@ -60,6 +78,6 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
        } ] );

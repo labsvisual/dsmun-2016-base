@@ -1,27 +1,46 @@
 angular.module( 'app' )
-       .controller( 'RegistrationFormController', [ '$cookies', '$http', '$stateParams', '$window', 'RestApiService', function( $cookies, $http, $stateParams, $window, $rest ) {
+        .controller( 'RegistrationFormController', [ '$cookies', '$http', '$stateParams', '$window', 'RestApiService', function( $cookies, $http, $stateParams, $window, $rest ) {
 
-           const guid = $stateParams.guid;
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+            const guid = $stateParams.guid;
 
-           this.guid = $stateParams.guid;
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           data = JSON.parse( data );
+            if( isLoggedIn && data ) {
 
-           $rest.GetConference( {
+               data = JSON.parse( data );
+
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+            }
+
+            this.guid = $stateParams.guid;
+
+            $rest.GetConference( {
 
                token: data.token,
                guid: data.guid,
                conferenceGuid: guid
 
-           } ).then( ( data ) => {
+            } ).then( ( data ) => {
 
                this.conference = data;
 
-           } );
+            } );
 
-           this.UpdateForm = () => {
+            this.UpdateForm = () => {
 
                this.processing = true;
 
@@ -51,6 +70,6 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
        } ] );

@@ -1,10 +1,10 @@
 angular.module( 'app' )
-       .controller( 'AdministratorDashboardController', [ 'RestApiService', '$cookies', '$state', '$window', function( $rest, $cookies, $state, $window ) {
+        .controller( 'AdministratorDashboardController', [ 'RestApiService', '$cookies', '$state', '$window', function( $rest, $cookies, $state, $window ) {
 
-           let isLoggedIn = $cookies.get( 'isLoggedIn' )
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data     = $cookies.get( 'loginData' );
 
-           if( isLoggedIn && data ) {
+            if( isLoggedIn && data ) {
 
                data = JSON.parse( data );
 
@@ -30,19 +30,19 @@ angular.module( 'app' )
 
                } );
 
-           }
+            }
 
-           $rest.GetAllUsers( {
+            $rest.GetAllUsers( {
 
                token: data.token,
 
-           } ).then( ( data ) => {
+            } ).then( ( data ) => {
 
                this.users = data;
 
-           } );
+            } );
 
-           $rest.GetUser( data ).then( ( { school_name, teacher_escort, username } ) => {
+            $rest.GetUser( data ).then( ( { school_name, teacher_escort, username } ) => {
 
                this.data = {
 
@@ -52,9 +52,9 @@ angular.module( 'app' )
 
                };
 
-           } );
+            } );
 
-           $rest.GetAllConferencesForAllUsers( data ).then( ( dbData ) => {
+            $rest.GetAllConferencesForAllUsers( data ).then( ( dbData ) => {
 
                this.allConferences = [];
 
@@ -70,12 +70,12 @@ angular.module( 'app' )
 
                } );
 
-           } );
+            } );
 
-           this.sortType = 'isConfirmed';
-           this.sortReverse = false;
+            this.sortType = 'isConfirmed';
+            this.sortReverse = false;
 
-           this.ChangeSort = ( sortTypeNew ) => {
+            this.ChangeSort = ( sortTypeNew ) => {
 
                if( sortTypeNew === this.sortType ) {
                    this.sortReverse = !this.sortReverse;
@@ -83,9 +83,9 @@ angular.module( 'app' )
                    this.sortType = sortTypeNew;
                }
 
-           };
+            };
 
-           this.ConfirmConference = ( guid ) => {
+            this.ConfirmConference = ( guid ) => {
 
                this.isProcessing = true;
 
@@ -121,9 +121,9 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
-           this.UnconfirmConference = ( guid ) => {
+            this.UnconfirmConference = ( guid ) => {
 
                this.isProcessing = true;
 
@@ -160,6 +160,6 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
        } ] );

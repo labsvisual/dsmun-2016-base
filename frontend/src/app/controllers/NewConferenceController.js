@@ -1,14 +1,32 @@
 angular.module( 'app' )
-       .controller( 'NewConferenceController', [ '$cookies', '$http', '$state', '$window', 'RestApiService', function( $cookies, $http, $state, $window, $rest ) {
+        .controller( 'NewConferenceController', [ '$cookies', '$http', '$state', '$window', 'RestApiService', function( $cookies, $http, $state, $window, $rest ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           const self = this;
+            if( isLoggedIn && data ) {
 
-           data = JSON.parse( data );
+               data = JSON.parse( data );
 
-           this.countries = [
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+            }
+
+            const self = this;
+
+            this.countries = [
 
                {
 
@@ -24,9 +42,9 @@ angular.module( 'app' )
 
                }
 
-           ];
+            ];
 
-           this.populateStateList = ( country ) => {
+            this.populateStateList = ( country ) => {
 
                $rest.GetStates( country ).then( ( data ) => {
 
@@ -34,15 +52,15 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
-           this.cancel = () => {
+            this.cancel = () => {
 
                $state.go( 'dashboard' );
 
-           };
+            };
 
-           this.NewConference = () => {
+            this.NewConference = () => {
 
                this.processing = true;
 
@@ -97,6 +115,6 @@ angular.module( 'app' )
 
                } );
 
-           };
+            };
 
        } ] );

@@ -1,21 +1,39 @@
 angular.module( 'app' )
-       .controller( 'EditConferenceController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $stateParams, $cookies, $http, $state, $window, $rest ) {
+        .controller( 'EditConferenceController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $stateParams, $cookies, $http, $state, $window, $rest ) {
 
-           const isLoggedIn = $cookies.get( 'isLoggedIn' );
-           let data = ( $cookies.get( 'loginData' ) );
+            let isLoggedIn = $cookies.get( 'isLoggedIn' )
+               , data     = $cookies.get( 'loginData' );
 
-           data = JSON.parse( data );
+            if( isLoggedIn && data ) {
 
-           const conferenceGuid = $stateParams.guid;
-           this.guid = conferenceGuid;
+               data = JSON.parse( data );
 
-           $rest.GetConference( {
+               $rest.IsValidToken( data.token ).then( ( valid ) => {
+
+                   if( !valid.valid ) {
+
+                       $state.go( 'home' );
+
+                   }
+
+               } ).catch( ( err ) => {
+
+                   $state.go( 'home' );
+
+               } );
+
+            }
+
+            const conferenceGuid = $stateParams.guid;
+            this.guid = conferenceGuid;
+
+            $rest.GetConference( {
 
                conferenceGuid,
                token: data.token,
                guid: data.guid,
 
-           } ).then( ( data ) => {
+            } ).then( ( data ) => {
 
                this.conferenceData = data;
 
@@ -25,6 +43,6 @@ angular.module( 'app' )
 
                } )();
 
-           } );
+            } );
 
        } ] );

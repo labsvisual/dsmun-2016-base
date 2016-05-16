@@ -1,13 +1,12 @@
 angular.module( 'app' )
-       .controller( 'ForgotPasswordController', [ 'RestApiService', '$state', '$cookies', '$window', function( $restApi, $state, $cookies, $window ) {
+        .controller( 'ForgotPasswordController', [ 'RestApiService', '$state', '$cookies', '$window', function( $restApi, $state, $cookies, $window ) {
 
-
-           const self = this;
-           self.Execute = () => {
+            this.Execute = () => {
 
                this.processing = true;
 
                const resultPromise = $restApi.ForgotPassword( self.user );
+
                resultPromise.then( ( dataForgot ) => {
 
                    this.processing = false;
@@ -36,6 +35,6 @@ angular.module( 'app' )
 
                } );
 
-           }
+            }
 
        } ] );
