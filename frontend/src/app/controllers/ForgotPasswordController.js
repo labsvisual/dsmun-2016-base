@@ -5,7 +5,7 @@ angular.module( 'app' )
 
                this.processing = true;
 
-               const resultPromise = $restApi.ForgotPassword( self.user );
+               const resultPromise = $restApi.ForgotPassword( this.user );
 
                resultPromise.then( ( dataForgot ) => {
 
