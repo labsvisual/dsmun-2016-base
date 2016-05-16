@@ -417,7 +417,7 @@ const handlers = {
                         break;
 
                     case 'au':
-                        delegate.committee = 'Disarmament and International Security Committee';
+                        delegate.committee = 'African Union';
                         break;
 
                     case( 'ec' ):
