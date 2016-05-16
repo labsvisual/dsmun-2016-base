@@ -5,7 +5,6 @@
         <title>Confirmation Sheet - {{ schoolName }}</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-        <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/Toast/master/css/grid.css">
 
         <style>
 
@@ -447,7 +446,7 @@
                     <div class="grid__col grid__col--1-of-4 data">
 
                         <label>Committee</label>
-                        <span class="content">{{this.committee}}</span>
+                        <span style="font-size: 80%; font-weight: bold; text-decoration: underline; color: inherit;" class="content"><a href="http://dsmun.com/committees/{{this.committeeShortName}}">{{this.committee}}</a></span>
 
                     </div>
 

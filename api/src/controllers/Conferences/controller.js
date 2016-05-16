@@ -401,7 +401,8 @@ const handlers = {
             let delegates = [];
             conference.delegateInformation.delegates.map( ( delegate ) => {
 
-                const { committee } = delegate;
+                const { committee } = delegate
+                    , shortName     = committee;
                 switch( committee ) {
 
                     case 'unsc':
@@ -457,6 +458,8 @@ const handlers = {
                         break;
 
                 }
+
+                delegate.committeeShortName = shortName;
 
                 delegates.push( delegate );
 
