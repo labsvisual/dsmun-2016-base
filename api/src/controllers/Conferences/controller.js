@@ -631,11 +631,41 @@ const handlers = {
 
                         } ).then( ( res ) => {
 
-                            ResponseBuilder( 200, null, {
+                            const msgHtml = `
 
-                                confirmationId: confirmationGuid,
+                            Hey <b>${ conference.registration.facultyAdvisor.name }</b>, <br>
+                            <br>
+                            Your conference was confirmed and ratified by the DSMUN Management team. You
+                            can view the confirmation sheet <a href="http://api.app.beta.dsmun.com/conferences/confirm/${ conferenceGuid }">here</a>. <br>
+                            <br>
+                            The confirmation sheet contains all of the details you have given us for the conference.
+                            If you feel that these details are incorrect in any way, feel free to drop a line to us
+                            at dsmun@doonschool.com.
+                            <br>
+                            -- <br>
+                            The DSMUN Team
 
-                            }, reply );
+                            `;
+
+                            const message = Mailer.buildMessage( conference.registration.facultyAdvisor.email, "Conference Confirmed", msgHtml, msgHtml );
+                            Mailer.instance.sendMail( message, ( err, res ) => {
+
+                                if( err ) {
+                                    Winston.log( 'error', err, {
+                                        type: 'api_error'
+                                    } );
+
+                                    ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
+                                    return;
+                                }
+
+                                ResponseBuilder( 200, null, {
+
+                                    confirmationId: confirmationGuid,
+
+                                }, reply );
+
+                            } );
 
                         } ).catch( ( err ) => {
 

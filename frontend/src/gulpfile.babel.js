@@ -6,9 +6,9 @@ import sourcemaps from 'gulp-sourcemaps';
 import plumber    from 'gulp-plumber';
 import rename     from 'gulp-rename';
 
-const replace     = require( 'gulp-replace' );
-
-const browserSync = require('browser-sync').create();
+const replace     = require( 'gulp-replace' )
+    , browserSync = require( 'browser-sync' ).create()
+    , purifycss   = require( 'gulp-purifycss' );
 
 gulp.task( 'compile:development', () => {
 
@@ -42,6 +42,14 @@ gulp.task( 'compile:production', () => {
                     outSourceMaps: true
                 } ) )
                .pipe( sourcemaps.write( './' ) )
+               .pipe( gulp.dest( './app/dist' ) );
+
+} );
+
+gulp.task( 'prepare:css', () => {
+
+    return gulp.src( [ './lib/semantic/dist/semantic.min.css' ] )
+               .pipe( purifycss( [ './app/templates/**/*.html' ] ) )
                .pipe( gulp.dest( './app/dist' ) );
 
 } );
