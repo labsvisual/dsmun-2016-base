@@ -507,7 +507,7 @@ const handlers = {
 
             reply.view( 'confirmation', _.merge( conference, {
                 generated: new Date().toDateString(),
-                confirmationGuid: conference.confirmationId
+                confirmationId: conference.confirmationId
             } ) );
 
         } ).catch( ( err ) => {
