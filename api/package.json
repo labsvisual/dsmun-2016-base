@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node bootstrap.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git add . && git commit -am \"DEPLOY_PREP\" && git push -u origin develop && ssh -i ~/dsmun.pem ubuntu@dsmun-backend 'sudo -u ubuntu /home/ubuntu/deploy.sh'"
+    "deploy": "ssh -i ~/dsmun.pem ubuntu@dsmun-backend 'sudo -u ubuntu /home/ubuntu/deploy.sh'"
   },
   "author": "",
   "license": "MIT",
