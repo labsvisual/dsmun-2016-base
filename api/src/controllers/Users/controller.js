@@ -134,7 +134,7 @@ const handlers = {
                 Hey ${ data.username }, <br>
                 <br>
                 An account related to this email was created for DSMUN Base. You can confirm the account by
-                clicking <a href="http://api.app.beta.dsmun.com/users/confirm/${ generatedGuid }/${ activationKey }">here</a>. <br>
+                clicking <a href="http://api.app.dsmun.com/users/confirm/${ generatedGuid }/${ activationKey }">here</a>. <br>
                 <br>
                 The username for the account is: <b>${ data.username }</b><br>
                 The password for the account is: <b>${ generatedPassword }</b><br>

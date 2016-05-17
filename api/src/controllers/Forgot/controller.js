@@ -137,7 +137,7 @@ const handlers = {
                 Hey <b>${ request.payload.username }</b>, <br>
                 <br>
                 A password reset request was initiated for this account. If you're the one who initiated
-                the request, please click <a href="http://api.app.beta.dsmun.com/forgot/${ pass_reset_code }">here</a>
+                the request, please click <a href="http://api.app.dsmun.com/forgot/${ pass_reset_code }">here</a>
                 to reset your password. <br>
                 <br>
                 If it wasn't you, just ignore this email.<br>
@@ -152,7 +152,7 @@ const handlers = {
                 Hey ${ request.payload.username }
 
                 A password reset request was initiated for this account. If you're the one who initiated
-                the request, please click <a href="https://api.app.beta.dsmun.com/forgot/${ pass_reset_code }">here</a>
+                the request, please click <a href="https://api.app.dsmun.com/forgot/${ pass_reset_code }">here</a>
                 to reset your password.
 
                 If it wasn't you, just ignore this email.

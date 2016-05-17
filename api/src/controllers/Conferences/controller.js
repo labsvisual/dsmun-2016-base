@@ -636,7 +636,7 @@ const handlers = {
                             Hey <b>${ conference.registration.facultyAdvisor.name }</b>, <br>
                             <br>
                             Your conference was confirmed and ratified by the DSMUN Management team. You
-                            can view the confirmation sheet <a href="http://api.app.beta.dsmun.com/conferences/confirm/${ conferenceGuid }">here</a>. <br>
+                            can view the confirmation sheet <a href="http://api.app.dsmun.com/conferences/confirm/${ conferenceGuid }">here</a>. <br>
                             <br>
                             The confirmation sheet contains all of the details you have given us for the conference.
                             If you feel that these details are incorrect in any way, feel free to drop a line to us
