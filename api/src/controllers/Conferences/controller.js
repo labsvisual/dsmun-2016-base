@@ -475,7 +475,7 @@ const handlers = {
                         delegate.committee = 'United Nations Security Council';
                         break;
 
-                    case 'uscss':
+                    case 'unscss':
                         delegate.committee = 'Supreme Council of Sovereign States';
                         break;
 
