@@ -50,6 +50,28 @@ const routes = [
 
     {
 
+        path: '/{conferenceGuid}',
+        method: 'DELETE',
+        handler: controller.deleteConference,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required(),
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
         path: '/confirm/{conferenceGuid}',
         method: 'GET',
         handler: controller.getConfirmation,

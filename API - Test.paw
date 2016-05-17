@@ -5,7 +5,7 @@
     <databaseInfo>
         <version>134481920</version>
         <UUID>4A3A7CF7-301A-41B9-9118-0189A0771DEC</UUID>
-        <nextObjectID>145</nextObjectID>
+        <nextObjectID>147</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -77,7 +77,7 @@
         <attribute name="method" type="string">POST</attribute>
         <attribute name="followredirects" type="bool">0</attribute>
         <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["data"],[{"data":{"json":"{\\"registration\\":{\\"name\\":\\"Mr. Mohit Sinha\\",\\"delegationSize\\":9}}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
-        <attribute name="order" type="int64">5</attribute>
+        <attribute name="order" type="int64">6</attribute>
         <attribute name="name" type="string">Create Conference</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
         <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
@@ -148,7 +148,7 @@
         <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z120"></relationship>
     </object>
     <object type="LMENVIRONMENTVARIABLEVALUE" id="z112">
-        <attribute name="value" type="string">vttG3UwaS5XmJ7cxc8J4Uk8g6zqEV05s</attribute>
+        <attribute name="value" type="string">RwI6zDd77AA3vtKlmBy72joodtZozf79</attribute>
         <relationship name="environment" type="1/1" destination="LMENVIRONMENT" idrefs="z102"></relationship>
         <relationship name="variable" type="1/1" destination="LMENVIRONMENTVARIABLE" idrefs="z116"></relationship>
     </object>
@@ -197,7 +197,7 @@
         <attribute name="followredirects" type="bool">0</attribute>
         <attribute name="clientcertificate" type="string">[{"data":{"mode":0},"identifier":"com.luckymarmot.CertificateDynamicValue"}]</attribute>
         <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["data"],[{"data":{"json":"{\\/*\\"registration\\":{\\"countryPreference\\":[\\"India\\",\\"China\\"],\\"name\\":\\"Shreyansh Pandey\\",\\"isFormFilled\\":true},\\"isConfirmed\\":false,\\"delegateInformation\\":{\\"delegates\\":[{\\"name\\":\\"Shreyansh Pandey\\",\\"committee\\":\\"DISEC\\",\\"gender\\":\\"male\\",\\"mealPreference\\":\\"veg\\",\\"isCommitteeConfirmed\\":false,\\"delegateGuid\\":\\"Hello\\"},{\\"name\\":\\"Dhruv Kharabanda\\"}],\\"isFormFilled\\":false},\\"medicalHistory\\":{\\"isFormFilled\\":true},*\\/\\"travelArrangements\\":{\\/*\\"onward\\":{\\"arrivalDate\\":null,\\"departureDate\\":null},\\"returnJourney\\":{\\"arrivalDate\\":null,\\"departureDate\\":null},*\\/\\"isFormFilled\\":true}\\/*,\\"gaCrisis\\":{\\"isFormFilled\\":false}*\\/}"},"identifier":"com.luckymarmot.JSONDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
-        <attribute name="order" type="int64">6</attribute>
+        <attribute name="order" type="int64">7</attribute>
         <attribute name="name" type="string">Update Conference</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
         <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
@@ -292,7 +292,7 @@
         <attribute name="order" type="int64">2</attribute>
         <attribute name="name" type="string">Conferences</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM"></relationship>
-        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM" idrefs="z136 z103 z135 z117 z111 z108 z144"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM" idrefs="z147 z111 z135 z103 z117 z108 z144 z136"></relationship>
         <relationship name="bodyparameters" type="0/0" destination="LMKEYVALUE"></relationship>
         <relationship name="headers" type="0/0" destination="LMKEYVALUE"></relationship>
         <relationship name="urlparameters" type="0/0" destination="LMKEYVALUE"></relationship>
@@ -423,7 +423,7 @@
     <object type="LMREQUEST" id="z139">
         <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
         <attribute name="uuid" type="string">79C9DFA0-27C5-4724-A0C8-7B9FE1AB1509</attribute>
-        <attribute name="url" type="string">[{"data":{"environmentVariable":"BB7241FB-B350-4436-A747-5EFF9FEF5D09"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"},"\\/confirmation\\/edff37a6-045e-4a3a-afe6-71c97238154a"]</attribute>
+        <attribute name="url" type="string">[{"data":{"environmentVariable":"BB7241FB-B350-4436-A747-5EFF9FEF5D09"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"},"\\/conferences\\/confirm\\/660af233-3d1d-4890-9ba7-d0fb708a3ea5"]</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -488,5 +488,31 @@
         <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
         <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
         <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z144"></relationship>
+    </object>
+    <object type="LMKEYVALUE" id="z146">
+        <attribute name="value" type="string"></attribute>
+        <attribute name="order" type="int64">0</attribute>
+        <attribute name="name" type="string"></attribute>
+        <attribute name="enabled" type="bool">1</attribute>
+        <relationship name="groupforbodyparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforheaders" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="groupforurlparameters" type="0/1" destination="LMREQUESTGROUP"></relationship>
+        <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z147"></relationship>
+    </object>
+    <object type="LMREQUEST" id="z147">
+        <attribute name="uuid" type="string">10D17D7F-5282-4563-8366-5610E0B63290</attribute>
+        <attribute name="url" type="string">http://localhost:3345/conferences/15549b8b-1f36-49cc-9818-c97003598698</attribute>
+        <attribute name="storecookies" type="bool">1</attribute>
+        <attribute name="sendcookies" type="bool">1</attribute>
+        <attribute name="redirectmethod" type="bool">0</attribute>
+        <attribute name="redirectauthorization" type="bool">0</attribute>
+        <attribute name="method" type="string">DELETE</attribute>
+        <attribute name="followredirects" type="bool">0</attribute>
+        <attribute name="body" type="string">[{"data":{"keyValues":[[["token"],[{"data":{"environmentVariable":"C2D7529F-7CE2-45C6-AEB5-48CD6F9292F6"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["guid"],[{"data":{"environmentVariable":"28E71342-55EB-413D-A9F3-E624A4FFBBE4"},"identifier":"com.luckymarmot.EnvironmentVariableDynamicValue"}],true],[["schoolGuid"],["f4e07143-511a-43a2-9d94-c0fd6e1775f8"],false]]},"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue"}]</attribute>
+        <attribute name="order" type="int64">5</attribute>
+        <attribute name="name" type="string">Confirm a Conference Duplicate</attribute>
+        <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z128"></relationship>
+        <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z146"></relationship>
     </object>
 </database>

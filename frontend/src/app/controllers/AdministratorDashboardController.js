@@ -85,6 +85,44 @@ angular.module( 'app' )
 
             };
 
+            this.DeleteConference  = ( conferenceGuid ) => {
+
+                this.isProcessing = true;
+
+                $rest.DeleteConference( {
+
+                    guid: data.guid,
+                    token: data.token,
+                    conferenceGuid,
+
+                } ).then( ( res ) => {
+
+                    this.isProcessing = false;
+
+                    this.hasButtonMessage = true;
+                    this.buttonMessage = "Conference confirmed!";
+                    this.hasMessage = true;
+                    this.messageClass = {
+                        blue: true
+                    };
+                    this.messageText = "Conference confirmed!";
+
+                    $window.location.reload();
+
+                } ).catch( ( err ) => {
+
+                    this.isProcessing = false;
+
+                    this.hasMessage = true;
+                    this.messageClass = {
+                        red: true
+                    };
+                    this.messageText = "An error was encountered while executing that operation!";
+
+                } );
+
+            };
+
             this.ConfirmConference = ( guid ) => {
 
                this.isProcessing = true;

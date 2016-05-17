@@ -2,9 +2,6 @@ angular
     .module( 'app' )
     .factory( 'RestApiService', [ '$http', 'CryptoService', '$q', ( $http, $cryptoService, $q ) => {
 
-        // const apiUrl = 'http://api.app.beta.dsmun.com';
-        // const apiUrl = 'http://localhost:3345';
-
         const apiUrl = '{{@API_URL}}';
 
         return {
@@ -478,6 +475,42 @@ angular
                             data: data.data,
 
                         } );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            DeleteConference( confObject ) {
+
+                const promise = $q.defer();
+
+                $http.delete( `${ apiUrl }/conferences/${ confObject.conferenceGuid }?token=${ confObject.token }&guid=${ confObject.guid }` ).then( ( data ) => {
+
+                    if( data.status === 200 || data.status === 201 ) {
+
+                        promise.resolve();
 
                     } else {
 

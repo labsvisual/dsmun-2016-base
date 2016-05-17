@@ -307,6 +307,70 @@ const handlers = {
 
     },
 
+    deleteConference( request, reply ) {
+
+
+        const {
+            conferenceGuid
+        } = request.params;
+
+        const {
+            token,
+            guid
+        } = request.query;
+
+        const checkToken = Knex( 'tokens' ).where( {
+
+            is_revoked: false,
+            token,
+
+        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+
+            dbData = dbData[ 0 ];
+            if( dbData.guid !== guid || dbData.guid === undefined ) {
+
+                ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+                return;
+
+            }
+
+            if( dbData.role === 1 ) {
+
+                ConferenceModel.filter( {
+
+                    conferenceGuid,
+
+                } ).delete().then( ( dat ) => {
+
+                    ResponseBuilder( 200, null, null, reply );
+
+                } ).catch( ( err ) => {
+
+                    Winston.log( 'error', err, {
+                        type: 'api_error'
+                    } );
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+                } );
+
+            } else {
+
+                Winston.warn( `Unauthorized operation executed against GUID ${ guid }` );
+                ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
+
+            }
+
+        } ).catch( ( err ) => {
+
+            Winston.log( 'error', err, {
+                type: 'api_error'
+            } );
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );
+
+    },
+
     getConference( request, reply ) {
 
         const token = request.query.token
@@ -593,7 +657,11 @@ const handlers = {
 
                     }
 
-                } );
+                } ).catch( ( err ) => {
+
+                    ResponseBuilder( 404, "The conference was not found.", null, reply );
+
+                } );;
 
             } else if ( dbData.role === 0 ) {
 
