@@ -12,7 +12,7 @@ const browserSync = require('browser-sync').create();
 
 gulp.task( 'compile:development', () => {
 
-    return gulp.src( [ './app/**/*.js', '!./app/dist/*.*', '!app/services/ExceptionLoggingService.js' ] )
+    return gulp.src( [ './app/**/*.js', '!./app/dist/*.*', '!app/services/LoggingService.js' ] )
                .pipe( plumber() )
                .pipe( sourcemaps.init() )
                .pipe( babel({
@@ -27,9 +27,10 @@ gulp.task( 'compile:development', () => {
 
 gulp.task( 'compile:production', () => {
 
-    return gulp.src( [ './app/**/*.js', '!./app/dist/*.*', '!app/services/ExceptionLoggingService.js' ] )
+    return gulp.src( [ './app/**/*.js', '!./app/dist/*.*', '!app/services/LoggingService.js' ] )
                .pipe( plumber() )
                .pipe( concat( 'app.min.js' ) )
+               .pipe( replace( '{{@API_URL}}', 'http://api.app.beta.dsmun.com' ) )
                .pipe( sourcemaps.init() )
                .pipe( babel({
                    presets: [ 'es2015' ]
@@ -40,7 +41,6 @@ gulp.task( 'compile:production', () => {
                     },
                     outSourceMaps: true
                 } ) )
-               .pipe( replace( '{{@API_URL}}', 'http://api.app.beta.dsmun.com' ) )
                .pipe( sourcemaps.write( './' ) )
                .pipe( gulp.dest( './app/dist' ) );
 
