@@ -11,9 +11,9 @@ angular.module( 'app' )
 
                    this.processing = false;
 
-                   self.hasMessage = true;
-                   self.messageText = "An email outling the steps to reset your password has been sent. Check your email!";
-                   self.messageClass = {
+                   this.hasMessage = true;
+                   this.messageText = "An email outling the steps to reset your password has been sent. Check your email!";
+                   this.messageClass = {
 
                        blue: true
 
@@ -25,9 +25,9 @@ angular.module( 'app' )
 
                    if( dataError.error ) {
 
-                       self.hasMessage = true;
-                       self.messageText = dataError.message;
-                       self.messageClass = {
+                       this.hasMessage = true;
+                       this.messageText = dataError.message;
+                       this.messageClass = {
                            red: true
                        }
 
