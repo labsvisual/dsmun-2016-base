@@ -39,8 +39,6 @@ const handlers = {
 
                 } ).then( ( [ conference ] ) => {
 
-                    renderer.render(  )
-
                     ResponseBuilder( 200, null, conference, reply );
 
                 } ).catch( ( err ) => {
