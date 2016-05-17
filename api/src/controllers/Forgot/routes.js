@@ -14,7 +14,7 @@ const routes = [
 
                 payload: {
 
-                    username: Joi.string().min( 9 ).max( 50 ).required()
+                    username: Joi.string().min( 4 ).max( 50 ).required()
 
                 }
 
@@ -44,7 +44,7 @@ const routes = [
                 payload: {
 
                     password: Joi.string().min( 9 ).max( 128 ).required(),
-                    username: Joi.string().min( 9 ).max( 32 ).required()
+                    username: Joi.string().min( 4 ).max( 32 ).required()
 
                 }
 
