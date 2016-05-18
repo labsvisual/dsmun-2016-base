@@ -4,4 +4,4 @@ trello-api
 visual_identity/
 *.git
 aws.json
-
+.vagrant
