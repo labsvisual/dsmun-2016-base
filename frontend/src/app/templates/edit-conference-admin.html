@@ -73,7 +73,7 @@
         <div class="header">All Forms Filled</div>
         <p>
             The delegation from {{ ctrl.conferenceData.schoolName }} has filled in all of the
-            required forms. 
+            required forms.
         </p>
 
     </div>
@@ -97,7 +97,9 @@
                     <span>{{ delegate.name }}</span>
                     <div class="checkbox__container--inner">
                         <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" type="checkbox" tabindex="0">
-                        <label>Committee Confirmed</label>
+                        <label style="margin-right: 1em;">Committee Confirmed</label>
+                        <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
+                        <label>Country Confirmed</label>
                     </div>
 
                 </h4>
@@ -126,7 +128,7 @@
                     </div>
                 </div>
 
-                <div class="field">
+                <!-- <div class="field">
                     <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
 
                         <option value="unsc">United Nations Security Council</option>
@@ -144,6 +146,34 @@
                         <option value="icao">International Civil Aviation Organisation</option>
 
                     </select>
+                </div> -->
+                <div class="two fields">
+                    <div class="field">
+                        <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
+
+                            <option value="unsc">United Nations Security Council</option>
+                            <option value="unscss">Supreme Council of Sovereign States</option>
+                            <option value="disec">Disarmament and International Security Committee</option>
+                            <option value="au">African Union</option>
+                            <option value="ec">European Council</option>
+                            <option value="iaea">International Atomic Energy Agency</option>
+                            <option value="unhrc">United Nations Human Rights Council</option>
+                            <option value="ls">Lok Sabha</option>
+                            <option value="ipc">International Press Corps</option>
+                            <option value="specpol">Special Political and Decolonisation Committee</option>
+                            <option value="scp">United Nations Special Committee on Palestine</option>
+                            <option value="odc">United Nations Office of Drugs and Crime</option>
+                            <option value="icao">International Civil Aviation Organisation</option>
+
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
+
+                            <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
+
+                        </select>
+                    </div>
                 </div>
 
             </div>
@@ -379,6 +409,23 @@
                 <label>Other Details</label>
                 <textarea ng-model="ctrl.conferenceData.travelArrangements.returnJourney.details" ></textarea>
 
+            </div>
+
+            <div class="admin__form-header ui dividing header">
+                <h1>Country Allotment</h1>
+            </div>
+
+            <div ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" class="ui field">
+                <input ng-model="ctrl.conferenceData.countryAllotment.countries[ $index ].name" type="text" placeholder="Country {{ $index + 1 }}">
+            </div>
+
+            <div ng-click="ctrl.AddCountryAllotment()" class="ui labeled button" tabindex="0">
+                <div class="ui button" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
+                    <i class="plus icon"></i> Country
+                </div>
+                <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
+                    {{ ctrl.conferenceData.countryAllotment.countries.length || 0 }}
+                </a>
             </div>
 
             <div class="ui buttons">

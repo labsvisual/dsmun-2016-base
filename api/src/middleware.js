@@ -4,7 +4,8 @@
 
 const Good             = require( 'good' )
     , GoodConsole      = require( 'good-console' )
-    , GoodGraylog2     = require( 'good-graylog2' );
+    , GoodGraylog2     = require( 'good-graylog2' )
+    , debug            = process.env.NODE_ENV !== 'production';
 
 const middlewares = [
 
@@ -28,22 +29,6 @@ const middlewares = [
 
                 },
 
-                {
-
-                    reporter: GoodGraylog2,
-                    events: {
-                        response: '*',
-                        log: '*',
-                        error: '*'
-                    },
-                    config: {
-                        service: 'DSMUN_MANAGEMENT_APPLICATION',
-                        host: '52.77.145.233',
-                        port: '5555',
-                    }
-
-                }
-
             ],
 
         },
@@ -51,6 +36,26 @@ const middlewares = [
     },
 
 ];
+
+if( !debug ) {
+
+    middlewares[ 0 ].options.reporters.push( {
+
+        reporter: GoodGraylog2,
+        events: {
+            response: '*',
+            log: '*',
+            error: '*'
+        },
+        config: {
+            service: 'DSMUN_MANAGEMENT_APPLICATION',
+            host: '52.77.145.233',
+            port: '5555',
+        }
+
+    } );
+
+}
 
 const attachMiddlwares = server => {
 

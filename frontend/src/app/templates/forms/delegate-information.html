@@ -13,9 +13,13 @@
 
         <div ng-repeat="delegate in ctrl.conferenceData.delegateInformation.delegates" style="padding-bottom: 2.5em;">
 
-            <h4 class="ui dividing header">
+            <h4 class="admin__form-header ui dividing header">
 
                 {{ delegate.name }}
+                <div ng-show="ctrl.conferenceData.countryAllotment" class="checkbox__container--inner">
+                    <input ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
+                    <label>Country Confirmed</label>
+                </div>
 
             </h4>
 
@@ -44,24 +48,33 @@
             </div>
 
 
-            <div class="field">
-                <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
+            <div class="two fields">
+                <div class="field">
+                    <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
 
-                    <option value="unsc">United Nations Security Council</option>
-                    <option value="unscss">Supreme Council of Sovereign States</option>
-                    <option value="disec">Disarmament and International Security Committee</option>
-                    <option value="au">African Union</option>
-                    <option value="ec">European Council</option>
-                    <option value="iaea">International Atomic Energy Agency</option>
-                    <option value="unhrc">United Nations Human Rights Council</option>
-                    <option value="ls">Lok Sabha</option>
-                    <option value="ipc">International Press Corps</option>
-                    <option value="specpol">Special Political and Decolonisation Committee</option>
-                    <option value="scp">United Nations Special Committee on Palestine</option>
-                    <option value="odc">United Nations Office of Drugs and Crime</option>
-                    <option value="icao">International Civil Aviation Organisation</option>
+                        <option value="unsc">United Nations Security Council</option>
+                        <option value="unscss">Supreme Council of Sovereign States</option>
+                        <option value="disec">Disarmament and International Security Committee</option>
+                        <option value="au">African Union</option>
+                        <option value="ec">European Council</option>
+                        <option value="iaea">International Atomic Energy Agency</option>
+                        <option value="unhrc">United Nations Human Rights Council</option>
+                        <option value="ls">Lok Sabha</option>
+                        <option value="ipc">International Press Corps</option>
+                        <option value="specpol">Special Political and Decolonisation Committee</option>
+                        <option value="scp">United Nations Special Committee on Palestine</option>
+                        <option value="odc">United Nations Office of Drugs and Crime</option>
+                        <option value="icao">International Civil Aviation Organisation</option>
 
-                </select>
+                    </select>
+                </div>
+                <div class="field">
+                    <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
+
+                        <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
+
+                    </select>
+                </div>
             </div>
 
         </div>

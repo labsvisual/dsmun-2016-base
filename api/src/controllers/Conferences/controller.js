@@ -8,8 +8,9 @@ import Helpers from '../../helpers/utils.js';
 import ConferenceModel from '../../models/models.js';
 import Winston from '../../helpers/logger';
 
-var Hasher = require( 'node-hasher' )
-  , _      = require( 'lodash' );
+const Hasher = require( 'node-hasher' )
+    , _      = require( 'lodash' )
+    , debug  = process.env.NODE_ENV !== 'production';
 
 _.mixin( {
   compactObject: ( obj, keyName ) => {
@@ -68,7 +69,7 @@ const handlers = {
                 let dataToExtendWith = {
 
                     conferenceGuid: confGuid,
-                    schoolName: dbData2['school_name'],
+                    schoolName: dbData2.school_name,
                     schoolGuid: guid,
                     isConfirmed: false
 
@@ -440,7 +441,7 @@ const handlers = {
             } );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
-        } );;
+        } );
 
     },
 
@@ -648,16 +649,28 @@ const handlers = {
                             `;
 
                             const message = Mailer.buildMessage( conference.registration.facultyAdvisor.email, "Conference Confirmed", msgHtml, msgHtml );
-                            Mailer.instance.sendMail( message, ( err, res ) => {
+                            if( !debug ) {
 
-                                if( err ) {
-                                    Winston.log( 'error', err, {
-                                        type: 'api_error'
-                                    } );
+                                Mailer.instance.sendMail( message, ( err, res ) => {
 
-                                    ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
-                                    return;
-                                }
+                                    if( err ) {
+                                        Winston.log( 'error', err, {
+                                            type: 'api_error'
+                                        } );
+
+                                        ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
+                                        return;
+                                    }
+
+                                    ResponseBuilder( 200, null, {
+
+                                        confirmationId: confirmationGuid,
+
+                                    }, reply );
+
+                                } );
+
+                            } else {
 
                                 ResponseBuilder( 200, null, {
 
@@ -665,7 +678,7 @@ const handlers = {
 
                                 }, reply );
 
-                            } );
+                            }
 
                         } ).catch( ( err ) => {
 
@@ -691,7 +704,7 @@ const handlers = {
 
                     ResponseBuilder( 404, "The conference was not found.", null, reply );
 
-                } );;
+                } );
 
             } else if ( dbData.role === 0 ) {
 

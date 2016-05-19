@@ -29,6 +29,7 @@ ENV     MYSQL_USER dsmun
 ENV     MYSQL_PASS nEXuEwTCuYwMacqq
 ENV     RETHINK_HOST 172.31.16.103
 ENV     RETHINK_AUTH 3Jl3LDaS60Qw9VNE1txq961e
+ENV     NODE_ENV production
 
 WORKDIR /usr/src/app
 

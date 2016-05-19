@@ -62,6 +62,47 @@ angular.module( 'app' )
 
             };
 
+            this.AddCountryAllotment = () => {
+
+               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.countries && this.conferenceData.countryAllotment.countries.length === 5 ) {
+
+                   this.isMessage = true;
+                   this.messageHeader = "Warning!";
+                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
+                   this.messageClass = {
+
+                       'yellow': true,
+
+                   };
+
+                   return false;
+
+               }
+
+               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.countries ) {
+
+                   this.conferenceData.countryAllotment.countries.push( {
+
+                       name: 'Country Name'
+
+                   } );
+
+               } else {
+
+                   this.conferenceData.countryAllotment = {
+                       countries: []
+                   };
+
+                   this.conferenceData.countryAllotment.countries.push( {
+
+                       name: 'Country Name'
+
+                   } );
+
+               }
+
+            };
+
             this.AddGADelegate = () => {
 
                if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 5 ) {
