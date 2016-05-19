@@ -105,11 +105,13 @@
                 </h4>
 
                 <div class="field">
+                    <label>Name</label>
                     <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
                 </div>
 
                 <div class="two fields">
                     <div class="field">
+                        <label>Dietry Preference</label>
                         <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
 
                             <option value="veg">Vegetarian</option>
@@ -118,6 +120,7 @@
                         </select>
                     </div>
                     <div class="field">
+                        <label>Gender</label>
                         <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
 
                             <option value="male">Male</option>
@@ -128,27 +131,9 @@
                     </div>
                 </div>
 
-                <!-- <div class="field">
-                    <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
-
-                        <option value="unsc">United Nations Security Council</option>
-                        <option value="unscss">Supreme Council of Sovereign States</option>
-                        <option value="disec">Disarmament and International Security Committee</option>
-                        <option value="au">African Union</option>
-                        <option value="ec">European Council</option>
-                        <option value="iaea">International Atomic Energy Agency</option>
-                        <option value="unhrc">United Nations Human Rights Council</option>
-                        <option value="ls">Lok Sabha</option>
-                        <option value="ipc">International Press Corps</option>
-                        <option value="specpol">Special Political and Decolonisation Committee</option>
-                        <option value="scp">United Nations Special Committee on Palestine</option>
-                        <option value="odc">United Nations Office of Drugs and Crime</option>
-                        <option value="icao">International Civil Aviation Organisation</option>
-
-                    </select>
-                </div> -->
                 <div class="two fields">
                     <div class="field">
+                        <label>Committee Preference</label>
                         <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
 
                             <option value="unsc">United Nations Security Council</option>
@@ -168,6 +153,7 @@
                         </select>
                     </div>
                     <div class="field">
+                        <label>Country Allotment</label>
                         <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
 
                             <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
@@ -199,6 +185,7 @@
 
                 <div class="field">
 
+                    <label>Name</label>
                     <input type="text" ng-model="ctrl.conferenceData.gaCrisis.delegates[ $index ].name">
 
                 </div>
@@ -225,22 +212,26 @@
             <div class="field">
 
                 <div class="field">
+                    <label>Name</label>
                     <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.name" placeholder="First Name">
                 </div>
 
                 <div class="two fields">
 
                     <div class="field">
+                        <label>Mobile Number</label>
                         <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
                     </div>
 
                     <div class="field">
+                        <label>Landline Number</label>
                         <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
                     </div>
 
                 </div>
 
                 <div class="field">
+                    <label>Email</label>
                     <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.email" placeholder="Email Address">
                 </div>
 
@@ -252,6 +243,7 @@
             <div class="one field">
 
                 <div class="field">
+                    <label>Street</label>
                     <input required type="text" ng-model="ctrl.conferenceData.registration.address.street" placeholder="Street Address">
                 </div>
 
@@ -260,10 +252,12 @@
             <div class="two fields">
 
                 <div class="field">
+                    <label>City</label>
                     <input required type="text" ng-model="ctrl.conferenceData.registration.address.city" placeholder="City">
                 </div>
 
                 <div class="field">
+                    <label>PIN</label>
                     <input required type="text" ng-model="ctrl.conferenceData.registration.address.pin" placeholder="Zip Code">
                 </div>
 
@@ -272,11 +266,13 @@
             <div class="two fields">
 
                 <div class="field">
-                    <input required ng-model="ctrl.conferenceData.registration.address.country" />
+                    <label>State</label>
+                    <input required ng-model="ctrl.conferenceData.registration.address.state" />
                 </div>
 
                 <div class="field">
-                    <input required ng-model="ctrl.conferenceData.registration.address.state" />
+                    <label>Country</label>
+                    <input required ng-model="ctrl.conferenceData.registration.address.country" />
                 </div>
 
             </div>
@@ -291,6 +287,7 @@
 
             <div class="field">
 
+                <label>Total Passengers</label>
                 <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassengers">
 
             </div>

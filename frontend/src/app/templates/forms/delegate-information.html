@@ -24,11 +24,13 @@
             </h4>
 
             <div class="field">
+                <label>Name</label>
                 <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
             </div>
 
             <div class="two fields">
                 <div class="field">
+                    <label>Dietry Preference</label>
                     <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
 
                         <option value="veg">Vegetarian</option>
@@ -37,6 +39,7 @@
                     </select>
                 </div>
                 <div class="field">
+                    <label>Gender</label>
                     <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
 
                         <option value="male">Male</option>
@@ -47,9 +50,9 @@
                 </div>
             </div>
 
-
-            <div class="two fields">
+            <div ng-class="ctrl.fieldClasses">
                 <div class="field">
+                    <label>Committee Preference</label>
                     <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
 
                         <option value="unsc">United Nations Security Council</option>
@@ -68,11 +71,10 @@
 
                     </select>
                 </div>
-                <div class="field">
+                <div ng-hide="!ctrl.conferenceData.countryAllotment" class="field">
+                    <label>Country Allotment</label>
                     <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
-
                         <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
-
                     </select>
                 </div>
             </div>

@@ -37,6 +37,13 @@ angular.module( 'app' )
 
                this.conferenceData = data;
 
+               this.fieldClasses = {
+
+                   'two fields': ( this.conferenceData.countryAllotment ),
+                   'field': ( !this.conferenceData.countryAllotment )
+
+               };
+
            } );
 
            this.AddDelegate = () => {

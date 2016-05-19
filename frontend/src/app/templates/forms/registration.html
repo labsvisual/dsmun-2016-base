@@ -18,23 +18,27 @@
         <div class="field">
 
             <div class="field">
+                <label>Name</label>
                 <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.name" placeholder="First Name">
             </div>
 
             <div class="two fields">
 
                 <div class="field">
+                    <label>Mobile Number</label>
                     <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
                 </div>
 
                 <div class="field">
+                    <label>Landline Number</label>
                     <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
                 </div>
 
             </div>
 
             <div class="field">
-                <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.email" placeholder="Email Address">
+                <label>Email</label>
+                <input required type="email" ng-model="ctrl.conference.registration.facultyAdvisor.email" placeholder="Email Address">
             </div>
 
         </div>
@@ -45,6 +49,7 @@
         <div class="one field">
 
             <div class="field">
+                <label>Street</label>
                 <input required type="text" ng-model="ctrl.conference.registration.address.street" placeholder="Street Address">
             </div>
 
@@ -53,10 +58,12 @@
         <div class="two fields">
 
             <div class="field">
+                <label>City</label>
                 <input required type="text" ng-model="ctrl.conference.registration.address.city" placeholder="City">
             </div>
 
             <div class="field">
+                <label>PIN</label>
                 <input required type="text" ng-model="ctrl.conference.registration.address.pin" placeholder="Zip Code">
             </div>
 
@@ -65,11 +72,13 @@
         <div class="two fields">
 
             <div class="field">
-                <input required ng-model="ctrl.conference.registration.address.country" />
+                <label>State</label>
+                <input required ng-model="ctrl.conference.registration.address.state" />
             </div>
 
             <div class="field">
-                <input required ng-model="ctrl.conference.registration.address.state" />
+                <label>Country</label>
+                <input required ng-model="ctrl.conference.registration.address.country" />
             </div>
 
         </div>
