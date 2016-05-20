@@ -12,15 +12,18 @@ angular.module( 'app' )
                     $cookies.remove( 'isLoggedIn' );
                     $cookies.remove( 'loginData' );
 
+                    this.showLogout = false;
+                    $state.go( 'home' );
+
                 } ).catch( ( err ) => {
 
                     $cookies.remove( 'isLoggedIn' );
                     $cookies.remove( 'loginData' );
 
-                } );
+                    this.showLogout = false;
+                    $state.go( 'home' );
 
-                this.showLogout = false;
-                $window.location = "/";
+                } );
 
             };
 
