@@ -103,6 +103,34 @@ angular.module( 'app' )
 
             };
 
+            this.AddAnnouncement = () => {
+
+               if( this.conferenceData.announcements && this.conferenceData.announcements.notifications ) {
+
+                   this.conferenceData.announcements.notifications.push( {
+
+                       text: 'Notification',
+                       name: 'New Notification'
+
+                   } );
+
+               } else {
+
+                   this.conferenceData.announcements = {
+                       notifications: []
+                   };
+
+                   this.conferenceData.announcements.notifications.push( {
+
+                       text: 'Notification',
+                       name: 'New Notification'
+
+                   } );
+
+               }
+
+            };
+
             this.AddGADelegate = () => {
 
                if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 5 ) {

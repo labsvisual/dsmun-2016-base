@@ -75,6 +75,15 @@
 
     </div>
 
+    <div ng-repeat="notification in ctrl.conferenceData.announcements.notifications" class="ui message" ng-class="notification.class" style="margin-top: 3em;">
+
+        <div class="header">{{ notification.name }}</div>
+        <p>
+            {{ notification.text }}
+        </p>
+
+    </div>
+
     <div ng-show="ctrl.isAllDone" class="ui message" style="margin-top: 3em;">
 
         <div class="header">All Forms Filled</div>

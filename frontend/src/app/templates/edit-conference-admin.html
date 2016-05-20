@@ -82,352 +82,7 @@
 
         <form ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
 
-            <div class="admin__form-header ui dividing header">
-                <h1>Delegate Information Form</h1>
-                <div class="checkbox__container">
-                    <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.isFormFilled" type="checkbox" tabindex="0">
-                    <label>Form Filled and Confirmed</label>
-                </div>
-            </div>
-
-            <div ng-repeat="delegate in ctrl.conferenceData.delegateInformation.delegates" style="padding-bottom: 2.5em;">
-
-                <h4 class="ui dividing header checkbox__container alt">
-
-                    <span>{{ delegate.name }}</span>
-                    <div class="checkbox__container--inner">
-                        <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" type="checkbox" tabindex="0">
-                        <label style="margin-right: 1em;">Committee Confirmed</label>
-                        <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
-                        <label>Country Confirmed</label>
-                    </div>
-
-                </h4>
-
-                <div class="field">
-                    <label>Name</label>
-                    <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
-                </div>
-
-                <div class="two fields">
-                    <div class="field">
-                        <label>Dietry Preference</label>
-                        <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
-
-                            <option value="veg">Vegetarian</option>
-                            <option value="nonveg">Non - Vegetarian</option>
-
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Gender</label>
-                        <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
-
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="opther">I prefer not to disclose</option>
-
-                        </select>
-                    </div>
-                </div>
-
-                <div class="two fields">
-                    <div class="field">
-                        <label>Committee Preference</label>
-                        <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
-
-                            <option value="unsc">United Nations Security Council</option>
-                            <option value="unscss">Supreme Council of Sovereign States</option>
-                            <option value="disec">Disarmament and International Security Committee</option>
-                            <option value="au">African Union</option>
-                            <option value="ec">European Council</option>
-                            <option value="iaea">International Atomic Energy Agency</option>
-                            <option value="unhrc">United Nations Human Rights Council</option>
-                            <option value="ls">Lok Sabha</option>
-                            <option value="ipc">International Press Corps</option>
-                            <option value="specpol">Special Political and Decolonisation Committee</option>
-                            <option value="scp">United Nations Special Committee on Palestine</option>
-                            <option value="odc">United Nations Office of Drugs and Crime</option>
-                            <option value="icao">International Civil Aviation Organisation</option>
-
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Country Allotment</label>
-                        <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
-
-                            <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
-
-                        </select>
-                    </div>
-                </div>
-
-            </div>
-
-            <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
-                <div class="ui button" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
-                    <i class="plus icon"></i> Delegate
-                </div>
-                <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
-                    {{ ctrl.conferenceData.delegateInformation.delegates.length || 0 }}
-                </a>
-            </div>
-
-            <div class="admin__form-header ui dividing header">
-                <h1>GA Crisis Form</h1>
-                <div class="checkbox__container">
-                    <input ng-model="ctrl.conferenceData.gaCrisis.isFormFilled" type="checkbox" tabindex="0">
-                    <label>Form Filled and Confirmed</label>
-                </div>
-            </div>
-
-            <div ng-repeat="delegate in ctrl.conferenceData.gaCrisis.delegates" style="padding-bottom: 2.5em;">
-
-                <div class="field">
-
-                    <label>Name</label>
-                    <input type="text" ng-model="ctrl.conferenceData.gaCrisis.delegates[ $index ].name">
-
-                </div>
-
-            </div>
-
-            <div ng-disabled="this.shouldDisableAddGaDelegates" ng-click="ctrl.AddGADelegate()" class="ui labeled button" tabindex="0">
-                <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                    <i class="plus icon"></i> Delegate (GA)
-                </div>
-                <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                    {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
-                </a>
-            </div>
-
-            <div class="admin__form-header ui dividing header">
-                <h1>Registration Form</h1>
-                <div class="checkbox__container">
-                    <input ng-model="ctrl.conferenceData.registration.isFormFilled" type="checkbox" tabindex="0">
-                    <label>Form Filled and Confirmed</label>
-                </div>
-            </div>
-
-            <div class="field">
-
-                <div class="field">
-                    <label>Name</label>
-                    <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.name" placeholder="First Name">
-                </div>
-
-                <div class="two fields">
-
-                    <div class="field">
-                        <label>Mobile Number</label>
-                        <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
-                    </div>
-
-                    <div class="field">
-                        <label>Landline Number</label>
-                        <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
-                    </div>
-
-                </div>
-
-                <div class="field">
-                    <label>Email</label>
-                    <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.email" placeholder="Email Address">
-                </div>
-
-            </div>
-
-            <h4 class="ui dividing header">
-                Address
-            </h4>
-            <div class="one field">
-
-                <div class="field">
-                    <label>Street</label>
-                    <input required type="text" ng-model="ctrl.conferenceData.registration.address.street" placeholder="Street Address">
-                </div>
-
-            </div>
-
-            <div class="two fields">
-
-                <div class="field">
-                    <label>City</label>
-                    <input required type="text" ng-model="ctrl.conferenceData.registration.address.city" placeholder="City">
-                </div>
-
-                <div class="field">
-                    <label>PIN</label>
-                    <input required type="text" ng-model="ctrl.conferenceData.registration.address.pin" placeholder="Zip Code">
-                </div>
-
-            </div>
-
-            <div class="two fields">
-
-                <div class="field">
-                    <label>State</label>
-                    <input required ng-model="ctrl.conferenceData.registration.address.state" />
-                </div>
-
-                <div class="field">
-                    <label>Country</label>
-                    <input required ng-model="ctrl.conferenceData.registration.address.country" />
-                </div>
-
-            </div>
-
-            <div class="admin__form-header ui dividing header">
-                <h1>Travel Arrangements Form</h1>
-                <div class="checkbox__container">
-                    <input ng-model="ctrl.conferenceData.travelArrangements.isFormFilled" type="checkbox" tabindex="0">
-                    <label>Form Filled and Confirmed</label>
-                </div>
-            </div>
-
-            <div class="field">
-
-                <label>Total Passengers</label>
-                <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassengers">
-
-            </div>
-
-            <h4 class="ui dividing header">
-                Onward Journey
-            </h4>
-
-            <div class="two fields">
-
-                <div class="field">
-
-                    <label>Arrival Date</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.arrivalDate" type="date">
-
-                </div>
-
-                <div class="field">
-
-                    <label>Departure Date</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.departureDate" type="date">
-
-                </div>
-
-            </div>
-
-            <div class="three fields">
-
-                <div class="field">
-
-                    <label>Time of Arrival</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.timeOfArrival" type="text" placeholder="Time of Arrival">
-
-                </div>
-
-                <div class="field">
-
-                    <label>Place of Departure</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.onward.placeOfDeparture" type="text" placeholder="Place of Departure">
-
-                </div>
-
-                <div class="field">
-
-                    <label>Mode of Transport</label>
-                    <select ng-model="ctrl.conferenceData.travelArrangements.onward.mode" class="ui search dropdown">
-                        <option value="train">Train</option>
-                        <option value="air">Air</option>
-                        <option value="other">Other</option>
-                    </select>
-
-                </div>
-
-            </div>
-
-            <div class="field">
-
-                <label>Other Details</label>
-                <textarea ng-model="ctrl.conferenceData.travelArrangements.onward.details" ></textarea>
-
-            </div>
-
-            <h4 class="ui dividing header">
-                Return Journey
-            </h4>
-
-            <div class="two fields">
-
-                <div class="field">
-
-                    <label>Arrival Date</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.arrivalDate" type="date">
-
-                </div>
-
-                <div class="field">
-
-                    <label>Departure Date</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.departureDate" type="date">
-
-                </div>
-
-            </div>
-
-            <div class="three fields">
-
-                <div class="field">
-
-                    <label>Time of Arrival</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.timeOfArrival" type="text" placeholder="Time of Arrival">
-
-                </div>
-
-                <div class="field">
-
-                    <label>Place of Departure</label>
-                    <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.placeOfDeparture" type="text" placeholder="Place of Departure">
-
-                </div>
-
-                <div class="field">
-
-                    <label>Mode of Transport</label>
-                    <select ng-model="ctrl.conferenceData.travelArrangements.returnJourney.mode" class="ui search dropdown">
-                        <option value="train">Train</option>
-                        <option value="air">Air</option>
-                        <option value="other">Other</option>
-                    </select>
-
-                </div>
-
-            </div>
-
-            <div class="field">
-
-                <label>Other Details</label>
-                <textarea ng-model="ctrl.conferenceData.travelArrangements.returnJourney.details" ></textarea>
-
-            </div>
-
-            <div class="admin__form-header ui dividing header">
-                <h1>Country Allotment</h1>
-            </div>
-
-            <div ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" class="ui field">
-                <input ng-model="ctrl.conferenceData.countryAllotment.countries[ $index ].name" type="text" placeholder="Country {{ $index + 1 }}">
-            </div>
-
-            <div ng-click="ctrl.AddCountryAllotment()" class="ui labeled button" tabindex="0">
-                <div class="ui button" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
-                    <i class="plus icon"></i> Country
-                </div>
-                <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
-                    {{ ctrl.conferenceData.countryAllotment.countries.length || 0 }}
-                </a>
-            </div>
-
             <div class="ui buttons">
-                <button ui-sref="dashboardAdmin" ng-disabled="ctrl.processing" class="ui button">Back</button>
-                <div class="or"></div>
                 <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
             </div>
 
@@ -436,6 +91,408 @@
                     {{ ctrl.messageHeader }}
                 </div>
                 <p>{{ ctrl.messageText }}</p>
+            </div>
+
+            <div class="ui top attached tabular menu">
+                <a class="item active" data-tab="registrationForm">Registration Form</a>
+                <a class="item" data-tab="delegateInformationForm">Delegate Information Form</a>
+                <a class="item" data-tab="gaCrisisForm">GA Crisis Form</a>
+                <a class="item" data-tab="travelArrangementsForm">Travel Arrangements Form</a>
+                <a class="item" data-tab="countryAllotments">Country Allotments</a>
+                <a class="item" data-tab="notifications">Post Notifications</a>
+            </div>
+            <div class="ui bottom attached tab segment active" data-tab="registrationForm">
+
+                <div class="admin__form-header ui dividing header">
+                    <h1>Registration Form</h1>
+                    <div class="checkbox__container">
+                        <input ng-model="ctrl.conferenceData.registration.isFormFilled" type="checkbox" tabindex="0">
+                        <label>Form Filled and Confirmed</label>
+                    </div>
+                </div>
+
+                <div class="field">
+
+                    <div class="field">
+                        <label>Name</label>
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.name" placeholder="First Name">
+                    </div>
+
+                    <div class="two fields">
+
+                        <div class="field">
+                            <label>Mobile Number</label>
+                            <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
+                        </div>
+
+                        <div class="field">
+                            <label>Landline Number</label>
+                            <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+                        <label>Email</label>
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.email" placeholder="Email Address">
+                    </div>
+
+                </div>
+
+                <h4 class="ui dividing header">
+                    Address
+                </h4>
+                <div class="one field">
+
+                    <div class="field">
+                        <label>Street</label>
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.address.street" placeholder="Street Address">
+                    </div>
+
+                </div>
+
+                <div class="two fields">
+
+                    <div class="field">
+                        <label>City</label>
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.address.city" placeholder="City">
+                    </div>
+
+                    <div class="field">
+                        <label>PIN</label>
+                        <input required type="text" ng-model="ctrl.conferenceData.registration.address.pin" placeholder="Zip Code">
+                    </div>
+
+                </div>
+
+                <div class="two fields">
+
+                    <div class="field">
+                        <label>State</label>
+                        <input required ng-model="ctrl.conferenceData.registration.address.state" />
+                    </div>
+
+                    <div class="field">
+                        <label>Country</label>
+                        <input required ng-model="ctrl.conferenceData.registration.address.country" />
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="delegateInformationForm">
+
+                <div class="admin__form-header ui dividing header">
+                    <h1>Delegate Information Form</h1>
+                    <div class="checkbox__container">
+                        <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.isFormFilled" type="checkbox" tabindex="0">
+                        <label>Form Filled and Confirmed</label>
+                    </div>
+                </div>
+
+                <div ng-repeat="delegate in ctrl.conferenceData.delegateInformation.delegates" style="padding-bottom: 2.5em;">
+
+                    <h4 class="ui dividing header checkbox__container alt">
+
+                        <span>{{ delegate.name }}</span>
+                        <div class="checkbox__container--inner">
+                            <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" type="checkbox" tabindex="0">
+                            <label style="margin-right: 1em;">Committee Confirmed</label>
+                            <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
+                            <label>Country Confirmed</label>
+                        </div>
+
+                    </h4>
+
+                    <div class="field">
+                        <label>Name</label>
+                        <input required type="text" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].name" placeholder="Name">
+                    </div>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Dietry Preference</label>
+                            <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].mealPreference">
+
+                                <option value="veg">Vegetarian</option>
+                                <option value="nonveg">Non - Vegetarian</option>
+
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Gender</label>
+                            <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].gender">
+
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="opther">I prefer not to disclose</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Committee Preference</label>
+                            <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
+
+                                <option value="unsc">United Nations Security Council</option>
+                                <option value="unscss">Supreme Council of Sovereign States</option>
+                                <option value="disec">Disarmament and International Security Committee</option>
+                                <option value="au">African Union</option>
+                                <option value="ec">European Council</option>
+                                <option value="iaea">International Atomic Energy Agency</option>
+                                <option value="unhrc">United Nations Human Rights Council</option>
+                                <option value="ls">Lok Sabha</option>
+                                <option value="ipc">International Press Corps</option>
+                                <option value="specpol">Special Political and Decolonisation Committee</option>
+                                <option value="scp">United Nations Special Committee on Palestine</option>
+                                <option value="odc">United Nations Office of Drugs and Crime</option>
+                                <option value="icao">International Civil Aviation Organisation</option>
+
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Country Allotment</label>
+                            <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
+
+                                <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
+                    <div class="ui button" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
+                        <i class="plus icon"></i> Delegate
+                    </div>
+                    <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
+                        {{ ctrl.conferenceData.delegateInformation.delegates.length || 0 }}
+                    </a>
+                </div>
+
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="gaCrisisForm">
+                <div class="admin__form-header ui dividing header">
+                    <h1>GA Crisis Form</h1>
+                    <div class="checkbox__container">
+                        <input ng-model="ctrl.conferenceData.gaCrisis.isFormFilled" type="checkbox" tabindex="0">
+                        <label>Form Filled and Confirmed</label>
+                    </div>
+                </div>
+
+                <div ng-repeat="delegate in ctrl.conferenceData.gaCrisis.delegates" style="padding-bottom: 2.5em;">
+
+                    <div class="field">
+
+                        <label>Name</label>
+                        <input type="text" ng-model="ctrl.conferenceData.gaCrisis.delegates[ $index ].name">
+
+                    </div>
+
+                </div>
+
+                <div ng-disabled="this.shouldDisableAddGaDelegates" ng-click="ctrl.AddGADelegate()" class="ui labeled button" tabindex="0">
+                    <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
+                        <i class="plus icon"></i> Delegate (GA)
+                    </div>
+                    <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
+                        {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
+                    </a>
+                </div>
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="travelArrangementsForm">
+
+                <div class="admin__form-header ui dividing header">
+                    <h1>Travel Arrangements Form</h1>
+                    <div class="checkbox__container">
+                        <input ng-model="ctrl.conferenceData.travelArrangements.isFormFilled" type="checkbox" tabindex="0">
+                        <label>Form Filled and Confirmed</label>
+                    </div>
+                </div>
+
+                <div class="field">
+
+                    <label>Total Passengers</label>
+                    <input type="text" placeholder="Total Passengers" ng-model="ctrl.conferenceData.travelArrangements.totalPassengers">
+
+                </div>
+
+                <h4 class="ui dividing header">
+                    Onward Journey
+                </h4>
+
+                <div class="two fields">
+
+                    <div class="field">
+
+                        <label>Arrival Date</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.onward.arrivalDate" type="date">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Departure Date</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.onward.departureDate" type="date">
+
+                    </div>
+
+                </div>
+
+                <div class="three fields">
+
+                    <div class="field">
+
+                        <label>Time of Arrival</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.onward.timeOfArrival" type="text" placeholder="Time of Arrival">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Place of Departure</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.onward.placeOfDeparture" type="text" placeholder="Place of Departure">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Mode of Transport</label>
+                        <select ng-model="ctrl.conferenceData.travelArrangements.onward.mode" class="ui search dropdown">
+                            <option value="train">Train</option>
+                            <option value="air">Air</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Other Details</label>
+                    <textarea ng-model="ctrl.conferenceData.travelArrangements.onward.details" ></textarea>
+
+                </div>
+
+                <h4 class="ui dividing header">
+                    Return Journey
+                </h4>
+
+                <div class="two fields">
+
+                    <div class="field">
+
+                        <label>Arrival Date</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.arrivalDate" type="date">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Departure Date</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.departureDate" type="date">
+
+                    </div>
+
+                </div>
+
+                <div class="three fields">
+
+                    <div class="field">
+
+                        <label>Time of Arrival</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.timeOfArrival" type="text" placeholder="Time of Arrival">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Place of Departure</label>
+                        <input ng-model="ctrl.conferenceData.travelArrangements.returnJourney.placeOfDeparture" type="text" placeholder="Place of Departure">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Mode of Transport</label>
+                        <select ng-model="ctrl.conferenceData.travelArrangements.returnJourney.mode" class="ui search dropdown">
+                            <option value="train">Train</option>
+                            <option value="air">Air</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label>Other Details</label>
+                    <textarea ng-model="ctrl.conferenceData.travelArrangements.returnJourney.details" ></textarea>
+
+                </div>
+
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="countryAllotments">
+
+                <div class="admin__form-header ui dividing header">
+                    <h1>Country Allotment</h1>
+                </div>
+
+                <div ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" class="ui field">
+                    <input ng-model="ctrl.conferenceData.countryAllotment.countries[ $index ].name" type="text" placeholder="Country {{ $index + 1 }}">
+                </div>
+
+                <div ng-click="ctrl.AddCountryAllotment()" class="ui labeled button" tabindex="0">
+                    <div class="ui button" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
+                        <i class="plus icon"></i> Country
+                    </div>
+                    <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
+                        {{ ctrl.conferenceData.countryAllotment.countries.length || 0 }}
+                    </a>
+                </div>
+
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="notifications">
+
+                <div class="admin__form-header ui dividing header">
+                    <h1>Notifications</h1>
+                </div>
+
+                <div ng-repeat="notification in ctrl.conferenceData.announcements.notifications" style="margin-bottom: 2em;">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Notification Title</label>
+                            <input ng-model="ctrl.conferenceData.announcements.notifications[ $index ].name" type="text" placeholder="Notification {{ $index + 1 }}">
+                        </div>
+                        <div class="field">
+                            <label>Notification Type</label>
+                            <select ng-model="ctrl.conferenceData.announcements.notifications[ $index ].class" class="ui dropdown">
+                                <option value="blue">Information</option>
+                                <option value="yellow">Warning</option>
+                                <option value="red">Severe</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui field">
+                        <label>Notification Text</label>
+                        <textarea ng-model="ctrl.conferenceData.announcements.notifications[ $index ].text" type="text" placeholder="Notification {{ $index + 1 }}"></textarea>
+                    </div>
+                </div>
+
+                <div ng-click="ctrl.AddAnnouncement()" class="ui labeled button" tabindex="0">
+                    <div class="ui blue button">
+                        <i class="plus icon"></i> Notification
+                    </div>
+                    <a class="ui basic left pointing label blue">
+                        {{ ctrl.conferenceData.announcements.notifications.length || 0 }}
+                    </a>
+                </div>
+
             </div>
 
         </form>

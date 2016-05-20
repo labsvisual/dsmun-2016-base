@@ -40,7 +40,7 @@ angular
                 $.ajax( {
 
                     type: 'POST',
-                    url : 'http://api.app.beta.dsmun.com/log',
+                    url : 'http://api.app.dsmun.com/log',
                     contentType: 'application/json',
                     data: angular.toJson( {
 
