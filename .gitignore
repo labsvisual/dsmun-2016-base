@@ -5,3 +5,5 @@ visual_identity/
 *.git
 aws.json
 .vagrant
+in.txt
+out.txt

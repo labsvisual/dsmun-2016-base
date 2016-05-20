@@ -1,0 +1,4 @@
+#!/usr/local/bin/node
+
+require( 'babel-core/register' );
+require( './generate_users' );
