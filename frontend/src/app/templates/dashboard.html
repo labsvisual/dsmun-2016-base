@@ -35,7 +35,7 @@
                   {{ ( conf.isConfirmed ) ? "Confirmed" : "Pending" }}
               </td>
               <td ng-if="conf.isConfirmed">
-                  <a target="_blank" href="http://api.app.beta.dsmun.com/conferences/confirm/{{ conf.conferenceGuid }}">Download</a>
+                  <a target="_blank" href="http://api.app.dsmun.com/conferences/confirm/{{ conf.conferenceGuid }}">Download</a>
               </td>
               <td ng-if="( !conf.isConfirmed )">
                   Conference not confirmed

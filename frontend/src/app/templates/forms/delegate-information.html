@@ -81,10 +81,13 @@
 
         </div>
 
-        <div class="ui buttons">
-            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
-            <div class="or"></div>
-            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
+        <div style="margin-bottom: 3em;" ng-show=" ( !ctrl.conferenceData.delegateInformation || !ctrl.conferenceData.delegateInformation.delegates || !ctrl.conferenceData.delegateInformation.delegates.length === 0 ) ">
+            <div class="ui message yellow">
+                <div class="header">No Delegates</div>
+                <p>
+                    You do not have any delegates for this conference. Start by adding a delegate.
+                </p>
+            </div>
         </div>
 
         <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
@@ -94,6 +97,12 @@
             <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.delegateInformation.delegates.length < 17 ) ? 'blue' : 'red' )">
                 {{ ctrl.conferenceData.delegateInformation.delegates.length || 0 }}
             </a>
+        </div>
+
+        <div class="ui buttons">
+            <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
+            <div class="or"></div>
+            <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
         </div>
 
         <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">

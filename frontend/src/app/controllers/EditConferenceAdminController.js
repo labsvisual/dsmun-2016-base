@@ -79,65 +79,40 @@ angular.module( 'app' )
 
                }
 
-               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.countries ) {
+               this.conferenceData.countryAllotment = this.conferenceData.countryAllotment || {
+                   countries: []
+               };
 
-                   this.conferenceData.countryAllotment.countries.push( {
+               this.conferenceData.countryAllotment.countries.push( {
 
-                       name: 'Country Name'
+                   name: 'Country Name'
 
-                   } );
-
-               } else {
-
-                   this.conferenceData.countryAllotment = {
-                       countries: []
-                   };
-
-                   this.conferenceData.countryAllotment.countries.push( {
-
-                       name: 'Country Name'
-
-                   } );
-
-               }
+               } );
 
             };
 
             this.AddAnnouncement = () => {
 
-               if( this.conferenceData.announcements && this.conferenceData.announcements.notifications ) {
+                this.conferenceData.announcements = this.conferenceData.announcements || {
+                    notifications: []
+                };
 
-                   this.conferenceData.announcements.notifications.push( {
+                this.conferenceData.announcements.notifications.push( {
 
-                       text: 'Notification',
-                       name: 'New Notification'
+                    text: 'Notification',
+                    name: 'New Notification'
 
-                   } );
-
-               } else {
-
-                   this.conferenceData.announcements = {
-                       notifications: []
-                   };
-
-                   this.conferenceData.announcements.notifications.push( {
-
-                       text: 'Notification',
-                       name: 'New Notification'
-
-                   } );
-
-               }
+                } );
 
             };
 
             this.AddGADelegate = () => {
 
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 5 ) {
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 7 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
-                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
+                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 7.";
                    this.messageClass = {
 
                        'yellow': true,
@@ -148,27 +123,15 @@ angular.module( 'app' )
 
                }
 
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates ) {
+               this.conferenceData.gaCrisis = this.conferenceData.gaCrisis || {
+                   delegates: []
+               };
 
-                   this.conferenceData.gaCrisis.delegates.push( {
+               this.conferenceData.gaCrisis.delegates.push( {
 
-                       name: 'Delegate Name'
+                   name: 'Delegate Name'
 
-                   } );
-
-               } else {
-
-                   this.conferenceData.gaCrisis = {
-                       delegates: []
-                   };
-
-                   this.conferenceData.gaCrisis.delegates.push( {
-
-                       name: 'Delegate Name'
-
-                   } );
-
-               }
+               } );
 
             };
 
@@ -189,31 +152,15 @@ angular.module( 'app' )
 
                }
 
-               if( this.conferenceData.delegateInformation ) {
+               this.conferenceData.delegateInformation = this.conferenceData.delegateInformation || {
+                   delegates: []
+               };
 
-                   this.conferenceData.delegateInformation.delegates = this.conferenceData.delegateInformation.delegates || [];
+               this.conferenceData.delegateInformation.delegates.push( {
 
-                   this.conferenceData.delegateInformation.delegates.push( {
+                   name: 'Delegate Name'
 
-                       name: 'Delegate Name'
-
-                   } );
-
-               } else {
-
-                   this.conferenceData.delegateInformation = {};
-
-                   this.conferenceData.delegateInformation = {
-                       delegates: []
-                   };
-
-                   this.conferenceData.delegateInformation.delegates.push( {
-
-                       name: 'Delegate Name'
-
-                   } );
-
-               }
+               } );
 
             };
 

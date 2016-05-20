@@ -21,19 +21,28 @@
 
         </div>
 
+        <div style="margin-bottom: 3em;" ng-show=" ( !ctrl.conferenceData.gaCrisis || !ctrl.conferenceData.gaCrisis.delegates || !ctrl.conferenceData.gaCrisis.delegates.length === 0 ) ">
+            <div class="ui message yellow">
+                <div class="header">No Delegates</div>
+                <p>
+                    You do not have any delegates for the General Assembly crisis. Start by adding a delegate.
+                </p>
+            </div>
+        </div>
+
+        <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
+            <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 7 ) ? 'blue' : 'red' )">
+                <i class="plus icon"></i> Delegate
+            </div>
+            <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 7 ) ? 'blue' : 'red' )">
+                {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
+            </a>
+        </div>
+
         <div class="ui buttons">
             <button ui-sref="editConference({guid:ctrl.guid})" ng-disabled="ctrl.processing" class="ui button">Back</button>
             <div class="or"></div>
             <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
-        </div>
-
-        <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
-            <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                <i class="plus icon"></i> Delegate
-            </div>
-            <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
-            </a>
         </div>
 
         <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">

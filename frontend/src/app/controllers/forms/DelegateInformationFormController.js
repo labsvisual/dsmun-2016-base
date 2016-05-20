@@ -48,7 +48,7 @@ angular.module( 'app' )
 
            this.AddDelegate = () => {
 
-               if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates.length === 17 ) {
+               if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates && this.conferenceData.delegateInformation.delegates.length === 17 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
@@ -58,33 +58,20 @@ angular.module( 'app' )
                        'yellow': true,
 
                    };
+
                    return false;
 
                }
 
-               if( this.conferenceData.delegateInformation ) {
+               this.conferenceData.delegateInformation = this.conferenceData.delegateInformation || {
+                   delegates: []
+               };
 
-                   this.conferenceData.delegateInformation.delegates.push( {
+               this.conferenceData.delegateInformation.delegates.push( {
 
-                       name: 'Delegate Name'
+                   name: 'Delegate Name'
 
-                   } );
-
-               } else {
-
-                   this.conferenceData.delegateInformation = {};
-
-                   this.conferenceData.delegateInformation = {
-                       delegates: []
-                   };
-
-                   this.conferenceData.delegateInformation.delegates.push( {
-
-                       name: 'Delegate Name'
-
-                   } );
-
-               }
+               } );
 
            };
 

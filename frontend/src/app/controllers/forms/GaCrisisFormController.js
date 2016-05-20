@@ -41,42 +41,30 @@ angular.module( 'app' )
 
            this.AddDelegate = () => {
 
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 5 ) {
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 7 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
-                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
+                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 7.";
                    this.messageClass = {
 
                        'yellow': true,
 
                    };
-                   
+
                    return false;
 
                }
 
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates ) {
+               this.conferenceData.gaCrisis = this.conferenceData.gaCrisis || {
+                   delegates: []
+               };
 
-                   this.conferenceData.gaCrisis.delegates.push( {
+               this.conferenceData.gaCrisis.delegates.push( {
 
-                       name: 'Delegate Name'
+                   name: 'Delegate Name'
 
-                   } );
-
-               } else {
-
-                   this.conferenceData.gaCrisis = {
-                       delegates: []
-                   };
-
-                   this.conferenceData.gaCrisis.delegates.push( {
-
-                       name: 'Delegate Name'
-
-                   } );
-
-               }
+               } );
 
            };
 
