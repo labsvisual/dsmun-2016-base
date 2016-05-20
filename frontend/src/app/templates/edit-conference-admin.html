@@ -96,8 +96,8 @@
             <div class="ui top attached tabular menu">
                 <a class="item active" data-tab="registrationForm">Registration Form</a>
                 <a class="item" data-tab="delegateInformationForm">Delegate Information Form</a>
-                <a class="item" data-tab="gaCrisisForm">GA Crisis Form</a>
                 <a class="item" data-tab="travelArrangementsForm">Travel Arrangements Form</a>
+                <a class="item" data-tab="gaCrisisForm">GA Crisis Form</a>
                 <a class="item" data-tab="countryAllotments">Country Allotments</a>
                 <a class="item" data-tab="notifications">Post Notifications</a>
             </div>
@@ -274,35 +274,6 @@
                 </div>
 
             </div>
-            <div class="ui bottom attached tab segment" data-tab="gaCrisisForm">
-                <div class="admin__form-header ui dividing header">
-                    <h1>GA Crisis Form</h1>
-                    <div class="checkbox__container">
-                        <input ng-model="ctrl.conferenceData.gaCrisis.isFormFilled" type="checkbox" tabindex="0">
-                        <label>Form Filled and Confirmed</label>
-                    </div>
-                </div>
-
-                <div ng-repeat="delegate in ctrl.conferenceData.gaCrisis.delegates" style="padding-bottom: 2.5em;">
-
-                    <div class="field">
-
-                        <label>Name</label>
-                        <input type="text" ng-model="ctrl.conferenceData.gaCrisis.delegates[ $index ].name">
-
-                    </div>
-
-                </div>
-
-                <div ng-disabled="this.shouldDisableAddGaDelegates" ng-click="ctrl.AddGADelegate()" class="ui labeled button" tabindex="0">
-                    <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                        <i class="plus icon"></i> Delegate (GA)
-                    </div>
-                    <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
-                        {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
-                    </a>
-                </div>
-            </div>
             <div class="ui bottom attached tab segment" data-tab="travelArrangementsForm">
 
                 <div class="admin__form-header ui dividing header">
@@ -436,6 +407,35 @@
 
                 </div>
 
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="gaCrisisForm">
+                <div class="admin__form-header ui dividing header">
+                    <h1>GA Crisis Form</h1>
+                    <div class="checkbox__container">
+                        <input ng-model="ctrl.conferenceData.gaCrisis.isFormFilled" type="checkbox" tabindex="0">
+                        <label>Form Filled and Confirmed</label>
+                    </div>
+                </div>
+
+                <div ng-repeat="delegate in ctrl.conferenceData.gaCrisis.delegates" style="padding-bottom: 2.5em;">
+
+                    <div class="field">
+
+                        <label>Name</label>
+                        <input type="text" ng-model="ctrl.conferenceData.gaCrisis.delegates[ $index ].name">
+
+                    </div>
+
+                </div>
+
+                <div ng-disabled="this.shouldDisableAddGaDelegates" ng-click="ctrl.AddGADelegate()" class="ui labeled button" tabindex="0">
+                    <div class="ui button" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
+                        <i class="plus icon"></i> Delegate (GA)
+                    </div>
+                    <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.gaCrisis.delegates.length < 5 ) ? 'blue' : 'red' )">
+                        {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
+                    </a>
+                </div>
             </div>
             <div class="ui bottom attached tab segment" data-tab="countryAllotments">
 
