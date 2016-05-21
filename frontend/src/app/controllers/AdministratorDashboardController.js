@@ -1,5 +1,5 @@
 angular.module( 'app' )
-        .controller( 'AdministratorDashboardController', [ 'RestApiService', '$cookies', '$state', '$window', function( $rest, $cookies, $state, $window ) {
+        .controller( 'AdministratorDashboardController', [ 'RestApiService', '$cookies', '$state', '$window', '$scope', function( $rest, $cookies, $state, $window, $scope ) {
 
             let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data     = $cookies.get( 'loginData' );
@@ -32,39 +32,6 @@ angular.module( 'app' )
 
             }
 
-            $rest.GetAllUsers( {
-
-               token: data.token,
-
-            } ).then( ( data ) => {
-
-               this.users = [];
-               data.filter( ( user ) => {
-
-                   if( user.role !== 1 ) this.users.push( user );
-
-               } );
-
-            } );
-
-            $rest.GetAllConferencesForAllUsers( data ).then( ( dbData ) => {
-
-               this.allConferences = [];
-
-               dbData.map( ( conference ) => {
-
-                   conference.areFormsFilled = ( () => {
-
-                       return ( conference.registration && conference.delegateInformation && conference.travelArrangements && conference.gaCrisis && conference.registration.isFormFilled && conference.delegateInformation.isFormFilled && conference.travelArrangements.isFormFilled && conference.gaCrisis.isFormFilled )
-
-                   } )();
-
-                   this.allConferences.push( conference );
-
-               } );
-
-            } );
-
             this.sortType = 'isConfirmed';
             this.sortReverse = false;
 
@@ -75,6 +42,54 @@ angular.module( 'app' )
                } else {
                    this.sortType = sortTypeNew;
                }
+
+            };
+
+            this.RefreshView = () => {
+
+                this.isProcessing = true;
+
+                let processingOne = true
+                  , processingTwo = true;
+
+                $rest.GetAllUsers( {
+
+                   token: data.token,
+
+                } ).then( ( data ) => {
+
+                    processingOne = false;
+                    this.isProcessing = ( processingOne || processingTwo );
+
+                   this.users = [];
+                   data.filter( ( user ) => {
+
+                       if( user.role !== 1 ) this.users.push( user );
+
+                   } );
+
+                } );
+
+                $rest.GetAllConferencesForAllUsers( data ).then( ( dbData ) => {
+
+                    processingTwo = false;
+                    this.isProcessing = ( processingOne || processingTwo );
+
+                   this.allConferences = [];
+
+                   dbData.map( ( conference ) => {
+
+                       conference.areFormsFilled = ( () => {
+
+                           return ( conference.registration && conference.delegateInformation && conference.travelArrangements && conference.gaCrisis && conference.registration.isFormFilled && conference.delegateInformation.isFormFilled && conference.travelArrangements.isFormFilled && conference.gaCrisis.isFormFilled )
+
+                       } )();
+
+                       this.allConferences.push( conference );
+
+                   } );
+
+                } );
 
             };
 
@@ -192,5 +207,7 @@ angular.module( 'app' )
                } );
 
             };
+
+            this.RefreshView();
 
        } ] );

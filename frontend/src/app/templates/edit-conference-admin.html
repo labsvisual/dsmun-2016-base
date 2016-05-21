@@ -82,6 +82,10 @@
                 <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
             </div>
 
+            <button ng-disabled="ctrl.isReloading" ng-click="ctrl.RefreshView()" class="ui blue button">
+                {{ ctrl.isReloading ? "Processing..." : "Reload" }}
+            </button>
+
             <div ng-show="ctrl.isMessage" ng-class="ctrl.messageClass" class="ui message">
                 <div class="header">
                     {{ ctrl.messageHeader }}

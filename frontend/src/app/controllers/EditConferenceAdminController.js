@@ -196,58 +196,67 @@ angular.module( 'app' )
 
             };
 
-            $rest.GetConference( {
+            this.RefreshView = () => {
 
-               conferenceGuid,
-               token: data.token,
-               guid: data.guid,
+                this.isReloading = true;
 
-            } ).then( ( dataDb ) => {
+                $rest.GetConference( {
 
-               this.conferenceData = dataDb;
+                   conferenceGuid,
+                   token: data.token,
+                   guid: data.guid,
 
-               this.fieldClasses = {
+                } ).then( ( dataDb ) => {
 
-                   'two fields': ( this.conferenceData.countryAllotment ),
-                   'field': ( !this.conferenceData.countryAllotment )
+                   this.conferenceData = dataDb;
+                   this.isReloading = false;
 
-               };
+                   this.fieldClasses = {
 
-               if( this.conferenceData.travelArrangements ) {
+                       'two fields': ( this.conferenceData.countryAllotment ),
+                       'field': ( !this.conferenceData.countryAllotment )
 
-                   if( this.conferenceData.travelArrangements.onward ) {
+                   };
 
-                       if( this.conferenceData.travelArrangements.onward.arrivalDate ) {
-                           this.conferenceData.travelArrangements.onward.arrivalDate = new Date( this.conferenceData.travelArrangements.onward.arrivalDate );
+                   if( this.conferenceData.travelArrangements ) {
+
+                       if( this.conferenceData.travelArrangements.onward ) {
+
+                           if( this.conferenceData.travelArrangements.onward.arrivalDate ) {
+                               this.conferenceData.travelArrangements.onward.arrivalDate = new Date( this.conferenceData.travelArrangements.onward.arrivalDate );
+                           }
+
+                           if( this.conferenceData.travelArrangements.onward.departureDate ) {
+                               this.conferenceData.travelArrangements.onward.departureDate = new Date( this.conferenceData.travelArrangements.onward.departureDate );
+                           }
+
                        }
 
-                       if( this.conferenceData.travelArrangements.onward.departureDate ) {
-                           this.conferenceData.travelArrangements.onward.departureDate = new Date( this.conferenceData.travelArrangements.onward.departureDate );
+                       if( this.conferenceData.travelArrangements.returnJourney ) {
+
+                           if( this.conferenceData.travelArrangements.returnJourney.arrivalDate ) {
+                               this.conferenceData.travelArrangements.returnJourney.arrivalDate = new Date( this.conferenceData.travelArrangements.returnJourney.arrivalDate );
+                           }
+
+                           if( this.conferenceData.travelArrangements.returnJourney.departureDate ) {
+                               this.conferenceData.travelArrangements.returnJourney.departureDate = new Date( this.conferenceData.travelArrangements.returnJourney.departureDate );
+                           }
+
                        }
 
                    }
 
-                   if( this.conferenceData.travelArrangements.returnJourney ) {
+                   this.isConferenceConfirmed = this.conferenceData.isConfirmed;
+                   this.areFormsFilled = ( () => {
 
-                       if( this.conferenceData.travelArrangements.returnJourney.arrivalDate ) {
-                           this.conferenceData.travelArrangements.returnJourney.arrivalDate = new Date( this.conferenceData.travelArrangements.returnJourney.arrivalDate );
-                       }
+                       return ( this.conferenceData.registration && this.conferenceData.delegateInformation && this.conferenceData.travelArrangements && this.conferenceData.gaCrisis && this.conferenceData.registration.isFormFilled && this.conferenceData.delegateInformation.isFormFilled && this.conferenceData.travelArrangements.isFormFilled && this.conferenceData.gaCrisis.isFormFilled )
 
-                       if( this.conferenceData.travelArrangements.returnJourney.departureDate ) {
-                           this.conferenceData.travelArrangements.returnJourney.departureDate = new Date( this.conferenceData.travelArrangements.returnJourney.departureDate );
-                       }
+                   } )();
 
-                   }
+                } );
 
-               }
+            };
 
-               this.isConferenceConfirmed = this.conferenceData.isConfirmed;
-               this.areFormsFilled = ( () => {
-
-                   return ( this.conferenceData.registration && this.conferenceData.delegateInformation && this.conferenceData.travelArrangements && this.conferenceData.gaCrisis && this.conferenceData.registration.isFormFilled && this.conferenceData.delegateInformation.isFormFilled && this.conferenceData.travelArrangements.isFormFilled && this.conferenceData.gaCrisis.isFormFilled )
-
-               } )();
-
-            } );
+            this.RefreshView();
 
        } ] );

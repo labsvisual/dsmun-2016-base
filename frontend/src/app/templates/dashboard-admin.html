@@ -116,6 +116,10 @@
             Add User
         </button>
 
+        <button ng-disabled="ctrl.isProcessing" ng-click="ctrl.RefreshView()" class="ui blue button">
+            {{ ctrl.isProcessing ? "Processing..." : "Reload" }}
+        </button>
+
     </div>
 
 </div>
