@@ -1,8 +1,8 @@
 angular.module( 'app' )
-        .controller( 'NewUserController', [ '$cookies', '$http', '$state', '$window', 'RestApiService', 'CryptoService', function( $cookies, $http, $state, $window, $rest, $crypto ) {
+        .controller( 'NewUserController', [ '$cookies', '$http', '$state', '$window', 'RestApiService', 'CryptoService', 'lodash', function( $cookies, $http, $state, $window, $rest, $crypto, _ ) {
 
             let isLoggedIn = $cookies.get( 'isLoggedIn' )
-               , data     = $cookies.get( 'loginData' );
+               , data      = $cookies.get( 'loginData' );
 
             if( isLoggedIn && data ) {
 
@@ -37,7 +37,7 @@ angular.module( 'app' )
                    token: data.token,
                    guid: data.guid,
                    hash,
-                   data: this.user
+                   data: _.assign( this.user, this.metadata )
 
                };
 
@@ -52,6 +52,12 @@ angular.module( 'app' )
                         };
                         this.messageHeader = "User Added";
                         this.messageText = `The user ${ this.user.username } was successfully created.`;
+
+                        if( data.data.data.generatedPassword ) {
+
+                            this.messageText += ` The generated password is ${ data.data.data.generatedPassword }.`;
+
+                        }
 
                     } else {
 
@@ -73,7 +79,6 @@ angular.module( 'app' )
                        red: true
                    };
                    this.messageHeader = "An error was encountered";
-                   console.log( data );
                    this.messageText = data.message;
 
                } );

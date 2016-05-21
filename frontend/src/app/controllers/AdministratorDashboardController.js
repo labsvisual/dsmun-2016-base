@@ -38,19 +38,12 @@ angular.module( 'app' )
 
             } ).then( ( data ) => {
 
-               this.users = data;
+               this.users = [];
+               data.filter( ( user ) => {
 
-            } );
+                   if( user.role !== 1 ) this.users.push( user );
 
-            $rest.GetUser( data ).then( ( { school_name, teacher_escort, username } ) => {
-
-               this.data = {
-
-                   school_name,
-                   teacher_escort,
-                   username,
-
-               };
+               } );
 
             } );
 

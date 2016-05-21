@@ -8,30 +8,40 @@
 
     <form ng-submit="ctrl.NewUser()" class="ui seperated form">
 
-        <div class="field">
+        <div class="two fields">
 
-            <div class="two fields">
-
-                <div class="field">
-                    <input required type="text" ng-model="ctrl.user.school_name" placeholder="School Name">
-                </div>
-
-                <div class="field">
-                    <input required type="text" ng-model="ctrl.user.teacher_escort" placeholder="Teacher Escort">
-                </div>
-
+            <div class="field">
+                <input required type="text" ng-model="ctrl.user.school_name" placeholder="School Name">
             </div>
 
-            <div class="two fields">
+            <div class="field">
+                <input required type="text" ng-model="ctrl.user.teacher_escort" placeholder="Teacher Escort">
+            </div>
 
-                <div class="field">
-                    <input required type="text" ng-model="ctrl.user.email" placeholder="Email">
-                </div>
+        </div>
 
-                <div class="field">
-                    <input required type="text" ng-model="ctrl.user.username" placeholder="Username">
-                </div>
+        <div class="two fields">
 
+            <div class="field">
+                <input required type="text" ng-model="ctrl.user.email" placeholder="Email">
+            </div>
+
+            <div class="field">
+                <input required type="text" ng-model="ctrl.user.username" placeholder="Username">
+            </div>
+
+        </div>
+
+        <div class="two fields">
+
+            <div class="field">
+                <input class="ui checkbox" type="checkbox" ng-model="ctrl.metadata.sendEmail">
+                <label>Send Email for Confirmation</label>
+            </div>
+
+            <div class="field">
+                <input class="ui checkbox" type="checkbox" ng-model="ctrl.metadata.isConfirmed">
+                <label>User Account Confirmed</label>
             </div>
 
         </div>
