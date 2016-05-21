@@ -53,7 +53,7 @@ angular.module( 'app' )
                         this.messageHeader = "User Added";
                         this.messageText = `The user ${ this.user.username } was successfully created.`;
 
-                        if( data.data.data.generatedPassword ) {
+                        if( data.data.data && data.data.data.generatedPassword ) {
 
                             this.messageText += ` The generated password is ${ data.data.data.generatedPassword }.`;
 
