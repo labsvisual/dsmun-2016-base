@@ -24,7 +24,6 @@ const handlers = {
         } ).select( 'is_confirmed', 'confirmation_code' ).then( ( data ) => {
 
             data = data[ 0 ];
-            console.log( data.is_confirmed == true );
             if( data.is_confirmed ) {
 
                 reply.view( 'error', {
@@ -116,7 +115,7 @@ const handlers = {
                 , generatedGuid     = Guid.v4()
                 , activationKey     = RandomString.generate( 16 );
 
-            const insertIntoTable = Knex( 'users' ).insert( {
+            let insertObject = {
 
                 username: data.username,
                 password: Hasher( 'sha512', generatedPassword ),
@@ -124,41 +123,66 @@ const handlers = {
                 guid: generatedGuid,
                 school_name: data.school_name,
                 teacher_escort: data.teacher_escort,
-                confirmation_code: activationKey,
-                is_confirmed: false
 
-            } ).then( ( id ) => {
+            };
 
-                const message = `
+            if( data.isConfirmed ) {
 
-                Hey ${ data.username }, <br>
-                <br>
-                An account related to this email was created for DSMUN Base. You can confirm the account by
-                clicking <a href="http://api.app.dsmun.com/users/confirm/${ generatedGuid }/${ activationKey }">here</a>. <br>
-                <br>
-                The username for the account is: <b>${ data.username }</b><br>
-                The password for the account is: <b>${ generatedPassword }</b><br>
-                <br>
-                If you believe that this is a mistake, you can safely ignore and/or delete this email. :) <br>
-                <br>
-                --<br>
-                The DSMUN Team.
-                `;
+                insertObject.is_confirmed = true;
 
-                const msg = Mailer.buildMessage( data.email, "Confirm Account - DSMUN Base", message.replace( '<br>', '\r\n' ), message );
-                Mailer.instance.sendMail( msg, ( err, res ) => {
+            } else {
 
-                    if( err ) {
-                        Winston.log( 'error', err, {
-                            type: 'api_error'
-                        } );
-                        ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
-                        return;
-                    }
+                insertObject.is_confirmed = false;
+                insertObject.confirmation_code = activationKey;
 
-                    ResponseBuilder( 200, "An email was sent to the associated account.", null, reply );
+            }
 
-                } );
+            const insertIntoTable = Knex( 'users' ).insert( insertObject ).then( ( id ) => {
+
+                if( data.sendEmail ) {
+
+                    const message = `
+
+                    Hey ${ data.username }, <br>
+                    <br>
+                    An account related to this email was created for DSMUN Base. You can confirm the account by
+                    clicking <a href="http://api.app.dsmun.com/users/confirm/${ generatedGuid }/${ activationKey }">here</a>. <br>
+                    <br>
+                    The username for the account is: <b>${ data.username }</b><br>
+                    The password for the account is: <b>${ generatedPassword }</b><br>
+                    <br>
+                    If you believe that this is a mistake, you can safely ignore and/or delete this email. :) <br>
+                    <br>
+                    --<br>
+                    The DSMUN Team.
+                    `;
+
+                    const msg = Mailer.buildMessage( data.email, "Confirm Account - DSMUN Base", message.replace( '<br>', '\r\n' ), message );
+                    Mailer.instance.sendMail( msg, ( err, res ) => {
+
+                        if( err ) {
+                            Winston.log( 'error', err, {
+                                type: 'api_error'
+                            } );
+                            ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
+                            return;
+                        }
+
+                        ResponseBuilder( 200, "An email was sent to the associated account.", null, reply );
+
+                    } );
+
+                } else {
+
+                    ResponseBuilder( 200, "Account created successfully.", {
+
+                        generatedPassword,
+
+                    }, reply );
+
+                }
+
+
 
             } ).catch( ( err ) => {
 
@@ -263,7 +287,7 @@ const handlers = {
 
             }
 
-            const userList = Knex( 'users' ).select().then( ( data ) => {
+            const userList = Knex( 'users' ).select( 'email', 'guid', 'role', 'school_name', 'teacher_escort', 'username' ).then( ( data ) => {
 
                 let usersArr = [];
                 data.forEach( ( user ) => {
@@ -310,7 +334,7 @@ const handlers = {
 
             const userList = Knex( 'users' ).where( {
                 guid,
-            } ).select().then( ( data ) => {
+            } ).select( 'email', 'guid', 'role', 'school_name', 'teacher_escort', 'username' ).then( ( data ) => {
 
                 if( data.length === 0 ) {
 
