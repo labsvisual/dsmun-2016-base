@@ -194,8 +194,10 @@
                         <div class="checkbox__container--inner">
                             <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" type="checkbox" tabindex="0">
                             <label style="margin-right: 1em;">Committee Confirmed</label>
-                            <input id="delegateInformationCheck" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
-                            <label>Country Confirmed</label>
+                            <div ng-show="ctrl.conferenceData.countryAllotment" class="checkbox__container--inner">
+                                <input ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
+                                <label>Country Confirmed</label>
+                            </div>
                         </div>
 
                     </h4>
@@ -227,7 +229,7 @@
                         </div>
                     </div>
 
-                    <div class="two fields">
+                    <div ng-class="ctrl.fieldClasses">
                         <div class="field">
                             <label>Committee Preference</label>
                             <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].committee">
@@ -248,12 +250,10 @@
 
                             </select>
                         </div>
-                        <div class="field">
+                        <div ng-hide="!ctrl.conferenceData.countryAllotment" class="field">
                             <label>Country Allotment</label>
                             <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
-
                                 <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
-
                             </select>
                         </div>
                     </div>

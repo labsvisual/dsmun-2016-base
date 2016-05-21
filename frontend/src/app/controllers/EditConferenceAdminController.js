@@ -206,6 +206,13 @@ angular.module( 'app' )
 
                this.conferenceData = dataDb;
 
+               this.fieldClasses = {
+
+                   'two fields': ( this.conferenceData.countryAllotment ),
+                   'field': ( !this.conferenceData.countryAllotment )
+
+               };
+
                if( this.conferenceData.travelArrangements ) {
 
                    if( this.conferenceData.travelArrangements.onward ) {
