@@ -112,7 +112,8 @@ const handlers = {
 
             const generatedPassword = RandomString.generate( 7 )
                 , generatedGuid     = Guid.v4()
-                , activationKey     = RandomString.generate( 16 );
+                , activationKey     = RandomString.generate( 16 )
+                , pass_reset_code   = RandomString.generate( 32 );
 
             let insertObject = {
 
@@ -122,6 +123,8 @@ const handlers = {
                 guid: generatedGuid,
                 school_name: data.school_name,
                 teacher_escort: data.teacher_escort,
+                forgot_password: true,
+                pass_reset_code,
 
             };
 
@@ -149,6 +152,8 @@ const handlers = {
                     <br>
                     The username for the account is: <b>${ data.username }</b><br>
                     The password for the account is: <b>${ generatedPassword }</b><br>
+                    <br>
+                    You can change your password by following <a href="http://api.app.dsmun.com/reset/${ pass_reset_code }">link</a>.
                     <br>
                     If you believe that this is a mistake, you can safely ignore and/or delete this email. :) <br>
                     <br>

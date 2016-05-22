@@ -81,7 +81,7 @@ angular
 
                 dataObject.username = userObject.username;
 
-                $http.post( apiUrl + '/forgot', dataObject ).then( ( data ) => {
+                $http.post( apiUrl + '/reset', dataObject ).then( ( data ) => {
 
                     if( data.status === 200 ) {
 
