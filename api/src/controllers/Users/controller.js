@@ -153,7 +153,8 @@ const handlers = {
                     The username for the account is: <b>${ data.username }</b><br>
                     The password for the account is: <b>${ generatedPassword }</b><br>
                     <br>
-                    You can change your password by following <a href="http://api.app.dsmun.com/reset/${ pass_reset_code }">link</a>.
+                    Now, we know that the passowrd is really tough to remember, so, you can change your
+                    password by following <a href="http://api.app.dsmun.com/reset/${ pass_reset_code }">this</a> link.
                     <br>
                     If you believe that this is a mistake, you can safely ignore and/or delete this email. :) <br>
                     <br>
