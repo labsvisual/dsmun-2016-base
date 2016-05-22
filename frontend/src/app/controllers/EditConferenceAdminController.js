@@ -79,9 +79,15 @@ angular.module( 'app' )
 
                }
 
-               this.conferenceData.countryAllotment = this.conferenceData.countryAllotment || {
-                   countries: []
-               };
+               this.conferenceData.countryAllotment = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.countryAllotment ) ? ( ( this.conferenceData.countryAllotment.countries ) ? this.conferenceData.countryAllotment : { countries: [] } ) : { countries: [] }
+
+                   )
+
+               } )();
 
                this.conferenceData.countryAllotment.countries.push( {
 
@@ -123,9 +129,15 @@ angular.module( 'app' )
 
                }
 
-               this.conferenceData.gaCrisis = this.conferenceData.gaCrisis || {
-                   delegates: []
-               };
+               this.conferenceData.gaCrisis = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.gaCrisis ) ? ( ( this.conferenceData.gaCrisis.delegates ) ? this.conferenceData.gaCrisis : { delegates: [] } ) : { delegates: [] }
+
+                   )
+
+               } )();
 
                this.conferenceData.gaCrisis.delegates.push( {
 
@@ -152,9 +164,15 @@ angular.module( 'app' )
 
                }
 
-               this.conferenceData.delegateInformation = this.conferenceData.delegateInformation || {
-                   delegates: []
-               };
+               this.conferenceData.delegateInformation = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.delegateInformation ) ? ( ( this.conferenceData.delegateInformation.delegates ) ? this.conferenceData.delegateInformation : { delegates: [] } ) : { delegates: [] }
+
+                   )
+
+               } )();
 
                this.conferenceData.delegateInformation.delegates.push( {
 

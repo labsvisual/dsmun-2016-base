@@ -56,9 +56,15 @@ angular.module( 'app' )
 
                }
 
-               this.conferenceData.gaCrisis = this.conferenceData.gaCrisis || {
-                   delegates: []
-               };
+               this.conferenceData.gaCrisis = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.gaCrisis ) ? ( ( this.conferenceData.gaCrisis.delegates ) ? this.conferenceData.gaCrisis : { delegates: [] } ) : { delegates: [] }
+
+                   )
+
+               } )();
 
                this.conferenceData.gaCrisis.delegates.push( {
 

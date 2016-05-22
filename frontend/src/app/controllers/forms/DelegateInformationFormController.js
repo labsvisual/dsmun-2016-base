@@ -63,9 +63,15 @@ angular.module( 'app' )
 
                }
 
-               this.conferenceData.delegateInformation = this.conferenceData.delegateInformation || {
-                   delegates: []
-               };
+               this.conferenceData.delegateInformation = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.delegateInformation ) ? ( ( this.conferenceData.delegateInformation.delegates ) ? this.conferenceData.delegateInformation : { delegates: [] } ) : { delegates: [] }
+
+                   )
+
+               } )();
 
                this.conferenceData.delegateInformation.delegates.push( {
 
