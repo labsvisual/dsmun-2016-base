@@ -287,7 +287,7 @@ const handlers = {
 
             }
 
-            const userList = Knex( 'users' ).select( 'email', 'guid', 'role', 'school_name', 'teacher_escort', 'username' ).then( ( data ) => {
+            const userList = Knex( 'users' ).select( 'email', 'guid', 'role', 'school_name', 'teacher_escort', 'username', 'is_confirmed' ).then( ( data ) => {
 
                 let usersArr = [];
                 data.forEach( ( user ) => {
@@ -333,7 +333,7 @@ const handlers = {
 
             const userList = Knex( 'users' ).where( {
                 guid,
-            } ).select( 'email', 'guid', 'role', 'school_name', 'teacher_escort', 'username' ).then( ( data ) => {
+            } ).select( 'email', 'guid', 'role', 'school_name', 'teacher_escort', 'username', 'is_confirmed' ).then( ( data ) => {
 
                 if( data.length === 0 ) {
 
