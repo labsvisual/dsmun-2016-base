@@ -35,4 +35,5 @@ WORKDIR /usr/src/app
 
 EXPOSE  3345
 
-CMD        [ "/usr/bin/supervisord" ]
+CMD     [ "npm", "start" ]
+# CMD        [ "/usr/bin/supervisord" ]
