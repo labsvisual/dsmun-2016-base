@@ -1,7 +1,7 @@
 import ResponseBuilder from '../../response.js';
 import Knex from '../../knex.js';
 
-import Winston from '../../helpers/logger';
+import * as Logger from '../../helpers/logger';
 
 const handlers = {
 
@@ -16,9 +16,8 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 500, "Server error!", null, reply );
 
         } );

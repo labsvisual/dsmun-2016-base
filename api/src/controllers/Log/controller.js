@@ -1,13 +1,15 @@
 import ResponseBuilder from '../../response';
-import Winston from '../../helpers/logger';
+import * as Logger from '../../helpers/logger';
 
 const handlers = {
 
     log( request, reply ) {
 
-        Winston.log( 'error', request.payload, {
-            type: 'frontend'
+        Logger.error( {
+            data: request.payload,
+            type: 'frontend_error'
         } );
+
         ResponseBuilder( 200, "Log piped", null, reply );
 
     }

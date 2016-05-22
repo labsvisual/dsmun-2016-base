@@ -6,7 +6,7 @@ import * as Guid from 'node-uuid';
 import * as Mailer from '../../helpers/mailer.js';
 import Helpers from '../../helpers/utils.js';
 import ConferenceModel from '../../models/models.js';
-import Winston from '../../helpers/logger';
+import * as Logger from '../../helpers/logger';
 
 var Hasher = require( 'node-hasher' )
   , _      = require( 'lodash' );
@@ -43,25 +43,23 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
+
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
 
             } else {
 
-                Winston.warn( `Unauthorized operation executed against GUID ${ guid }` );
+                Logger.info( `Unauthorized operation executed against GUID ${ guid }` );
                 ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
 
             }
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );

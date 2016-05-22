@@ -6,7 +6,7 @@ import * as Guid from 'node-uuid';
 import * as Mailer from '../../helpers/mailer.js';
 import Helpers from '../../helpers/utils.js';
 import ConferenceModel from '../../models/models.js';
-import Winston from '../../helpers/logger';
+import * as Logger from '../../helpers/logger';
 
 const Hasher = require( 'node-hasher' )
     , _      = require( 'lodash' )
@@ -84,9 +84,7 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.info( err );
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
@@ -96,9 +94,7 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
             ResponseBuilder( 511, "An invalid token was provided.", null, reply );
 
         } );
@@ -135,18 +131,16 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
-                Winston.log( 'error', err, {
-                    type: 'api_error'
-                } );
+                Logger.error( err );
+
                 ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -184,18 +178,16 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
-                Winston.log( 'error', err, {
-                    type: 'api_error'
-                } );
+                Logger.error( err );
+
                 ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -237,18 +229,16 @@ const handlers = {
 
             } ).catch( ( err ) => {
 
-                Winston.log( 'error', err, {
-                    type: 'api_error'
-                } );
+                Logger.error( err );
+
                 ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
             } );
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -283,25 +273,22 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
+
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
 
             } else {
 
-                Winston.warn( `Unauthorized operation executed against GUID ${ guid }` );
+                Logger.info( `Unauthorized operation executed against GUID ${ guid }` );
                 ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
 
             }
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -347,25 +334,21 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
 
             } else {
 
-                Winston.warn( `Unauthorized operation executed against GUID ${ guid }` );
+                Logger.info( `Unauthorized operation executed against GUID ${ guid }` );
                 ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
 
             }
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -405,9 +388,8 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
+
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
@@ -425,9 +407,8 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
+
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
@@ -436,9 +417,8 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
@@ -577,9 +557,8 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             reply.view( 'error', {
                 message: 'There was an error with the server. Please try again, later.'
             } );
@@ -654,9 +633,8 @@ const handlers = {
                                 Mailer.instance.sendMail( message, ( err, res ) => {
 
                                     if( err ) {
-                                        Winston.log( 'error', err, {
-                                            type: 'api_error'
-                                        } );
+
+                                        Logger.error( err );
 
                                         ResponseBuilder( 511, "There was an error encountered during the processing of that request. This should be resolved in no time. Please try again later.", null, reply );
                                         return;
@@ -682,9 +660,7 @@ const handlers = {
 
                         } ).catch( ( err ) => {
 
-                            Winston.log( 'error', err, {
-                                type: 'api_error'
-                            } );
+                            Logger.error( err );
 
                             ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
@@ -708,16 +684,14 @@ const handlers = {
 
             } else if ( dbData.role === 0 ) {
 
-                Winston.warn( `Unauthorized operation executed against GUID ${ guid }` );
+                Logger.info( `Unauthorized operation executed against GUID ${ guid }` );
                 ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
 
             }
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
 
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
@@ -770,9 +744,8 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
+
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
@@ -789,9 +762,8 @@ const handlers = {
 
                 } ).catch( ( err ) => {
 
-                    Winston.log( 'error', err, {
-                        type: 'api_error'
-                    } );
+                    Logger.error( err );
+
                     ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
 
                 } );
@@ -800,9 +772,8 @@ const handlers = {
 
         } ).catch( ( err ) => {
 
-            Winston.log( 'error', err, {
-                type: 'api_error'
-            } );
+            Logger.error( err );
+
             ResponseBuilder( 511, "The provided token is invalid.", null, reply );
 
         } );
