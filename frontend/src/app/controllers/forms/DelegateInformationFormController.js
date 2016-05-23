@@ -48,6 +48,10 @@ angular.module( 'app' )
 
            this.GetAllotments = ( committee ) => {
 
+               if( !this.conferenceData.countryAllotment || !this.conferenceData.countryAllotment.allotments ) {
+                   return [];
+               }
+
                let retVal = [];
 
                this.conferenceData.countryAllotment.allotments.map( ( allotment ) => {
