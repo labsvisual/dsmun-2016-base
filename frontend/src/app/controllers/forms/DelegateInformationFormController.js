@@ -46,6 +46,24 @@ angular.module( 'app' )
 
            } );
 
+           this.GetAllotments = ( committee ) => {
+
+               let retVal = [];
+
+               this.conferenceData.countryAllotment.allotments.map( ( allotment ) => {
+
+                   if( committee === allotment.name ) {
+
+                       retVal.push( allotment );
+
+                   }
+
+               } );
+
+               return retVal;
+
+           };
+
            this.AddDelegate = () => {
 
                if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates && this.conferenceData.delegateInformation.delegates.length === 17 ) {

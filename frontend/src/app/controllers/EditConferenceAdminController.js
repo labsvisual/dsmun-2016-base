@@ -1,5 +1,5 @@
 angular.module( 'app' )
-        .controller( 'EditConferenceAdminController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', function( $stateParams, $cookies, $http, $state, $window, $rest ) {
+        .controller( 'EditConferenceAdminController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', 'lodash', function( $stateParams, $cookies, $http, $state, $window, $rest, _ ) {
 
             let isLoggedIn = $cookies.get( 'isLoggedIn' )
                , data     = $cookies.get( 'loginData' );
@@ -62,9 +62,27 @@ angular.module( 'app' )
 
             };
 
+            this.GetAllotments = ( committee ) => {
+
+                let retVal = [];
+
+                this.conferenceData.countryAllotment.allotments.map( ( allotment ) => {
+
+                    if( committee === allotment.name ) {
+
+                        retVal.push( allotment );
+
+                    }
+
+                } );
+
+                return retVal;
+
+            };
+
             this.AddCountryAllotment = () => {
 
-               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.countries && this.conferenceData.countryAllotment.countries.length === 5 ) {
+               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.allotments && this.conferenceData.countryAllotment.allotments.length === 5 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
@@ -83,15 +101,16 @@ angular.module( 'app' )
 
                    return (
 
-                       ( this.conferenceData.countryAllotment ) ? ( ( this.conferenceData.countryAllotment.countries ) ? this.conferenceData.countryAllotment : { countries: [] } ) : { countries: [] }
+                       ( this.conferenceData.countryAllotment ) ? ( ( this.conferenceData.countryAllotment.allotments ) ? this.conferenceData.countryAllotment : { allotments: [] } ) : { allotments: [] }
 
                    )
 
                } )();
 
-               this.conferenceData.countryAllotment.countries.push( {
+               this.conferenceData.countryAllotment.allotments.push( {
 
-                   name: 'Country Name'
+                   name: '',
+                   country: ''
 
                } );
 

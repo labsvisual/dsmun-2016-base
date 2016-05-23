@@ -16,10 +16,6 @@
             <h4 class="admin__form-header ui dividing header">
 
                 {{ delegate.name }}
-                <div ng-show="ctrl.conferenceData.countryAllotment" class="checkbox__container--inner">
-                    <input ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" type="checkbox" tabindex="0">
-                    <label>Country Confirmed</label>
-                </div>
 
             </h4>
 
@@ -73,8 +69,8 @@
                 </div>
                 <div ng-hide="!ctrl.conferenceData.countryAllotment" class="field">
                     <label>Country Allotment</label>
-                    <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCommitteeConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
-                        <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
+                    <select class="ui dropdown" ng-disabled="ctrl.conferenceData.delegateInformation.delegates[ $index ].isCountryConfirmed" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].countryAllotment">
+                        <option ng-repeat="country in ctrl.GetAllotments( ctrl.conferenceData.delegateInformation.delegates[ $index ].committee )" value="{{ country.country }}">{{ country.country }}</option>
                     </select>
                 </div>
             </div>

@@ -256,8 +256,8 @@
                         </div>
                         <div ng-hide="!ctrl.conferenceData.countryAllotment" class="field">
                             <label>Country Allotment</label>
-                            <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].country">
-                                <option ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" value="{{ country.name }}">{{ country.name }}</option>
+                            <select class="ui dropdown" ng-model="ctrl.conferenceData.delegateInformation.delegates[ $index ].countryAllotment">
+                                <option ng-repeat="country in ctrl.GetAllotments( ctrl.conferenceData.delegateInformation.delegates[ $index ].committee )" value="{{ country.country }}">{{ country.country }}</option>
                             </select>
                         </div>
                     </div>
@@ -443,16 +443,42 @@
                     <h1>Country Allotment</h1>
                 </div>
 
-                <div ng-repeat="country in ctrl.conferenceData.countryAllotment.countries" class="ui field">
-                    <input ng-model="ctrl.conferenceData.countryAllotment.countries[ $index ].name" type="text" placeholder="Country {{ $index + 1 }}">
+                <div ng-repeat="country in ctrl.conferenceData.countryAllotment.allotments" class="two fields">
+
+                    <div class="field">
+                        <label>Committee</label>
+                        <select class="ui dropdown" ng-model="ctrl.conferenceData.countryAllotment.allotments[ $index ].name">
+
+                            <option value="unsc">United Nations Security Council</option>
+                            <option value="unscss">Supreme Council of Sovereign States</option>
+                            <option value="disec">Disarmament and International Security Committee</option>
+                            <option value="au">African Union</option>
+                            <option value="ec">European Council</option>
+                            <option value="iaea">International Atomic Energy Agency</option>
+                            <option value="unhrc">United Nations Human Rights Council</option>
+                            <option value="ls">Lok Sabha</option>
+                            <option value="ipc">International Press Corps</option>
+                            <option value="specpol">Special Political and Decolonisation Committee</option>
+                            <option value="scp">United Nations Special Committee on Palestine</option>
+                            <option value="odc">United Nations Office of Drugs and Crime</option>
+                            <option value="icao">International Civil Aviation Organisation</option>
+
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Country</label>
+                        <input ng-model="ctrl.conferenceData.countryAllotment.allotments[ $index ].country" type="text" placeholder="Allotment {{ $index + 1 }}">
+                    </div>
+
                 </div>
 
                 <div ng-click="ctrl.AddCountryAllotment()" class="ui labeled button" tabindex="0">
-                    <div class="ui button" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
-                        <i class="plus icon"></i> Country
+                    <div class="ui blue button">
+                        <i class="plus icon"></i> Allotment
                     </div>
-                    <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.countryAllotment.countries.length < 5 ) ? 'blue' : 'red' )">
-                        {{ ctrl.conferenceData.countryAllotment.countries.length || 0 }}
+                    <a class="ui basic blue left pointing label">
+                        {{ ctrl.conferenceData.countryAllotment.allotments.length || 0 }}
                     </a>
                 </div>
 
