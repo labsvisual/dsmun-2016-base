@@ -87,20 +87,20 @@ angular.module( 'app' )
 
             this.AddCountryAllotment = () => {
 
-               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.allotments && this.conferenceData.countryAllotment.allotments.length === 5 ) {
-
-                   this.isMessage = true;
-                   this.messageHeader = "Warning!";
-                   this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
-                   this.messageClass = {
-
-                       'yellow': true,
-
-                   };
-
-                   return false;
-
-               }
+            //    if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.allotments && this.conferenceData.countryAllotment.allotments.length === 5 ) {
+               //
+            //        this.isMessage = true;
+            //        this.messageHeader = "Warning!";
+            //        this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 5.";
+            //        this.messageClass = {
+               //
+            //            'yellow': true,
+               //
+            //        };
+               //
+            //        return false;
+               //
+            //    }
 
                this.conferenceData.countryAllotment = ( () => {
 
