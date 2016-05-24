@@ -183,7 +183,7 @@ const handlers = {
                     </p>
 
                     <p>
-                    <b>Notification: </b>"${ data.notification_text }"
+                    <b>Notification: </b>"${ data.notificationText }"
                     </p>
 
                     <p>
