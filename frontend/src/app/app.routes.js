@@ -66,7 +66,7 @@ angular.module( 'app' )
                })
                .state( 'editConferenceAdmin', {
 
-                   url: '/dashboard/edit/conferences/:guid',
+                   url: '/dashboard/edit/conferences/:schoolGuid/:guid',
                    templateUrl: 'app/templates/edit-conference-admin.html',
 
                })

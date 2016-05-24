@@ -489,15 +489,15 @@
                     <h1>Notifications</h1>
                 </div>
 
-                <div ng-repeat="notification in ctrl.conferenceData.announcements.notifications" style="margin-bottom: 2em;">
+                <div style="margin-bottom: 2em;">
                     <div class="two fields">
                         <div class="field">
                             <label>Notification Title</label>
-                            <input ng-model="ctrl.conferenceData.announcements.notifications[ $index ].name" type="text" placeholder="Notification {{ $index + 1 }}">
+                            <input type="text" ng-model="ctrl.notification.notificationTitle">
                         </div>
                         <div class="field">
                             <label>Notification Type</label>
-                            <select ng-model="ctrl.conferenceData.announcements.notifications[ $index ].class" class="ui dropdown">
+                            <select ng-model="ctrl.notification.notificationType" class="ui dropdown">
                                 <option value="blue">Information</option>
                                 <option value="yellow">Warning</option>
                                 <option value="red">Severe</option>
@@ -506,18 +506,16 @@
                     </div>
                     <div class="ui field">
                         <label>Notification Text</label>
-                        <textarea ng-model="ctrl.conferenceData.announcements.notifications[ $index ].text" type="text" placeholder="Notification {{ $index + 1 }}"></textarea>
+                        <textarea ng-model="ctrl.notification.notificationText" type="text"></textarea>
                     </div>
                 </div>
 
-                <div ng-click="ctrl.AddAnnouncement()" class="ui labeled button" tabindex="0">
-                    <div class="ui blue button">
-                        <i class="plus icon"></i> Notification
-                    </div>
-                    <a class="ui basic left pointing label blue">
-                        {{ ctrl.conferenceData.announcements.notifications.length || 0 }}
-                    </a>
-                </div>
+                <button ng-click="ctrl.PostNotification()" ng-disabled="ctrl.isProcessing" class="ui blue button" tabindex="0">
+
+                    <i class="plus icon"></i>
+                    {{ ctrl.isProcessing ? "Processing..." : "Post Notification" }}
+
+                </button>
 
             </div>
 

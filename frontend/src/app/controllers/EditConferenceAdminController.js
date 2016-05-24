@@ -2,7 +2,7 @@ angular.module( 'app' )
         .controller( 'EditConferenceAdminController', [ '$stateParams', '$cookies', '$http', '$state', '$window', 'RestApiService', 'lodash', function( $stateParams, $cookies, $http, $state, $window, $rest, _ ) {
 
             let isLoggedIn = $cookies.get( 'isLoggedIn' )
-               , data     = $cookies.get( 'loginData' );
+               , data      = $cookies.get( 'loginData' );
 
             if( isLoggedIn && data ) {
 
@@ -27,6 +27,7 @@ angular.module( 'app' )
             const conferenceGuid = $stateParams.guid;
 
             this.guid = conferenceGuid;
+            this.schoolGuid = $stateParams.schoolGuid;
 
             this.ConfirmConference = ( guid ) => {
 
@@ -120,16 +121,46 @@ angular.module( 'app' )
 
             };
 
-            this.AddAnnouncement = () => {
+            this.PostNotification = () => {
 
-                this.conferenceData.announcements = this.conferenceData.announcements || {
-                    notifications: []
+                this.isProcessing = true;
+                this.notification.guid = $stateParams.schoolGuid;
+
+                const postData =  {
+
+                    guid: data.guid,
+                    token: data.token,
+                    data: this.notification
+
                 };
 
-                this.conferenceData.announcements.notifications.push( {
+                $rest.PostNewNotification( postData ).then( ( data ) => {
 
-                    text: 'Notification',
-                    name: 'New Notification'
+                    this.isProcessing = false;
+
+                    this.isMessage = true;
+                    this.messageHeader = "Success!";
+                    this.messageText = "A notification was successfully sent to the respective school.";
+                    this.messageClass = {
+
+                        'green': true,
+
+                    };
+
+                    this.notification = {};
+
+                } ).catch( ( err ) => {
+
+                    this.isProcessing = false;
+
+                    this.isMessage = true;
+                    this.messageHeader = "Error!";
+                    this.messageText = "There was an error in sending the notification.";
+                    this.messageClass = {
+
+                        'red': true,
+
+                    };
 
                 } );
 

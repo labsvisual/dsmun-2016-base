@@ -46,6 +46,20 @@ exports.up = function(knex, Promise) {
                 tokensTable.string( 'conference_guid', 36 ).notNullable();
                 tokensTable.timestamp( 'created_at' ).notNullable().defaultTo( knex.fn.now() );
 
+            } )
+
+            .createTable( 'notifications', function( notificationsTable ) {
+
+                notificationsTable.increments();
+                notificationsTable.string( 'guid', 36 ).notNullable().references( 'guid' ).inTable( 'users' );
+
+                notificationsTable.string( 'notification_id', 16 ).notNullable().unique();
+                notificationsTable.string( 'notification_text' ).notNullable();
+                notificationsTable.string( 'notification_title' ).notNullable();
+                notificationsTable.string( 'notification_type', 10 ).notNullable();
+                notificationsTable.boolean( 'is_viewed' ).notNullable().defaultTo( false );
+                notificationsTable.timestamp( 'created_at' ).notNullable().defaultTo( knex.fn.now() );
+
             } );
 
 };
@@ -56,6 +70,7 @@ exports.down = function(knex, Promise) {
             .schema
             .dropTableIfExists( 'tokens' )
             .dropTableIfExists( 'confirmations' )
+            .dropTableIfExists( 'notifications' )
             .dropTableIfExists( 'users' );
 
 };

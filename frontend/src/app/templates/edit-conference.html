@@ -75,12 +75,14 @@
 
     </div>
 
-    <div ng-repeat="notification in ctrl.conferenceData.announcements.notifications" class="ui message" ng-class="notification.class" style="margin-top: 3em;">
+    <div ng-repeat="notification in ctrl.notifications" class="ui message" ng-class="notification.notification_type" style="margin-top: 3em;">
 
-        <div class="header">{{ notification.name }}</div>
+        <div class="header">{{ notification.notification_title }}</div>
         <p>
-            {{ notification.text }}
+            {{ notification.notification_text }}
         </p>
+
+        <i class="close icon" ng-click="ctrl.MarkAsViewed( notification.notification_id )" id="{{notification.notification_id}}"></i>
 
     </div>
 

@@ -38,7 +38,7 @@ export const info = ( message ) => {
 
     const message_id = RandomString.generate( 32 );
 
-    const data = _.merge( message, err, {
+    const data = _.merge( message, {
         type: 'api_info',
         message_id,
     } );

@@ -77,7 +77,6 @@ const handlers = {
 
     isTokenValid( request, reply ) {
 
-
         const users = Knex( 'tokens' ).where( {
 
             token: request.params.token,

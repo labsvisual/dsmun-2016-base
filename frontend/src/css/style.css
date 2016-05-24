@@ -46,3 +46,13 @@
   .checkbox__container--inner > label {
     font-weight: 400;
     font-size: 80%; }
+
+.successfully-saved.hide-opacity {
+  opacity: 0; }
+
+.successfully-saved {
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+  opacity: 1; }

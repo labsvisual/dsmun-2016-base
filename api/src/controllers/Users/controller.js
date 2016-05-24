@@ -155,8 +155,12 @@ const handlers = {
                     </p>
 
                     <p>
+                    You can download the Reference Guide by clicking <a href="http://static.dsmun.com/documents/dsmun_base_manual.pdf">here.</a>
+                    </p>
+
+                    <p>
                     The username for the account is: <b>${ data.username }</b><br>
-                    The password for the account is: <b>${ generatedPassword }
+                    The password for the account is: <b>${ generatedPassword }</b>
                     </p>
 
                     <p>

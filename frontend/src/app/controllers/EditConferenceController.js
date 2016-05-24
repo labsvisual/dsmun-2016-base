@@ -27,6 +27,17 @@ angular.module( 'app' )
             const conferenceGuid = $stateParams.guid;
             this.guid = conferenceGuid;
 
+            $rest.GetNotifications( {
+
+                guid: data.guid,
+                token: data.token
+
+            } ).then( data => {
+
+                this.notifications = data;
+
+            } );
+
             $rest.GetConference( {
 
                conferenceGuid,
@@ -44,5 +55,26 @@ angular.module( 'app' )
                } )();
 
             } );
+
+            this.MarkAsViewed = ( notificationId ) => {
+
+                $rest.MarkAsViewed( {
+
+                    notificationId,
+                    guid: data.guid,
+                    token: data.token
+
+                } ).then( ( data ) => {
+
+                    const elem = angular.element( `#${ notificationId }` ).closest( '.message' );
+                    elem.addClass( 'successfully-saved' ).addClass( 'hide-opacity' );
+
+                } ).catch( ( err ) => {
+
+                    alert( 'An error was encountered. Please try again later.' );
+
+                } );
+
+            };
 
        } ] );

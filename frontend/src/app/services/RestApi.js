@@ -113,6 +113,48 @@ angular
 
             },
 
+            PostNewNotification( notificationData ) {
+
+                const promise    = $q.defer();
+
+                $http.post( apiUrl + '/notifications', {
+
+                    token: notificationData.token,
+                    data: notificationData.data,
+                    guid: notificationData.guid,
+
+                } ).then( ( data ) => {
+
+                    if( data.status === 200 || data.status === 201 ) {
+
+                        promise.resolve();
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             GetUser( data ) {
 
                 const promise    = $q.defer();
@@ -158,6 +200,78 @@ angular
                     if( data.status === 200 && data.data.data ) {
 
                         promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            GetNotifications( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/notifications/${ data.guid }?token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
+            MarkAsViewed( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/notifications/${ data.guid }/${ data.notificationId }/viewed?token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 || data.status === 201 ) {
+
+                        promise.resolve();
 
                     } else {
 

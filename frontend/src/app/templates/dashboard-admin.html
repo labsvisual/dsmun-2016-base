@@ -45,7 +45,7 @@
                                 <i class="checkmark icon"></i>
                                 {{ ( conference.isConfirmed ? "Conference Confirmed" : ctrl.isProcessing ? "Processing..." : ( ctrl.hasButtonMessage ) ? ctrl.buttonMessage : "Confirm Conference" ) }}
                             </button>
-                            <button ui-sref="editConferenceAdmin({guid: conference.conferenceGuid})" class="ui teal button">
+                            <button ui-sref="editConferenceAdmin({guid: conference.conferenceGuid, schoolGuid: conference.schoolGuid})" class="ui teal button">
                                 Edit Conference
                             </button>
                             <button ng-click="ctrl.DeleteConference( conference.conferenceGuid )" class="ui button">
