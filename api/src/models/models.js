@@ -1,6 +1,18 @@
 const thinky = require( 'thinky' )( {
 
-    host: process.env.RETHINK_HOST || '192.168.33.10',
+    servers: [
+
+        {
+            host: process.env.RETHINK_HOST_PRIMARY || '192.168.33.10',
+            port: 28015,
+        },
+
+        {
+            host: process.env.RETHINK_HOST_SECONDARY || '192.168.33.10',
+            port: 28015,
+        },
+
+    ],
     db: process.env.RETHINK_DB_NAME || 'dsmun',
     authKey: process.env.RETHINK_AUTH || '',
 
