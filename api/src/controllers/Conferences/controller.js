@@ -368,6 +368,10 @@ const handlers = {
 
         } ).select( 'guid', 'role' ).then( ( dbData ) => {
 
+            console.log( request.query );
+            console.log( request.params );
+            console.log( dbData );
+
             dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
