@@ -203,21 +203,6 @@ angular.module( 'app' )
 
             this.AddDelegate = () => {
 
-            //    if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates && this.conferenceData.delegateInformation.delegates.length === 17 ) {
-               //
-            //        this.isMessage = true;
-            //        this.messageHeader = "Warning!";
-            //        this.messageText = "You can not add any more delegates. The maximum number of delegates per delegation is 17.";
-            //        this.messageClass = {
-               //
-            //            'yellow': true,
-               //
-            //        };
-               //
-            //        return false;
-               //
-            //    }
-
                this.conferenceData.delegateInformation = ( () => {
 
                    return (
