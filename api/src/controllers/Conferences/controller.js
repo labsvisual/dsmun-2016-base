@@ -368,10 +368,6 @@ const handlers = {
 
         } ).select( 'guid', 'role' ).then( ( dbData ) => {
 
-            console.log( request.query );
-            console.log( request.params );
-            console.log( dbData );
-
             dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
@@ -708,11 +704,6 @@ const handlers = {
         const token = request.payload.token
             , guid  = request.payload.guid
             , conferenceId = request.params.conferenceId;
-
-        console.log( request.query );
-        console.log( request.params );
-        console.log( dbData );
-        console.log( request.payload.data );
 
         let data  = request.payload.data;
 
