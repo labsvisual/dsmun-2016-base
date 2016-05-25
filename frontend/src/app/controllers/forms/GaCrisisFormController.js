@@ -41,7 +41,7 @@ angular.module( 'app' )
 
            this.AddDelegate = () => {
 
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 7 ) {
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length >= 7 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";

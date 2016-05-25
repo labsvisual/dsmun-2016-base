@@ -87,7 +87,7 @@ angular.module( 'app' )
 
             this.AddCountryAllotment = () => {
 
-               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.allotments && this.conferenceData.countryAllotment.allotments.length === 5 ) {
+               if( this.conferenceData.countryAllotment && this.conferenceData.countryAllotment.allotments && this.conferenceData.countryAllotment.allotments.length >= 5 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
@@ -168,7 +168,7 @@ angular.module( 'app' )
 
             this.AddGADelegate = () => {
 
-               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length === 7 ) {
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length >= 7 ) {
 
                    this.isMessage = true;
                    this.messageHeader = "Warning!";
