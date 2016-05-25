@@ -1,1 +1,5 @@
 node_modules
+.vagrant
+.sass-cache
+config.codekit
+.vagrant
