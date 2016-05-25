@@ -709,6 +709,10 @@ const handlers = {
             , guid  = request.payload.guid
             , conferenceId = request.params.conferenceId;
 
+        console.log( request.query );
+        console.log( request.params );
+        console.log( dbData );
+        console.log( request.payload.data );
 
         let data  = request.payload.data;
 
