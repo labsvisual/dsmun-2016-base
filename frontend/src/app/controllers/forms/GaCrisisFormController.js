@@ -36,8 +36,59 @@ angular.module( 'app' )
            } ).then( ( data ) => {
 
                this.conferenceData = data;
+               this.UpdateView();
 
            } );
+
+           this.RemoveDelegate = ( index ) => {
+
+               if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length <= 0 ) {
+
+                   this.isMessage = true;
+                   this.messageHeader = "Warning!";
+                   this.messageText = "You can not remove any more delegates.";
+                   this.messageClass = {
+
+                       'yellow': true,
+
+                   };
+
+                   return false;
+
+               }
+
+               this.conferenceData.gaCrisis = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.gaCrisis ) ? ( ( this.conferenceData.gaCrisis.delegates ) ? this.conferenceData.gaCrisis : { delegates: [] } ) : { delegates: [] }
+
+                   )
+
+               } )();
+
+               this.conferenceData.gaCrisis.delegates.splice( index, 1 );
+               this.UpdateView();
+
+           };
+
+           this.UpdateView = () => {
+
+               this.shouldShowNoDelegatesMessage = ( () => {
+
+                   if( this.conferenceData.gaCrisis ) {
+
+                       if( this.conferenceData.gaCrisis.delegates ) {
+
+                           return ( this.conferenceData.gaCrisis.delegates.length === 0 );
+
+                       } else { return false; }
+
+                   } else { return false; }
+
+               } )();
+
+           };
 
            this.AddDelegate = () => {
 
@@ -71,6 +122,8 @@ angular.module( 'app' )
                    name: 'Delegate Name'
 
                } );
+
+               this.UpdateView();
 
            };
 

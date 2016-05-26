@@ -19,9 +19,14 @@
 
             </div>
 
+            <button ng-click="ctrl.RemoveDelegate( $index )" class="ui red button">
+                <i class="icon remove"></i>
+                Remove Delegate
+            </button>
+
         </div>
 
-        <div style="margin-bottom: 3em;" ng-show=" ( !ctrl.conferenceData.gaCrisis || !ctrl.conferenceData.gaCrisis.delegates || !ctrl.conferenceData.gaCrisis.delegates.length === 0 ) ">
+        <div style="margin-bottom: 3em;" ng-show="( ctrl.shouldShowNoDelegatesMessage )">
             <div class="ui message yellow">
                 <div class="header">No Delegates</div>
                 <p>

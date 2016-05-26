@@ -199,6 +199,40 @@ angular.module( 'app' )
 
                } );
 
+               this.UpdateView();
+
+            };
+
+            this.RemoveGADelegate = ( index ) => {
+
+                if( this.conferenceData.gaCrisis && this.conferenceData.gaCrisis.delegates && this.conferenceData.gaCrisis.delegates.length <= 0 ) {
+
+                    this.isMessage = true;
+                    this.messageHeader = "Warning!";
+                    this.messageText = "You can not remove any more delegates.";
+                    this.messageClass = {
+
+                        'yellow': true,
+
+                    };
+
+                    return false;
+
+                }
+
+                this.conferenceData.gaCrisis = ( () => {
+
+                    return (
+
+                        ( this.conferenceData.gaCrisis ) ? ( ( this.conferenceData.gaCrisis.delegates ) ? this.conferenceData.gaCrisis : { delegates: [] } ) : { delegates: [] }
+
+                    )
+
+                } )();
+
+                this.conferenceData.gaCrisis.delegates.splice( index, 1 );
+                this.UpdateView();
+
             };
 
             this.AddDelegate = () => {
@@ -218,6 +252,40 @@ angular.module( 'app' )
                    name: 'Delegate Name'
 
                } );
+
+               this.UpdateView();
+
+            };
+
+            this.RemoveDelegate = ( index ) => {
+
+                if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates && this.conferenceData.delegateInformation.delegates.length <= 0 ) {
+
+                    this.isMessage = true;
+                    this.messageHeader = "Warning!";
+                    this.messageText = "You can not remove any more delegates.";
+                    this.messageClass = {
+
+                        'yellow': true,
+
+                    };
+
+                    return false;
+
+                }
+
+                this.conferenceData.delegateInformation = ( () => {
+
+                    return (
+
+                        ( this.conferenceData.delegateInformation ) ? ( ( this.conferenceData.delegateInformation.delegates ) ? this.conferenceData.delegateInformation : { delegates: [] } ) : { delegates: [] }
+
+                    )
+
+                } )();
+
+                this.conferenceData.delegateInformation.delegates.splice( index, 1 );
+                this.UpdateView();
 
             };
 
@@ -311,6 +379,24 @@ angular.module( 'app' )
                    } )();
 
                 } );
+
+            };
+
+            this.UpdateView = () => {
+
+                this.shouldShowNoDelegatesMessage = ( () => {
+
+                    if( this.conferenceData.delegateInformation ) {
+
+                        if( this.conferenceData.delegateInformation.delegates ) {
+
+                            return ( this.conferenceData.delegateInformation.delegates.length === 0 );
+
+                        } else { return false; }
+
+                    } else { return false; }
+
+                } )();
 
             };
 

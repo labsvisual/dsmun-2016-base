@@ -262,6 +262,11 @@
                         </div>
                     </div>
 
+                    <button ng-click="ctrl.RemoveDelegate( $index )" class="ui red button">
+                        <i class="icon remove"></i>
+                        Remove Delegate
+                    </button>
+
                 </div>
 
                 <div ng-disabled="this.shouldDisableAddDelegates" ng-click="ctrl.AddDelegate()" class="ui labeled button" tabindex="0">
@@ -426,6 +431,11 @@
 
                     </div>
 
+                    <button ng-click="ctrl.RemoveGADelegate( $index )" class="ui red button">
+                        <i class="icon remove"></i>
+                        Remove Delegate
+                    </button>
+
                 </div>
 
                 <div ng-disabled="this.shouldDisableAddGaDelegates" ng-click="ctrl.AddGADelegate()" class="ui labeled button" tabindex="0">
@@ -436,6 +446,7 @@
                         {{ ctrl.conferenceData.gaCrisis.delegates.length || 0 }}
                     </a>
                 </div>
+
             </div>
             <div class="ui bottom attached tab segment" data-tab="countryAllotments">
 

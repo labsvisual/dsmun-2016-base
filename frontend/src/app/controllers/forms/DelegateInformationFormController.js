@@ -37,6 +37,8 @@ angular.module( 'app' )
 
                this.conferenceData = data;
 
+               this.UpdateView();
+
                this.fieldClasses = {
 
                    'two fields': ( this.conferenceData.countryAllotment ),
@@ -100,6 +102,58 @@ angular.module( 'app' )
                    name: 'Delegate Name'
 
                } );
+
+               this.UpdateView();
+
+           };
+
+           this.RemoveDelegate = ( index ) => {
+
+               if( this.conferenceData.delegateInformation && this.conferenceData.delegateInformation.delegates && this.conferenceData.delegateInformation.delegates.length <= 0 ) {
+
+                   this.isMessage = true;
+                   this.messageHeader = "Warning!";
+                   this.messageText = "You can not remove any more delegates.";
+                   this.messageClass = {
+
+                       'yellow': true,
+
+                   };
+
+                   return false;
+
+               }
+
+               this.conferenceData.delegateInformation = ( () => {
+
+                   return (
+
+                       ( this.conferenceData.delegateInformation ) ? ( ( this.conferenceData.delegateInformation.delegates ) ? this.conferenceData.delegateInformation : { delegates: [] } ) : { delegates: [] }
+
+                   )
+
+               } )();
+
+               this.conferenceData.delegateInformation.delegates.splice( index, 1 );
+               this.UpdateView();
+
+           };
+
+           this.UpdateView = () => {
+
+               this.shouldShowNoDelegatesMessage = ( () => {
+
+                   if( this.conferenceData.delegateInformation ) {
+
+                       if( this.conferenceData.delegateInformation.delegates ) {
+
+                           return ( this.conferenceData.delegateInformation.delegates.length === 0 );
+
+                       } else { return false; }
+
+                   } else { return false; }
+
+               } )();
 
            };
 
