@@ -8,9 +8,11 @@ const handlers = {
     deauthUser( request, reply ) {
 
         const users = Knex( 'tokens' ).where( {
+
             guid: request.payload.guid,
             token: request.payload.token
-        }).del().then( () => {
+
+        } ).del().then( () => {
 
             ResponseBuilder( 200, "Successfully logged out.", null, reply );
 

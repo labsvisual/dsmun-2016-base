@@ -15,9 +15,9 @@ const handlers = {
 
             pass_reset_code: token
 
-        } ).select( 'forgot_password', 'username' ).then( ( data ) => {
+        } ).select( 'forgot_password', 'username' ).then( ( [ data ] ) => {
 
-            const forgot_password = ( data[ 0 ].forgot_password === 1 );
+            const forgot_password = ( data.forgot_password === 1 );
 
             if( !forgot_password ) {
 
@@ -76,10 +76,10 @@ const handlers = {
         const token = request.params.resetToken;
         const users = Knex( 'users' ).where( {
             pass_reset_code: token
-        } ).select( 'forgot_password', 'username' ).then( ( data ) => {
+        } ).select( 'forgot_password', 'username' ).then( ( [ data ] ) => {
 
-            const forgot_password = ( data[ 0 ].forgot_password === 1 );
-            const username = data[ 0 ].username;
+            const forgot_password = ( data.forgot_password === 1 );
+            const username = data.username;
 
             if( !forgot_password ) {
 
@@ -112,9 +112,9 @@ const handlers = {
 
             username: request.payload.username,
 
-        }).select( 'email' ).then( ( email ) => {
+        }).select( 'email' ).then( ( [ email ] ) => {
 
-            email = email[ 0 ].email;
+            email = email.email;
             const pass_reset_code = RandomString.generate( 32 );
 
             Knex( 'users' ).where( {

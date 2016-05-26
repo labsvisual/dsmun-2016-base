@@ -21,9 +21,8 @@ const handlers = {
 
             guid: userGuid
 
-        } ).select( 'is_confirmed', 'confirmation_code' ).then( ( data ) => {
+        } ).select( 'is_confirmed', 'confirmation_code' ).then( ( [ data ] ) => {
 
-            data = data[ 0 ];
             if( data.is_confirmed ) {
 
                 reply.view( 'error', {
@@ -94,9 +93,8 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.role !== 1 ) {
 
                 ResponseBuilder( 511, "The provided user does not have the privileges to execute that operation.", null, reply );
@@ -229,9 +227,8 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.role !== 1 ) {
 
                 ResponseBuilder( 511, "The provided user does not have the privileges to execute that operation.", null, reply );
@@ -288,9 +285,8 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.role !== 1 ) {
 
                 Winston.warn( `An attempt to execute an escalated operation was noted ${ token }` );
@@ -332,9 +328,8 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.role !== 1 && dbData.guid !== guid ) {
 
                 Winston.warn( `An attempt to execute an escalated operation was noted ${ guid }` );

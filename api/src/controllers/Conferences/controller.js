@@ -46,9 +46,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid' ).then( ( dbData ) => {
+        } ).select( 'guid' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -60,11 +59,9 @@ const handlers = {
 
                 guid: dbData.guid,
 
-            } ).select( 'school_name' ).then( ( dbData2 ) => {
+            } ).select( 'school_name' ).then( ( [ dbData2 ] ) => {
 
                 const confGuid = Guid.v4();
-
-                dbData2 = dbData2[ 0 ];
 
                 let dataToExtendWith = {
 
@@ -111,9 +108,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -157,9 +153,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid' ).then( ( dbData ) => {
+        } ).select( 'guid' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -204,9 +199,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid' ).then( ( dbData ) => {
+        } ).select( 'guid' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -255,9 +249,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -312,9 +305,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -366,9 +358,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -578,9 +569,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );
@@ -712,9 +702,8 @@ const handlers = {
             is_revoked: false,
             token,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.guid !== guid || dbData.guid === undefined ) {
 
                 ResponseBuilder( 511, "The provided token is invalid.", null, reply );

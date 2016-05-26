@@ -12,27 +12,6 @@ const Hasher = require( 'node-hasher' )
     , _      = require( 'lodash' )
     , debug  = process.env.NODE_ENV !== 'production';
 
-_.mixin( {
-  compactObject: ( obj, keyName ) => {
-
-     let clone = _.clone( obj );
-
-     _.each( clone, ( value, key ) => {
-
-       if( key === keyName ) {
-
-         delete clone[ key ];
-
-       }
-
-     });
-
-     return clone;
-
-  }
-
-} );
-
 const handlers = {
 
     confirmNotification( request, reply ) {
@@ -46,9 +25,7 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
-
-            dbData = dbData[ 0 ];
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
             if( dbData.guid !== guid ) {
 
@@ -99,9 +76,7 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
-
-            dbData = dbData[ 0 ];
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
             if( dbData.guid !== guid ) {
 
@@ -142,9 +117,8 @@ const handlers = {
             token,
             is_revoked: false,
 
-        } ).select( 'guid', 'role' ).then( ( dbData ) => {
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
 
-            dbData = dbData[ 0 ];
             if( dbData.role !== 1 ) {
 
                 ResponseBuilder( 511, "The provided user does not have the privileges to execute that operation.", null, reply );

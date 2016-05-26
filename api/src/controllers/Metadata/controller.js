@@ -12,7 +12,9 @@ const handlers = {
         http( `http://www.geodatasource.com/get-dropdown-list.json?countryCode=${ countryCode }`, ( error, response, body ) => {
 
             if( response.statusCode === 200 ) {
+
                 return ResponseBuilder( 200, null, JSON.parse( body ), reply );
+
             }
 
         } );

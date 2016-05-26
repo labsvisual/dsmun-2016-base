@@ -11,16 +11,14 @@ const handlers = {
 
             username: request.payload.username
 
-        }).select( 'password', 'guid', 'role', 'is_confirmed' ).then( ( school ) => {
+        }).select( 'password', 'guid', 'role', 'is_confirmed' ).then( ( [ school ] ) => {
 
-            if( school.length === 0 ) {
+            if( !school ) {
 
                 Logger.info( 'Incorrect username and password' );
                 ResponseBuilder( 411, "Username and/or password were entered incorrectly.", null, reply );
 
             } else {
-
-                school = school[ 0 ];
 
                 if( !school.is_confirmed ) {
 
