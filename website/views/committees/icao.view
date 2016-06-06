@@ -61,8 +61,16 @@
                                 <p>It’s a privilege to welcome all of you to the DSMUN 2016, the tenth of its kind. My name is C.C.Chengappa and I am going to be the Chairperson of the International Civil Aviation Organisation. A bit about myself to begin with. I have been involved in ‘MUNing’ since grade 9 and have truly enjoyed every moment of it, whether it be working in committee as an official or representing different countries at various conferences through India . I am currently pursuing the ISC curriculum and have Humanities (without Maths... thankfully) as my electives. My interests lie in football, the guitar (don’t expect a performance) freestyle rap and writing where I am part of the schools flagship publication, The DS Weekly as a senior editor.</p>
                                 <p>This year’s conference has inculcated the ICAO for the first time and it is truly an honour to be leading all of you into what will be an enthralling and mesmerising three days. Being a Specialised Committee, the ICAO was set up by the UN to deal with and promote the safety of International air transport. Over the course of time, it has evolved as an organisation that has constantly dealt with air disasters, environmental problems and economical development of aviation. The issues faced by one of the world’s largest industries needs to be dealt with effectively and finding suitable solutions is the prime motive of the committee.</p>
                                 <p>The two agendas for the session are:</p>
-                                <p><ul><li><b>Global Aviation Security</b></li>
-                                <li><b>Economic Development of Air Transport</b></li></ul></p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <b>Territorial Sovereignity of Air Space</b>
+                                        </li>
+                                        <li>
+                                            <b>Global Aviation Security</b>
+                                        </li>
+                                    </ul>
+                                </p>
                                 <p>The background guides should have adequate information about the agendas but if you have any queries whatsoever, please feel free to contact me by mail. Apart from that, I do expect to witness intense debate, innovative resolutions and moreover, the ability of the committee to handle impeding crises. Research and preparation are the most important assets of any delegate. As for the conference, I can promise that it will be diplomacy at its best.</p>
                                 <p>Looking forward to meeting all of you this fall.</p>
                                 <div class="signing-off">
@@ -115,10 +123,31 @@
                         <div id="agenda-intro">
                           <h2>Introduction to Agenda</h2>
                           <div class="divide20"></div>
-                          <h3>Civil Aviation Security</h3>
-                          <p>Civil Aviation has always been a prime target of terrorist organisations around the world. The ICAO recognises the issue of terror threats and hijacks along with safety of civil aircraft from conflicts taking place in several areas around the world. These incidents have lead to various developments in the functioning of aviation on a daily basis. However, the recent events regarding airspace, dispute over aircraft being shot down(MH17) and the growing threat of terrorism has lead to a major conflict regarding safety measures that must be taken by aircraft manufacturers and airlines. With the rapid development of the airline industry, the issue of safety and security is of major concern to the ICAO and the world at large.</p>
-                          <h3>Economic Development</h3>
-                          <p>With a contribution of around 606 billion dollars to global GDP and employment of over 8.7 million people, the aviation industry holds an important stronghold in the world economy. However, recent studies have shown that the rate of growth in aviation is not enough to cater to the interests of third world nations, who struggle with rapid development in various other sectors as well. A few reasons for the lack of development constitute components such as fluctuating oil prices, lack of labour and huge bailouts of airlines. Such factors have to be taken into account in order to come to a proper consensus regarding the stable economic development of aviation.</p>
+                          <h3>Territorial Sovereignity of Air Space</h3>
+                          <p>
+                            Air space has been an issue that most modern day conflicts have faced because countries have vied
+                            for control over land and the territorial arrangements. There have been numerous cases of violation
+                            and attempted infiltrations by various countries. Some of these violations have come over disputed
+                            territorial waters, while others have come in times of war and hostility. The ICAO recognises the
+                            issue has potentially threatening as it has resulted in aggravated conflict previously and has lead to
+                            an increase in hostility between nations. Major areas such as the South China Sea and Crimea have
+                            seen constant dispute over airspace. One of the major issues to be addressed is the willingness and
+                            corporation of the countries to accept regulations set down by the ICAO that have to be abided with
+                            in all cases arising in the future. The ICAO looks for a proper consensus to all worldwide conflicts
+                            related to the matter, and requests member nations to formulate effective strategies related to the
+                            sovereignty of air space.
+                          </p>
+                          <h3>Global Aviation Security</h3>
+                          <p>
+                              Civil Aviation has always been a prime target of terrorist organisations around the world.
+                              The ICAO recognises the issue of terror threats and hijacks along with safety of civil aircraft
+                              from conflicts taking place in several areas around the world. These incidents have lead to
+                              various developments in the functioning of aviation on a daily basis. However, the recent
+                              events regarding airspace, dispute over aircraft being shot down(MH17) and the growing threat of
+                              terrorism has lead to a major conflict regarding safety measures that must be taken by aircraft
+                              manufacturers and airlines. With the rapid development of the airline industry, the issue of safety
+                              and security is of major concern to the ICAO and the world at large.
+                          </p>
                         </div>
                         <div class="sidebox box widget">
                             <h5> Contact Me: chair.icao@doonschool.com </h5>
