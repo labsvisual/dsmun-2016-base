@@ -76,7 +76,7 @@
 
     <div class="mid-container">
 
-        <form name="main-form-back" ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
+        <form name="main-form" ng-submit="ctrl.UpdateForm()" class="ui seperated form" >
 
             <div class="ui buttons">
                 <button type="submit" ng-disabled="ctrl.processing" class="ui positive button">{{ ctrl.processing ? "Processing..." : "Save" }}</button>
@@ -127,7 +127,7 @@
 
                         <div class="field">
                             <label>Landline Number</label>
-                            <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
+                            <input type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
                         </div>
 
                     </div>
@@ -169,12 +169,12 @@
 
                     <div class="field">
                         <label>State</label>
-                        <input ng-model="ctrl.conferenceData.registration.address.state" />
+                        <input required ng-model="ctrl.conferenceData.registration.address.state" />
                     </div>
 
                     <div class="field">
                         <label>Country</label>
-                        <input ng-model="ctrl.conferenceData.registration.address.country" />
+                        <input required ng-model="ctrl.conferenceData.registration.address.country" />
                     </div>
 
                 </div>
