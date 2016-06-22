@@ -105,7 +105,7 @@
                             <div class="res">
                                 <a href="#agenda-intro" class="fancybox-inline" data-fancybox-width="800" data-fancybox-height="800">Introduction to Agenda</a> <!-- Popup -->
                                 <a href="http://static.dsmun.com/documents/country_matrix_au.pdf" target="_blank">Country Matrix</a><!-- New Tab -->
-                                 <!--<a href="../documents/Background Guides/(DSMUN '16) Background Guide - ECOFIN.pdf" target="_blank" download="(DSMUN '16) Background Guide - ECOFIN">Background Guide</a> <!-- UID -->
+                                 <a href="http://static.dsmun.com/documents/background_guide_au.pdf" target="_blank" download="(DSMUN '16) Background Guide - ECOFIN">Background Guide</a> 
                                 <a href="http://static.dsmun.com/documents/rules_of_procedure_dsmun.pdf" target="_blank">Rules of Procedure</a>
                             </div>
 
