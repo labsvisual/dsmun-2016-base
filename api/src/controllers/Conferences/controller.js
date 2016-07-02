@@ -438,6 +438,7 @@ const handlers = {
             conference.delegateInformation.delegates.map( ( delegate ) => {
 
                 delegate.mealPreference = delegate.mealPreference === 'veg' ? 'Vegetarian' : 'Non Vegetarian';
+                delegate.gender = delegate.gender.substring( 0, 1 ).toUpperCase() + delegate.gender.substring( 1 );
 
                 const { committee } = delegate
                     , shortName     = committee;
