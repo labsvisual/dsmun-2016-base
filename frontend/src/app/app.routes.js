@@ -75,6 +75,12 @@ angular.module( 'app' )
                    url: '/dashboard/users/new',
                    templateUrl: 'app/templates/new-user.html',
 
+               })
+               .state( 'userWiseAllocation', {
+
+                   url: '/dashboard/users/allocations',
+                   templateUrl: 'app/templates/user-wise-allocation.html',
+
                });
 
        }]);
