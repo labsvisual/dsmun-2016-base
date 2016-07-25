@@ -518,25 +518,25 @@ const handlers = {
 
             conference.travelArrangements.onward.arrivalDate = ( () => {
 
-                return ( conference.travelArrangements.onward.arrivalDate ? new Date( conference.travelArrangements.onward.arrivalDate ).toDateString() : '' );
+                return ( conference.travelArrangements.onward.arrivalDate ? new Date( conference.travelArrangements.onward.arrivalDate.replace( 'T18:30:00.000Z', 'T00:00:00' ) ).toDateString() : '' );
 
             } )();
 
             conference.travelArrangements.onward.departureDate = ( () => {
 
-                return ( conference.travelArrangements.onward.departureDate ? new Date( conference.travelArrangements.onward.departureDate ).toDateString() : '' );
+                return ( conference.travelArrangements.onward.departureDate ? new Date( conference.travelArrangements.onward.departureDate.replace( 'T18:30:00.000Z', 'T00:00:00' ) ).toDateString() : '' );
 
             } )();
 
             conference.travelArrangements.returnJourney.arrivalDate = ( () => {
 
-                return ( conference.travelArrangements.returnJourney.arrivalDate ? new Date( conference.travelArrangements.returnJourney.arrivalDate ).toDateString() : '' );
+                return ( conference.travelArrangements.returnJourney.arrivalDate ? new Date( conference.travelArrangements.returnJourney.arrivalDate.replace( 'T18:30:00.000Z', 'T00:00:00' ) ).toDateString() : '' );
 
             } )();
 
             conference.travelArrangements.returnJourney.departureDate = ( () => {
 
-                return ( conference.travelArrangements.returnJourney.departureDate ? new Date( conference.travelArrangements.returnJourney.departureDate ).toDateString() : '' );
+                return ( conference.travelArrangements.returnJourney.departureDate ? new Date( conference.travelArrangements.returnJourney.departureDate.replace( 'T18:30:00.000Z', 'T00:00:00' ) ).toDateString() : '' );
 
             } )();
 
