@@ -278,6 +278,8 @@ angular.module( 'app' )
 
                this.processing = true;
 
+               console.log( this.conferenceData );
+
                $rest.UpdateConference( {
 
                    token: data.token,
