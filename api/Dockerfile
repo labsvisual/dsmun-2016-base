@@ -32,6 +32,9 @@ ENV     RETHINK_HOST_SECONDARY 172.31.25.107
 ENV     RETHINK_AUTH 3Jl3LDaS60Qw9VNE1txq961e
 ENV     NODE_ENV production
 
+ENV     TZ=Asia/Kolkata
+RUN     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 WORKDIR /usr/src/app
 
 EXPOSE  3345
