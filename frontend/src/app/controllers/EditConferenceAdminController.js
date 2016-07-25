@@ -278,13 +278,13 @@ angular.module( 'app' )
 
                this.processing = true;
 
-               this.conferenceData.travelArrangements.onward.departureDate = new Date( Date.UTC( this.conferenceData.travelArrangements.onward.departureDate.getYear(), this.conferenceData.travelArrangements.onward.departureDate.getMonth(), this.conferenceData.travelArrangements.onward.departureDate.getDate() ) );
-               this.conferenceData.travelArrangements.onward.arrivalDate = new Date( Date.UTC( this.conferenceData.travelArrangements.onward.arrivalDate.getYear(), this.conferenceData.travelArrangements.onward.arrivalDate.getMonth(), this.conferenceData.travelArrangements.onward.arrivalDate.getDate() ) );
-               this.conferenceData.travelArrangements.returnJourney.departureDate = new Date( Date.UTC( this.conferenceData.travelArrangements.returnJourney.departureDate.getYear(), this.conferenceData.travelArrangements.returnJourney.departureDate.getMonth(), this.conferenceData.travelArrangements.returnJourney.departureDate.getDate() ) );
-               this.conferenceData.travelArrangements.returnJourney.arrivalDate = new Date( Date.UTC( this.conferenceData.travelArrangements.returnJourney.arrivalDate.getYear(), this.conferenceData.travelArrangements.returnJourney.arrivalDate.getMonth(), this.conferenceData.travelArrangements.returnJourney.arrivalDate.getDate() ) );
-
-               console.log( this.conferenceData.travelArrangements.returnJourney );
-               console.log( this.conferenceData.travelArrangements.onward );
+            //    this.conferenceData.travelArrangements.onward.departureDate = new Date( Date.UTC( this.conferenceData.travelArrangements.onward.departureDate.getYear(), this.conferenceData.travelArrangements.onward.departureDate.getMonth(), this.conferenceData.travelArrangements.onward.departureDate.getDate() ) );
+            //    this.conferenceData.travelArrangements.onward.arrivalDate = new Date( Date.UTC( this.conferenceData.travelArrangements.onward.arrivalDate.getYear(), this.conferenceData.travelArrangements.onward.arrivalDate.getMonth(), this.conferenceData.travelArrangements.onward.arrivalDate.getDate() ) );
+            //    this.conferenceData.travelArrangements.returnJourney.departureDate = new Date( Date.UTC( this.conferenceData.travelArrangements.returnJourney.departureDate.getYear(), this.conferenceData.travelArrangements.returnJourney.departureDate.getMonth(), this.conferenceData.travelArrangements.returnJourney.departureDate.getDate() ) );
+            //    this.conferenceData.travelArrangements.returnJourney.arrivalDate = new Date( Date.UTC( this.conferenceData.travelArrangements.returnJourney.arrivalDate.getYear(), this.conferenceData.travelArrangements.returnJourney.arrivalDate.getMonth(), this.conferenceData.travelArrangements.returnJourney.arrivalDate.getDate() ) );
+               //
+            //    console.log( this.conferenceData.travelArrangements.returnJourney );
+            //    console.log( this.conferenceData.travelArrangements.onward );
 
                $rest.UpdateConference( {
 
