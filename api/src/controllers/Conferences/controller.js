@@ -384,17 +384,21 @@ const handlers = {
 
                     conferences.forEach( ( conference ) => {
 
-                        conference.delegateInformation.delegates.forEach( ( delegate ) => {
+                        if( conference.delegateInformation && conference.delegateInformation.delegates ) {
 
-                            confObject.committees[ delegate.committee ].delegates.push( {
+                            conference.delegateInformation.delegates.forEach( ( delegate ) => {
 
-                                countryAllotment: delegate.countryAllotment,
-                                name: delegate.name,
-                                school: conference.schoolName
+                                confObject.committees[ delegate.committee ].delegates.push( {
+
+                                    countryAllotment: delegate.countryAllotment,
+                                    name: delegate.name,
+                                    school: conference.schoolName
+
+                                } );
 
                             } );
 
-                        } );
+                        }
 
                     } );
 
