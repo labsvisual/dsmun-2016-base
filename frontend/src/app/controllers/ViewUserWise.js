@@ -26,6 +26,16 @@ angular.module( 'app' )
 
             const self = this;
 
-            
+            $rest.GetDelegatesAsCommittees( data ).then( ( data ) => {
+
+                self.committees = data.committees;
+
+            } );
+
+            self.getDelegates = ( committee ) => {
+
+                return committee.delegates;
+
+            };
 
        } ] );

@@ -1,0 +1,67 @@
+<div ng-controller="ViewUserWiseController as ctrl">
+
+    <div ng-repeat="committee in ctrl.committees" >
+
+        <h1 class="ui header">
+            <span style="font-weight: 300;">{{ committee.name }}</span>
+        </h1>
+
+        <table class="ui celled table">
+
+            <thead>
+
+                <tr>
+
+                    <th>School Name</th>
+                    <th>Country Allotment</th>
+                    <th>Delegate Name</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="delegate in committee.delegates">
+
+                    <td>
+                        {{ delegate.school }}
+                    </td>
+                    <td>
+                        {{ delegate.countryAllotment }}
+                    </td>
+                    <td>
+                        {{ delegate.name }}
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <p>
+
+            <strong>Total Delegates: </strong> {{ committee.delegates.length }}
+
+        </p>
+
+        <div style="margin-bottom: 5em;">
+
+        </div>
+
+    </div>
+
+    <button style="margin-top: 4em;" class="ui labeled icon button" ui-sref="dashboardAdmin">
+        <i class="arrow left icon"></i>
+        Back
+    </button>
+
+</div>
+<script type="text/javascript">
+    $( document ).ready( function() {
+
+        $( '.menu .item' ).tab();
+
+    });
+</script>

@@ -288,6 +288,142 @@ const handlers = {
 
     },
 
+    getDelegatesByCommittee( request, reply ) {
+
+        const token = request.query.token
+            , guid  = request.query.guid;
+
+        const checkToken = Knex( 'tokens' ).where( {
+
+            is_revoked: false,
+            token,
+
+        } ).select( 'guid', 'role' ).then( ( [ dbData ] ) => {
+
+            if( dbData.guid !== guid || dbData.guid === undefined ) {
+
+                ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+                return;
+
+            }
+
+            if( dbData.role === 1 ) {
+
+                ConferenceModel.then( ( conferences ) => {
+
+                    let confObject = {};
+
+                    confObject.committees = {
+
+                        unsc: {
+                            name: 'United Nations Security Council',
+                            delegates: []
+                        },
+
+                        unscss: {
+                            name: 'Supreme Council of Sovereign States',
+                            delegates: []
+                        },
+
+                        disec: {
+                            name: 'Disarmament and International Security Committee',
+                            delegates: []
+                        },
+
+                        au: {
+                            name: 'African Union',
+                            delegates: []
+                        },
+
+                        ec: {
+                            name: 'European Council',
+                            delegates: []
+                        },
+
+                        iaea: {
+                            name: 'International Atomic Energy Agency',
+                            delegates: []
+                        },
+
+                        unhrc: {
+                            name: 'United Nations Human Rights Council',
+                            delegates: []
+                        },
+
+                        ls: {
+                            name: 'Lok Sabha',
+                            delegates: []
+                        },
+
+                        ipc: {
+                            name: 'International Press Corps',
+                            delegates: []
+                        },
+
+                        specpol: {
+                            name: 'Special Political and Decolonisation Committee',
+                            delegates: []
+                        },
+
+                        scp: {
+                            name: 'United Nations Special Committee on Palestine',
+                            delegates: []
+                        },
+
+                        odc: {
+                            name: 'United Nations Office of Drugs and Crime',
+                            delegates: []
+                        },
+
+                        icao: {
+                            name: 'International Civil Aviation Organisation',
+                            delegates: []
+                        },
+
+                    };
+
+                    conferences.forEach( ( conference ) => {
+
+                        conference.delegateInformation.delegates.forEach( ( delegate ) => {
+
+                            confObject.committees[ delegate.committee ].delegates.push( {
+
+                                countryAllotment: delegate.countryAllotment,
+                                name: delegate.name,
+                                school: conference.schoolName
+
+                            } );
+
+                        } );
+
+                    } );
+
+                    ResponseBuilder( 200, null, confObject, reply );
+
+                } ).catch( ( err ) => {
+
+                    Logger.error( err );
+
+                    ResponseBuilder( 511, "An error was encountered! Please try again later, or contact the developer.", null, reply );
+
+                } );
+
+            } else {
+
+                Logger.info( `Unauthorized operation executed against GUID ${ guid }` );
+                ResponseBuilder( 403, "You are unauthorised for the operation.", null, reply );
+
+            }
+
+        } ).catch( ( err ) => {
+
+            Logger.error( err );
+            ResponseBuilder( 511, "The provided token is invalid.", null, reply );
+
+        } );
+
+    },
+
     deleteConference( request, reply ) {
 
 

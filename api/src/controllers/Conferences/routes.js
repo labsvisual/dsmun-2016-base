@@ -102,6 +102,28 @@ const routes = [
 
     {
 
+        path: '/as/delegates',
+        method: 'GET',
+        handler: controller.getDelegatesByCommittee,
+        config: {
+
+            validate: {
+
+                query: {
+
+                    token: Joi.string().min( 32 ).max( 32 ).required(),
+                    guid: Joi.string().min( 36 ).max( 36 ).required()
+
+                }
+
+            }
+
+        }
+
+    },
+
+    {
+
         path: '/unconfirmed',
         method: 'GET',
         handler: controller.getUnconfirmedConferences,

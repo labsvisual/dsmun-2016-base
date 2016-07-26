@@ -227,6 +227,42 @@ angular
 
             },
 
+            GetDelegatesAsCommittees( data ) {
+
+                const promise    = $q.defer();
+
+                $http.get( `${ apiUrl }/conferences/as/delegates?guid=${ data.guid }&token=${ data.token }` ).then( ( data ) => {
+
+                    if( data.status === 200 && data.data.data ) {
+
+                        promise.resolve( data.data.data );
+
+                    } else {
+
+                        promise.reject( {
+
+                            message: data.data.message,
+                            error: true
+
+                        } );
+
+                    }
+
+                } ).catch( ( data ) => {
+
+                    promise.reject( {
+
+                        message: data.data.message,
+                        error: true
+
+                    } );
+
+                } );
+
+                return promise.promise;
+
+            },
+
             GetNotifications( data ) {
 
                 const promise    = $q.defer();
