@@ -644,6 +644,16 @@ const handlers = {
 
             } );
 
+            let teacherEscorts = [];
+            conference.registration.teacherEscorts.map( ( teacherEscort ) => {
+
+                teacherEscort.mealPreference = teacherEscort.mealPreference === 'veg' ? 'Vegetarian' : 'Non Vegetarian';
+                teacherEscort.gender = teacherEscort.gender.substring( 0, 1 ).toUpperCase() + teacherEscort.gender.substring( 1 );
+
+                teacherEscorts.push( teacherEscort );
+
+            } );
+
             conference.travelArrangements.onward.mode = ( () => {
 
                 return ( conference.travelArrangements.onward.mode ? conference.travelArrangements.onward.mode.substring( 0, 1 ).toUpperCase() + conference.travelArrangements.onward.mode.substring( 1 ) : '' );
@@ -682,6 +692,7 @@ const handlers = {
             } )();
 
             conference.delegateInformation.delegates = delegates;
+            conference.registration.teacherEscorts = teacherEscorts;
 
             reply.view( 'confirmation', _.merge( conference, {
                 generated: new Date().toDateString(),

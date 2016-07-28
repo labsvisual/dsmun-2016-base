@@ -62,6 +62,41 @@
 
                 </div>
 
+                <fieldset>
+
+                    <legend>Teacher Escorts</legend>
+
+                    {{#each registration.teacherEscorts}}
+
+                    <div class="grid">
+
+                        <div class="grid__col grid__col--1-of-5 data">
+
+                            <label>Name</label>
+                            <span class="content">{{this.name}}</span>
+
+                        </div>
+
+                        <div class="grid__col grid__col--1-of-5 data">
+
+                            <label>Meal Preference</label>
+                            <span class="content">{{this.mealPreference}}</span>
+
+                        </div>
+
+                        <div class="grid__col grid__col--1-of-4 data">
+
+                            <label>Gender</label>
+                            <span class="content">{{this.gender}}</span>
+
+                        </div>
+
+                    </div>
+
+                    {{/each}}
+
+                </fieldset>
+
             </fieldset>
 
             <fieldset>

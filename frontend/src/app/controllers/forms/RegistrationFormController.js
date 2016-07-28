@@ -36,9 +36,81 @@ angular.module( 'app' )
 
             } ).then( ( data ) => {
 
-               this.conference = data;
+               this.conferenceData = data;
+               this.UpdateView();
 
             } );
+
+            this.AddTeacherEscort = () => {
+
+                if( this.conferenceData.registration && this.conferenceData.registration.teacherEscorts && this.conferenceData.registration.teacherEscorts.length >= 2 ) {
+
+                    this.isMessage = true;
+                    this.messageHeader = "Warning!";
+                    this.messageText = "You can not add any more teacher escorts. The maximum number of teacher escorts per delegation is 2.";
+                    this.messageClass = {
+
+                        'yellow': true,
+
+                    };
+
+                    return false;
+
+                }
+
+                this.conferenceData.registration.teacherEscorts = this.conferenceData.registration.teacherEscorts || [];
+
+                this.conferenceData.registration.teacherEscorts.push( {
+
+                    name: 'Escort Name',
+
+                } );
+
+                this.UpdateView();
+
+            };
+
+            this.RemoveEscort = ( index ) => {
+
+                if( this.conferenceData.registration && this.conferenceData.registration.teacherEscorts && this.conferenceData.registration.teacherEscorts.length <= 0 ) {
+
+                    this.isMessage = true;
+                    this.messageHeader = "Warning!";
+                    this.messageText = "You can not remove any more delegates.";
+                    this.messageClass = {
+
+                        'yellow': true,
+
+                    };
+
+                    return false;
+
+                }
+
+                this.conferenceData.registration.teacherEscorts = this.conferenceData.registration.teacherEscorts || [];
+
+                this.conferenceData.registration.teacherEscorts.splice( index, 1 );
+                this.UpdateView();
+
+            };
+
+            this.UpdateView = () => {
+
+                this.shouldShowNoTeacherEscortMessage = ( () => {
+
+                    if( this.conferenceData.registration ) {
+
+                        if( this.conferenceData.registration.teacherEscorts ) {
+
+                            return ( this.conferenceData.registration.teacherEscorts.length === 0 );
+
+                        } else { return false; }
+
+                    } else { return false; }
+
+                } )();
+
+            };
 
             this.UpdateForm = () => {
 
@@ -49,7 +121,7 @@ angular.module( 'app' )
                    token: data.token,
                    guid: data.guid,
                    conferenceGuid: guid,
-                   data: this.conference
+                   data: this.conferenceData
 
                } ).then( ( dataIn ) => {
 

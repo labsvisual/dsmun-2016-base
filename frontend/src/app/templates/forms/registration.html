@@ -19,26 +19,26 @@
 
             <div class="field">
                 <label>Name</label>
-                <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.name" placeholder="First Name">
+                <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.name" placeholder="First Name">
             </div>
 
             <div class="two fields">
 
                 <div class="field">
                     <label>Mobile Number</label>
-                    <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.mobileNumber" placeholder="Mobile Number">
                 </div>
 
                 <div class="field">
                     <label>Landline Number</label>
-                    <input required type="text" ng-model="ctrl.conference.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
+                    <input required type="text" ng-model="ctrl.conferenceData.registration.facultyAdvisor.landlineNumber" placeholder="Landline Number">
                 </div>
 
             </div>
 
             <div class="field">
                 <label>Email</label>
-                <input required type="email" ng-model="ctrl.conference.registration.facultyAdvisor.email" placeholder="Email Address">
+                <input required type="email" ng-model="ctrl.conferenceData.registration.facultyAdvisor.email" placeholder="Email Address">
             </div>
 
         </div>
@@ -50,7 +50,7 @@
 
             <div class="field">
                 <label>Street</label>
-                <input required type="text" ng-model="ctrl.conference.registration.address.street" placeholder="Street Address">
+                <input required type="text" ng-model="ctrl.conferenceData.registration.address.street" placeholder="Street Address">
             </div>
 
         </div>
@@ -59,12 +59,12 @@
 
             <div class="field">
                 <label>City</label>
-                <input required type="text" ng-model="ctrl.conference.registration.address.city" placeholder="City">
+                <input required type="text" ng-model="ctrl.conferenceData.registration.address.city" placeholder="City">
             </div>
 
             <div class="field">
                 <label>PIN</label>
-                <input required type="text" ng-model="ctrl.conference.registration.address.pin" placeholder="Zip Code">
+                <input required type="text" ng-model="ctrl.conferenceData.registration.address.pin" placeholder="Zip Code">
             </div>
 
         </div>
@@ -73,14 +73,68 @@
 
             <div class="field">
                 <label>State</label>
-                <input required ng-model="ctrl.conference.registration.address.state" />
+                <input required ng-model="ctrl.conferenceData.registration.address.state" />
             </div>
 
             <div class="field">
                 <label>Country</label>
-                <input required ng-model="ctrl.conference.registration.address.country" />
+                <input required ng-model="ctrl.conferenceData.registration.address.country" />
             </div>
 
+        </div>
+
+        <h4 class="ui dividing header">
+            Teacher Escorts
+        </h4>
+        <div ng-repeat="teacherEscort in ctrl.conferenceData.registration.teacherEscorts" style="padding-bottom: 2.5em;">
+
+            <h4 class="admin__form-header ui dividing header">
+
+                {{ teacherEscort.name }}
+
+            </h4>
+
+            <div class="field">
+                <label>Name</label>
+                <input required type="text" ng-model="ctrl.conferenceData.registration.teacherEscorts[ $index ].name" placeholder="Name">
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <label>Dietry Preference</label>
+                    <select class="ui dropdown" ng-model="ctrl.conferenceData.registration.teacherEscorts[ $index ].mealPreference">
+
+                        <option value="veg">Vegetarian</option>
+                        <option value="nonveg">Non - Vegetarian</option>
+
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <select class="ui dropdown" ng-model="ctrl.conferenceData.registration.teacherEscorts[ $index ].gender">
+
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="opther">I prefer not to disclose</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <button ng-click="ctrl.RemoveEscort( $index )" class="ui red button">
+                <i class="icon remove"></i>
+                Remove Teacher Escort
+            </button>
+
+        </div>
+
+        <div ng-disabled="this.shouldDisableAddTeacherEscort" ng-click="ctrl.AddTeacherEscort()" class="ui labeled button" tabindex="0">
+            <div class="ui button" ng-class="( ( ctrl.conferenceData.registration.teacherEscorts.length < 2 ) ? 'blue' : 'red' )">
+                <i class="plus icon"></i> Teacher Escort
+            </div>
+            <a class="ui basic left pointing label" ng-class="( ( ctrl.conferenceData.registration.teacherEscorts.length < 2 ) ? 'blue' : 'red' )">
+                {{ ctrl.conferenceData.registration.teacherEscorts.length || 0 }}
+            </a>
         </div>
 
         <div ng-show="ctrl.isError" class="ui red message">
