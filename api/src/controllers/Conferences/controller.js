@@ -658,7 +658,7 @@ const handlers = {
 
             conference.travelArrangements.onward.arrivalDate = ( () => {
 
-                console.log( conference.travelArrangements.onward.arrivalDate.replace( 'T18:30:00.000Z', 'T00:00:00' ) );
+                console.log( new Date( conference.travelArrangements.onward.arrivalDate ).toDateString() );
                 return ( conference.travelArrangements.onward.arrivalDate ? new Date( conference.travelArrangements.onward.arrivalDate.replace( 'T18:30:00.000Z', 'T00:00:00' ) ).toDateString() : '' );
 
             } )();
