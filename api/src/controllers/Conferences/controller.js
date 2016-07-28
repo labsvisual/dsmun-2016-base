@@ -659,7 +659,7 @@ const handlers = {
             conference.travelArrangements.onward.arrivalDate = ( () => {
 
                 console.log( new Date( conference.travelArrangements.onward.arrivalDate ).toDateString() );
-                return ( conference.travelArrangements.onward.arrivalDate ? new Date( conference.travelArrangements.onward.arrivalDate.toDateString() ) : '' );
+                return ( conference.travelArrangements.onward.arrivalDate ? new Date( conference.travelArrangements.onward.arrivalDate ).toDateString() : '' );
 
             } )();
 
