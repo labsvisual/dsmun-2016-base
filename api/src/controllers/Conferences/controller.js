@@ -657,6 +657,8 @@ const handlers = {
 
                 } );
 
+                conference.registration.teacherEscorts = teacherEscorts;
+
             }
 
             conference.travelArrangements.onward.mode = ( () => {
@@ -697,7 +699,6 @@ const handlers = {
             } )();
 
             conference.delegateInformation.delegates = delegates;
-            conference.registration.teacherEscorts = teacherEscorts;
 
             reply.view( 'confirmation', _.merge( conference, {
                 generated: new Date().toDateString(),
