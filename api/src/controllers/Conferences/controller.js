@@ -644,15 +644,20 @@ const handlers = {
 
             } );
 
-            let teacherEscorts = [];
-            conference.registration.teacherEscorts.map( ( teacherEscort ) => {
+            if( conference.registration.teacherEscorts ) {
 
-                teacherEscort.mealPreference = teacherEscort.mealPreference === 'veg' ? 'Vegetarian' : 'Non Vegetarian';
-                teacherEscort.gender = teacherEscort.gender.substring( 0, 1 ).toUpperCase() + teacherEscort.gender.substring( 1 );
+                let teacherEscorts = [];
 
-                teacherEscorts.push( teacherEscort );
+                conference.registration.teacherEscorts.map( ( teacherEscort ) => {
 
-            } );
+                    teacherEscort.mealPreference = teacherEscort.mealPreference === 'veg' ? 'Vegetarian' : 'Non Vegetarian';
+                    teacherEscort.gender = teacherEscort.gender.substring( 0, 1 ).toUpperCase() + teacherEscort.gender.substring( 1 );
+
+                    teacherEscorts.push( teacherEscort );
+
+                } );
+
+            }
 
             conference.travelArrangements.onward.mode = ( () => {
 
