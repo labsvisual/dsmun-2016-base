@@ -64,6 +64,14 @@
 
     </div>
 
+    <div ng-show="ctrl.isConferenceConfirmed" class="ui message" style="margin-top: 1.5em;">
+
+        <p>
+            View the conference confirmation sheet <a target="_blank" href="http://api.app.dsmun.com/conferences/confirm/{{ ctrl.guid }}">here</a>.
+        </p>
+
+    </div>
+
     <div ng-show="ctrl.areFormsFilled && !ctrl.isConferenceConfirmed" class="ui message" style="margin-top: 3em;">
 
         <div class="header">All Forms Filled</div>
